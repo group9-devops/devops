@@ -1,3 +1,5 @@
+Don't have permissions to repository options
+so will need them to complete lab 2
 # Population Reporting System - Group 9
 
 - Module : Software Engineering Methods (SETO8101)
@@ -87,5 +89,4 @@ We track our tasks and progress using:
 3. Tulasi Rijal - ID: 40783965 - Developer
 4. Adin Carlisle - ID: 40485891 - Developer
 
-Adding text for lab 2
 
