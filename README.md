@@ -1,6 +1,5 @@
 # Population Reporting System - Group 9
 
-### Code Review 1
 - Module : Software Engineering Methods (SETO8101)
 - Year : 2
 - Group: 9
@@ -63,10 +62,10 @@ Workflow file: to be added soon
 ## Branching Strategy - Gitflow
 
 We are following Gitflow with the following branches
--master: production-ready
--develop: active development
--feature: individual features
--release/0.1.0: first release branch
+- master: production-ready
+- develop: active development
+- feature: individual feature branches
+- release/0.1.0: first release branch
 
 ## Code of Conduct
 
