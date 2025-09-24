@@ -1,10 +1,10 @@
 # Population Reporting System - Group 9
 
 ### Code Review 1
-Module : Software Engineering Methods (SETO8101)
-Year : 2
-Group: 9
-Repository: [`group9-devops`](https://github.com/group9-devops/devops)
+- Module : Software Engineering Methods (SETO8101)
+- Year : 2
+- Group: 9
+- Repository: [`group9-devops`](https://github.com/group9-devops/devops)
 
 ## Code Review 1 - Checklist Status
 
@@ -58,7 +58,7 @@ Our GitHub Actions pipeline automatically
 - Builds the Maven JAR
 - Builds the Docker image
 
-### Workflow file: 
+Workflow file: to be added soon
 
 ## Branching Strategy - Gitflow
 
