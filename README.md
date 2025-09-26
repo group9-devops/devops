@@ -1,5 +1,9 @@
 ![workflow](https://github.com/group9-devops/devops/actions/workflows/main.yml/badge.svg)
 
+[![LICENSE](https://img.shields.io/github/license/<Adinc02>/devops.svg?style=flat-square)](https://github.com/<github-username>/devops/blob/master/LICENSE)
+
+[![Releases](https://img.shields.io/github/release/<Adinc02>/devops/all.svg?style=flat-square)](https://github.com/<github-username>/devops/releases)
+
 # Population Reporting System - Group 9
 
 - Module : Software Engineering Methods (SETO8101)
