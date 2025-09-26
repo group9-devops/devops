@@ -14,7 +14,7 @@
 
 3. Maven JAR build working - **In Progress** - Maven Build, JAR not building yet
 
-4. Dockerfile created - **Completed**
+4. Dockerfile created - **Completed** - Created Docker file
 
 5. Add GitHub Actions build workflow - **In Progress**
 
