@@ -1,3 +1,4 @@
+![workflow](https://github.com/group9-devops/devops/actions/workflows/main.yml/badge.svg)
 
 # Population Reporting System - Group 9
 
@@ -87,6 +88,4 @@ We track our tasks and progress using:
 2. Euan BirKett - ID: 40711166  - Product Owner
 3. Tulasi Rijal - ID: 40783965 - Developer
 4. Adin Carlisle - ID: 40485891 - Developer
-
-![workflow](https://github.com/group9-devops/devops/actions/workflows/main.yml/badge.svg)
 
