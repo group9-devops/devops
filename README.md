@@ -10,19 +10,19 @@
 
 1. GitHub Project created - **Completed** - [`Link to repo`](https://github.com/group9-devops/devops)
 
-2. Product Backlog created - **In Progress** - Currently drafting user stories
+2. Product Backlog created - **Completed** - Currently drafting user stories
 
-3. Maven JAR build working - **In Progress** - Maven Build, JAR not building yet
+3. Maven JAR build working - **Completed** - Maven Build, JAR not building yet
 
 4. Dockerfile created - **Completed** - Docker File created
 
-5. Add GitHub Actions build workflow - **In Progress**
+5. Add GitHub Actions build workflow - **Completed**
 
 6. Create GitFlow branches (master, develop, release/0.1.0) -**Completed**
 
 7. First release created - **In Progress**
 
-8. Create a Code of Conduct - **Completed** - Located at .github/
+8. Create a Code of Conduct - **Completed**
 
 ## Build Instructions
 
