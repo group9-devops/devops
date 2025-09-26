@@ -1,5 +1,4 @@
-Don't have permissions to repository options
-so will need them to complete lab 2
+
 # Population Reporting System - Group 9
 
 - Module : Software Engineering Methods (SETO8101)
