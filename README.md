@@ -5,7 +5,6 @@
 
 [![Releases](https://img.shields.io/github/release/group9-devops/devops/all.svg?style=flat-square)](https://github.com/group9-devops/devops/releases)
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/group9-devops/devops/main.yml/master?style=flat-square)
 
 # DevOps
 
