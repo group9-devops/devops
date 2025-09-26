@@ -14,11 +14,11 @@
 
 3. Maven JAR build working - **In Progress** - Maven Build, JAR not building yet
 
-4. Dockerfile created - **In Progress**
+4. Dockerfile created - **Completed**
 
 5. Add GitHub Actions build workflow - **In Progress**
 
-6. Create GitFlow branches (master, develop, release/0.1.0) -**In Progress**
+6. Create GitFlow branches (master, develop, release/0.1.0) -**Completed**
 
 7. First release created - **In Progress**
 
