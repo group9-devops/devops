@@ -1,8 +1,13 @@
+# badges
 ![workflow](https://github.com/group9-devops/devops/actions/workflows/main.yml/badge.svg)
 
 [![LICENSE](https://img.shields.io/github/license/group9-devops/devops.svg?style=flat-square)](https://github.com/group9-devops/devops/blob/master/LICENSE)
 
 [![Releases](https://img.shields.io/github/release/group9-devops/devops/all.svg?style=flat-square)](https://github.com/group9-devops/devops/releases)
+
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/group9-devops/devops/main.yml/master?style=flat-square)
+
+# DevOps
 
 # Population Reporting System - Group 9
 
