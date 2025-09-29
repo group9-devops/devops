@@ -19,19 +19,19 @@
 
 1. GitHub Project created - **Completed** - [`Link to repo`](https://github.com/group9-devops/devops)
 
-2. Product Backlog created - **In Progress** - Currently drafting user stories
+2. Product Backlog created - **Completed** - Currently drafting user stories
 
-3. Maven JAR build working - **In Progress** - Maven Build, JAR not building yet
+3. Maven JAR build working - **Completed** - Maven Build, JAR not building yet
 
 4. Dockerfile created - **Completed** - Created Docker file
 
-5. Add GitHub Actions build workflow - **In Progress**
+5. Add GitHub Actions build workflow - **Completed**
 
 6. Create GitFlow branches (master, develop, release/0.1.0) -**Completed**
 
 7. First release created - **In Progress**
 
-8. Create a Code of Conduct - **Completed** - Located at .github/
+8. Create a Code of Conduct - **Completed**
 
 ## Build Instructions
 
@@ -94,6 +94,6 @@ We track our tasks and progress using:
 
 1. Chiedza Chaterera - ID: 40668762 - Scrum Master - 
 2. Euan BirKett - ID: 40711166  - Product Owner
-3. Tulasi Rijal - ID: 40783965 - Developer
-4. Adin Carlisle - ID: 40485891 - Developer
+3. Tulasi Rijal - ID: 40783965 - Developer one
+4. Adin Carlisle - ID: 40485891 - Developer two
 
