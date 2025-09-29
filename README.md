@@ -1,3 +1,12 @@
+# badges
+![workflow](https://github.com/group9-devops/devops/actions/workflows/main.yml/badge.svg)
+
+[![LICENSE](https://img.shields.io/github/license/group9-devops/devops.svg?style=flat-square)](https://github.com/group9-devops/devops/blob/master/LICENSE)
+
+[![Releases](https://img.shields.io/github/release/group9-devops/devops/all.svg?style=flat-square)](https://github.com/group9-devops/devops/releases)
+
+
+# DevOps
 
 # Population Reporting System - Group 9
 
@@ -14,7 +23,7 @@
 
 3. Maven JAR build working - **In Progress** - Maven Build, JAR not building yet
 
-4. Dockerfile created - **Completed** - Docker File created
+4. Dockerfile created - **Completed** - Created Docker file
 
 5. Add GitHub Actions build workflow - **In Progress**
 
@@ -87,5 +96,4 @@ We track our tasks and progress using:
 2. Euan BirKett - ID: 40711166  - Product Owner
 3. Tulasi Rijal - ID: 40783965 - Developer
 4. Adin Carlisle - ID: 40485891 - Developer
-
 
