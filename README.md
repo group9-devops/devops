@@ -1,14 +1,11 @@
-# badges
+# Population Reporting System - Group 9
+
+# Build Badges
 ![workflow](https://github.com/group9-devops/devops/actions/workflows/main.yml/badge.svg)
 
 [![LICENSE](https://img.shields.io/github/license/group9-devops/devops.svg?style=flat-square)](https://github.com/group9-devops/devops/blob/master/LICENSE)
 
 [![Releases](https://img.shields.io/github/release/group9-devops/devops/all.svg?style=flat-square)](https://github.com/group9-devops/devops/releases)
-
-
-# DevOps
-
-# Population Reporting System - Group 9
 
 - Module : Software Engineering Methods (SETO8101)
 - Year : 2
@@ -19,9 +16,9 @@
 
 1. GitHub Project created - **Completed** - [`Link to repo`](https://github.com/group9-devops/devops)
 
-2. Product Backlog created - **Completed** - Currently drafting user stories
+2. Product Backlog created - **Completed** - Located at GitHub Project Board
 
-3. Maven JAR build working - **Completed** - Maven Build, JAR not building yet
+3. Maven JAR build working - **Completed** - Maven Build, JAR building
 
 4. Dockerfile created - **Completed** - Created Docker file
 
@@ -29,7 +26,7 @@
 
 6. Create GitFlow branches (master, develop, release/0.1.0) -**Completed**
 
-7. First release created - **In Progress**
+7. First release created - **Completed** -- v0.1-alpha-2 tagged
 
 8. Create a Code of Conduct - **Completed**
 
@@ -48,17 +45,20 @@
 git clone https://github.com/group9-devops/devops
 cd group9-devops
 
-# Build the project
+# Build the project using Maven
 mvn clean package
 
 # Run the app
-#this will be added soon
+java -jar target/devops-0.1.0.2-jar-with-dependencies.jar
+
+
 
 ```
 
-## Docker Instructions
+## Docker Instructions in IntelliJ
+- Build the Docker Image
+- Test the image by creating a container and testing the Mongo DB-Server
 
-_Content to be added soon_
 
 ## GitHub Actions (CI/CD)
 
@@ -67,7 +67,7 @@ Our GitHub Actions pipeline automatically
 - Builds the Maven JAR
 - Builds the Docker image
 
-Workflow file: to be added soon
+Workflow file: .github/workflows/main.yml
 
 ## Branching Strategy - Gitflow
 
@@ -92,7 +92,7 @@ We track our tasks and progress using:
 
 ## Team Members and Roles
 
-1. Chiedza Chaterera - ID: 40668762 - Scrum Master - 
+1. Chiedza Chaterera - ID: 40668762 - Scrum Master  
 2. Euan BirKett - ID: 40711166  - Product Owner
 3. Tulasi Rijal - ID: 40783965 - Developer one
 4. Adin Carlisle - ID: 40485891 - Developer two
