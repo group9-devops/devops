@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  # Build app from Dockerfile in same folder
+  app:
+    build: .
+
+  # Build the db as name db from the Dockerfile in the db folder
+  # Both ports set as 3306 to avoid XPlugin errors on MacOS.
+  db:
+    build: db/.
+    ports:
+      - "3306:3306"

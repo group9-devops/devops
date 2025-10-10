@@ -1,55 +1,5 @@
 # Population Reporting System - Group 9
 
-## Vision Statement
-
-### Purpose
-
-The purpose of this application is to provide streamlined access to global population data
-for analytical and reporting purposes. The system will be used by data analysts and researchers within the organisation. 
-An existing SQL database containing population, country, city, and language data will serve as the foundation.
-
-### Solution Overview
-
-The application will offer a user-friendly interface to query and generate detailed population reports. 
-It will support dynamic filtering by continent, region, country, district, city and will allow users to specify custom parameters such as top-N populated areas.
-
-### User Description
-
-The primary users are data analysts and researchers with moderate technical knowledge. They require flexible reporting tools and visual summaries to support strategic planning.
-The application will be web-based to ensure accessibility across departments.
-
-## Features
-
-### Generate Country Report
-
-1. List all countries in the world, continent and region by population in descending order.
-2. Display top-N populated countries, in the world, a region and a continent where N is user input.
-3. Include: code, name,continent, region, population, capital
-
-### Generate City Report
-
-1. List all cities in the world, continent, region, country and district by population in descending order.
-2. Display top-N populated cities, where N is user input.
-3. Include: name, country, district, population
-
-### Generate Capital City Report
-
-1. List all capital cities in the world, continent and region by population in descending order.
-2. Display top-N populated capital cities, in the world, a region and a continent where N is user input.
-3. Include: name, country, population
-
-### Generate Population Report
-
-1. Show the total population of people living in cities and those who are not in each continent, region and country.
-2. Include the percentages for people living in cities and those who are not.
-3. The name of each continent/country and region 
-4. The total population of the continent/region/country. 
-
-### Language Report
-
-1. Display the number of people who speak Chinese, English, Hindi, Spanish and Arabic from greatest number to smallest
-2. Include percentage of global population for each language. 
-
 # Build Badges
 ![workflow](https://github.com/group9-devops/devops/actions/workflows/main.yml/badge.svg)
 
@@ -57,13 +7,36 @@ The application will be web-based to ensure accessibility across departments.
 
 [![Releases](https://img.shields.io/github/release/group9-devops/devops/all.svg?style=flat-square)](https://github.com/group9-devops/devops/releases)
 
+- Module : Software Engineering Methods (SETO8101)
+- Year : 2
+- Group: 9
+- Repository: [`group9-devops`](https://github.com/group9-devops/devops)
+
+## Code Review 1 - Checklist Status
+
+1. GitHub Project created - **Completed** - [`Link to repo`](https://github.com/group9-devops/devops)
+
+2. Product Backlog created - **Completed** - Located at GitHub Project Board
+
+3. Maven JAR build working - **Completed** - Maven Build, JAR building
+
+4. Dockerfile created - **Completed** - Created Docker file
+
+5. Add GitHub Actions build workflow - **Completed**
+
+6. Create GitFlow branches (master, develop, release/0.1.0) -**Completed**
+
+7. First release created - **Completed** -- v0.1-alpha-2 tagged
+
+8. Create a Code of Conduct - **Completed**
+
 ## Build Instructions
 
 ### Prerequisites
 
 - Java 17+
 - Maven
-- Docker-Compose
+- Docker
 
 ### Run Locally Maven
 
@@ -83,8 +56,8 @@ java -jar target/devops-0.1.0.2-jar-with-dependencies.jar
 ```
 
 ## Docker Instructions in IntelliJ
-- Build the Docker Image using docker-compose
-- Test the image by creating a container and testing that the database is successfully connected
+- Build the Docker Image
+- Test the image by creating a container and testing the Mongo DB-Server
 
 
 ## GitHub Actions (CI/CD)
@@ -93,7 +66,6 @@ Our GitHub Actions pipeline automatically
 
 - Builds the Maven JAR
 - Builds the Docker image
-- Connects and Disconnects from the Database
 
 Workflow file: .github/workflows/main.yml
 
@@ -116,12 +88,12 @@ Location: .github/CODE_OF_CONDUCT.md
 We track our tasks and progress using:
 
 - GitHub Issues
-- Zube.io Kanban Board and Sprint Board
+- GitHub Project board
 
 ## Team Members and Roles
 
-1. Chiedza Chaterera - ID: 40668762 - Product Owner
-2. Euan BirKett - ID: 40711166  - Scrum Master
-3. Tulasi Rijal - ID: 40783965 - Developer one
-4. Adin Carlisle - ID: 40485891 - Developer two
+1. Chiedza Chaterera - ID: 40668762 - Scrum Master  
+2. Euan Birkett - ID: 40711166  - Product Owner
+3. Tulasi Rijal - ID: 40783965 - Developer One
+4. Adin Carlisle - ID: 40485891 - Developer Two
 
