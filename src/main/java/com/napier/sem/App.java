@@ -69,12 +69,12 @@ public class App
             }
         }
     }
-    public Country  getCountry()
+    public Country  getCountry(String name)
     {
         try {
             Country country = new Country();
             Statement stmt = con.createStatement();
-            String sqlStatement =  "select * from country order by population desc";
+            String sqlStatement =  "SELECT * FROM country ORDER BY population DESC";
             ResultSet rset = stmt.executeQuery(sqlStatement);
             if(rset.next()){
                 country.code = rset.getString("Code");
@@ -115,7 +115,7 @@ public class App
 
         // Connect to database
         a.connect();
-        Country country = new Country();
+        Country country = a.getCountry("Brazil");
         a.printCountries(country);
         // Disconnect from database
         a.disconnect();
