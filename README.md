@@ -93,7 +93,7 @@ We track our tasks and progress using:
 ## Team Members and Roles
 
 1. Chiedza Chaterera - ID: 40668762 - Scrum Master  
-2. Euan BirKett - ID: 40711166  - Product Owner
-3. Tulasi Rijal - ID: 40783965 - Developer one
-4. Adin Carlisle - ID: 40485891 - Developer two
+2. Euan Birkett - ID: 40711166  - Product Owner
+3. Tulasi Rijal - ID: 40783965 - Developer One
+4. Adin Carlisle - ID: 40485891 - Developer Two
 
