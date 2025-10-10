@@ -69,6 +69,44 @@ public class App
             }
         }
     }
+    public Country  getCountry()
+    {
+        try {
+            Country country = new Country();
+            Statement stmt = con.createStatement();
+            String sqlStatement =  "select * from country order by population desc";
+            ResultSet rset = stmt.executeQuery(sqlStatement);
+            if(rset.next()){
+                country.code = rset.getString("Code");
+                country.name = rset.getString("Name");
+                country.continent = rset.getString("Continent");
+                country.population = rset.getInt("Population");
+                country.capital = rset.getString("Capital");
+                country.region = rset.getString("Region");
+                return country;
+            } else {
+                return null;
+            }
+
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country");
+            return null;
+        }
+    }
+
+    public void printCountries(Country country)
+    {
+        if(country == null)
+        {
+            System.out.println("Country is null");
+            return;
+        }
+        System.out.println("Code : " + country.code + " Name : " + country.name +  " Continent : "
+                + country.continent + " Population : " +
+                country.population +  " Capital : " + country.capital + " Region : " + country.region);
+    }
 
     public static void main(String[] args)
     {
@@ -77,9 +115,11 @@ public class App
 
         // Connect to database
         a.connect();
-
+        Country country = new Country();
+        a.printCountries(country);
         // Disconnect from database
         a.disconnect();
+
     }
 
 
