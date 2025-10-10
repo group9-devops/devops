@@ -9,6 +9,24 @@ public class App
      * Connection to MySQL database.
      */
     private Connection con = null;
+    public int limit;
+
+    public String statement = "USE world;\n" +
+            "\n" +
+            "SELECT\n" +
+            "    country.Name AS Country,\n" +
+            "    city.Name AS CapitalCity,\n" +
+            "    city.Population AS CapitalPopulation\n" +
+            "FROM\n" +
+            "    country AS country\n" +
+            "        INNER JOIN\n" +
+            "    city AS city\n" +
+            "    ON country.Capital = city.ID\n" +
+            "WHERE\n" +
+            "    country.Capital IS NOT NULL\n" +
+            "ORDER BY\n" +
+            "    city.Population DESC\n" +
+            "LIMIT " + limit;
 
     /**
      * Connects to the MySQL database. Connection string set w/ port 3306.
