@@ -6,7 +6,7 @@ services:
     build: .
 
   # Build the db as name db from the Dockerfile in the db folder
-  # exposing the port if we want to run code outside a container
+  # Both ports set as 3306 to avoid XPlugin errors on MacOS.
   db:
     build: db/.
     ports:

@@ -11,7 +11,7 @@ public class App
     private Connection con = null;
 
     /**
-     * Connect to the MySQL database.
+     * Connects to the MySQL database. Connection string set w/ port 3306.
      */
     public void connect()
     {
@@ -36,12 +36,12 @@ public class App
                 Thread.sleep(30000);
                 // Connect to database
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
-                System.out.println("Successfully connected");
+                System.out.println("Connection established!");
                 break;
             }
             catch (SQLException sqle)
             {
-                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
+                System.out.println("Connection failed. Attempt:  " + Integer.toString(i));
                 System.out.println(sqle.getMessage());
             }
             catch (InterruptedException ie)
