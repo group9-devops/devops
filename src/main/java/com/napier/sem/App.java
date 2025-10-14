@@ -2,22 +2,26 @@ package com.napier.sem;
 
 import java.sql.*;
 
+/**
+ * The App class manages the connection between the application
+ * and a MySQL database. It provides methods to establish and close the
+ * connection, with retry handling for connection failures.
+ */
 public class App
 {
-
     /**
-     * Connection to MySQL database.
+     * Connection object for interacting with the MySQL database.
      */
     private Connection con = null;
 
     /**
-     * Connects to the MySQL database. Connection string set w/ port 3306.
+     * Establishes a connection to the MySQL database.
+     * Retries up to 10 times, waiting 30 seconds between attempts.
      */
     public void connect()
     {
         try
         {
-            // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
         }
         catch (ClassNotFoundException e)
@@ -32,27 +36,29 @@ public class App
             System.out.println("Connecting to database...");
             try
             {
-                // Wait a bit for db to start
                 Thread.sleep(30000);
-                // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
+                con = DriverManager.getConnection(
+                        "jdbc:mysql://db:3306/world?allowPublicKeyRetrieval=true&useSSL=false",
+                        "root",
+                        "example"
+                );
                 System.out.println("Connection established!");
                 break;
             }
             catch (SQLException sqle)
             {
-                System.out.println("Connection failed. Attempt:  " + Integer.toString(i));
+                System.out.println("Connection failed. Attempt: " + i);
                 System.out.println(sqle.getMessage());
             }
             catch (InterruptedException ie)
             {
-                System.out.println("Thread interrupted? Should not happen.");
+                System.out.println("Thread interrupted unexpectedly.");
             }
         }
     }
 
     /**
-     * Disconnect from the MySQL database.
+     * Closes the connection to the MySQL database if it is active.
      */
     public void disconnect()
     {
@@ -60,7 +66,6 @@ public class App
         {
             try
             {
-                // Close connection
                 con.close();
             }
             catch (Exception e)
@@ -70,17 +75,16 @@ public class App
         }
     }
 
+    /**
+     * Main entry point of the application.
+     * Connects to the database and then disconnects.
+     *
+     * @param args command-line arguments
+     */
     public static void main(String[] args)
     {
-        // Create new Application
         App a = new App();
-
-        // Connect to database
         a.connect();
-
-        // Disconnect from database
         a.disconnect();
     }
-
-
 }
