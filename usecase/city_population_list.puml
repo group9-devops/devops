@@ -1,12 +1,17 @@
 @startuml
-left to right direction
 
-actor "Data Analyst" as Analyst
+actor analyst as "Data Analyst"
 
-rectangle "Population Analysis System" {
-  usecase "List Cities by Population" as UC1
+rectangle Database
+
+rectangle "Report system" {
+    usecase UC4 as "Get cities by population"
+
+    usecase UCa as "Print report in ascending order"
+
+    analyst - UC4
+    UC4 ..> UCa : include
+    UC4 - Database
 }
-
-Analyst --> UC1 : requests city population list
 
 @enduml
