@@ -1,5 +1,5 @@
 @startuml
-title Country Report Use Case Diagram
+
 
 rectangle "Database" as DB
 actor "Data Analyst" as DA
