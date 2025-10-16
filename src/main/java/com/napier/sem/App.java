@@ -1,12 +1,8 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
 
-/**
- * The App class manages the connection between the application
- * and a MySQL database. It provides methods to establish and close the
- * connection, with retry handling for connection failures.
- */
 public class App
 {
 
@@ -74,26 +70,25 @@ public class App
             }
         }
     }
-
-    //Class to print all countries in the world.
-    public Country  getCountry(String name)
+    public ArrayList<Country> getCountry()
     {
         try {
-            Country country = new Country();
             Statement stmt = con.createStatement();
             String sqlStatement =  "SELECT * FROM country ORDER BY population DESC";
             ResultSet rset = stmt.executeQuery(sqlStatement);
-            if(rset.next()){
+            ArrayList<Country> countries = new ArrayList<Country>();
+            while(rset.next()){
+                Country country = new Country();
                 country.code = rset.getString("Code");
                 country.name = rset.getString("Name");
                 country.continent = rset.getString("Continent");
                 country.population = rset.getInt("Population");
                 country.capital = rset.getString("Capital");
                 country.region = rset.getString("Region");
-                return country;
-            } else {
-                return null;
+                countries.add(country);
             }
+
+            return countries;
 
         }
         catch (Exception e){
@@ -103,17 +98,6 @@ public class App
         }
     }
 
-    public void printCountries(Country country)
-    {
-        if(country == null)
-        {
-            System.out.println("Country is null");
-            return;
-        }
-        System.out.println("Code : " + country.code + " Name : " + country.name +  " Continent : "
-                + country.continent + " Population : " +
-                country.population +  " Capital : " + country.capital + " Region : " + country.region);
-    }
 
     public static void main(String[] args)
     {
@@ -122,8 +106,25 @@ public class App
 
         // Connect to database
         a.connect();
-        Country country = a.getCountry("Brazil");
-        a.printCountries(country);
+        ArrayList<Country> countries = a.getCountry();
+
+        // format of the table
+        System.out.printf("%-30s %-20s %-15s %-20s %-30s %15s\n",
+                "Name", "Continent", "Region", "Capital", "Code", "Population");
+        System.out.println("--------------------------------------------------------------------------------------------------------------");
+
+// Print rows
+        for (Country country : countries) {
+            System.out.printf("%-30s %-20s %-15s %-20s %-30s %,15d\n",
+                    country.name,
+                    country.continent,
+                    country.region,
+                    country.capital,
+                    country.code,
+                    country.population
+            );
+        }
+
         // Disconnect from database
         a.disconnect();
 
