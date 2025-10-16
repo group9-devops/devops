@@ -4,6 +4,11 @@ import java.sql.*;
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * The App class manages the connection between the application
+ * and a MySQL database. It provides methods to establish and close the
+ * connection, with retry handling for connection failures.
+ */
 public class App {
 
     /**
@@ -82,9 +87,9 @@ public class App {
             ArrayList<City> cities = new ArrayList<City>();
             while (rset.next()) {
                 City city = new City();
-                city.Name = rset.getString("CityName");
-                city.Country = rset.getString("Country");
-                city.Population = rset.getInt("Population");
+                city.name = rset.getString("CityName");
+                city.country = rset.getString("Country");
+                city.population = rset.getInt("Population");
 
                 cities.add(city);
             }
@@ -101,7 +106,7 @@ public class App {
     public void Display(List<City> cities) {
         if (cities != null && !cities.isEmpty()) {
             for (City c : cities) {
-                System.out.println("City: " + c.Name + ", Country: " + c.Country + ", Population: " + c.Population);
+                System.out.println("City: " + c.name + ", Country: " + c.country + ", Population: " + c.population);
             }
         } else {
             System.out.println("No capital cities found.");
