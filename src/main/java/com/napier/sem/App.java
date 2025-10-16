@@ -1,9 +1,9 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
 
-public class App
-{
+public class App {
 
     /**
      * Connection to MySQL database.
@@ -13,39 +13,29 @@ public class App
     /**
      * Connects to the MySQL database. Connection string set w/ port 3306.
      */
-    public void connect()
-    {
-        try
-        {
+    public void connect() {
+        try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-        }
-        catch (ClassNotFoundException e)
-        {
+        } catch (ClassNotFoundException e) {
             System.out.println("Could not load SQL driver");
             System.exit(-1);
         }
 
         int retries = 10;
-        for (int i = 0; i < retries; ++i)
-        {
+        for (int i = 0; i < retries; ++i) {
             System.out.println("Connecting to database...");
-            try
-            {
+            try {
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Connection established!");
                 break;
-            }
-            catch (SQLException sqle)
-            {
+            } catch (SQLException sqle) {
                 System.out.println("Connection failed. Attempt:  " + Integer.toString(i));
                 System.out.println(sqle.getMessage());
-            }
-            catch (InterruptedException ie)
-            {
+            } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
@@ -54,33 +44,56 @@ public class App
     /**
      * Disconnect from the MySQL database.
      */
-    public void disconnect()
-    {
-        if (con != null)
-        {
-            try
-            {
+    public void disconnect() {
+        if (con != null) {
+            try {
                 // Close connection
                 con.close();
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 System.out.println("Error closing connection to database");
             }
         }
     }
 
-    public static void main(String[] args)
-    {
-        // Create new Application
-        App a = new App();
+    /**
+     * Gets all cities and sorts them by population in descending order
+     * returns a list of cities sorted by population in descending order, or return null if thrown exception
+     */
 
-        // Connect to database
-        a.connect();
+    public ArrayList<City> getAllCities() {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
 
-        // Disconnect from database
-        a.disconnect();
+            // Modified SQL query to get all cities with their country and population
+            String strSelect =
+                    "SELECT city.Name AS CityName, " +
+                            "country.Name AS Country, " +
+                            "city.Population AS Population " +
+                            "FROM city " +
+                            "JOIN country ON city.CountryCode = country.Code " +
+                            "ORDER BY city.Population DESC";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract city information
+            ArrayList<City> cities = new ArrayList<City>();
+            while (rset.next()) {
+                City city = new City();
+                city.Name = rset.getString("CityName");
+                city.Country = rset.getString("Country");
+                city.Population = rset.getInt("Population");
+
+                cities.add(city);
+            }
+
+            return cities;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get the cities");
+            return null;
+        }
     }
-
-
 }
