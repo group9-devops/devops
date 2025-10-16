@@ -2,6 +2,11 @@ package com.napier.sem;
 
 import java.sql.*;
 
+/**
+ * The App class manages the connection between the application
+ * and a MySQL database. It provides methods to establish and close the
+ * connection, with retry handling for connection failures.
+ */
 public class App
 {
 
@@ -69,6 +74,8 @@ public class App
             }
         }
     }
+
+    //Class to print all countries in the world.
     public Country  getCountry(String name)
     {
         try {
