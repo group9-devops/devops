@@ -1,4 +1,4 @@
-# USE CASE: 3 Produce a Capital City Population Report
+# USE CASE: 3 Produce a Capital City Report
 ## CHARACTERISTIC INFORMATION
 ### Goal in Context
 As a data analyst, I want to produce a report on capital cities by population so that I can analyze urban population trends globally and regionally.
@@ -47,4 +47,4 @@ A request for urban population analysis is initiated by the data analyst or a st
 - Report showing top-N capital cities within a continent.
 
 ## SCHEDULE
-DUE DATE: Release 1.0
+DUE DATE: Release: v0.1-alpha-3

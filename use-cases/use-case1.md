@@ -48,4 +48,4 @@ A request for country population analysis is initiated by the data analyst or a 
 
 
 ## SCHEDULE
-DUE DATE: Release 1.0
+DUE DATE: Release: v0.1-alpha-3

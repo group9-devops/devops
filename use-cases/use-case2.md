@@ -1,4 +1,4 @@
-# USE CASE: 2 – Produce a City Population Report
+# USE CASE: 2 – Produce a City Report
 
 ## CHARACTERISTIC INFORMATION
 
@@ -35,23 +35,15 @@ The data analyst or a stakeholder initiates a request to analyze city population
 ## MAIN SUCCESS SCENARIO
 
 1. Data analyst initiates a request to generate a city population report.
-
 2. System prompts the user for report parameters (e.g., global, continent, region, country, district, or top-N cities).
-
 3. Data analyst selects filters or inputs a top-N value if needed.
-
 4. System queries the database to retrieve relevant city data including:
-
    - City name
-
    - Country name
-
    - District
-
    - Population
 
 5. System generates and displays the report, sorted from largest to smallest population (descending order).
-
 6. Data analyst reviews and optionally exports or saves the report for further use.
 
 ## EXTENSIONS
@@ -65,17 +57,12 @@ The data analyst or a stakeholder initiates a request to analyze city population
 ## SUB-VARIATIONS
 
 - Report filtered by continent only
-
 - Report filtered by region only
-
 - Report filtered by country only
-
 - Report filtered by district only
-
 - Report showing top-N cities globally
-
 - Report showing top-N cities by continent, region, country, or district
 
 ## SCHEDULE
 
-Due Date: Release 1.0
+DUE DATE: Release: v0.1-alpha-3
