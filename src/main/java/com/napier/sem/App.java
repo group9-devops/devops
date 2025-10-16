@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.List;
 import java.util.ArrayList;
 
 public class App {
@@ -95,5 +96,33 @@ public class App {
             System.out.println("Failed to get the cities");
             return null;
         }
+
+    }
+    public void Display(List<City> cities) {
+        if (cities != null && !cities.isEmpty()) {
+            for (City c : cities) {
+                System.out.println("City: " + c.Name + ", Country: " + c.Country + ", Population: " + c.Population);
+            }
+        } else {
+            System.out.println("No capital cities found.");
+        }
+    }
+    public static void main(String[] args)
+    {
+        // Create new Application
+        App a = new App();
+
+        // Connect to database
+        a.connect();
+
+        // Extract city information
+        ArrayList<City> cityList = a.getAllCities();
+        a.Display(cityList);
+
+
+        System.out.println(cityList.size());
+
+        // Disconnect from database
+        a.disconnect();
     }
 }
