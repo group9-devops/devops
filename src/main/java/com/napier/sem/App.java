@@ -1,6 +1,10 @@
 package com.napier.sem;
 
+import java.io.InputStream;
 import java.sql.*;
+import java.util.Properties;
+import java.io.IOException;
+
 
 /**
  * The App class manages the connection between the application
@@ -79,6 +83,7 @@ public class App
     //  Total world pop for percentage based calculations
     //  Percentages of Urban and Non-Urban populations
     //  Number of people in cities vs not in cities (are these two not just the same bloody thing?)
+    //  Fix .properties reading (im so lost)
 
     /**
      * Main entry point of the application.
