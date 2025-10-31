@@ -3,6 +3,11 @@ package com.napier.sem;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * The App class manages the connection between the application
+ * and a MySQL database. It provides methods to establish and close the
+ * connection, with retry handling for connection failures.
+ */
 public class App
 {
 
