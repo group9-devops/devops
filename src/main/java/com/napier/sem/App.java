@@ -87,4 +87,5 @@ public class App
         a.connect();
         a.disconnect();
     }
+    //Will add SQL query for continent population here
 }
