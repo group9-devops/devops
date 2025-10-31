@@ -32,4 +32,6 @@ public class City {
      * City's ID in DB
      */
     public int ID;
+
+    //will create sql query for sorting cities in countries by population descending here
 }
