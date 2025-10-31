@@ -75,6 +75,11 @@ public class App
         }
     }
 
+    // TODO: Write queries for:
+    //  Total world pop for percentage based calculations
+    //  Percentages of Urban and Non-Urban populations
+    //  Number of people in cities vs not in cities (are these two not just the same bloody thing?)
+
     /**
      * Main entry point of the application.
      * Connects to the database and then disconnects.
