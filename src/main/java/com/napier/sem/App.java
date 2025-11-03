@@ -1,6 +1,8 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The App class manages the connection between the application
@@ -56,7 +58,42 @@ public class App
             }
         }
     }
+    public ArrayList<City> getCitiesByCountry(String countryName) {
+        try {
+            // Create an SQL prepared statement
+            String strSelect =
+                    "SELECT city.Name AS CityName, " +
+                            "country.Name AS Country, " +
+                            "city.Population AS Population " +
+                            "FROM city " +
+                            "JOIN country ON city.CountryCode = country.Code " +
+                            "WHERE country.Name = ? " +   // Filter by country name
+                            "ORDER BY city.Population DESC"; // Order by population descending
 
+            PreparedStatement pstmt = con.prepareStatement(strSelect);
+            pstmt.setString(1, countryName); // Set the country name parameter
+
+            // Execute SQL statement
+            ResultSet rset = pstmt.executeQuery();
+
+            // Extract city information
+            ArrayList<City> cities = new ArrayList<>();
+            while (rset.next()) {
+                City city = new City();
+                city.name = rset.getString("CityName");
+                city.country = rset.getString("Country");
+                city.population = rset.getInt("Population");
+                cities.add(city);
+            }
+
+            return cities;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get the cities for country: " + countryName);
+            return null;
+        }
+    }
     /**
      * Closes the connection to the MySQL database if it is active.
      */
@@ -84,7 +121,12 @@ public class App
     public static void main(String[] args)
     {
         App a = new App();
+
         a.connect();
+
+        ArrayList<City> ArrayList = a.getCitiesByCountry("");
+
+
         a.disconnect();
     }
 }
