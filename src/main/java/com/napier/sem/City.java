@@ -5,7 +5,7 @@ import java.sql.Statement;
 import java.sql.Connection;
 
 /**
- * Represents a City
+ * Represents details of a  City
  */
 public class City {
     /**

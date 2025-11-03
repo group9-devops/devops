@@ -1,6 +1,41 @@
 # Population Reporting System - Group 9
 
-# Build Badges
+## Vision Statement: Population Reporting System
+## Introduction
+### Purpose
+### Solution Overview
+The application will offer a user-friendly interface to query and generate detailed population reports. It will support dynamic filtering by continent, region, country, district, and city, and allow users to specify custom parameters such as top-N populated areas. This will enhance the organisation’s ability to make data-driven decisions and produce accurate demographic insights.
+### User Description
+The primary users are data analysts and policy advisors with moderate technical knowledge. They require flexible reporting tools and visual summaries to support strategic planning. The application will be web-based to ensure accessibility across departments, with potential for desktop deployment if needed.
+## FEATURES
+
+### Generate Country Reports
+- List all countries by population (global, continent, region).
+- Display top-N populated countries based on user input.
+- Include key details: code, name, continent, region, population, capital.
+
+### Generate City Reports
+- List cities by population (global, continent, region, country, district).
+- Display top-N populated cities based on user input.
+- Include: name, country, district, population.
+
+### Generate Capital City Reports
+- List capital cities by population (global, continent, region).
+- Display top-N populated capital cities.
+- Include: name, country, population.
+
+### Generate Population Reports
+- Show total population, city-dwelling population, and non-city population for each continent, region, and country.
+- Include percentages for urban vs. non-urban populations.
+
+### Language Demographics
+- Report number of speakers for Chinese, English, Hindi, Spanish, and Arabic.
+- Include percentage of global population for each language.
+
+### Individual Population Queries
+- Retrieve population data for specific continents, regions, countries, districts, and cities.
+
+## Build Badges
 ![workflow](https://github.com/group9-devops/devops/actions/workflows/main.yml/badge.svg)
 
 [![LICENSE](https://img.shields.io/github/license/group9-devops/devops.svg?style=flat-square)](https://github.com/group9-devops/devops/blob/master/LICENSE)
@@ -12,23 +47,7 @@
 - Group: 9
 - Repository: [`group9-devops`](https://github.com/group9-devops/devops)
 
-## Code Review 1 - Checklist Status
 
-1. GitHub Project created - **Completed** - [`Link to repo`](https://github.com/group9-devops/devops)
-
-2. Product Backlog created - **Completed** - Located at GitHub Project Board
-
-3. Maven JAR build working - **Completed** - Maven Build, JAR building
-
-4. Dockerfile created - **Completed** - Created Docker file
-
-5. Add GitHub Actions build workflow - **Completed**
-
-6. Create GitFlow branches (master, develop, release/0.1.0) -**Completed**
-
-7. First release created - **Completed** -- v0.1-alpha-2 tagged
-
-8. Create a Code of Conduct - **Completed**
 
 ## Build Instructions
 
@@ -36,7 +55,7 @@
 
 - Java 17+
 - Maven
-- Docker
+- Docker-Compose
 
 ### Run Locally Maven
 
@@ -56,8 +75,8 @@ java -jar target/devops-0.1.0.2-jar-with-dependencies.jar
 ```
 
 ## Docker Instructions in IntelliJ
-- Build the Docker Image
-- Test the image by creating a container and testing the Mongo DB-Server
+- Build the Docker-Compose Image
+- Test the image by creating a container and testing that the SQL database in connected.
 
 
 ## GitHub Actions (CI/CD)
@@ -88,12 +107,13 @@ Location: .github/CODE_OF_CONDUCT.md
 We track our tasks and progress using:
 
 - GitHub Issues
-- GitHub Project board
+- Zube Kanban board
+- Zube Sprint Board
 
 ## Team Members and Roles
 
-1. Chiedza Chaterera - ID: 40668762 - Scrum Master  
-2. Euan Birkett - ID: 40711166  - Product Owner
+1. Chiedza Chaterera - ID: 40668762 - Product Owner  
+2. Euan Birkett - ID: 40711166  - Scrum Master
 3. Tulasi Rijal - ID: 40783965 - Developer One
 4. Adin Carlisle - ID: 40485891 - Developer Two
 
