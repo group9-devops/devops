@@ -72,7 +72,15 @@ public class App {
 
         // Extract city information
         PrintCityValues printCityValues = new PrintCityValues();
-        printCityValues.getAllCities(a.con);
+
+        System.out.println("ALL CITIES IN THE WORLD");
+        printCityValues.printAllCities(a.con);
+
+        System.out.println("\nALL CITIES IN THE CONTINENT");
+        printCityValues.printCitiesByContinent(a.con,"Africa");
+
+        System.out.println("\nALL CITIES IN A REGION");
+        printCityValues.printCitiesByRegion(a.con,"North America");
 
 
 
