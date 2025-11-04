@@ -16,12 +16,12 @@ public class PrintCountryValues {
 
             while (rset.next()) {
                 Country country = new Country();
-                country.code = rset.getString("Code");
-                country.name = rset.getString("Name");
-                country.continent = rset.getString("Continent");
-                country.population = rset.getInt("Population");
-                country.capital = rset.getString("Capital");
-                country.region = rset.getString("Region");
+                country.Code = rset.getString("Code");
+                country.Name = rset.getString("Name");
+                country.Continent = rset.getString("Continent");
+                country.Population = rset.getInt("Population");
+                country.Capital = rset.getString("Capital");
+                country.Region = rset.getString("Region");
                 countries.add(country);
             }
 
@@ -35,15 +35,15 @@ public class PrintCountryValues {
                 "Name", "Continent", "Region", "Capital", "Code", "Population");
         System.out.println("--------------------------------------------------------------------------------------------------------------");
 
-// Print rows
+        // Print rows
         for (Country country : countries) {
             System.out.printf("%-30s %-20s %-15s %-20s %-30s %,15d\n",
-                    country.name,
-                    country.continent,
-                    country.region,
-                    country.capital,
-                    country.code,
-                    country.population
+                    country.Name,
+                    country.Continent,
+                    country.Region,
+                    country.Capital,
+                    country.Code,
+                    country.Population
             );
         }
 

@@ -1,4 +1,3 @@
-version: '3'
 services:
 
   # Build app from Dockerfile in same folder
