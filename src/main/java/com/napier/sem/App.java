@@ -124,7 +124,7 @@ public class App
         App a = new App();
         a.connect();
 
-        ArrayList<City> cities = a.getAllCitiesInContinent("");
+        ArrayList<City> cities = a.getAllCitiesInContinent("Africa");
 
         a.disconnect();
     }
