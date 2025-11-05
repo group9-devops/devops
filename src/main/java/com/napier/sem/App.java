@@ -89,15 +89,15 @@ public class App
         // Connect to database
         a.connect();
 
-        //Print Countries
-        System.out.println("----LISTING COUNTRIES IN THE WORLD----");
-        PrintCountryValues PrintCountry = new PrintCountryValues();
-        PrintCountry.getAllCountriesByPopulationDescending(a.con);
+        //Extract City Information
+        CapitalCityReport printCapitalCityValues = new CapitalCityReport();
+        printCapitalCityValues.printAllCapitalCities(a.con);
 
-        //Print Cities
-        System.out.println("----LISTING CITIES IN THE WORLD----");
-        CapitalCityReport PrintCity = new CapitalCityReport();
-        PrintCity.getAllCities(a.con);
+        //Print Capital Cities in a Continent
+        printCapitalCityValues.printCapitalCitiesByContinent(a.con, "Asia");
+
+        //Print Capital Cities in a Region
+        printCapitalCityValues.printCapitalCitiesByRegion(a.con, "North America");
 
         // Disconnect from database
         a.disconnect();
