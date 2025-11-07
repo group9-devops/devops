@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * The App class manages the connection between the application
@@ -89,18 +90,28 @@ public class App
         // Connect to database
         a.connect();
 
-        //Extract City Information
-        CapitalCityReport printCapitalCityValues = new CapitalCityReport();
-        printCapitalCityValues.printAllCapitalCities(a.con);
+        // Create report instance
+        CapitalCityReport capitalReport = new CapitalCityReport(a.con);
 
-        //Print Capital Cities in a Continent
-        printCapitalCityValues.printCapitalCitiesByContinent(a.con, "Asia");
+        // --- 1. All Capital Cities ---
+        System.out.println("\n=== All Capital Cities ===");
+        ArrayList<City> allCapitals = capitalReport.getAllCapitalCities();
+        capitalReport.printCapitalCities(allCapitals);
 
-        //Print Capital Cities in a Region
-        printCapitalCityValues.printCapitalCitiesByRegion(a.con, "North America");
+        // --- 2. Capital Cities in a Continent ---
+        System.out.println("\n=== Capital Cities in Continent ===");
+        ArrayList<City> capitalInContinent = capitalReport.getCapitalCitiesByContinent("Asia");
+        capitalReport.printCapitalCities(capitalInContinent);
+
+        // --- 3. Capital Cities in a Region ---
+        System.out.println("\n=== Capital Cities in a Region ===");
+        ArrayList<City> capitalInRegion = capitalReport.getCapitalCitiesByRegion("North America");
+        capitalReport.printCapitalCities(capitalInRegion);
 
         // Disconnect from database
         a.disconnect();
     }
+
 }
+
 
