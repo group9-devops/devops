@@ -1,6 +1,7 @@
 name: A workflow for the SQL app
 on: push
 
+
 jobs:
   build:
     name: Java CI build workflow
