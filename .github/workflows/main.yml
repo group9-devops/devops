@@ -1,9 +1,9 @@
-name: A workflow for my Hello World App
+name: A workflow for the SQL app
 on: push
 
 jobs:
   build:
-    name: Java CI build
+    name: Java CI build workflow
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -16,7 +16,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Unit Tests
-        run: mvn -Dtest=com.napier.devops.AppTest test
+        run: mvn -Dtest=AppTest test
       - name: Package and Run docker compose
         run: |
           mvn package -DskipTests
