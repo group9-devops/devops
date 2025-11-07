@@ -57,43 +57,6 @@ public class App
             }
         }
     }
-    public ArrayList<City> getAllCitiesInContinent(String continent) {
-        try {
-            // Create an SQL statement using a prepared statement for safety
-            String strSelect =
-                    "SELECT city.Name AS CityName, " +
-                            "country.Name AS Country, " +
-                            "country.Continent AS Continent, " +
-                            "city.Population AS Population " +
-                            "FROM city " +
-                            "JOIN country ON city.CountryCode = country.Code " +
-                            "WHERE country.Continent = ? " +
-                            "ORDER BY city.Population DESC";
-
-            PreparedStatement pstmt = con.prepareStatement(strSelect);
-            pstmt.setString(1, continent);
-
-            // Execute SQL statement
-            ResultSet rset = pstmt.executeQuery();
-
-            // Extract city information
-            ArrayList<City> cities = new ArrayList<>();
-            while (rset.next()) {
-                City city = new City();
-                city.name = rset.getString("CityName");
-                city.country = rset.getString("Country");
-                city.district = rset.getString("Continent"); // optional, if City has this field
-                city.population = rset.getInt("Population");
-                cities.add(city);
-            }
-
-            return cities;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get the cities for continent: " + continent);
-            return null;
-        }
-    }
 
     /**
      * Closes the connection to the MySQL database if it is active.
@@ -123,8 +86,10 @@ public class App
     {
         App a = new App();
         a.connect();
+        cont_pop printcontValues = new cont_pop();
 
-        ArrayList<City> cities = a.getAllCitiesInContinent("Africa");
+        System.out.println("ALl Continents");
+        System.out.println();
 
         a.disconnect();
     }
