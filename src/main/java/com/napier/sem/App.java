@@ -88,9 +88,6 @@ public class App
 //        PrintCountry.getAllCountriesByPopulationDescending(a.con);
         PrintCountry.getAllCountriesBySpecificContinent(a.con,"Africa");
         PrintCountry.getAllCountriesBySpecificRegion(a.con,"Caribbean");
-
-
-]''
         // Disconnect from database
         a.disconnect();
 
