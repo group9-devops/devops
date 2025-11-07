@@ -1,0 +1,36 @@
+@startuml
+
+left to right direction
+
+' Define the actor on the left
+actor DA as "Data Analyst"
+
+' Define the external system
+rectangle DB as "Database"
+
+' Define the system and its use cases in the center
+rectangle "Population Report System" {
+    usecase UC1 as "Produce Country Report"
+    usecase UC2 as "Produce City Report"
+    usecase UC3 as "Produce Capital City Report"
+    usecase UC5 as "Produce Population Report"
+    usecase UC4 as "Produce Language Report"
+}
+
+' Connect actor to use cases
+DA -- UC1
+DA -- UC2
+DA -- UC3
+DA -- UC4
+DA -- UC5
+
+' Connect use cases to external database
+UC1 -- DB
+UC2 -- DB
+UC3 -- DB
+UC4 -- DB
+UC5 -- DB
+
+@enduml
+
+

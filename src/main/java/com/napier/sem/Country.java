@@ -5,7 +5,7 @@ import java.sql.Statement;
 import java.sql.Connection;
 
 /**
- * Represents a Country
+ * Represents details of a  Country
  */
 public class Country {
     /**
