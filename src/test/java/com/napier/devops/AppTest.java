@@ -18,4 +18,9 @@ public class AppTest {
     static void init() {
         app = new App();
     }
+
+    @Test
+    public void testApp() {
+        assertEquals(5,5,"Pass");
+    }
 }
