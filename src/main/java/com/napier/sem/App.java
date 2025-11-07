@@ -85,7 +85,9 @@ public class App
         // Connect to database
         a.connect();
         PrintCountryValues PrintCountry = new PrintCountryValues();
-        PrintCountry.getAllCountriesByPopulationDescending(a.con);
+//        PrintCountry.getAllCountriesByPopulationDescending(a.con);
+        PrintCountry.getAllCountriesBySpecificContinent(a.con,"Africa");
+        PrintCountry.getAllCountriesBySpecificRegion(a.con,"Caribbean");
 
 
 
