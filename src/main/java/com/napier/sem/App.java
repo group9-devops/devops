@@ -58,42 +58,7 @@ public class App
             }
         }
     }
-    public ArrayList<City> getCitiesByCountry(String countryName) {
-        try {
-            // Create an SQL prepared statement
-            String strSelect =
-                    "SELECT city.Name AS CityName, " +
-                            "country.Name AS Country, " +
-                            "city.Population AS Population " +
-                            "FROM city " +
-                            "JOIN country ON city.CountryCode = country.Code " +
-                            "WHERE country.Name = ? " +   // Filter by country name
-                            "ORDER BY city.Population DESC"; // Order by population descending
 
-            PreparedStatement pstmt = con.prepareStatement(strSelect);
-            pstmt.setString(1, countryName); // Set the country name parameter
-
-            // Execute SQL statement
-            ResultSet rset = pstmt.executeQuery();
-
-            // Extract city information
-            ArrayList<City> cities = new ArrayList<>();
-            while (rset.next()) {
-                City city = new City();
-                city.name = rset.getString("CityName");
-                city.country = rset.getString("Country");
-                city.population = rset.getInt("Population");
-                cities.add(city);
-            }
-
-            return cities;
-
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get the cities for country: " + countryName);
-            return null;
-        }
-    }
     /**
      * Closes the connection to the MySQL database if it is active.
      */
@@ -118,15 +83,20 @@ public class App
      *
      * @param args command-line arguments
      */
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
+        // Create new Application
         App a = new App();
 
+        // Connect to database
         a.connect();
 
-        ArrayList<City> ArrayList = a.getCitiesByCountry("");
+        // Extract city information for a specific country
+        CountryReport countryReport = new CountryReport();
+        countryReport.getCitiesByCountry(a.con, "India");
 
 
+        // Disconnect from database
         a.disconnect();
     }
 }
