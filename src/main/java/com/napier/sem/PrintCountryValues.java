@@ -7,94 +7,79 @@ import java.util.ArrayList;
 import java.sql.PreparedStatement;
 
 /**
- * Class responsible for retrieving and printing lists of Country objects
- * from the database based on various criteria, such as population order,
- * continent, or region.
+ * Class responsible for retrieving and printing lists of Country objects.
  */
 public class PrintCountryValues {
 
     /**
-     * Retrieves all countries from the database, orders them by population
-     * in descending order, and prints the results to the console.
+     * The active database connection.
+     */
+    private Connection con;
+
+    /**
      * @param con The active database connection object.
      */
-    public void getAllCountriesByPopulationDescending(Connection con) {
-        // List to hold the retrieved Country objects
-        ArrayList<Country> countries = new ArrayList<>();
-
-        try {
-            Statement stmt = con.createStatement();
-            String sqlStatement = "SELECT Code, Name, Continent, Region, Population, Capital FROM country ORDER BY Population DESC";
-
-            ResultSet rset = stmt.executeQuery(sqlStatement);
-
-            // Loop through the result set and map data to Country objects
-            while (rset.next()) {
-                Country country = new Country();
-
-
-                country.code = rset.getString("Code");
-                country.name = rset.getString("Name");
-                country.continent = rset.getString("Continent");
-                country.population = rset.getInt("Population");
-                country.capital = rset.getString("Capital");
-                country.region = rset.getString("Region");
-
-                countries.add(country);
-            }
-
-            rset.close();
-            stmt.close();
-
-        } catch (Exception e) {
-
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get countries");
-        }
-
-
-
-        System.out.printf("%-30s %-20s %-15s %-20s %-30s %15s\n",
-                "Name", "Continent", "Region", "Capital", "Code", "Population");
-
-
-        System.out.println("--------------------------------------------------------------------------------------------------------------");
-
-        for (Country country : countries) {
-            System.out.printf("%-30s %-20s %-15s %-20s %-30s %,15d\n",
-                    country.name,
-                    country.continent,
-                    country.region,
-                    country.capital,
-                    country.code,
-                    country.population
-            );
-        }
-
+    public PrintCountryValues(Connection con) {
+        this.con = con;
     }
 
     /**
-     * Retrieves all countries filtered by a specific column (place) and value (name),
-     * ordered by population in descending order.
-     * This method uses a PreparedStatement.
-     *
-     * @param con The active database connection object.
-     * @param place The database column name to filter on (e.g., "Continent", "Region").
-     * @param name The specific value to filter by (e.g., "Asia", "Caribbean").
+     * Retrieves all countries from the database, ordered by population.
+     * @return An ArrayList of Country objects, or null on failure.
      */
-    public void getAllCountriesBySpecificPlace(Connection con, String place, String name) {
+    public ArrayList<Country> getCountriesByPopulation() {
+        String sql = """
+                SELECT Code, Name, Continent, Region, Population, Capital 
+                FROM country 
+                ORDER BY Population DESC
+                """;
+        return executeCountryQuery(sql);
+    }
+
+    /**
+     * Retrieves all countries in a specific continent, ordered by population.
+     * @param continent The name of the continent.
+     * @return An ArrayList of Country objects, or null on failure.
+     */
+    public ArrayList<Country> getCountriesByContinent(String continent) {
+        String sql = """
+                SELECT Code, Name, Continent, Region, Population, Capital 
+                FROM country 
+                WHERE Continent = ? 
+                ORDER BY Population DESC
+                """;
+        return executeCountryQuery(sql, continent);
+    }
+
+    /**
+     * Retrieves all countries in a specific region, ordered by population.
+     * @param region The name of the region.
+     * @return An ArrayList of Country objects, or null on failure.
+     */
+    public ArrayList<Country> getCountriesByRegion(String region) {
+        String sql = """
+                SELECT Code, Name, Continent, Region, Population, Capital 
+                FROM country 
+                WHERE Region = ? 
+                ORDER BY Population DESC
+                """;
+        return executeCountryQuery(sql, region);
+    }
+
+    /**
+     * Private helper method to execute SQL queries and map results to Country objects.
+     * @param sql The SQL query to execute.
+     * @param params Optional query parameters for the PreparedStatement.
+     * @return A list of Country objects, or null if an error occurs.
+     */
+    private ArrayList<Country> executeCountryQuery(String sql, String... params) {
         ArrayList<Country> countries = new ArrayList<>();
 
-        try {
-
-            String sqlStatement = "SELECT Code, Name, Continent, Region, Population, Capital FROM country WHERE " + place + " = ? ORDER BY Population DESC";
-
-
-            PreparedStatement pstmt = con.prepareStatement(sqlStatement);
-
-
-            pstmt.setString(1, name);
-
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            // Bind parameters if they are provided
+            for (int i = 0; i < params.length; i++) {
+                pstmt.setString(i + 1, params[i]);
+            }
 
             ResultSet rset = pstmt.executeQuery();
 
@@ -108,27 +93,39 @@ public class PrintCountryValues {
                 country.region = rset.getString("Region");
                 countries.add(country);
             }
-
-            // Close resources
-            rset.close();
-            pstmt.close();
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            System.out.println("Failed to get countries");
+            System.out.println("Failed to execute country query.");
+            return null;
         }
 
+        return countries;
+    }
 
+    /**
+     * Prints a list of countries to the console in a formatted table.
+     * (This method is unchanged as it doesn't use the database connection)
+     * @param countries The list of countries to print.
+     */
+    public void printCountries(ArrayList<Country> countries) {
+        // Check for null or empty list
+        if (countries == null) {
+            System.out.println("No countries found.");
+            return;
+        }
 
+        if (countries.isEmpty()) {
+            System.out.println("No countries found.");
+            return;
+        }
 
         System.out.printf("%-30s %-20s %-15s %-20s %-30s %15s\n",
                 "Name", "Continent", "Region", "Capital", "Code", "Population");
-
-
         System.out.println("--------------------------------------------------------------------------------------------------------------");
 
-
         for (Country country : countries) {
+            if (country == null) continue;
+
             System.out.printf("%-30s %-20s %-15s %-20s %-30s %,15d\n",
                     country.name,
                     country.continent,
@@ -138,24 +135,32 @@ public class PrintCountryValues {
                     country.population
             );
         }
+    }
 
+
+    /**
+     * Retrieves AND prints all countries, ordered by population.
+     */
+    public void getAllCountriesByPopulationDescending() {
+        ArrayList<Country> countries = getCountriesByPopulation();
+        printCountries(countries);
     }
 
     /**
-     * @param continent The name of the continent (e.g., "Asia").
+     * Retrieves AND prints all countries for a specific continent.
+     * @param continent The name of the continent.
      */
-    public void getAllCountriesBySpecificContinent(Connection con, String continent) {
-
-        getAllCountriesBySpecificPlace(con, "Continent", continent);
+    public void getAllCountriesBySpecificContinent(String continent) {
+        ArrayList<Country> countries = getCountriesByContinent(continent);
+        printCountries(countries);
     }
 
     /**
-
-     * @param region The name of the region (e.g., "Caribbean").
+     * Retrieves AND prints all countries for a specific region.
+     * @param region The name of the region.
      */
-    public void getAllCountriesBySpecificRegion(Connection con, String region) {
-
-        getAllCountriesBySpecificPlace(con, "Region", region);
+    public void getAllCountriesBySpecificRegion(String region) {
+        ArrayList<Country> countries = getCountriesByRegion(region);
+        printCountries(countries);
     }
-
 }

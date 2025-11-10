@@ -1,26 +1,100 @@
 package com.napier.devops;
 
-import com.napier.sem.App;
+import com.napier.sem.PrintCountryValues;
 import com.napier.sem.Country;
-import com.napier.sem.City;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
+import java.sql.Connection;
 import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for the PrintCountryValues class.
+ * These tests ensure the class can handle null, empty, and populated lists
+ */
 public class AppTest {
-    static App app;
+
+    static PrintCountryValues printer;
 
     @BeforeAll
     static void init() {
-        app = new App();
+        Connection con = null;
+        printer = new PrintCountryValues(con);
     }
 
     @Test
-    public void testApp() {
-        assertEquals(5,5,"Pass");
+    void testPrintCountriesNull() {
+        try {
+            printer.printCountries(null);
+        } catch (Exception e) {
+            fail("Method threw an exception on null input: " + e.getMessage());
+        }
+    }
+
+    @Test
+    void testPrintCountriesEmpty() {
+        try {
+            printer.printCountries(new ArrayList<>());
+        } catch (Exception e) {
+            fail("Method threw an exception on empty list: " + e.getMessage());
+        }
+    }
+
+    @Test
+    void testPrintCountriesWithData() {
+        try {
+            ArrayList<Country> countries = new ArrayList<>();
+
+            // Create some dummy data
+            Country c1 = new Country();
+            c1.name = "Aruba";
+            c1.continent = "North America";
+            c1.region = "Caribbean";
+            c1.capital = "Beatrix";
+            c1.code = "ABW";
+            c1.population = 103000;
+            countries.add(c1);
+
+            Country c2 = new Country();
+            c2.name = "Afghanistan";
+            c2.continent = "Asia";
+            c2.region = "Southern and Central Asia";
+            c2.capital = "Kabul";
+            c2.code = "AFG";
+            c2.population = 652090;
+            countries.add(c2);
+
+            // Run the print method
+            printer.printCountries(countries);
+
+        } catch (Exception e) {
+            fail("Method threw an exception when printing populated list: " + e.getMessage());
+        }
+    }
+
+    @Test
+    void testPrintCountriesWithSpecifiedContinent() {
+        try {
+            ArrayList<Country> countries = new ArrayList<>();
+            Country c1 = new Country();
+            c1.name = "Aruba";
+            c1.continent = "North America";
+            c1.region = "Caribbean";
+            c1.capital = "Beatrix";
+            c1.code = "ABW";
+            c1.population = 103000;
+            countries.add(c1);
+
+            PrintCountryValues printContinet = new PrintCountryValues(null);
+            ArrayList<Country> countries2 = printContinet.getCountriesByContinent("Africa");
+            assertEquals(54, countries2.size());
+
+
+
+
+        } catch (Exception e) {
+            fail("Method threw an exception when printing populated list: " + e.getMessage());
+        }
     }
 }

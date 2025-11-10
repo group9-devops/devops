@@ -88,10 +88,10 @@ public class App
 
         // Connect to database
         a.connect();
-        PrintCountryValues PrintCountry = new PrintCountryValues();
+        PrintCountryValues PrintCountry = new PrintCountryValues(a.con);
 //        PrintCountry.getAllCountriesByPopulationDescending(a.con);
-        PrintCountry.getAllCountriesBySpecificContinent(a.con,"Africa");
-        PrintCountry.getAllCountriesBySpecificRegion(a.con,"Caribbean");
+        PrintCountry.getAllCountriesBySpecificContinent("Africa");
+        PrintCountry.getAllCountriesBySpecificRegion("Caribbean");
         // Disconnect from database
         a.disconnect();
     }
