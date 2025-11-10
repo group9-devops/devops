@@ -72,7 +72,4 @@ public class AppTest {
             fail("Method threw an exception when printing populated list: " + e.getMessage());
         }
     }
-
-
-
 }
