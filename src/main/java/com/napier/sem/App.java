@@ -93,7 +93,6 @@ public class App
 
         // Extract city information for a specific country
         CountryReport countryReport = new CountryReport();
-        countryReport.getCitiesByCountry(a.con, "India");
 
 
         // Disconnect from database
