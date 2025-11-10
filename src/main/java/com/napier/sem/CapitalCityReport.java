@@ -133,24 +133,6 @@ public class CapitalCityReport {
         }
     }
 
-    /**
-     * Filters a list of cities by the given region.
-     *
-     * @param cities  the list of City objects to filter
-     * @param country the region name to filter by
-     * @return a list of City objects that belong to the specified region
-     */
-
-    public ArrayList<City> filterCitiesByCountry(ArrayList<City> cities, String country) {
-        ArrayList<City> filtered = new ArrayList<>();
-        for (City city : cities) {
-            if (city != null && city.Country.equalsIgnoreCase(country)) {
-                filtered.add(city);
-            }
-        }
-        return filtered;
-    }
-
 }
 
 
