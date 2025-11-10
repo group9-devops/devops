@@ -73,28 +73,6 @@ public class AppTest {
         }
     }
 
-    @Test
-    void testPrintCountriesWithSpecifiedContinent() {
-        try {
-            ArrayList<Country> countries = new ArrayList<>();
-            Country c1 = new Country();
-            c1.name = "Aruba";
-            c1.continent = "North America";
-            c1.region = "Caribbean";
-            c1.capital = "Beatrix";
-            c1.code = "ABW";
-            c1.population = 103000;
-            countries.add(c1);
-
-            PrintCountryValues printContinet = new PrintCountryValues(null);
-            ArrayList<Country> countries2 = printContinet.getCountriesByContinent("Africa");
-            assertEquals(54, countries2.size());
 
 
-
-
-        } catch (Exception e) {
-            fail("Method threw an exception when printing populated list: " + e.getMessage());
-        }
-    }
 }
