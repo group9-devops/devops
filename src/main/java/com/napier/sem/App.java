@@ -86,10 +86,8 @@ public class App
     {
         App a = new App();
         a.connect();
-        cont_pop printcontValues = new cont_pop();
-
-        System.out.println("ALl Continents");
-        System.out.println();
+        PrintCityValues printCityValues = new PrintCityValues();
+        printCityValues.getCitiesByContinent(a.con);
 
         a.disconnect();
     }
