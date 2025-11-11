@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * The App class manages the connection between the application
@@ -12,7 +13,7 @@ public class App
     /**
      * Connection object for interacting with the MySQL database.
      */
-    private Connection con = null;
+    public Connection con = null;
 
     /**
      * Establishes a connection to the MySQL database.
@@ -44,6 +45,11 @@ public class App
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
+            }
+
+            if (con == null) {
+                System.out.println("Could not establish database connection after retries.");
+                System.exit(-1);
             }
         }
     }
@@ -85,8 +91,24 @@ public class App
 
         // Connect to database
 
-        PrintCountryValues PrintCountry = new PrintCountryValues();
-        PrintCountry.getAllCountriesByPopulationDescending(a.con);
+        // Create report instance
+        CapitalCityReport capitalReport = new CapitalCityReport(a.con);
+
+        // --- 1. All Capital Cities ---
+        System.out.println("\n=== All Capital Cities ===");
+        ArrayList<City> allCapitals = capitalReport.getAllCapitalCities();
+        capitalReport.printCapitalCities(allCapitals);
+
+        // --- 2. Capital Cities in a Continent ---
+        System.out.println("\n=== Capital Cities in Continent ===");
+        ArrayList<City> capitalInContinent = capitalReport.getCapitalCitiesByContinent("Asia");
+        capitalReport.printCapitalCities(capitalInContinent);
+
+        // --- 3. Capital Cities in a Region ---
+        System.out.println("\n=== Capital Cities in a Region ===");
+        ArrayList<City> capitalInRegion = capitalReport.getCapitalCitiesByRegion("North America");
+        capitalReport.printCapitalCities(capitalInRegion);
+
 
 
 
