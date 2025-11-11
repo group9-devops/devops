@@ -26,7 +26,7 @@ public class CapitalCityIntegrationTest {
 
     /**
      * test whether the application is able to
-     * access the first correct element of cities in the program*/
+     * access the first correct element in the program*/
 
     @Test
     void getAllCapitalCities() {

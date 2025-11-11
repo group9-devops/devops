@@ -2,7 +2,6 @@ name: A workflow for my SQL App
 on:
   push:
     branches:
-      - master
       - capital-city-report
 
 jobs:
