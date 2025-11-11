@@ -12,7 +12,7 @@ public class App
     /**
      * Connection object for interacting with the MySQL database.
      */
-    private Connection con = null;
+    public Connection con = null;
 
     /**
      * Establishes a connection to the MySQL database.
