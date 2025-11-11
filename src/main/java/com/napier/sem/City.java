@@ -11,11 +11,11 @@ public class City {
     /**
      * City's name
      */
-    public String name;
+    public String Name;
     /**
      * City's country (Country Code)
      */
-    public String country;
+    public String Country;
     /**
      * City's District
      */
@@ -23,7 +23,7 @@ public class City {
     /**
      * City's Population
      */
-    public int population;
+    public int Population;
     /**
      * True or False if City is a capital
      */

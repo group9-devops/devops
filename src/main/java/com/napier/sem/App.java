@@ -91,9 +91,8 @@ public class App
         PrintCountryValues PrintCountry = new PrintCountryValues();
         PrintCountry.getAllCountriesByPopulationDescending(a.con);
 
-        UrbanReport test =  new UrbanReport();
-        test.getPopulationOfWorld(a.con);
-        test.getUrbanPopulation(a.con);
+        UrbanReport test =  new UrbanReport(a.con);
+        test.getUrbanPopulationWorld();
 
         // Disconnect from database
         a.disconnect();
