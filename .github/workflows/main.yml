@@ -18,6 +18,8 @@ jobs:
           distribution: 'adopt'
       - name: Unit Tests
         run: mvn -Dtest=com.napier.devops.UrbanReportTest test
+      - name: Integration Test
+        run: mvn -Dtest=com.napier.devops.UrbanReportIntegration test
       - name: Package and Run docker compose
         run: |
           mvn package -DskipTests
