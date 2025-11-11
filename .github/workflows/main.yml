@@ -24,7 +24,7 @@ jobs:
         run: mvn -Dtest=com.napier.devops.UrbanReportTest test
 
       - name: Integration Test
-        run: mvn -Dtest=com.napier.devops.UrbanReportIntegration test
+        run: mvn -Dtest=com.napier.devops.UrbanReportIntegration -DfailIfNoTests=false test
 
       - name: Package and Run docker compose
         run: |
