@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
+
 public class CapitalCityIntegrationTest {
 
     static App app;
@@ -21,6 +23,10 @@ public class CapitalCityIntegrationTest {
         app.connect("localhost:3308", 30000);  // Connect first
         report = new CapitalCityReport(app.con);
     }
+
+    /**
+     * test whether the application is able to
+     * access the first correct element of cities in the program*/
 
     @Test
     void getAllCapitalCities() {
