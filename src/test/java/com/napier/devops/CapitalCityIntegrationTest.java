@@ -38,5 +38,39 @@ public class CapitalCityIntegrationTest {
         assertNotNull(firstCity.Country);
         assertTrue(firstCity.Population > 0);
     }
+
+    @Test
+    void getAllCapitalCitiesByContinent() {
+        ArrayList<City> cities = report.getCapitalCitiesByContinent("Africa");
+
+        assertNotNull(cities, "City list should not be null.");
+        assertFalse(cities.isEmpty(), "City list should not be empty.");
+
+        City firstCity = cities.get(0);
+        System.out.printf("Top capital city: %s, %s (%,d)%n",
+                firstCity.Name, firstCity.Country, firstCity.Population);
+
+        // Sanity checks instead of hardcoded values
+        assertNotNull(firstCity.Name);
+        assertNotNull(firstCity.Country);
+        assertTrue(firstCity.Population > 0);
+    }
+
+    @Test
+    void getAllCapitalCitiesByRegion() {
+        ArrayList<City> cities = report.getCapitalCitiesByRegion("North America");
+
+        assertNotNull(cities, "City list should not be null.");
+        assertFalse(cities.isEmpty(), "City list should not be empty.");
+
+        City firstCity = cities.get(0);
+        System.out.printf("Top capital city: %s, %s (%,d)%n",
+                firstCity.Name, firstCity.Country, firstCity.Population);
+
+        // Sanity checks instead of hardcoded values
+        assertNotNull(firstCity.Name);
+        assertNotNull(firstCity.Country);
+        assertTrue(firstCity.Population > 0);
+    }
 }
 
