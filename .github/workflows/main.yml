@@ -1,24 +1,24 @@
-name: Java CI Build
+name: A workflow for the SQL app
 on: push
+
 
 jobs:
   build:
-    name: Check DB connection
+    name: Java CI build workflow
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Set up JDK 17 using Temurin
-        uses: actions/setup-java@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
         with:
           java-version: '17'
-          distribution: 'temurin'
-      - name: Build with Maven
-        run: mvn package
-      - name: Run docker compose
-        run: docker compose up --abort-on-container-exit
-
-
-
+          distribution: 'adopt'
+      - name: Unit Tests
+        run: mvn -Dtest=com.napier.devops.CapitalCityReportTest test
+      - name: Package and Run docker compose
+        run: |
+          mvn package -DskipTests
+          docker compose up --abort-on-container-exit
