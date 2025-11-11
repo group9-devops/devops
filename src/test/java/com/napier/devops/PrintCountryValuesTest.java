@@ -235,3 +235,4 @@ class PrintCountryValuesTest {
         report.printCountries(countries);
     }
 }
+
