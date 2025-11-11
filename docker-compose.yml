@@ -1,12 +1,27 @@
 services:
+  db:
+    image: mysql:8.0
+    container_name: devops-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: world
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./db/world.sql:/docker-entrypoint-initdb.d/world.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-pexample"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-  # Build app from Dockerfile in same folder
   app:
     build: .
+    container_name: devops-app
+    depends_on:
+      db:
+        condition: service_healthy
 
-  # Build the db as name db from the Dockerfile in the db folder
-  # Both ports set as 3306 to avoid XPlugin errors on MacOS.
-  db:
-    build: db/.
-    ports:
-      - "3306:3306"
+
+
