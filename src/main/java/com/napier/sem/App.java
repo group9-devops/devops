@@ -85,9 +85,9 @@ public class App
 
         // Connect to database
         if(args.length < 1){
-            a.connect("localhost:3306", 0);
+            a.connect("localhost:3308", 30000);
         }else{
-            a.connect("db:3306", 3000);
+            a.connect(args[0], Integer.parseInt(args[1]));
         }
         PrintCountryValues PrintCountry = new PrintCountryValues(a.con);
 //        PrintCountry.getAllCountriesByPopulationDescending(a.con);
