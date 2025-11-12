@@ -19,6 +19,10 @@ public class CountryReportIntegrationTest {
     static App app;
     static CountryReport report;
 
+    /**
+     * Initializes the application and report before all tests.
+     * Connects to the database and prepares the Country Report instance.
+     */
     @BeforeAll
     static void init() {
         app = new App();
