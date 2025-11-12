@@ -1,8 +1,5 @@
 name: A workflow for my SQL App
-on:
-  push:
-    branches:
-      - capital-city-report
+on: push
 
 jobs:
   UnitTests:

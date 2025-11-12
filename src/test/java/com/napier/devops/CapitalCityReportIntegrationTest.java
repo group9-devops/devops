@@ -12,11 +12,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 
-public class CapitalCityIntegrationTest {
+/**
+ * Integration tests for the CapitalCityReport class.
+ * These tests verify that the application can retrieve capital city data
+ * from the database and validate basic properties of the returned results.
+ */
+public class CapitalCityReportIntegrationTest {
 
+    /** Application instance used to establish database connection. */
     static App app;
+
+    /** Report instance used to query capital city data. */
     static CapitalCityReport report;
 
+    /**
+     * Initializes the application and report before all tests.
+     * Connects to the database and prepares the CapitalCityReport instance.
+     */
     @BeforeAll
     static void init() {
         app = new App();
@@ -25,9 +37,10 @@ public class CapitalCityIntegrationTest {
     }
 
     /**
-     * test whether the application is able to
-     * access the first correct element in the program*/
-
+     * Tests whether the application can retrieve all capital cities.
+     * Verifies that the list is not null, not empty, and that the first city
+     * has valid name, country, and population values.
+     */
     @Test
     void getAllCapitalCities() {
         ArrayList<City> cities = report.getAllCapitalCities();
@@ -45,6 +58,11 @@ public class CapitalCityIntegrationTest {
         assertTrue(firstCity.Population > 0);
     }
 
+    /**
+     * Tests whether the application can retrieve capital cities by continent.
+     * Verifies that the list for "Africa" is not null, not empty, and that
+     * the first city has valid name, country, and population values.
+     */
     @Test
     void getAllCapitalCitiesByContinent() {
         ArrayList<City> cities = report.getCapitalCitiesByContinent("Africa");
@@ -62,6 +80,11 @@ public class CapitalCityIntegrationTest {
         assertTrue(firstCity.Population > 0);
     }
 
+    /**
+     * Tests whether the application can retrieve capital cities by region.
+     * Verifies that the list for "North America" is not null, not empty, and that
+     * the first city has valid name, country, and population values.
+     */
     @Test
     void getAllCapitalCitiesByRegion() {
         ArrayList<City> cities = report.getCapitalCitiesByRegion("North America");
@@ -78,5 +101,28 @@ public class CapitalCityIntegrationTest {
         assertNotNull(firstCity.Country);
         assertTrue(firstCity.Population > 0);
     }
+
+    /**
+     * Tests whether the application can handle an invalid
+     * continent, uses assertTrue to check that an empty list is returned
+     * otherwise results in an error*/
+    @Test
+    void getCapitalCitiesByInvalidContinent() {
+        ArrayList<City> cities = report.getCapitalCitiesByContinent("Afr");
+        assertNotNull(cities);
+        assertTrue(cities.isEmpty(), "Expected empty list for non-existent continent.");
+    }
+
+    /**
+     * Tests whether the application can handle an invalid
+     * continent, uses assertTrue to check that an empty list is returned
+     * otherwise results in an error*/
+    @Test
+    void getCapitalCitiesByInvalidRegion() {
+        ArrayList<City> cities = report.getCapitalCitiesByRegion("Tokyo");
+        assertNotNull(cities);
+        assertTrue(cities.isEmpty(), "Expected empty list for non-existent region.");
+    }
+
 }
 
