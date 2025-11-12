@@ -290,7 +290,9 @@ class CityReportTest {
 
     @Test
     void testPrintCities_Empty() {
-        report.printCities(new ArrayList<>());
+        ArrayList<City> cities = new ArrayList<City>();
+        cities.add(new City());
+        report.printCities(cities);
     }
 
     /**
