@@ -15,7 +15,7 @@ public class PrintCountryValuesIntegrationTest {
     @BeforeAll
     static void init() {
         app = new App();
-        app.connect("localhost:3307", 30000);  // Connect first
+        app.connect("localhost:3308", 30000);  // Connect first
         report = new PrintCountryValues(app.con);
     }
 
