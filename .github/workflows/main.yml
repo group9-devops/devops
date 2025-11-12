@@ -42,13 +42,15 @@ jobs:
           docker stop world
           docker rm world
           docker image rm database
-      - name: CodeCov
-        uses: codecov/codecov-action@v2
+      - name: Codecov
+        uses: codecov/codecov-action@v4
         with:
-          # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          directory: ./target/site/jacoco
-          flags: Integration Tests # optional
-          verbose: true # optional (default = false)
+           token: ${{ secrets.CODECOV_TOKEN }}
+           files: ./target/site/jacoco/jacoco.xml
+           flags: Integration Tests
+           fail_ci_if_error: true
+           verbose: true
+
 
   build:
     name: Build and Start Using docker-compose
