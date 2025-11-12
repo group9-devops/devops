@@ -18,6 +18,7 @@ jobs:
       - name: Unit Tests
         run: mvn test
 
+
   IntegrationTests:
     name: Integration Tests
     runs-on: ubuntu-22.04
@@ -35,7 +36,12 @@ jobs:
         run: |
           docker build -t database ./db 
           docker run --name world -dp 3308:3306 database
-          sleep 20
+          # Wait until MySQL is ready
+          echo "Waiting for MySQL to be ready..."
+          until docker exec world mysqladmin ping -h "localhost" --silent; do
+            sleep 2
+          done
+          echo "MySQL is ready! Running integration tests..."
           mvn test
           docker stop world
           docker rm world

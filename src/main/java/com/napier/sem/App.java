@@ -93,26 +93,45 @@ public class App
 
         // Create report instance
         CityReport cityReport = new CityReport(a.con);
+        // Create report instance
+        CapitalCityReport capitalReport = new CapitalCityReport(a.con);
 
-        // --- 1. All Capital Cities ---
+
+        // --- 1. All Cities ---
         System.out.println("\n=== All Cities In The World ===");
         ArrayList<City> allCities = cityReport.printAllCities();
         cityReport.printCities(allCities);
 
-        // --- 2. Capital Cities in a Continent ---
+        // --- 2. Cities in a Continent ---
         System.out.println("\n=== All Cities in Continent ===");
         ArrayList<City> cityInContinent = cityReport.printCitiesByContinent("Asia");
         cityReport.printCities(cityInContinent);
 
-        // --- 3. Capital Cities in a Region ---
+        // --- 3. Cities in a Region ---
         System.out.println("\n=== Capital Cities in a Region ===");
         ArrayList<City> cityInRegion = cityReport.printCitiesByRegion("South America");
         cityReport.printCities(cityInRegion);
 
-        // --- 3. Capital Cities in a Region ---
+        // --- 3. Cities in a Region ---
         System.out.println("\n=== Capital Cities in a District ===");
         ArrayList<City> cityInDistrict = cityReport.printCitiesByDistrict("Oran");
         cityReport.printCities(cityInDistrict);
+
+
+        // --- 1. All Capital Cities ---
+        System.out.println("\n=== All Capital Cities ===");
+        ArrayList<City> allCapitals = capitalReport.getAllCapitalCities();
+        capitalReport.printCapitalCities(allCapitals);
+
+        // --- 2. Capital Cities in a Continent ---
+        System.out.println("\n=== Capital Cities in Continent ===");
+        ArrayList<City> capitalInContinent = capitalReport.getCapitalCitiesByContinent("Asia");
+        capitalReport.printCapitalCities(capitalInContinent);
+
+        // --- 3. Capital Cities in a Region ---
+        System.out.println("\n=== Capital Cities in a Region ===");
+        ArrayList<City> capitalInRegion = capitalReport.getCapitalCitiesByRegion("North America");
+        capitalReport.printCapitalCities(capitalInRegion);
 
 
 
