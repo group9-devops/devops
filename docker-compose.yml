@@ -1,3 +1,4 @@
+
 services:
   db:
     image: mysql:8.0
@@ -22,6 +23,3 @@ services:
     depends_on:
       db:
         condition: service_healthy
-
-
-

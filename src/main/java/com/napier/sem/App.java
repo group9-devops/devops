@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * The App class manages the connection between the application
@@ -12,7 +13,7 @@ public class App
     /**
      * Connection object for interacting with the MySQL database.
      */
-    private Connection con = null;
+    public Connection con = null;
 
     /**
      * Establishes a connection to the MySQL database.
@@ -44,6 +45,11 @@ public class App
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
+            }
+
+            if (con == null) {
+                System.out.println("Could not establish database connection after retries.");
+                System.exit(-1);
             }
         }
     }
@@ -83,10 +89,30 @@ public class App
             a.connect("db:3306", 3000);
         }
 
-        // Connect to database
 
-        PrintCountryValues PrintCountry = new PrintCountryValues();
-        PrintCountry.getAllCountriesByPopulationDescending(a.con);
+
+        // Create report instance
+        CityReport cityReport = new CityReport(a.con);
+
+        // --- 1. All Capital Cities ---
+        System.out.println("\n=== All Cities In The World ===");
+        ArrayList<City> allCities = cityReport.printAllCities();
+        cityReport.printCities(allCities);
+
+        // --- 2. Capital Cities in a Continent ---
+        System.out.println("\n=== All Cities in Continent ===");
+        ArrayList<City> cityInContinent = cityReport.printCitiesByContinent("Asia");
+        cityReport.printCities(cityInContinent);
+
+        // --- 3. Capital Cities in a Region ---
+        System.out.println("\n=== Capital Cities in a Region ===");
+        ArrayList<City> cityInRegion = cityReport.printCitiesByRegion("South America");
+        cityReport.printCities(cityInRegion);
+
+        // --- 3. Capital Cities in a Region ---
+        System.out.println("\n=== Capital Cities in a District ===");
+        ArrayList<City> cityInDistrict = cityReport.printCitiesByDistrict("Oran");
+        cityReport.printCities(cityInDistrict);
 
 
 

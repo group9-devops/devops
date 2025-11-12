@@ -1,0 +1,17 @@
+@startuml
+
+actor analyst as "Data Analyst"
+
+rectangle Database
+
+rectangle "Report system" {
+    usecase UC4 as "Get cities by population"
+
+    usecase UCa as "Print report in ascending order"
+
+    analyst - UC4
+    UC4 ..> UCa : include
+    UC4 - Database
+}
+
+@enduml
