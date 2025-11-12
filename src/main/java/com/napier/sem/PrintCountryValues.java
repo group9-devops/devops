@@ -136,34 +136,4 @@ public class PrintCountryValues {
             );
         }
     }
-
-
-    /**
-     * Retrieves AND prints all countries, ordered by population.
-     */
-    public void getAllCountriesByPopulationDescending() {
-        ArrayList<Country> countries = getCountriesByPopulation();
-        printCountries(countries);
-    }
-
-    /**
-     * Retrieves AND prints all countries for a specific continent.
-     * @param continent The name of the continent.
-     */
-    public void getAllCountriesBySpecificContinent(String continent) {
-        ArrayList<Country> countries = getCountriesByContinent(continent);
-        printCountries(countries);
-    }
-
-    /**
-     * Retrieves AND prints all countries for a specific region.
-     * @param region The name of the region.
-     */
-    public void getAllCountriesBySpecificRegion(String region) {
-        ArrayList<Country> countries = getCountriesByRegion(region);
-        printCountries(countries);
-    }
-
-
-
 }

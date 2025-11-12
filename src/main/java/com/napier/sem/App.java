@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * The App class manages the connection between the application
@@ -90,9 +91,18 @@ public class App
             a.connect(args[0], Integer.parseInt(args[1]));
         }
         PrintCountryValues PrintCountry = new PrintCountryValues(a.con);
-//        PrintCountry.getAllCountriesByPopulationDescending(a.con);
-        PrintCountry.getAllCountriesBySpecificContinent("Africa");
-        PrintCountry.getAllCountriesBySpecificRegion("Caribbean");
+
+        // Print the countries in decending order of population
+        ArrayList<Country> countries = PrintCountry.getCountriesByPopulation();
+        PrintCountry.printCountries(countries);
+
+        // Print the countries in specific region
+        ArrayList<Country> countriesInRegion = PrintCountry.getCountriesByRegion("Caribbean");
+        PrintCountry.printCountries(countriesInRegion);
+
+        // Print the countries in specific continent
+        ArrayList<Country> countriesInContinent = PrintCountry.getCountriesByRegion("North America");
+        PrintCountry.printCountries(countriesInContinent);
         // Disconnect from database
         a.disconnect();
     }
