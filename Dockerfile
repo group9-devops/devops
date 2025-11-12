@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk
-COPY ./target/devops-0.1.0.3-jar-with-dependencies.jar /tmp
+FROM amazoncorretto:17
+COPY ./target/devops.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar", "devops-0.1.0.3-jar-with-dependencies.jar"]
+ENTRYPOINT ["java", "-jar", "devops.jar", "db:3306", "30000"]

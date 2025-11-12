@@ -1,7 +1,6 @@
 package com.napier.sem;
 
 import java.sql.*;
-import java.util.List;
 import java.util.ArrayList;
 
 /**
@@ -9,17 +8,18 @@ import java.util.ArrayList;
  * and a MySQL database. It provides methods to establish and close the
  * connection, with retry handling for connection failures.
  */
-public class App {
+public class App
+{
+    /**
+     * Connection object for interacting with the MySQL database.
+     */
+    public Connection con = null;
 
     /**
-     * Connection to MySQL database.
+     * Establishes a connection to the MySQL database.
+     * Retries up to 10 times, waiting 30 seconds between attempts.
      */
-    private Connection con = null;
-
-    /**
-     * Connects to the MySQL database. Connection string set w/ port 3306.
-     */
-    public void connect() {
+    public void connect(String location, int delay) {
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -33,55 +33,86 @@ public class App {
             System.out.println("Connecting to database...");
             try {
                 // Wait a bit for db to start
-                Thread.sleep(30000);
+                Thread.sleep(delay);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
-                System.out.println("Connection established!");
+                con = DriverManager.getConnection("jdbc:mysql://" + location
+                                + "/world?allowPublicKeyRetrieval=true&useSSL=false",
+                        "root", "example");
+                System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Connection failed. Attempt:  " + Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " +                                  Integer.toString(i));
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
+            }
+
+            if (con == null) {
+                System.out.println("Could not establish database connection after retries.");
+                System.exit(-1);
             }
         }
     }
 
     /**
-     * Disconnect from the MySQL database.
+     * Closes the connection to the MySQL database if it is active.
      */
-    public void disconnect() {
-        if (con != null) {
-            try {
-                // Close connection
+    public void disconnect()
+    {
+        if (con != null)
+        {
+            try
+            {
                 con.close();
-            } catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 System.out.println("Error closing connection to database");
             }
         }
     }
 
-
+    /**
+     * Main entry point of the application.
+     * Connects to the database and then disconnects.
+     *
+     * @param args command-line arguments
+     */
     public static void main(String[] args)
     {
         // Create new Application
         App a = new App();
 
-        // Connect to database
-        a.connect();
+        if(args.length < 1){
+            a.connect("localhost:3307", 0);
+        }else{
+            a.connect("db:3306", 3000);
+        }
 
-        // Extract city information
-        PrintCityValues printCityValues = new PrintCityValues();
 
-        System.out.println("ALL CITIES IN THE WORLD");
-        printCityValues.printAllCities(a.con);
 
-        System.out.println("\nALL CITIES IN THE CONTINENT");
-        printCityValues.printCitiesByContinent(a.con,"Africa");
+        // Create report instance
+        CityReport cityReport = new CityReport(a.con);
 
-        System.out.println("\nALL CITIES IN A REGION");
-        printCityValues.printCitiesByRegion(a.con,"North America");
+        // --- 1. All Capital Cities ---
+        System.out.println("\n=== All Cities In The World ===");
+        ArrayList<City> allCities = cityReport.printAllCities();
+        cityReport.printCities(allCities);
 
+        // --- 2. Capital Cities in a Continent ---
+        System.out.println("\n=== All Cities in Continent ===");
+        ArrayList<City> cityInContinent = cityReport.printCitiesByContinent("Asia");
+        cityReport.printCities(cityInContinent);
+
+        // --- 3. Capital Cities in a Region ---
+        System.out.println("\n=== Capital Cities in a Region ===");
+        ArrayList<City> cityInRegion = cityReport.printCitiesByRegion("South America");
+        cityReport.printCities(cityInRegion);
+
+        // --- 3. Capital Cities in a Region ---
+        System.out.println("\n=== Capital Cities in a District ===");
+        ArrayList<City> cityInDistrict = cityReport.printCitiesByDistrict("Oran");
+        cityReport.printCities(cityInDistrict);
 
 
 
