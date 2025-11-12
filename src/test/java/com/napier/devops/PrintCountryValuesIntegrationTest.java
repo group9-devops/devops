@@ -84,4 +84,23 @@ public class PrintCountryValuesIntegrationTest {
         assertEquals("Western Europe", firstCountry.region, "Region should be Western Europe.");
         assertTrue(firstCountry.population > 0, "Population should be positive.");
     }
+
+    /**
+     * Test to check for the invalid region provided.
+     */
+    @Test
+    void getCountriesByInvalidRegion() {
+        ArrayList<Country> countries = report.getCountriesByRegion("Wes");
+        assertNotNull(countries);
+        assertTrue(countries.isEmpty(), "Expected empty list for non existent region.");
+    }
+    /**
+     * Test to check for the invalid continent provied.
+     */
+    @Test
+    void getCountriesByInvalidContinent() {
+        ArrayList<Country> countries = report.getCountriesByContinent("Eur");
+        assertNotNull(countries);
+        assertTrue(countries.isEmpty(), "Expected empty list for non existent continent.");
+    }
 }
