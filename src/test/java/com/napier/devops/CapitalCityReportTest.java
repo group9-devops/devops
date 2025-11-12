@@ -212,12 +212,14 @@ class CapitalCityReportTest {
     /** Test printCapitalCities handles null correctly */
     @Test
     void testPrintCapitalCities_Null() {
+
         report.printCapitalCities(null);
     }
 
     /** Test printCapitalCities handles empty list */
     @Test
     void testPrintCapitalCities_Empty() {
+
         report.printCapitalCities(new ArrayList<>());
     }
 

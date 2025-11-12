@@ -2,7 +2,7 @@ package com.napier.devops;
 
 import com.napier.sem.App;
 import com.napier.sem.Country;
-import com.napier.sem.PrintCountryValues;
+import com.napier.sem.CountryReport;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -14,17 +14,17 @@ import static org.junit.jupiter.api.Assertions.*;
  * Integration tests for PrintCountryValues class.
  * Verifies that the application can retrieve real data from the MySQL database.
  */
-public class PrintCountryValuesIntegrationTest {
+public class CountryReportIntegrationTest {
 
     static App app;
-    static PrintCountryValues report;
+    static CountryReport report;
 
     @BeforeAll
     static void init() {
         app = new App();
         // Connect to the local MySQL instance (use 3308 for GitHub Actions)
         app.connect("localhost:3308", 30000);
-        report = new PrintCountryValues(app.con);
+        report = new CountryReport(app.con);
     }
 
     /**
@@ -39,12 +39,12 @@ public class PrintCountryValuesIntegrationTest {
 
         Country firstCountry = countries.get(0);
         System.out.printf("Top country: %s (%s) — %,d population%n",
-                firstCountry.name, firstCountry.continent, firstCountry.population);
+                firstCountry.Name, firstCountry.Continent, firstCountry.Population);
 
         // Sanity checks
-        assertNotNull(firstCountry.name, "Country name should not be null.");
-        assertNotNull(firstCountry.continent, "Continent should not be null.");
-        assertTrue(firstCountry.population > 0, "Population should be positive.");
+        assertNotNull(firstCountry.Name, "Country name should not be null.");
+        assertNotNull(firstCountry.Continent, "Continent should not be null.");
+        assertTrue(firstCountry.Population > 0, "Population should be positive.");
     }
 
     /**
@@ -59,11 +59,11 @@ public class PrintCountryValuesIntegrationTest {
 
         Country firstCountry = countries.get(0);
         System.out.printf("Top Asian country: %s (%s) — %,d population%n",
-                firstCountry.name, firstCountry.region, firstCountry.population);
+                firstCountry.Name, firstCountry.Region, firstCountry.Population);
 
         // Sanity checks
-        assertEquals("Asia", firstCountry.continent, "Continent should be Asia.");
-        assertTrue(firstCountry.population > 0, "Population should be positive.");
+        assertEquals("Asia", firstCountry.Continent, "Continent should be Asia.");
+        assertTrue(firstCountry.Population > 0, "Population should be positive.");
     }
 
     /**
@@ -78,11 +78,11 @@ public class PrintCountryValuesIntegrationTest {
 
         Country firstCountry = countries.get(0);
         System.out.printf("Top country in Western Europe: %s — %,d population%n",
-                firstCountry.name, firstCountry.population);
+                firstCountry.Name, firstCountry.Population);
 
         // Sanity checks
-        assertEquals("Western Europe", firstCountry.region, "Region should be Western Europe.");
-        assertTrue(firstCountry.population > 0, "Population should be positive.");
+        assertEquals("Western Europe", firstCountry.Region, "Region should be Western Europe.");
+        assertTrue(firstCountry.Population > 0, "Population should be positive.");
     }
 
     /**

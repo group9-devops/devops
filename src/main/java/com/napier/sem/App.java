@@ -91,10 +91,12 @@ public class App
 
 
 
-        // Create report instance
+        // Create  city report instance
         CityReport cityReport = new CityReport(a.con);
-        // Create report instance
+        // Create capital city report instance
         CapitalCityReport capitalReport = new CapitalCityReport(a.con);
+        // Create capital country report instance
+        CountryReport PrintCountry = new CountryReport(a.con);
 
 
         // --- 1. All Cities ---
@@ -132,6 +134,24 @@ public class App
         System.out.println("\n=== Capital Cities in a Region ===");
         ArrayList<City> capitalInRegion = capitalReport.getCapitalCitiesByRegion("North America");
         capitalReport.printCapitalCities(capitalInRegion);
+
+
+
+
+        // Print the countries in decending order of population
+        System.out.println("\n=== All Countries in The World ===");
+        ArrayList<Country> countries = PrintCountry.getCountriesByPopulation();
+        PrintCountry.printCountries(countries);
+
+        // Print the countries in specific region
+        System.out.println("\n=== All Countries in a Continent ===");
+        ArrayList<Country> countriesInContinent = PrintCountry.getCountriesByContinent("Europe");
+        PrintCountry.printCountries(countriesInContinent);
+
+        // Print the countries in specific continent
+        System.out.println("\n=== All Countries in a Region ===");
+        ArrayList<Country> countriesInRegion = PrintCountry.getCountriesByRegion("North America");
+        PrintCountry.printCountries(countriesInContinent);
 
 
 

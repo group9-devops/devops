@@ -1,6 +1,6 @@
 package com.napier.devops;
 
-import com.napier.sem.PrintCountryValues;
+import com.napier.sem.CountryReport;
 import com.napier.sem.Country;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,19 +15,19 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 /**
- * Unit tests for the {@link PrintCountryValues} class.
+ * Unit tests for the {@link CountryReport} class.
  * This class uses Mockito to simulate database interactions
  * and verify behavior of methods retrieving country data.
  */
-class PrintCountryValuesTest {
+class CountryReportTest {
 
     private Connection mockConnection;
     private PreparedStatement mockPreparedStatement;
     private ResultSet mockResultSet;
-    private PrintCountryValues report;
+    private CountryReport report;
 
     /**
-     * Sets up the mock database connection and initializes the {@link PrintCountryValues} instance
+     * Sets up the mock database connection and initializes the {@link CountryReport} instance
      * before each test. Mocks the behavior of {@link Connection}, {@link PreparedStatement},
      * and {@link ResultSet} to simulate database interactions.
      *
@@ -42,7 +42,7 @@ class PrintCountryValuesTest {
         when(mockConnection.prepareStatement(any(String.class))).thenReturn(mockPreparedStatement);
         when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
 
-        report = new PrintCountryValues(mockConnection);
+        report = new CountryReport(mockConnection);
     }
 
     /**
@@ -63,12 +63,12 @@ class PrintCountryValuesTest {
         assertNotNull(countries);
         assertEquals(1, countries.size());
         Country c = countries.get(0);
-        assertEquals("JPN", c.code);
-        assertEquals("Japan", c.name);
-        assertEquals("Asia", c.continent);
-        assertEquals("Eastern Asia", c.region);
-        assertEquals(125800000, c.population);
-        assertEquals("Tokyo", c.capital);
+        assertEquals("JPN", c.Code);
+        assertEquals("Japan", c.Name);
+        assertEquals("Asia", c.Continent);
+        assertEquals("Eastern Asia", c.Region);
+        assertEquals(125800000, c.Population);
+        assertEquals("Tokyo", c.Capital);
     }
 
     /**
@@ -102,12 +102,12 @@ class PrintCountryValuesTest {
         assertNotNull(countries);
         assertEquals(1, countries.size());
         Country c = countries.get(0);
-        assertEquals("CHN", c.code);
-        assertEquals("China", c.name);
-        assertEquals("Asia", c.continent);
-        assertEquals("Eastern Asia", c.region);
-        assertEquals(1400000000, c.population);
-        assertEquals("Beijing", c.capital);
+        assertEquals("CHN", c.Code);
+        assertEquals("China", c.Name);
+        assertEquals("Asia", c.Continent);
+        assertEquals("Eastern Asia", c.Region);
+        assertEquals(1400000000, c.Population);
+        assertEquals("Beijing", c.Capital);
 
         verify(mockPreparedStatement).setString(1, "Asia");
     }
@@ -158,12 +158,12 @@ class PrintCountryValuesTest {
         assertNotNull(countries);
         assertEquals(1, countries.size());
         Country c = countries.get(0);
-        assertEquals("DEU", c.code);
-        assertEquals("Germany", c.name);
-        assertEquals("Europe", c.continent);
-        assertEquals("Western Europe", c.region);
-        assertEquals(83000000, c.population);
-        assertEquals("Berlin", c.capital);
+        assertEquals("DEU", c.Code);
+        assertEquals("Germany", c.Name);
+        assertEquals("Europe", c.Continent);
+        assertEquals("Western Europe", c.Region);
+        assertEquals(83000000, c.Population);
+        assertEquals("Berlin", c.Capital);
 
         verify(mockPreparedStatement).setString(1, "Western Europe");
     }
@@ -212,20 +212,20 @@ class PrintCountryValuesTest {
     @Test
     void testPrintCountries_Valid() {
         Country c1 = new Country();
-        c1.code = "FRA";
-        c1.name = "France";
-        c1.continent = "Europe";
-        c1.region = "Western Europe";
-        c1.population = 67000000;
-        c1.capital = "Paris";
+        c1.Code = "FRA";
+        c1.Name = "France";
+        c1.Continent = "Europe";
+        c1.Region = "Western Europe";
+        c1.Population = 67000000;
+        c1.Capital = "Paris";
 
         Country c2 = new Country();
-        c2.code = "ESP";
-        c2.name = "Spain";
-        c2.continent = "Europe";
-        c2.region = "Southern Europe";
-        c2.population = 47000000;
-        c2.capital = "Madrid";
+        c2.Code = "ESP";
+        c2.Name = "Spain";
+        c2.Continent = "Europe";
+        c2.Region = "Southern Europe";
+        c2.Population = 47000000;
+        c2.Capital = "Madrid";
 
         ArrayList<Country> countries = new ArrayList<>();
         countries.add(c1);

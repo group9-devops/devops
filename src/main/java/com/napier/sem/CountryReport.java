@@ -2,14 +2,13 @@ package com.napier.sem;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.sql.PreparedStatement;
 
 /**
  * Class responsible for retrieving and printing lists of Country objects.
  */
-public class PrintCountryValues {
+public class CountryReport {
 
     /**
      * The active database connection.
@@ -19,7 +18,7 @@ public class PrintCountryValues {
     /**
      * @param con The active database connection object.
      */
-    public PrintCountryValues(Connection con) {
+    public CountryReport(Connection con) {
         this.con = con;
     }
 
@@ -85,12 +84,12 @@ public class PrintCountryValues {
 
             while (rset.next()) {
                 Country country = new Country();
-                country.code = rset.getString("Code");
-                country.name = rset.getString("Name");
-                country.continent = rset.getString("Continent");
-                country.population = rset.getInt("Population");
-                country.capital = rset.getString("Capital");
-                country.region = rset.getString("Region");
+                country.Code = rset.getString("Code");
+                country.Name = rset.getString("Name");
+                country.Continent = rset.getString("Continent");
+                country.Population = rset.getInt("Population");
+                country.Capital = rset.getString("Capital");
+                country.Region = rset.getString("Region");
                 countries.add(country);
             }
         } catch (Exception e) {
@@ -127,12 +126,12 @@ public class PrintCountryValues {
             if (country == null) continue;
 
             System.out.printf("%-30s %-20s %-15s %-20s %-30s %,15d\n",
-                    country.name,
-                    country.continent,
-                    country.region,
-                    country.capital,
-                    country.code,
-                    country.population
+                    country.Name,
+                    country.Continent,
+                    country.Region,
+                    country.Capital,
+                    country.Code,
+                    country.Population
             );
         }
     }
