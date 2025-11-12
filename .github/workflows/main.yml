@@ -16,7 +16,7 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - name: Unit Tests
-        run: mvn -Dtest=com.napier.devops.CityReportTest test
+        run: mvn test
 
   IntegrationTests:
     name: Integration Tests
@@ -36,7 +36,7 @@ jobs:
           docker build -t database ./db 
           docker run --name world -dp 3308:3306 database
           sleep 20
-          mvn -Dtest=com.napier.devops.CityReportIntegrationTest test
+          mvn test
           docker stop world
           docker rm world
           docker image rm database
