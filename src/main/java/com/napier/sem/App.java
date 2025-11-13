@@ -47,12 +47,10 @@ public class App
                 System.out.println("Thread interrupted? Should not happen.");
             }
 
-
-
-        }
-        if (con == null) {
-            System.out.println("Could not establish database connection after retries.");
-            System.exit(-1);
+            if (con == null) {
+                System.out.println("Could not establish database connection after retries.");
+                System.exit(-1);
+            }
         }
     }
 
