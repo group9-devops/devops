@@ -21,7 +21,7 @@ class AppIntegrationTest {
     @Test
     void testRunReports() {
         App app = new App();
-        app.connect("localhost:3308", 0);
+        app.connect("localhost:3308", 3000);
 
         CityReport cityReport = new CityReport(app.con);
         CapitalCityReport capitalReport = new CapitalCityReport(app.con);
@@ -36,8 +36,8 @@ class AppIntegrationTest {
      * Executes the main app*/
     @Test
     void testMainMethod() {
-        String[] args = {}; // or some dummy arguments
-        App.main(args); // this will execute main()
+        String[] args = {"localhost:3308"}; // Pass the test database port
+        App.main(args); // main() will now connect to 3308
     }
 
 

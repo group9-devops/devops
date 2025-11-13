@@ -47,10 +47,12 @@ public class App
                 System.out.println("Thread interrupted? Should not happen.");
             }
 
-            if (con == null) {
-                System.out.println("Could not establish database connection after retries.");
-                System.exit(-1);
-            }
+
+        }
+        // Only exit if after all retries, the connection is still null
+        if (con == null) {
+            System.out.println("Could not establish database connection after retries.");
+            System.exit(-1);
         }
     }
 
@@ -133,7 +135,7 @@ public class App
         // Print the countries in specific continent
         System.out.println("\n=== All Countries in a Region ===");
         ArrayList<Country> countriesInRegion = PrintCountry.getCountriesByRegion("North America");
-        PrintCountry.printCountries(countriesInContinent);
+        PrintCountry.printCountries(countriesInRegion);
     }
 
     /**
