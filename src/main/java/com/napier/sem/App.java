@@ -73,30 +73,12 @@ public class App
     }
 
     /**
-     * Main entry point of the application.
-     * Connects to the database and then disconnects.
-     *
-     * @param args command-line arguments
-     */
-    public static void main(String[] args)
-    {
-        // Create new Application
-        App a = new App();
+     * This method runs all the reports
+     * required to meet the project requirements*/
+    public void runReports(CityReport cityReport,
+                           CapitalCityReport capitalReport,
+                           CountryReport PrintCountry){
 
-        if(args.length < 1){
-            a.connect("localhost:3307", 0);
-        }else{
-            a.connect("db:3306", 3000);
-        }
-
-
-
-        // Create  city report instance
-        CityReport cityReport = new CityReport(a.con);
-        // Create capital city report instance
-        CapitalCityReport capitalReport = new CapitalCityReport(a.con);
-        // Create capital country report instance
-        CountryReport PrintCountry = new CountryReport(a.con);
 
 
         // --- 1. All Cities ---
@@ -152,9 +134,32 @@ public class App
         System.out.println("\n=== All Countries in a Region ===");
         ArrayList<Country> countriesInRegion = PrintCountry.getCountriesByRegion("North America");
         PrintCountry.printCountries(countriesInContinent);
+    }
 
+    /**
+     * Main entry point of the application.
+     * Connects to the database and then disconnects.
+     *
+     * @param args command-line arguments
+     */
+    public static void main(String[] args)
+    {
+        // Create new Application
+        App a = new App();
 
+        if(args.length < 1){
+            a.connect("localhost:3307", 0);
+        }else{
+            a.connect("db:3306", 3000);
+        }
 
+        // Create report instances
+        CityReport cityReport = new CityReport(a.con);
+        CapitalCityReport capitalReport = new CapitalCityReport(a.con);
+        CountryReport PrintCountry = new CountryReport(a.con);
+
+        //run the reports
+        a.runReports(cityReport,capitalReport,PrintCountry);
         // Disconnect from database
         a.disconnect();
     }
