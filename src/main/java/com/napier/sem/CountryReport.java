@@ -27,6 +27,9 @@ public class CountryReport {
      * @return An ArrayList of Country objects, or null on failure.
      */
     public ArrayList<Country> getCountriesByPopulation() {
+        if (con == null) {
+            return new ArrayList<>(); // Return empty list, not null
+        }
         String sql = """
                 SELECT Code, Name, Continent, Region, Population, Capital 
                 FROM country 
@@ -41,6 +44,9 @@ public class CountryReport {
      * @return An ArrayList of Country objects, or null on failure.
      */
     public ArrayList<Country> getCountriesByContinent(String continent) {
+        if (con == null) {
+            return new ArrayList<>(); // Return empty list, not null
+        }
         String sql = """
                 SELECT Code, Name, Continent, Region, Population, Capital 
                 FROM country 
@@ -56,6 +62,9 @@ public class CountryReport {
      * @return An ArrayList of Country objects, or null on failure.
      */
     public ArrayList<Country> getCountriesByRegion(String region) {
+        if (con == null) {
+            return new ArrayList<>(); // Return empty list, not null
+        }
         String sql = """
                 SELECT Code, Name, Continent, Region, Population, Capital 
                 FROM country 
@@ -73,6 +82,8 @@ public class CountryReport {
      */
     private ArrayList<Country> executeCountryQuery(String sql, String... params) {
         ArrayList<Country> countries = new ArrayList<>();
+
+        if (con == null) return countries;
 
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             // Bind parameters if they are provided

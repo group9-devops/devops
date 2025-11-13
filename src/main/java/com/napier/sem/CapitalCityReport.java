@@ -28,6 +28,9 @@ public class CapitalCityReport {
      * @return A list of all capital cities.
      */
     public ArrayList<City> getAllCapitalCities() {
+        if (con == null) {
+            return new ArrayList<>(); // Return empty list, not null
+        }
         String sql = """
                 SELECT city.Name AS CapitalCity, country.Name AS Country, city.Population AS Population
                 FROM country
@@ -44,6 +47,9 @@ public class CapitalCityReport {
      * @return A list of capital cities in that continent.
      */
     public ArrayList<City> getCapitalCitiesByContinent(String continent) {
+        if (con == null) {
+            return new ArrayList<>(); // Return empty list, not null
+        }
         String sql = """
                 SELECT city.Name AS CapitalCity, country.Name AS Country, city.Population AS Population
                 FROM country
@@ -61,6 +67,9 @@ public class CapitalCityReport {
      * @return A list of capital cities in that region.
      */
     public ArrayList<City> getCapitalCitiesByRegion(String region) {
+        if (con == null) {
+            return new ArrayList<>(); // Return empty list, not null
+        }
         String sql = """
                 SELECT city.Name AS CapitalCity, country.Name AS Country, city.Population AS Population
                 FROM country
@@ -80,6 +89,8 @@ public class CapitalCityReport {
      */
     private ArrayList<City> executeCapitalCityQuery(String sql, String... params) {
         ArrayList<City> cities = new ArrayList<>();
+
+        if (con == null) return cities;
 
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             // Bind parameters if provided

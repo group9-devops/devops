@@ -30,6 +30,9 @@ public class CityReport {
      * @return A list of all cities.
      */
     public ArrayList<City> printAllCities() {
+        if (con == null) {
+            return new ArrayList<>(); // Return empty list, not null
+        }
         String sql = """
                 SELECT city.Name AS CityName, country.Name AS Country, city.District AS District, city.Population AS Population
                 FROM city JOIN country ON city.CountryCode = country.Code
@@ -45,6 +48,9 @@ public class CityReport {
      * @return A list of cities in that continent.
      */
     public ArrayList<City> printCitiesByContinent(String continent) {
+        if (con == null) {
+            return new ArrayList<>(); // Return empty list, not null
+        }
         String sql = """
                 SELECT city.Name AS CityName, country.Name AS Country, city.District AS District,city.Population AS Population
                 FROM city JOIN country ON city.CountryCode = country.Code
@@ -61,6 +67,9 @@ public class CityReport {
      * @return A list of cities in that region.
      */
     public ArrayList<City> printCitiesByRegion(String region) {
+        if (con == null) {
+            return new ArrayList<>(); // Return empty list, not null
+        }
         String sql = """
                 SELECT city.Name AS CityName, country.Name AS Country,city.District AS District, city.Population AS Population 
                 FROM city JOIN country ON city.CountryCode = country.Code 
@@ -77,6 +86,9 @@ public class CityReport {
      * @return A list of cities in that district.
      */
     public ArrayList<City> printCitiesByDistrict(String district) {
+        if (con == null) {
+            return new ArrayList<>(); // Return empty list, not null
+        }
         String sql = """
                 SELECT city.Name AS CityName, country.Name AS Country,city.District AS District, city.Population AS Population 
                 FROM city JOIN country ON city.CountryCode = country.Code
@@ -96,6 +108,8 @@ public class CityReport {
      */
     private ArrayList<City> executeCapitalCityQuery(String sql, String... params) {
         ArrayList<City> cities = new ArrayList<>();
+
+        if (con == null) return cities;
 
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             // Bind parameters if provided

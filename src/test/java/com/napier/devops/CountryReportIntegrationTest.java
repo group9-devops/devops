@@ -148,5 +148,59 @@ public class CountryReportIntegrationTest {
         report.printCountries(countries);
     }
 
+    /**
+     * Test printing an empty country list.
+     */
+    @Test
+    void printEmptyCountryList() {
+        ArrayList<Country> emptyList = new ArrayList<>();
+        report.printCountries(emptyList);
+    }
+
+    /**
+     * Test printing a list with null Country objects.
+     */
+    @Test
+    void printListWithNullCountry() {
+        ArrayList<Country> list = new ArrayList<>();
+        list.add(null);
+        report.printCountries(list);
+    }
+
+
+
+    /**
+     * Test getCountriesByPopulation with a null connection.
+     */
+    @Test
+    void getCountriesByPopulationWithNullConnection() {
+        CountryReport brokenReport = new CountryReport(null);
+        ArrayList<Country> countries = brokenReport.getCountriesByPopulation();
+        assertNotNull(countries);
+        assertTrue(countries.isEmpty(), "Expected empty list when connection is null.");
+    }
+
+    /**
+     * Test getCountriesByContinent with a null connection.
+     */
+    @Test
+    void getCountriesByContinentWithNullConnection() {
+        CountryReport brokenReport = new CountryReport(null);
+        ArrayList<Country> countries = brokenReport.getCountriesByContinent("Asia");
+        assertNotNull(countries);
+        assertTrue(countries.isEmpty(), "Expected empty list when connection is null.");
+    }
+
+    /**
+     * Test getCountriesByRegion with a null connection.
+     */
+    @Test
+    void getCountriesByRegionWithNullConnection() {
+        CountryReport brokenReport = new CountryReport(null);
+        ArrayList<Country> countries = brokenReport.getCountriesByRegion("Western Europe");
+        assertNotNull(countries);
+        assertTrue(countries.isEmpty(), "Expected empty list when connection is null.");
+    }
+
 
 }

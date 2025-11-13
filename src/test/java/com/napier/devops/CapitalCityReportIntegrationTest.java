@@ -167,6 +167,60 @@ public class CapitalCityReportIntegrationTest {
         report.printCapitalCities(city);
     }
 
+    /**
+     * Test printing an empty country list.
+     */
+    @Test
+    void printEmptyCityList() {
+        ArrayList<City> emptyList = new ArrayList<>();
+        report.printCapitalCities(emptyList);
+    }
+
+    /**
+     * Test printing a list with null Country objects.
+     */
+    @Test
+    void printListWithNullCity() {
+        ArrayList<City> list = new ArrayList<>();
+        list.add(null);
+        report.printCapitalCities(list);
+    }
+
+
+
+    /**
+     * Test getCountriesByPopulation with a null connection.
+     */
+    @Test
+    void getCitiesByPopulationWithNullConnection() {
+        CapitalCityReport brokenReport = new CapitalCityReport(null);
+        ArrayList<City> city = brokenReport.getAllCapitalCities();
+        assertNotNull(city);
+        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    }
+
+    /**
+     * Test getCountriesByContinent with a null connection.
+     */
+    @Test
+    void getCitiesByContinentWithNullConnection() {
+        CapitalCityReport brokenReport = new CapitalCityReport(null);
+        ArrayList<City> city = brokenReport.getCapitalCitiesByContinent("Europe");
+        assertNotNull(city);
+        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    }
+
+    /**
+     * Test getCountriesByRegion with a null connection.
+     */
+    @Test
+    void getCitiesByRegionWithNullConnection() {
+        CapitalCityReport brokenReport = new CapitalCityReport(null);
+        ArrayList<City> city = brokenReport.getCapitalCitiesByRegion("North America");
+        assertNotNull(city);
+        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    }
+
 
 }
 

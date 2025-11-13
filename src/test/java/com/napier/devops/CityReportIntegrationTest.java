@@ -158,7 +158,7 @@ public class CityReportIntegrationTest {
      * Test to check for a null continent provided.
      */
     @Test
-    void getCountriesByNullContinent() {
+    void getCitiesByNullContinent() {
         ArrayList<City> city = report.printCitiesByContinent(null);
         assertNotNull(city, "Result should not be null for null region.");
         assertTrue(city.isEmpty(), "Expected empty list for null region.");
@@ -168,7 +168,7 @@ public class CityReportIntegrationTest {
      * Test to check for a null region provided.
      */
     @Test
-    void getCountriesByNullRegion() {
+    void getCitiesByNullRegion() {
         ArrayList<City> city = report.printCitiesByRegion(null);
         assertNotNull(city, "Result should not be null for null region.");
         assertTrue(city.isEmpty(), "Expected empty list for null region.");
@@ -179,7 +179,7 @@ public class CityReportIntegrationTest {
      * Test to check for a null district provided.
      */
     @Test
-    void getCountriesByNullDistrict() {
+    void getCitiesByNullDistrict() {
         ArrayList<City> city = report.printCitiesByDistrict(null);
         assertNotNull(city, "Result should not be null for null region.");
         assertTrue(city.isEmpty(), "Expected empty list for null region.");
@@ -204,5 +204,72 @@ public class CityReportIntegrationTest {
         // Just check that calling the print method does not throw
         report.printCities(city);
     }
+
+    /**
+     * Test printing an empty country list.
+     */
+    @Test
+    void printEmptyCityList() {
+        ArrayList<City> emptyList = new ArrayList<>();
+        report.printCities(emptyList);
+    }
+
+    /**
+     * Test printing a list with null Country objects.
+     */
+    @Test
+    void printListWithNullCity() {
+        ArrayList<City> list = new ArrayList<>();
+        list.add(null);
+        report.printCities(list);
+    }
+
+
+
+    /**
+     * Test getCountriesByPopulation with a null connection.
+     */
+    @Test
+    void getCitiesByPopulationWithNullConnection() {
+        CityReport brokenReport = new CityReport(null);
+        ArrayList<City> city = brokenReport.printAllCities();
+        assertNotNull(city);
+        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    }
+
+    /**
+     * Test getCountriesByContinent with a null connection.
+     */
+    @Test
+    void getCitiesByContinentWithNullConnection() {
+        CityReport brokenReport = new CityReport(null);
+        ArrayList<City> city = brokenReport.printCitiesByContinent("Africa");
+        assertNotNull(city);
+        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    }
+
+    /**
+     * Test getCountriesByRegion with a null connection.
+     */
+    @Test
+    void getCitiesByRegionWithNullConnection() {
+        CityReport brokenReport = new CityReport(null);
+        ArrayList<City> city = brokenReport.printCitiesByRegion("Western Europe");
+        assertNotNull(city);
+        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    }
+
+
+    /**
+     * Test getCountriesByRegion with a null connection.
+     */
+    @Test
+    void getCitiesByDistrictWithNullConnection() {
+        CityReport brokenReport = new CityReport(null);
+        ArrayList<City> city = brokenReport.printCitiesByDistrict("Oran");
+        assertNotNull(city);
+        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    }
+
 
 }
