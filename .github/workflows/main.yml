@@ -36,8 +36,8 @@ jobs:
       - name: Integration Tests and CodeCov
         run: |
             docker build -t database ./db 
-            docker run --name world -dp 3308:3306 database
-            sleep 20
+            docker run --name world -e MYSQL_ROOT_PASSWORD=example -dp 3308:3306 database
+            sleep 40
             mvn -Dtest=com.napier.devops.CountryReportIntegrationTest,CityReportIntegrationTest,CapitalCityReportIntegrationTest test
             docker stop world
             docker rm world
