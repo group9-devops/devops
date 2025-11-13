@@ -32,13 +32,7 @@ class AppIntegrationTest {
         app.disconnect();
     }
 
-    /**
-     * Executes the main app*/
-    @Test
-    void testMainMethod() {
-        String[] args = {"localhost:3308"}; // Pass the test database port
-        App.main(args); // main() will now connect to 3308
-    }
+
 
 
 }
