@@ -32,4 +32,13 @@ class AppIntegrationTest {
         app.disconnect();
     }
 
+    /**
+     * Executes the main app*/
+    @Test
+    void testMainMethod() {
+        String[] args = {}; // or some dummy arguments
+        App.main(args); // this will execute main()
+    }
+
+
 }
