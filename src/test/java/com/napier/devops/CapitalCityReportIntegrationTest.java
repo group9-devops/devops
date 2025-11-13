@@ -3,6 +3,7 @@ package com.napier.devops;
 import com.napier.sem.App;
 import com.napier.sem.City;
 import com.napier.sem.CapitalCityReport;
+import com.napier.sem.CityReport;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -123,6 +124,49 @@ public class CapitalCityReportIntegrationTest {
         assertNotNull(cities);
         assertTrue(cities.isEmpty(), "Expected empty list for non-existent region.");
     }
+
+    /**
+     * Test to check for a null continent provided.
+     */
+    @Test
+    void getCountriesByNullContinent() {
+        ArrayList<City> city = report.getCapitalCitiesByContinent(null);
+        assertNotNull(city, "Result should not be null for null region.");
+        assertTrue(city.isEmpty(), "Expected empty list for null region.");
+    }
+
+    /**
+     * Test to check for a null region provided.
+     */
+    @Test
+    void getCountriesByNullRegion() {
+        ArrayList<City> city = report.getCapitalCitiesByRegion(null);
+        assertNotNull(city, "Result should not be null for null region.");
+        assertTrue(city.isEmpty(), "Expected empty list for null region.");
+    }
+
+
+
+
+    /**
+     * Integration test for the {@link CapitalCityReport#printCapitalCities(ArrayList)} method.
+     * <p>
+     * This test retrieves real city data from the database using
+     * {@link CapitalCityReport#getAllCapitalCities()}  and passes the result
+     * to the {@code printCities} method. The purpose is to verify that
+     * the method can handle a real dataset without throwing exceptions.
+     *
+     */
+    @Test
+    void printCapitalCitiesIntegration() {
+        ArrayList<City> city = report.getAllCapitalCities();
+        assertNotNull(city);
+        assertFalse(city.isEmpty());
+
+        // Just check that calling the print method does not throw
+        report.printCapitalCities(city);
+    }
+
 
 }
 

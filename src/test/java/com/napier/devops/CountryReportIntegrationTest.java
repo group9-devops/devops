@@ -99,7 +99,7 @@ public class CountryReportIntegrationTest {
         assertTrue(countries.isEmpty(), "Expected empty list for non existent region.");
     }
     /**
-     * Test to check for the invalid continent provied.
+     * Test to check for the invalid continent provided.
      */
     @Test
     void getCountriesByInvalidContinent() {
@@ -107,4 +107,46 @@ public class CountryReportIntegrationTest {
         assertNotNull(countries);
         assertTrue(countries.isEmpty(), "Expected empty list for non existent continent.");
     }
+
+    /**
+     * Test to check for a null continent provided.
+     */
+    @Test
+    void getCountriesByNullContinent() {
+        ArrayList<Country> countries = report.getCountriesByContinent(null);
+        assertNotNull(countries, "Result should not be null for null continent.");
+        assertTrue(countries.isEmpty(), "Expected empty list for null continent.");
+    }
+
+    /**
+     * Test to check for a null region provided.
+     */
+    @Test
+    void getCountriesByNullRegion() {
+        ArrayList<Country> countries = report.getCountriesByRegion(null);
+        assertNotNull(countries, "Result should not be null for null region.");
+        assertTrue(countries.isEmpty(), "Expected empty list for null region.");
+    }
+
+
+    /**
+     * Integration test for the {@link CountryReport#printCountries(ArrayList)} method.
+     * <p>
+     * This test retrieves real country data from the database using
+     * {@link CountryReport#getCountriesByPopulation()} and passes the result
+     * to the {@code printCountries} method. The purpose is to verify that
+     * the method can handle a real dataset without throwing exceptions.
+     *
+     */
+    @Test
+    void printCountriesIntegration() {
+        ArrayList<Country> countries = report.getCountriesByPopulation();
+        assertNotNull(countries);
+        assertFalse(countries.isEmpty());
+
+        // Just check that calling the print method does not throw
+        report.printCountries(countries);
+    }
+
+
 }

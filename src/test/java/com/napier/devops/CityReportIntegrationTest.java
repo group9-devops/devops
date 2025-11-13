@@ -1,8 +1,6 @@
 package com.napier.devops;
 
-import com.napier.sem.App;
-import com.napier.sem.City;
-import com.napier.sem.CityReport;
+import com.napier.sem.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -155,4 +153,56 @@ public class CityReportIntegrationTest {
         assertNotNull(cities);
         assertTrue(cities.isEmpty(), "Expected empty list for non-existent district.");
     }
+
+    /**
+     * Test to check for a null continent provided.
+     */
+    @Test
+    void getCountriesByNullContinent() {
+        ArrayList<City> city = report.printCitiesByContinent(null);
+        assertNotNull(city, "Result should not be null for null region.");
+        assertTrue(city.isEmpty(), "Expected empty list for null region.");
+    }
+
+    /**
+     * Test to check for a null region provided.
+     */
+    @Test
+    void getCountriesByNullRegion() {
+        ArrayList<City> city = report.printCitiesByRegion(null);
+        assertNotNull(city, "Result should not be null for null region.");
+        assertTrue(city.isEmpty(), "Expected empty list for null region.");
+    }
+
+
+    /**
+     * Test to check for a null district provided.
+     */
+    @Test
+    void getCountriesByNullDistrict() {
+        ArrayList<City> city = report.printCitiesByDistrict(null);
+        assertNotNull(city, "Result should not be null for null region.");
+        assertTrue(city.isEmpty(), "Expected empty list for null region.");
+    }
+
+
+    /**
+     * Integration test for the {@link CityReport#printCities(ArrayList)} method.
+     * <p>
+     * This test retrieves real city data from the database using
+     * {@link CityReport#printAllCities()}  and passes the result
+     * to the {@code printCities} method. The purpose is to verify that
+     * the method can handle a real dataset without throwing exceptions.
+     *
+     */
+    @Test
+    void printCitiesIntegration() {
+        ArrayList<City> city = report.printAllCities();
+        assertNotNull(city);
+        assertFalse(city.isEmpty());
+
+        // Just check that calling the print method does not throw
+        report.printCities(city);
+    }
+
 }
