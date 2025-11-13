@@ -30,17 +30,16 @@ public class App
             System.exit(-1);
         }
 
-        int retries = 10;
-        for (int i = 0; i < retries; ++i)
+        for (int i = 0; i < 10; ++i)
         {
             System.out.println("Connecting to database...");
             try
             {
                 Thread.sleep(30000);
                 con = DriverManager.getConnection(
-                        "jdbc:mysql://db:3306/world?allowPublicKeyRetrieval=true&useSSL=false",
+                        "jdbc:mysql://localhost:3306/world?allowPublicKeyRetrieval=true&useSSL=false",
                         "root",
-                        "example"
+                        "example123"
                 );
                 System.out.println("Connection established!");
                 break;
@@ -88,12 +87,11 @@ public class App
 
         // Connect to database
         a.connect();
-        PrintCountryValues PrintCountry = new PrintCountryValues();
-        PrintCountry.getAllCountriesByPopulationDescending(a.con);
 
-        UrbanReport test =  new UrbanReport(a.con);
-        test.getUrbanPopulationWorld();
 
+        UrbanReport test =  new UrbanReport();
+        test.getPopulationOfWorld(a.con);
+        test.getUrbanPopulation(a.con);
         // Disconnect from database
         a.disconnect();
     }
