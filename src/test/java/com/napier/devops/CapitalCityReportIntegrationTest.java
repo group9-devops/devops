@@ -128,6 +128,34 @@ public class CapitalCityReportIntegrationTest {
     }
 
     /**
+     * Tests getCapitalCitiesByContinent(String) when the database connection is null.
+     * Expects an empty list to be returned, not null.
+     */
+    @Test
+    void testGetCapitalCitiesByContinent_NullConnection() {
+        CapitalCityReport reportWithNullCon = new CapitalCityReport(null);
+
+        ArrayList<City> result = reportWithNullCon.getCapitalCitiesByContinent("Asia");
+
+        assertNotNull(result, "The result should not be null even if the connection is null.");
+        assertTrue(result.isEmpty(), "The result list should be empty when connection is null.");
+    }
+
+    /**
+     * Tests getCapitalCitiesByRegion(String) when the database connection is null.
+     * Expects an empty list to be returned, not null.
+     */
+    @Test
+    void testGetCapitalCitiesByRegion_NullConnection() {
+        CapitalCityReport reportWithNullCon = new CapitalCityReport(null);
+
+        ArrayList<City> result = reportWithNullCon.getCapitalCitiesByRegion("Western Europe");
+
+        assertNotNull(result, "The result should not be null even if the connection is null.");
+        assertTrue(result.isEmpty(), "The result list should be empty when connection is null.");
+    }
+
+    /**
      * Test that getTopNCapitalCities returns exactly N cities in descending population order.
      */
     @Test
@@ -232,6 +260,8 @@ public class CapitalCityReportIntegrationTest {
         assertNotNull(cities, "Returned list should not be null");
         assertTrue(cities.isEmpty(), "Returned list should be empty for invalid region");
     }
+
+
 }
 
 
