@@ -36,7 +36,7 @@ jobs:
       - name: Integration Tests and CodeCov
         run: |
           docker build -t database ./db 
-          docker run --name world -e MYSQL_ROOT_PASSWORD=example -d -p 3306:3306 database
+          docker run --name world -e MYSQL_ROOT_PASSWORD=example123 -d -p 3306:3306 database
           MAX_TRIES=12
           TRIES=0
           until docker exec world mysqladmin ping --silent; do
