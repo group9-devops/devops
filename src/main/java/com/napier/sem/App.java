@@ -109,6 +109,23 @@ public class App
         ArrayList<City> capitalInRegion = capitalReport.getCapitalCitiesByRegion("North America");
         capitalReport.printCapitalCities(capitalInRegion);
 
+        // --- 1. Top N Capital Cities ---
+        System.out.println("\n=== Top N All Capital Cities ===");
+        ArrayList<City> nCapitals = capitalReport.getTopNCapitalCities(3);
+        capitalReport.printCapitalCities(nCapitals);
+
+        // --- 2. Top N Top N Capital Cities in a Continent ---
+        System.out.println("\n=== Top N Capital Cities in Continent ===");
+        ArrayList<City> nCapitalsContinent = capitalReport.getTopNCapitalCitiesByContinent("Asia",4);
+        capitalReport.printCapitalCities(nCapitalsContinent);
+
+        // --- 3. Capital Cities in a Region ---
+        System.out.println("\n=== Top N Capital Cities in a Region ===");
+        ArrayList<City> nCapitalsRegion = capitalReport.getTopNCapitalCitiesByRegion("North America",2);
+        capitalReport.printCapitalCities(nCapitalsRegion);
+
+
+
 
 
 
