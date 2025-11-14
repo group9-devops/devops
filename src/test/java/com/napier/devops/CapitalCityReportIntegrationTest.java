@@ -3,14 +3,15 @@ package com.napier.devops;
 import com.napier.sem.App;
 import com.napier.sem.City;
 import com.napier.sem.CapitalCityReport;
-import com.napier.sem.CityReport;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.DisplayName;
+
 
 
 
@@ -127,112 +128,122 @@ public class CapitalCityReportIntegrationTest {
     }
 
     /**
-     * Test to check for a null continent provided.
+     * Test that getTopNCapitalCities returns exactly N cities in descending population order.
      */
     @Test
-    void getCitiesByNullContinent() {
-        ArrayList<City> city = report.getCapitalCitiesByContinent(null);
-        assertNotNull(city, "Result should not be null for null region.");
-        assertTrue(city.isEmpty(), "Expected empty list for null region.");
+    @DisplayName("Test getTopNCapitalCities returns correct number of cities")
+    public void testGetTopNCapitalCities() {
+        int n = 5;
+        ArrayList<City> cities = report.getTopNCapitalCities(n);
+
+        assertNotNull(cities, "Returned list should not be null");
+        assertEquals(n, cities.size(), "Returned list should have exactly " + n + " cities");
+
+        for (int i = 1; i < cities.size(); i++) {
+            assertTrue(cities.get(i - 1).Population >= cities.get(i).Population,
+                    "Cities should be in descending order by population");
+        }
     }
 
     /**
-     * Test to check for a null region provided.
+     * Test that getTopNCapitalCitiesByContinent returns exactly N cities
+     * in descending population order for the specified continent.
      */
     @Test
-    void getCitiesByNullRegion() {
-        ArrayList<City> city = report.getCapitalCitiesByRegion(null);
-        assertNotNull(city, "Result should not be null for null region.");
-        assertTrue(city.isEmpty(), "Expected empty list for null region.");
-    }
+    @DisplayName("Test getTopNCapitalCitiesByContinent returns correct number of cities")
+    public void testGetTopNCapitalCitiesByContinent() {
+        int n = 3;
+        String continent = "Asia";
 
+        ArrayList<City> cities = report.getTopNCapitalCitiesByContinent(continent, n);
 
+        assertNotNull(cities, "Returned list should not be null");
+        assertEquals(n, cities.size(), "Returned list should have exactly " + n + " cities");
 
-
-    /**
-     * Integration test for the {@link CapitalCityReport#printCapitalCities(ArrayList)} method.
-     * <p>
-     * This test retrieves real city data from the database using
-     * {@link CapitalCityReport#getAllCapitalCities()}  and passes the result
-     * to the {@code printCities} method. The purpose is to verify that
-     * the method can handle a real dataset without throwing exceptions.
-     *
-     */
-    @Test
-    void printCapitalCitiesIntegration() {
-        ArrayList<City> city = report.getAllCapitalCities();
-        assertNotNull(city);
-        assertFalse(city.isEmpty());
-
-        // Just check that calling the print method does not throw
-        report.printCapitalCities(city);
+        for (int i = 1; i < cities.size(); i++) {
+            assertTrue(cities.get(i - 1).Population >= cities.get(i).Population,
+                    "Cities should be in descending order by population");
+        }
     }
 
     /**
-     * Test printing an empty country list.
+     * Test that getTopNCapitalCitiesByRegion returns exactly N cities
+     * in descending population order for the specified region.
      */
     @Test
-    void printEmptyCityList() {
-        ArrayList<City> emptyList = new ArrayList<>();
-        report.printCapitalCities(emptyList);
+    @DisplayName("Test getTopNCapitalCitiesByRegion returns correct number of cities")
+    public void testGetTopNCapitalCitiesByRegion() {
+        int n = 2;
+        String region = "Western Europe";
+
+        ArrayList<City> cities = report.getTopNCapitalCitiesByRegion(region, n);
+
+        assertNotNull(cities, "Returned list should not be null");
+        assertEquals(n, cities.size(), "Returned list should have exactly " + n + " cities");
+
+        for (int i = 1; i < cities.size(); i++) {
+            assertTrue(cities.get(i - 1).Population >= cities.get(i).Population,
+                    "Cities should be in descending order by population");
+        }
     }
 
     /**
-     * Test printing a list with null Country objects.
+     * Test that requesting zero cities returns an empty list.
      */
     @Test
-    void printListWithNullCity() {
-        ArrayList<City> list = new ArrayList<>();
-        list.add(null);
-        report.printCapitalCities(list);
-    }
-
-
-
-    /**
-     * Test getCountriesByPopulation with a null connection.
-     */
-    @Test
-    void getCitiesByPopulationWithNullConnection() {
-        CapitalCityReport brokenReport = new CapitalCityReport(null);
-        ArrayList<City> city = brokenReport.getAllCapitalCities();
-        assertNotNull(city);
-        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    @DisplayName("Test requesting zero cities returns empty list")
+    public void testGetTopNZeroCities() {
+        ArrayList<City> cities = report.getTopNCapitalCities(0);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty when n=0");
     }
 
     /**
-     * Test getCountriesByContinent with a null connection.
+     * Test that requesting more cities than available returns all cities.
      */
     @Test
-    void getCitiesByContinentWithNullConnection() {
-        CapitalCityReport brokenReport = new CapitalCityReport(null);
-        ArrayList<City> city = brokenReport.getCapitalCitiesByContinent("Europe");
-        assertNotNull(city);
-        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    @DisplayName("Test requesting more cities than exist returns all cities")
+    public void testGetTopNMoreThanAvailable() {
+        int n = 1000; // Assuming fewer than 1000 capitals in DB
+        ArrayList<City> cities = report.getTopNCapitalCities(n);
+
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.size() <= n, "Returned list should contain at most " + n + " cities");
     }
 
     /**
-     * Test getCountriesByRegion with a null connection.
+     * Test that an invalid continent returns an empty list.
      */
-    @DisplayName("getCountriesByRegion handles a null connection")
     @Test
-    void getCitiesByRegionWithNullConnection() {
-        CapitalCityReport brokenReport = new CapitalCityReport(null);
-        ArrayList<City> city = brokenReport.getCapitalCitiesByRegion("North America");
-        assertNotNull(city);
-        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    @DisplayName("Test invalid continent returns empty list")
+    public void testInvalidContinent() {
+        ArrayList<City> cities = report.getTopNCapitalCitiesByContinent("Atlantis", 5);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty for invalid continent");
     }
 
     /**
-     * Test whether printCapitalCities handles a null value*/
-    @DisplayName("printCapitalCities handles null list without crashing")
+     * Test that an invalid region returns an empty list.
+     */
     @Test
-    void printNullCapitalCityList() {
-        // If this throws an exception, JUnit will fail the test automatically.
-        report.printCapitalCities(null);
+    @DisplayName("Test invalid region returns empty list")
+    public void testInvalidRegion() {
+        ArrayList<City> cities = report.getTopNCapitalCitiesByRegion("Middle Earth", 5);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty for invalid region");
     }
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

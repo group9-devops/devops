@@ -81,6 +81,65 @@ public class CapitalCityReport {
     }
 
     /**
+     * Retrieves the top N populated capital cities in the world.
+     *
+     * @param n the number of capital cities to return.
+     * @return A list of the top N capital cities in the world.
+     */
+    public ArrayList<City> getTopNCapitalCities(int n) {
+        if (n <= 0) return new ArrayList<>();
+        String sql = """
+        SELECT city.Name AS CapitalCity, country.Name AS Country, city.Population AS Population
+        FROM country
+        JOIN city ON country.Capital = city.ID
+        ORDER BY city.Population DESC
+        LIMIT ?
+        """;
+        return executeCapitalCityQuery(sql, n); // Need another overload accepting only LIMIT
+    }
+
+    /**
+     * Retrieves the top N populated capital cities in a continent.
+     *
+     * @param continent The continent name
+     * @param n The number of cities to return
+     * @return A list of capital cities
+     */
+    public ArrayList<City> getTopNCapitalCitiesByContinent(String continent, int n) {
+        String sql = """
+            SELECT city.Name AS CapitalCity, country.Name AS Country, city.Population AS Population
+            FROM country
+            JOIN city ON country.Capital = city.ID
+            WHERE country.Continent = ?
+            ORDER BY city.Population DESC
+            LIMIT ?
+            """;
+        return executeCapitalCityQuery(sql, continent, n);
+    }
+
+
+
+    /**
+     * Retrieves the top N populated capital cities in a region.
+     *
+     * @param region The region name
+     * @param n The number of cities to return
+     * @return A list of capital cities
+     */
+    public ArrayList<City> getTopNCapitalCitiesByRegion(String region, int n) {
+        String sql = """
+            SELECT city.Name AS CapitalCity, country.Name AS Country, city.Population AS Population
+            FROM country
+            JOIN city ON country.Capital = city.ID
+            WHERE country.Region = ?
+            ORDER BY city.Population DESC
+            LIMIT ?
+            """;
+        return executeCapitalCityQuery(sql, region, n);
+    }
+
+
+    /**
      * Executes SQL queries and maps results to City objects.
      *
      * @param sql    The SQL query to execute.
@@ -116,6 +175,66 @@ public class CapitalCityReport {
 
         return cities;
     }
+
+    /**
+     * Executes SQL queries and maps results to City objects.
+     *
+     * @param sql    The SQL query to execute.
+     * @param params Optional query parameters.
+     * @return A list of City objects.
+     */
+    private ArrayList<City> executeCapitalCityQuery(String sql, String params, int limit) {
+        ArrayList<City> cities = new ArrayList<>();
+
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+
+            pstmt.setString(1, params);  // e.g., continent or region
+            pstmt.setInt(2, limit);     // the LIMIT parameter
+
+            ResultSet rset = pstmt.executeQuery();
+
+            while (rset.next()) {
+                City city = new City();
+                city.Name = rset.getString("CapitalCity");
+                city.Country = rset.getString("Country");
+                city.Population = rset.getInt("Population");
+                cities.add(city);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to execute capital city query.");
+            return null;
+        }
+
+        return cities;
+    }
+
+    private ArrayList<City> executeCapitalCityQuery(String sql, int limit) {
+        ArrayList<City> cities = new ArrayList<>();
+
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setInt(1, limit);  // Bind the LIMIT parameter
+
+            ResultSet rset = pstmt.executeQuery();
+
+            while (rset.next()) {
+                City city = new City();
+                city.Name = rset.getString("CapitalCity");
+                city.Country = rset.getString("Country");
+                city.Population = rset.getInt("Population");
+                cities.add(city);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to execute capital city query.");
+            return null;
+        }
+
+        return cities;
+    }
+
 
     /**
      * Prints a formatted list of capital cities.

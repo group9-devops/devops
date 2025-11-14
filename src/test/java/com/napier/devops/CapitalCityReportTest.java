@@ -242,6 +242,205 @@ class CapitalCityReportTest {
         report.printCapitalCities(cities);
     }
 
+    /**
+     * Tests that getTopNCapitalCities(int n) retrieves a valid list of capital cities
+     * when the database returns rows.
+     *
+     * @throws Exception if mocking fails
+     */
+    @Test
+    void testGetTopNCapitalCities_Valid() throws Exception {
+        when(mockResultSet.next()).thenReturn(true, false);
+        when(mockResultSet.getString("CapitalCity")).thenReturn("Tokyo");
+        when(mockResultSet.getString("Country")).thenReturn("Japan");
+        when(mockResultSet.getInt("Population")).thenReturn(13929286);
+
+        ArrayList<City> cities = report.getTopNCapitalCities(1);
+
+        assertNotNull(cities);
+        assertEquals(1, cities.size());
+        assertEquals("Tokyo", cities.get(0).Name);
+        assertEquals("Japan", cities.get(0).Country);
+
+        verify(mockPreparedStatement).setInt(1, 1);
+    }
+
+    /**
+     * Tests that getTopNCapitalCities(int n) returns an empty list
+     * when the database query returns no rows.
+     *
+     * @throws Exception if mocking fails
+     */
+    @Test
+    void testGetTopNCapitalCities_Empty() throws Exception {
+        when(mockResultSet.next()).thenReturn(false);
+
+        ArrayList<City> cities = report.getTopNCapitalCities(5);
+
+        assertNotNull(cities);
+        assertTrue(cities.isEmpty());
+        verify(mockPreparedStatement).setInt(1, 5);
+    }
+
+    /**
+     * Tests that getTopNCapitalCities(int n) correctly returns null
+     * when a SQLException occurs during query execution.
+     *
+     * @throws Exception if mocking fails
+     */
+    @Test
+    void testGetTopNCapitalCities_Exception() throws Exception {
+        when(mockConnection.prepareStatement(any(String.class)))
+                .thenThrow(new SQLException("DB error"));
+
+        ArrayList<City> cities = report.getTopNCapitalCities(3);
+
+        assertNull(cities);
+    }
+
+    /**
+     * Tests that getTopNCapitalCitiesByContinent(String, int) returns a valid
+     * capital city list when the database returns rows.
+     *
+     * @throws Exception if mocking fails
+     */
+    @Test
+    void testGetTopNCapitalCitiesByContinent_Valid() throws Exception {
+        when(mockResultSet.next()).thenReturn(true, false);
+        when(mockResultSet.getString("CapitalCity")).thenReturn("Beijing");
+        when(mockResultSet.getString("Country")).thenReturn("China");
+        when(mockResultSet.getInt("Population")).thenReturn(21540000);
+
+        ArrayList<City> cities = report.getTopNCapitalCitiesByContinent("Asia", 1);
+
+        assertNotNull(cities);
+        assertEquals(1, cities.size());
+
+        verify(mockPreparedStatement).setString(1, "Asia");
+        verify(mockPreparedStatement).setInt(2, 1);
+    }
+
+    /**
+     * Tests that getTopNCapitalCitiesByContinent(String, int) returns an empty list
+     * when the database query returns no rows.
+     *
+     * @throws Exception if mocking fails
+     */
+    @Test
+    void testGetTopNCapitalCitiesByContinent_Empty() throws Exception {
+        when(mockResultSet.next()).thenReturn(false);
+
+        ArrayList<City> cities = report.getTopNCapitalCitiesByContinent("Europe", 10);
+
+        assertNotNull(cities);
+        assertTrue(cities.isEmpty());
+
+        verify(mockPreparedStatement).setString(1, "Europe");
+        verify(mockPreparedStatement).setInt(2, 10);
+    }
+
+    /**
+     * Tests that getTopNCapitalCitiesByContinent(String, int) returns null
+     * when a SQLException occurs.
+     *
+     * @throws Exception if mocking fails
+     */
+    @Test
+    void testGetTopNCapitalCitiesByContinent_Exception() throws Exception {
+        when(mockConnection.prepareStatement(any(String.class)))
+                .thenThrow(new SQLException("DB error"));
+
+        ArrayList<City> cities = report.getTopNCapitalCitiesByContinent("Asia", 2);
+
+        assertNull(cities);
+    }
+
+    /**
+     * Tests that getTopNCapitalCitiesByRegion(String, int) returns a valid city list
+     * when the database returns rows.
+     *
+     * @throws Exception if mocking fails
+     */
+    @Test
+    void testGetTopNCapitalCitiesByRegion_Valid() throws Exception {
+        when(mockResultSet.next()).thenReturn(true, false);
+        when(mockResultSet.getString("CapitalCity")).thenReturn("Berlin");
+        when(mockResultSet.getString("Country")).thenReturn("Germany");
+        when(mockResultSet.getInt("Population")).thenReturn(3645000);
+
+        ArrayList<City> cities = report.getTopNCapitalCitiesByRegion("Western Europe", 1);
+
+        assertNotNull(cities);
+        assertEquals(1, cities.size());
+
+        verify(mockPreparedStatement).setString(1, "Western Europe");
+        verify(mockPreparedStatement).setInt(2, 1);
+    }
+
+    /**
+     * Tests that getTopNCapitalCitiesByRegion(String, int) returns an empty list
+     * when the database returns no rows.
+     *
+     * @throws Exception if mocking fails
+     */
+    @Test
+    void testGetTopNCapitalCitiesByRegion_Empty() throws Exception {
+        when(mockResultSet.next()).thenReturn(false);
+
+        ArrayList<City> cities = report.getTopNCapitalCitiesByRegion("Caribbean", 4);
+
+        assertNotNull(cities);
+        assertTrue(cities.isEmpty());
+
+        verify(mockPreparedStatement).setString(1, "Caribbean");
+        verify(mockPreparedStatement).setInt(2, 4);
+    }
+
+    /**
+     * Tests that getTopNCapitalCitiesByRegion(String, int) handles a null region
+     * parameter by returning an empty list and setting SQL parameters safely.
+     *
+     * @throws Exception if mocking fails
+     */
+    @Test
+    void testGetTopNCapitalCitiesByRegion_Null() throws Exception {
+        when(mockResultSet.next()).thenReturn(false);
+
+        ArrayList<City> cities = report.getTopNCapitalCitiesByRegion(null, 2);
+
+        assertNotNull(cities);
+        assertTrue(cities.isEmpty());
+
+        verify(mockPreparedStatement).setString(1, null);
+        verify(mockPreparedStatement).setInt(2, 2);
+    }
+
+    /**
+     * Tests that getTopNCapitalCitiesByRegion(String, int) returns null
+     * when a SQLException is thrown during query execution.
+     *
+     * @throws Exception if mocking fails
+     */
+    @Test
+    void testGetTopNCapitalCitiesByRegion_Exception() throws Exception {
+        when(mockConnection.prepareStatement(any(String.class)))
+                .thenThrow(new SQLException("DB error"));
+
+        ArrayList<City> cities = report.getTopNCapitalCitiesByRegion("Middle East", 5);
+
+        assertNull(cities);
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 }
 

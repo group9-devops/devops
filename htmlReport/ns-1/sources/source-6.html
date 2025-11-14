@@ -1,0 +1,254 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > CountryReport</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.napier.sem</a>
+</div>
+
+<h1>Coverage Summary for Class: CountryReport (com.napier.sem)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CountryReport</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (12/12)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (36/36)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.napier.sem;
+&nbsp;
+&nbsp;import java.sql.Connection;
+&nbsp;import java.sql.ResultSet;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.sql.PreparedStatement;
+&nbsp;
+&nbsp;/**
+&nbsp; * Class responsible for retrieving and printing lists of Country objects.
+&nbsp; */
+&nbsp;public class CountryReport {
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The active database connection.
+&nbsp;     */
+&nbsp;    private Connection con;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * @param con The active database connection object.
+&nbsp;     */
+<b class="fc">&nbsp;    public CountryReport(Connection con) {</b>
+<b class="fc">&nbsp;        this.con = con;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retrieves all countries from the database, ordered by population.
+&nbsp;     * @return An ArrayList of Country objects, or null on failure.
+&nbsp;     */
+&nbsp;    public ArrayList&lt;Country&gt; getCountriesByPopulation() {
+<b class="fc">&nbsp;        String sql = &quot;&quot;&quot;</b>
+&nbsp;                SELECT Code, Name, Continent, Region, Population, Capital 
+&nbsp;                FROM country 
+&nbsp;                ORDER BY Population DESC
+&nbsp;                &quot;&quot;&quot;;
+<b class="fc">&nbsp;        return executeCountryQuery(sql);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retrieves all countries in a specific continent, ordered by population.
+&nbsp;     * @param continent The name of the continent.
+&nbsp;     * @return An ArrayList of Country objects, or null on failure.
+&nbsp;     */
+&nbsp;    public ArrayList&lt;Country&gt; getCountriesByContinent(String continent) {
+<b class="fc">&nbsp;        String sql = &quot;&quot;&quot;</b>
+&nbsp;                SELECT Code, Name, Continent, Region, Population, Capital 
+&nbsp;                FROM country 
+&nbsp;                WHERE Continent = ? 
+&nbsp;                ORDER BY Population DESC
+&nbsp;                &quot;&quot;&quot;;
+<b class="fc">&nbsp;        return executeCountryQuery(sql, continent);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retrieves all countries in a specific region, ordered by population.
+&nbsp;     * @param region The name of the region.
+&nbsp;     * @return An ArrayList of Country objects, or null on failure.
+&nbsp;     */
+&nbsp;    public ArrayList&lt;Country&gt; getCountriesByRegion(String region) {
+<b class="fc">&nbsp;        String sql = &quot;&quot;&quot;</b>
+&nbsp;                SELECT Code, Name, Continent, Region, Population, Capital 
+&nbsp;                FROM country 
+&nbsp;                WHERE Region = ? 
+&nbsp;                ORDER BY Population DESC
+&nbsp;                &quot;&quot;&quot;;
+<b class="fc">&nbsp;        return executeCountryQuery(sql, region);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Private helper method to execute SQL queries and map results to Country objects.
+&nbsp;     * @param sql The SQL query to execute.
+&nbsp;     * @param params Optional query parameters for the PreparedStatement.
+&nbsp;     * @return A list of Country objects, or null if an error occurs.
+&nbsp;     */
+&nbsp;    private ArrayList&lt;Country&gt; executeCountryQuery(String sql, String... params) {
+<b class="fc">&nbsp;        ArrayList&lt;Country&gt; countries = new ArrayList&lt;&gt;();</b>
+&nbsp;
+<b class="fc">&nbsp;        try (PreparedStatement pstmt = con.prepareStatement(sql)) {</b>
+&nbsp;            // Bind parameters if they are provided
+<b class="fc">&nbsp;            for (int i = 0; i &lt; params.length; i++) {</b>
+<b class="fc">&nbsp;                pstmt.setString(i + 1, params[i]);</b>
+&nbsp;            }
+&nbsp;
+<b class="fc">&nbsp;            ResultSet rset = pstmt.executeQuery();</b>
+&nbsp;
+<b class="fc">&nbsp;            while (rset.next()) {</b>
+<b class="fc">&nbsp;                Country country = new Country();</b>
+<b class="fc">&nbsp;                country.Code = rset.getString(&quot;Code&quot;);</b>
+<b class="fc">&nbsp;                country.Name = rset.getString(&quot;Name&quot;);</b>
+<b class="fc">&nbsp;                country.Continent = rset.getString(&quot;Continent&quot;);</b>
+<b class="fc">&nbsp;                country.Population = rset.getInt(&quot;Population&quot;);</b>
+<b class="fc">&nbsp;                country.Capital = rset.getString(&quot;Capital&quot;);</b>
+<b class="fc">&nbsp;                country.Region = rset.getString(&quot;Region&quot;);</b>
+<b class="fc">&nbsp;                countries.add(country);</b>
+&nbsp;            }
+&nbsp;        } catch (Exception e) {
+<b class="fc">&nbsp;            System.out.println(e.getMessage());</b>
+<b class="fc">&nbsp;            System.out.println(&quot;Failed to execute country query.&quot;);</b>
+<b class="fc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        return countries;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Prints a list of countries to the console in a formatted table.
+&nbsp;     * (This method is unchanged as it doesn&#39;t use the database connection)
+&nbsp;     * @param countries The list of countries to print.
+&nbsp;     */
+&nbsp;    public void printCountries(ArrayList&lt;Country&gt; countries) {
+&nbsp;        // Check for null or empty list
+<b class="fc">&nbsp;        if (countries == null) {</b>
+<b class="fc">&nbsp;            System.out.println(&quot;No countries found.&quot;);</b>
+&nbsp;            return;
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        if (countries.isEmpty()) {</b>
+<b class="fc">&nbsp;            System.out.println(&quot;No countries found.&quot;);</b>
+&nbsp;            return;
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        System.out.printf(&quot;%-30s %-20s %-15s %-20s %-30s %15s\n&quot;,</b>
+&nbsp;                &quot;Name&quot;, &quot;Continent&quot;, &quot;Region&quot;, &quot;Capital&quot;, &quot;Code&quot;, &quot;Population&quot;);
+<b class="fc">&nbsp;        System.out.println(&quot;--------------------------------------------------------------------------------------------------------------&quot;);</b>
+&nbsp;
+<b class="fc">&nbsp;        for (Country country : countries) {</b>
+<b class="fc">&nbsp;            if (country == null) continue;</b>
+&nbsp;
+<b class="fc">&nbsp;            System.out.printf(&quot;%-30s %-20s %-15s %-20s %-30s %,15d\n&quot;,</b>
+&nbsp;                    country.Name,
+&nbsp;                    country.Continent,
+&nbsp;                    country.Region,
+&nbsp;                    country.Capital,
+&nbsp;                    country.Code,
+<b class="fc">&nbsp;                    country.Population</b>
+&nbsp;            );
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-11-12 19:53</div>
+</div>
+</body>
+</html>
