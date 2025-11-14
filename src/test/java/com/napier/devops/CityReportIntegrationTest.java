@@ -2,6 +2,7 @@ package com.napier.devops;
 
 import com.napier.sem.*;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -269,6 +270,15 @@ public class CityReportIntegrationTest {
         ArrayList<City> city = brokenReport.printCitiesByDistrict("Oran");
         assertNotNull(city);
         assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    }
+
+    /**
+     * Test whether printCapitalCities handles a null value*/
+    @DisplayName("printCities handles null list without crashing")
+    @Test
+    void printNullCityList() {
+        // If this throws an exception, JUnit will fail the test automatically.
+        report.printCities(null);
     }
 
 

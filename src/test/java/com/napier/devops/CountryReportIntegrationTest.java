@@ -4,6 +4,7 @@ import com.napier.sem.App;
 import com.napier.sem.Country;
 import com.napier.sem.CountryReport;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -200,6 +201,15 @@ public class CountryReportIntegrationTest {
         ArrayList<Country> countries = brokenReport.getCountriesByRegion("Western Europe");
         assertNotNull(countries);
         assertTrue(countries.isEmpty(), "Expected empty list when connection is null.");
+    }
+
+    /**
+     * Test whether printCapitalCities handles a null value*/
+    @DisplayName("printCountries handles null list without crashing")
+    @Test
+    void printNullCapitalCityList() {
+        // If this throws an exception, JUnit will fail the test automatically.
+        report.printCountries(null);
     }
 
 

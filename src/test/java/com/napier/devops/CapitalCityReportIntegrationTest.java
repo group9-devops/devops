@@ -5,6 +5,7 @@ import com.napier.sem.City;
 import com.napier.sem.CapitalCityReport;
 import com.napier.sem.CityReport;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -129,7 +130,7 @@ public class CapitalCityReportIntegrationTest {
      * Test to check for a null continent provided.
      */
     @Test
-    void getCountriesByNullContinent() {
+    void getCitiesByNullContinent() {
         ArrayList<City> city = report.getCapitalCitiesByContinent(null);
         assertNotNull(city, "Result should not be null for null region.");
         assertTrue(city.isEmpty(), "Expected empty list for null region.");
@@ -139,7 +140,7 @@ public class CapitalCityReportIntegrationTest {
      * Test to check for a null region provided.
      */
     @Test
-    void getCountriesByNullRegion() {
+    void getCitiesByNullRegion() {
         ArrayList<City> city = report.getCapitalCitiesByRegion(null);
         assertNotNull(city, "Result should not be null for null region.");
         assertTrue(city.isEmpty(), "Expected empty list for null region.");
@@ -213,6 +214,7 @@ public class CapitalCityReportIntegrationTest {
     /**
      * Test getCountriesByRegion with a null connection.
      */
+    @DisplayName("getCountriesByRegion handles a null connection")
     @Test
     void getCitiesByRegionWithNullConnection() {
         CapitalCityReport brokenReport = new CapitalCityReport(null);
@@ -220,6 +222,16 @@ public class CapitalCityReportIntegrationTest {
         assertNotNull(city);
         assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
     }
+
+    /**
+     * Test whether printCapitalCities handles a null value*/
+    @DisplayName("printCapitalCities handles null list without crashing")
+    @Test
+    void printNullCapitalCityList() {
+        // If this throws an exception, JUnit will fail the test automatically.
+        report.printCapitalCities(null);
+    }
+
 
 
 }
