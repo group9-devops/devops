@@ -11,25 +11,25 @@ public class Country {
     /**
      * Country's Code
      */
-    public String code;
+    public String Code;
     /**
      * Country's name
      */
-    public String name;
+    public String Name;
     /**
      * Country's continent
      */
-    public String continent;
+    public String Continent;
     /**
      * Country's region
      */
-    public String region;
+    public String Region;
     /**
      * Country's population
      */
-    public int population;
+    public int Population;
     /**
      * Country's capital
      */
-    public String capital;
+    public String Capital;
 }

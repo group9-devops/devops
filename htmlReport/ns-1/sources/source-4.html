@@ -1,0 +1,269 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > CityReport</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.napier.sem</a>
+</div>
+
+<h1>Coverage Summary for Class: CityReport (com.napier.sem)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CityReport</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/10)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (34/34)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.napier.sem;
+&nbsp;
+&nbsp;import java.sql.Connection;
+&nbsp;import java.sql.PreparedStatement;
+&nbsp;import java.sql.ResultSet;
+&nbsp;import java.util.ArrayList;
+&nbsp;
+&nbsp;/**
+&nbsp; * The  PrintCityValues class is responsible for retrieving and displaying
+&nbsp; *  * information about cities from the database. It connects to the database via a
+&nbsp; *  * provided {@link java.sql.Connection}, executes an SQL query to obtain city data,
+&nbsp; *  * and prints the results in a formatted table.*/
+&nbsp;
+&nbsp;public class CityReport {
+&nbsp;
+&nbsp;    public Connection con;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Constructor to inject database connection.
+&nbsp;     *
+&nbsp;     * @param con the active database connection
+&nbsp;     */
+<b class="fc">&nbsp;    public CityReport(Connection con) {</b>
+<b class="fc">&nbsp;        this.con = con;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retrieves all cities in the world, ordered by population descending.
+&nbsp;     *
+&nbsp;     * @return A list of all cities.
+&nbsp;     */
+&nbsp;    public ArrayList&lt;City&gt; printAllCities() {
+<b class="fc">&nbsp;        String sql = &quot;&quot;&quot;</b>
+&nbsp;                SELECT city.Name AS CityName, country.Name AS Country, city.District AS District, city.Population AS Population
+&nbsp;                FROM city JOIN country ON city.CountryCode = country.Code
+&nbsp;                ORDER BY city.Population DESC
+&nbsp;                &quot;&quot;&quot;;
+<b class="fc">&nbsp;        return executeCapitalCityQuery(sql);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retrieves all cities in a specific continent.
+&nbsp;     *
+&nbsp;     * @param continent The name of the continent.
+&nbsp;     * @return A list of cities in that continent.
+&nbsp;     */
+&nbsp;    public ArrayList&lt;City&gt; printCitiesByContinent(String continent) {
+<b class="fc">&nbsp;        String sql = &quot;&quot;&quot;</b>
+&nbsp;                SELECT city.Name AS CityName, country.Name AS Country, city.District AS District,city.Population AS Population
+&nbsp;                FROM city JOIN country ON city.CountryCode = country.Code
+&nbsp;                WHERE country.Continent = ?
+&nbsp;                ORDER BY city.Population DESC
+&nbsp;                &quot;&quot;&quot;;
+<b class="fc">&nbsp;        return executeCapitalCityQuery(sql,continent);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retrieves all cities in a specific region.
+&nbsp;     *
+&nbsp;     * @param region The name of the region.
+&nbsp;     * @return A list of cities in that region.
+&nbsp;     */
+&nbsp;    public ArrayList&lt;City&gt; printCitiesByRegion(String region) {
+<b class="fc">&nbsp;        String sql = &quot;&quot;&quot;</b>
+&nbsp;                SELECT city.Name AS CityName, country.Name AS Country,city.District AS District, city.Population AS Population 
+&nbsp;                FROM city JOIN country ON city.CountryCode = country.Code 
+&nbsp;                WHERE country.Region = ?
+&nbsp;                ORDER BY city.Population DESC
+&nbsp;                &quot;&quot;&quot;;
+<b class="fc">&nbsp;        return executeCapitalCityQuery(sql,region);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Retrieves all capital cities in a specific district.
+&nbsp;     *
+&nbsp;     * @param district The name of the district.
+&nbsp;     * @return A list of cities in that district.
+&nbsp;     */
+&nbsp;    public ArrayList&lt;City&gt; printCitiesByDistrict(String district) {
+<b class="fc">&nbsp;        String sql = &quot;&quot;&quot;</b>
+&nbsp;                SELECT city.Name AS CityName, country.Name AS Country,city.District AS District, city.Population AS Population 
+&nbsp;                FROM city JOIN country ON city.CountryCode = country.Code
+&nbsp;                WHERE city.District = ?
+&nbsp;                ORDER BY city.Population DESC
+&nbsp;                &quot;&quot;&quot;;
+<b class="fc">&nbsp;        return executeCapitalCityQuery(sql,district);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Executes SQL queries and maps results to City objects.
+&nbsp;     *
+&nbsp;     * @param sql    The SQL query to execute.
+&nbsp;     * @param params Optional query parameters.
+&nbsp;     * @return A list of City objects.
+&nbsp;     */
+&nbsp;    private ArrayList&lt;City&gt; executeCapitalCityQuery(String sql, String... params) {
+<b class="fc">&nbsp;        ArrayList&lt;City&gt; cities = new ArrayList&lt;&gt;();</b>
+&nbsp;
+<b class="fc">&nbsp;        try (PreparedStatement pstmt = con.prepareStatement(sql)) {</b>
+&nbsp;            // Bind parameters if provided
+<b class="fc">&nbsp;            for (int i = 0; i &lt; params.length; i++) {</b>
+<b class="fc">&nbsp;                pstmt.setString(i + 1, params[i]);</b>
+&nbsp;            }
+&nbsp;
+<b class="fc">&nbsp;            ResultSet rset = pstmt.executeQuery();</b>
+&nbsp;
+<b class="fc">&nbsp;            while (rset.next()) {</b>
+<b class="fc">&nbsp;                City city = new City();</b>
+<b class="fc">&nbsp;                city.Name = rset.getString(&quot;CityName&quot;);</b>
+<b class="fc">&nbsp;                city.Country = rset.getString(&quot;Country&quot;);</b>
+<b class="fc">&nbsp;                city.District = rset.getString(&quot;District&quot;);</b>
+<b class="fc">&nbsp;                city.Population = rset.getInt(&quot;Population&quot;);</b>
+<b class="fc">&nbsp;                cities.add(city);</b>
+&nbsp;            }
+&nbsp;
+&nbsp;        } catch (Exception e) {
+<b class="fc">&nbsp;            System.out.println(e.getMessage());</b>
+<b class="fc">&nbsp;            System.out.println(&quot;Failed to execute capital city query.&quot;);</b>
+<b class="fc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        return cities;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Prints a formatted list of capital cities.
+&nbsp;     *
+&nbsp;     * @param cities The list of cities to print.
+&nbsp;     */
+&nbsp;    public void printCities(ArrayList&lt;City&gt; cities) {
+<b class="fc">&nbsp;        if (cities == null) {</b>
+<b class="fc">&nbsp;            System.out.println(&quot;No cities to display.&quot;);</b>
+&nbsp;            return;
+&nbsp;        }
+&nbsp;
+&nbsp;        // Table header
+<b class="fc">&nbsp;        System.out.printf(&quot;%-30s %-25s %-20s %15s%n&quot;,</b>
+&nbsp;                &quot;Capital City&quot;, &quot;Country&quot;, &quot;District&quot;, &quot;Population&quot;);
+<b class="fc">&nbsp;        System.out.println(&quot;------------------------------------------------------------------------------------------&quot;);</b>
+&nbsp;
+&nbsp;        // Print rows
+<b class="fc">&nbsp;        for (City city : cities) {</b>
+<b class="fc">&nbsp;            if (city == null)</b>
+&nbsp;                continue;
+&nbsp;
+<b class="fc">&nbsp;            System.out.printf(&quot;%-30s %-25s %-20s %,15d%n&quot;,</b>
+<b class="fc">&nbsp;                    city.Name, city.Country, city.District, city.Population);</b>
+&nbsp;        }
+&nbsp;
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-11-12 19:53</div>
+</div>
+</body>
+</html>
