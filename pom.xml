@@ -13,9 +13,8 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version>
+            <version>8.0.18</version>
         </dependency>
-
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -23,7 +22,6 @@
             <version>5.1.0</version>
             <scope>test</scope>
         </dependency>
-
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -49,8 +47,6 @@
         </dependency>
 
 
-
-
     </dependencies>
 
     <properties>
@@ -66,6 +62,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
+                    <finalName>devops</finalName>
                     <archive>
                         <manifest>
                             <mainClass>com.napier.sem.App</mainClass>
@@ -74,6 +71,7 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <appendAssemblyId>false</appendAssemblyId>
                 </configuration>
                 <executions>
                     <execution>
@@ -103,6 +101,31 @@
                     </dependency>
                 </dependencies>
             </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.11</version>
+                <executions>
+                    <!-- Attach JaCoCo agent to the test phase -->
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+
+                    <!-- Generate JaCoCo report after tests run -->
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase> <!-- changed from 'test' to 'verify' -->
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 

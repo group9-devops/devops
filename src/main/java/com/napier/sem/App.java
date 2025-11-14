@@ -18,7 +18,7 @@ public class App
      * Establishes a connection to the MySQL database.
      * Retries up to 10 times, waiting 30 seconds between attempts.
      */
-    public void connect()
+    public void connect(String location, int delay)
     {
         try
         {
@@ -30,18 +30,17 @@ public class App
             System.exit(-1);
         }
 
-        for (int i = 0; i < 10; ++i)
+        int retries = 10;
+        for (int i = 0; i < retries; ++i)
         {
             System.out.println("Connecting to database...");
             try
             {
-                Thread.sleep(30000);
-                con = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/world?allowPublicKeyRetrieval=true&useSSL=false",
-                        "root",
-                        "example123"
-                );
-                System.out.println("Connection established!");
+                Thread.sleep(delay);
+                con = DriverManager.getConnection("jdbc:mysql://" + location
+                                + "/world?allowPublicKeyRetrieval=true&useSSL=false",
+                        "root", "example123");
+                System.out.println("Successfully connected");
                 break;
             }
             catch (SQLException sqle)
@@ -82,11 +81,16 @@ public class App
      */
     public static void main(String[] args)
     {
-        // Create new Application
-        App a = new App();
 
         // Connect to database
-        a.connect();
+        App a = new App();
+
+        if(args.length < 1){
+            a.connect("localhost:3306", 0);
+        }else{
+            a.connect("db:3306", 3000);
+        }
+
 
 
         UrbanReport test =  new UrbanReport();
