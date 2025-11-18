@@ -62,8 +62,8 @@ public class CityReport {
      */
     public ArrayList<City> printCitiesByRegion(String region) {
         String sql = """
-                SELECT city.Name AS CityName, country.Name AS Country,city.District AS District, city.Population AS Population 
-                FROM city JOIN country ON city.CountryCode = country.Code 
+                SELECT city.Name AS CityName, country.Name AS Country,city.District AS District, city.Population AS Population
+                FROM city JOIN country ON city.CountryCode = country.Code
                 WHERE country.Region = ?
                 ORDER BY city.Population DESC
                 """;
@@ -78,7 +78,7 @@ public class CityReport {
      */
     public ArrayList<City> printCitiesByDistrict(String district) {
         String sql = """
-                SELECT city.Name AS CityName, country.Name AS Country,city.District AS District, city.Population AS Population 
+                SELECT city.Name AS CityName, country.Name AS Country,city.District AS District, city.Population AS Population
                 FROM city JOIN country ON city.CountryCode = country.Code
                 WHERE city.District = ?
                 ORDER BY city.Population DESC
@@ -86,6 +86,48 @@ public class CityReport {
         return executeCapitalCityQuery(sql,district);
     }
 
+    /**
+     * Gets most populated cities in a district
+     * @param district the name of the district
+     * @return a list of the most populated cities in that district
+     */
+
+    public ArrayList<City> CityPopulationDistrict(String district, int limit) {
+        String sql = """
+                SELECT city.Name AS CityName,
+                       country.Name AS Country,
+                       city.District AS District,
+                       city.Population AS Population
+                FROM city
+                JOIN country ON city.CountryCode = country.Code
+                WHERE city.District = ?
+                ORDER BY city.Population DESC
+                LIMIT ?
+                """;
+
+        return executeCapitalCityQuery(sql, district, String.valueOf(limit));
+    }
+
+    /**
+     * Retrieves the top N most populated cities in the world.
+     *
+     * @param limit the number of cities to return (top N).
+     * @return A list of the top N cities globally.
+     */
+    public ArrayList<City> getTopNCitiesInWorld(int limit) {
+        String sql = """
+                SELECT city.Name AS CityName,
+                       country.Name AS Country,
+                       city.District AS District,
+                       city.Population AS Population
+                FROM city
+                JOIN country ON city.CountryCode = country.Code
+                ORDER BY city.Population DESC
+                LIMIT ?
+                """;
+
+        return executeCapitalCityQuery(sql, String.valueOf(limit));
+    }
 
     /**
      * Executes SQL queries and maps results to City objects.
