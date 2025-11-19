@@ -17,6 +17,13 @@ jobs:
           distribution: 'adopt'
       - name: Unit Tests
         run: mvn -Dtest=AppTest,CountryReportTest,CityReportTest,CapitalCityReportTest test
+      - name: Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./target/site/jacoco/jacoco.xml
+          flags: Unit Tests
+          verbose: true
 
 
 
@@ -53,12 +60,12 @@ jobs:
           docker stop world
           docker rm world
           docker image rm database
-      - name: Upload coverage reports to Codecov
+      - name: Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./target/site/jacoco/jacoco.xml
-          flags: integration
+          flags: Integration Tests
           verbose: true
 
 
