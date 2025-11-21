@@ -126,7 +126,7 @@ public class App
         ArrayList<City> nCapitals = capitalReport.getTopNCapitalCities(3);
         capitalReport.printCapitalCities(nCapitals);
 
-        // --- 2. Top N Top N Capital Cities in a Continent ---
+        // --- 2. Top N Capital Cities in a Continent ---
         System.out.println("\n=== Top N Capital Cities in Continent ===");
         ArrayList<City> nCapitalsContinent = capitalReport.getTopNCapitalCitiesByContinent("Asia",4);
         capitalReport.printCapitalCities(nCapitalsContinent);

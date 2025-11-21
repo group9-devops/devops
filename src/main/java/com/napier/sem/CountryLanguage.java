@@ -9,17 +9,9 @@ import java.sql.Connection;
  */
 public class CountryLanguage {
 
-    /**
-     * Country's Language Code
-     */
-    public String CountryCode;
-    /**
-     * Country's Language
-     */
-    public String Language;
-    /**
-     * Country's continent
-     */
-    public boolean isOfficial;
-    public long NumberOfSpeakers;
+
+        public String Language;
+        public long NumberOfSpeakers;
+        public double WorldPercentage;
+
 }
