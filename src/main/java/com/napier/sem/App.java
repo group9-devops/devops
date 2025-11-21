@@ -182,6 +182,7 @@ public class App
 
         //run the reports
         a.runReports(cityReport,capitalReport,PrintCountry, languageReport);
+
         // Disconnect from database
         a.disconnect();
     }
