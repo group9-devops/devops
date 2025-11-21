@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Integration tests for PrintCountryValues class.
  * Verifies that the application can retrieve real data from the MySQL database.
  */
-public class PrintCountryValuesIntegrationTest {
+public class CountryReportIntegrationTest {
 
     static App app;
     static PrintCountryValues report;

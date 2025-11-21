@@ -19,7 +19,7 @@ import static org.mockito.Mockito.*;
  * This class uses Mockito to simulate database interactions
  * and verify behavior of methods retrieving country data.
  */
-class PrintCountryValuesTest {
+class CountryReportTest {
 
     private Connection mockConnection;
     private PreparedStatement mockPreparedStatement;
