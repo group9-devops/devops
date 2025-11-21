@@ -37,7 +37,7 @@ public class App
                 // Connect to database
                 con = DriverManager.getConnection("jdbc:mysql://" + location
                                 + "/world?allowPublicKeyRetrieval=true&useSSL=false",
-                        "root", "example");
+                        "root", "Example123");
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
@@ -86,7 +86,7 @@ public class App
 
         // Connect to database
         if(args.length < 1){
-            a.connect("localhost:3308", 30000);
+            a.connect("localhost:3306", 30000);
         }else{
             a.connect(args[0], Integer.parseInt(args[1]));
         }

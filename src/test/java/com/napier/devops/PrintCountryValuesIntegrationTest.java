@@ -23,7 +23,7 @@ public class PrintCountryValuesIntegrationTest {
     static void init() {
         app = new App();
         // Connect to the local MySQL instance (use 3308 for GitHub Actions)
-        app.connect("localhost:3308", 30000);
+        app.connect("localhost:3306", 30000);
         report = new PrintCountryValues(app.con);
     }
 
@@ -103,6 +103,11 @@ public class PrintCountryValuesIntegrationTest {
         assertNotNull(countries);
         assertTrue(countries.isEmpty(), "Expected empty list for non existent continent.");
     }
+
+
+
+
+
 
     /**
      * Test retrieving top N countries for a specific region.
