@@ -103,6 +103,14 @@ public class App
         // Print the countries in specific continent
         ArrayList<Country> countriesInContinent = PrintCountry.getCountriesByRegion("North America");
         PrintCountry.printCountries(countriesInContinent);
+
+        //print top N countries in a region
+        ArrayList<Country> topNCountryInRegion = PrintCountry.topNCountriesByRegion("Carribean", 10);
+        PrintCountry.printCountries(topNCountryInRegion);
+
+        //print top N countries in the world
+        ArrayList<Country> topNCountryInWorld = PrintCountry.topNCountriesInTheWorld( 10);
+        PrintCountry.printCountries(topNCountryInWorld);
         // Disconnect from database
         a.disconnect();
     }
