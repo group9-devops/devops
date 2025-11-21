@@ -91,11 +91,6 @@ public class App
             a.connect("db:3306", 3000);
         }
 
-
-
-        UrbanReport test =  new UrbanReport();
-        test.getPopulationOfWorld(a.con);
-        test.getUrbanPopulation(a.con);
         // Disconnect from database
         a.disconnect();
     }
