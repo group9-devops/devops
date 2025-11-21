@@ -23,7 +23,7 @@ public class CountryReportIntegrationTest {
     static void init() {
         app = new App();
         // Connect to the local MySQL instance (use 3308 for GitHub Actions)
-        app.connect("localhost:3308", 30000);
+        app.connect("localhost:3306", 30000);
         report = new PrintCountryValues(app.con);
     }
 
