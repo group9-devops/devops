@@ -51,6 +51,21 @@ class UrbanReportTest {
     }
 
     @Test
+    void testGetPopulationOfRegion() throws Exception {
+        when(mockStatement.executeQuery("SELECT SUM(population) FROM country WHERE Region = 'British Islands'")).thenReturn(mockResultSet);
+        when(mockResultSet.next()).thenReturn(true);
+        when(mockResultSet.getDouble(1)).thenReturn(63398500.0);
+
+        mockReport.getPopulationOfRegion(mockConnection, "British Islands");
+
+        verify(mockStatement).executeQuery("SELECT SUM(population) FROM country WHERE Region = 'British Islands'");
+    }
+
+    @Test
+    void testGetPopulationOfCountry() throws Exception {}
+
+
+    @Test
     void testGetPopulationOfWorld_ExceptionHandled() throws Exception {
         when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
 
@@ -61,12 +76,21 @@ class UrbanReportTest {
 
     @Test
     void testGetUrbanPopulation_ExceptionHandled() throws Exception {
-        mockReport.population = 7000000000.0;
+        mockReport.population = 6078749450.0;
         when(mockStatement.executeQuery("SELECT SUM(population) FROM city")).thenThrow(new RuntimeException("Query failed"));
 
         mockReport.getUrbanPopulation(mockConnection);
 
         assertEquals(0.0, mockReport.urbanPopulation, 0.001);
         assertEquals(0.0, mockReport.percentage, 0.001);
+    }
+
+    @Test
+    void testGetPopulationOfRegion_ExceptionHandled() throws Exception {
+        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
+
+        mockReport.getPopulationOfRegion(mockConnection, "British Islands");
+
+        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
     }
 }
