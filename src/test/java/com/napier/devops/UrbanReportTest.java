@@ -15,6 +15,7 @@ class UrbanReportTest {
     private PreparedStatement mockStatement;
     private ResultSet mockResultSet;
     private UrbanReport mockReport;
+    public String arg;
 
     @BeforeEach
     void setUp() throws Exception {
@@ -62,8 +63,82 @@ class UrbanReportTest {
     }
 
     @Test
-    void testGetPopulationOfCountry() throws Exception {}
+    void testGetUrbanPopulationOfRegion() throws Exception {
+        when(mockStatement.executeQuery("SELECT SUM(city.population) FROM city " +
+                "JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Region = 'British Islands'")).thenReturn(mockResultSet);
+        when(mockResultSet.next()).thenReturn(true);
+        when(mockResultSet.getDouble(1)).thenReturn(19401506.0);
 
+        mockReport.getUrbanPopulationOfRegion(mockConnection, "British Islands");
+
+        verify(mockStatement).executeQuery("SELECT SUM(city.population) FROM city " +
+                "JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Region = 'British Islands'");
+    }
+
+    @Test
+    void testGetPopulationOfCountry() throws Exception {
+        when(mockStatement.executeQuery("SELECT population FROM country WHERE Name = 'Afghanistan'")).thenReturn(mockResultSet);
+        when(mockResultSet.next()).thenReturn(true);
+        when(mockResultSet.getDouble(1)).thenReturn(22720000.0);
+
+        mockReport.getPopulationOfCountry(mockConnection, "Afghanistan");
+
+        verify(mockStatement).executeQuery("SELECT population FROM country WHERE Name = 'Afghanistan'");
+    }
+
+    @Test
+    void testGetUrbanPopulationOfCountry() throws Exception {
+        when(mockStatement.executeQuery("SELECT SUM(city.population) FROM city " +
+                "JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Name = 'Afghanistan'")).thenReturn(mockResultSet);
+        when(mockResultSet.next()).thenReturn(true);
+        when(mockResultSet.getDouble(1)).thenReturn(2332100.0);
+
+        mockReport.getUrbanPopulationOfCountry(mockConnection, "Afghanistan");
+
+        verify(mockStatement).executeQuery("SELECT SUM(city.population) FROM city " +
+                "JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Name = 'Afghanistan'");
+    }
+
+    @Test
+    void testGetPopulationOfContinent() throws Exception {
+        when(mockStatement.executeQuery("SELECT SUM(population) FROM country WHERE Continent = 'Asia'")).thenReturn(mockResultSet);
+        when(mockResultSet.next()).thenReturn(true);
+        when(mockResultSet.getDouble(1)).thenReturn(3705025700.0);
+
+        mockReport.getPopulationOfCContinent(mockConnection, "Asia");
+
+        verify(mockStatement).executeQuery("SELECT SUM(population) FROM country WHERE Continent = 'Asia'");
+    }
+
+    @Test
+    void testGetUrbanPopulationOfContinent() throws Exception {
+        when(mockStatement.executeQuery("SELECT SUM(city.population) FROM city " +
+                "JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Continent = 'Asia'")).thenReturn(mockResultSet);
+        when(mockResultSet.next()).thenReturn(true);
+        when(mockResultSet.getDouble(1)).thenReturn(697604103.0);
+
+        mockReport.getUrbanPopulationOfContinent(mockConnection, "Asia");
+
+        verify(mockStatement).executeQuery("SELECT SUM(city.population) FROM city " +
+                "JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Continent = 'Asia'");
+    }
+
+    @Test
+    void testGetPopulationOfCity() throws Exception {
+        when(mockStatement.executeQuery("SELECT population FROM city WHERE Name = 'Liverpool'")).thenReturn(mockResultSet);
+        when(mockResultSet.next()).thenReturn(true);
+        when(mockResultSet.getDouble(1)).thenReturn(461000.0);
+
+        mockReport.getPopulationOfCCity(mockConnection, "Liverpool");
+
+        verify(mockStatement).executeQuery("SELECT population FROM city WHERE Name = 'Liverpool'");
+    }
 
     @Test
     void testGetPopulationOfWorld_ExceptionHandled() throws Exception {
