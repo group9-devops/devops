@@ -2,17 +2,15 @@ package com.napier.devops;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+
 import com.napier.sem.App;
-import com.napier.sem.City;
 import com.napier.sem.CityReport;
-import com.napier.sem.CountryReport;
 import com.napier.sem.CapitalCityReport;
-
-
+import com.napier.sem.CountryReport;
+import com.napier.sem.LanguageReport;
+import com.napier.sem.CountryLanguage;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -20,7 +18,6 @@ import static org.mockito.Mockito.*;
 
 /**
  * Unit tests for the {@link App} class using Mockito.
- * Tests connection handling, disconnection, and running reports.
  */
 class AppTest {
 
@@ -28,10 +25,11 @@ class AppTest {
     private CityReport mockCityReport;
     private CapitalCityReport mockCapitalReport;
     private CountryReport mockCountryReport;
+    private LanguageReport mockLanguageReport;
     private Connection mockConnection;
 
     /**
-     * Set up mocks for reports and connection before each test.
+     * Set up mocks before each test.
      */
     @BeforeEach
     void setUp() throws SQLException {
@@ -41,51 +39,67 @@ class AppTest {
         mockCityReport = mock(CityReport.class);
         mockCapitalReport = mock(CapitalCityReport.class);
         mockCountryReport = mock(CountryReport.class);
+        mockLanguageReport = mock(LanguageReport.class);
         mockConnection = mock(Connection.class);
 
-        // Mock report methods to return empty lists
+        // Mock CityReport methods
         when(mockCityReport.printAllCities()).thenReturn(new ArrayList<>());
         when(mockCityReport.printCitiesByContinent(anyString())).thenReturn(new ArrayList<>());
         when(mockCityReport.printCitiesByRegion(anyString())).thenReturn(new ArrayList<>());
         when(mockCityReport.printCitiesByDistrict(anyString())).thenReturn(new ArrayList<>());
 
+        // Mock CapitalCityReport methods
         when(mockCapitalReport.getAllCapitalCities()).thenReturn(new ArrayList<>());
         when(mockCapitalReport.getCapitalCitiesByContinent(anyString())).thenReturn(new ArrayList<>());
         when(mockCapitalReport.getCapitalCitiesByRegion(anyString())).thenReturn(new ArrayList<>());
 
+        // Mock CountryReport methods
         when(mockCountryReport.getCountriesByPopulation()).thenReturn(new ArrayList<>());
         when(mockCountryReport.getCountriesByContinent(anyString())).thenReturn(new ArrayList<>());
         when(mockCountryReport.getCountriesByRegion(anyString())).thenReturn(new ArrayList<>());
+
+        // Mock LanguageReport query
+        when(mockLanguageReport.retrieveLanguageSpeakers()).thenReturn(new ArrayList<>());
 
         // Assign mock connection
         app.con = mockConnection;
     }
 
     /**
-     * Tests that {@link App#runReports(CityReport, CapitalCityReport, CountryReport)}
-     * calls all report methods as expected.
+     * Tests that runReports calls all report methods including LanguageReport.
      */
     @Test
     void testRunReports() {
-        app.runReports(mockCityReport, mockCapitalReport, mockCountryReport);
+        app.runReports(
+                mockCityReport,
+                mockCapitalReport,
+                mockCountryReport,
+                mockLanguageReport
+        );
 
-        // Verify that each report method was called
+        // --- Verify LanguageReport calls ---
+        verify(mockLanguageReport).retrieveLanguageSpeakers();
+        verify(mockLanguageReport).printLanguageReport(any(ArrayList.class));
+
+        // --- Verify CityReport calls ---
         verify(mockCityReport).printAllCities();
         verify(mockCityReport).printCitiesByContinent("Asia");
         verify(mockCityReport).printCitiesByRegion("South America");
         verify(mockCityReport).printCitiesByDistrict("Oran");
 
+        // --- Verify CapitalCityReport calls ---
         verify(mockCapitalReport).getAllCapitalCities();
         verify(mockCapitalReport).getCapitalCitiesByContinent("Asia");
         verify(mockCapitalReport).getCapitalCitiesByRegion("North America");
 
+        // --- Verify CountryReport calls ---
         verify(mockCountryReport).getCountriesByPopulation();
         verify(mockCountryReport).getCountriesByContinent("Europe");
         verify(mockCountryReport).getCountriesByRegion("North America");
     }
 
     /**
-     * Tests that {@link App#disconnect()} closes the connection when it is active.
+     * Tests that disconnect closes the connection.
      */
     @Test
     void testDisconnectClosesConnection() throws SQLException {
@@ -94,23 +108,17 @@ class AppTest {
     }
 
     /**
-     * Tests that {@link App#disconnect()} does not throw an exception when
-     * the connection is null.
+     * Tests safe disconnect when con is null.
      */
     @Test
     void testDisconnectWhenConnectionIsNull() {
         app.con = null;
-        app.disconnect(); // Should not throw exception
+        app.disconnect(); // Should not throw
     }
 
-    /**
-     * Example of testing connection failure behavior. Full coverage of
-     * {@link App#connect(String, int)} is tricky due to System.exit calls.
-     */
     @Test
     void testConnectWithException() throws Exception {
         App app2 = spy(new App());
-        // Cannot directly test System.exit(-1), so this is a placeholder
-        // for connection exception handling coverage
+        // Placeholder – System.exit not testable safely
     }
 }

@@ -17,13 +17,6 @@ jobs:
           distribution: 'adopt'
       - name: Unit Tests
         run: mvn -Dtest=AppTest,CountryReportTest,CityReportTest,CapitalCityReportTest test
-      - name: Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./target/site/jacoco/jacoco.xml
-          flags: Unit Tests
-          verbose: true
 
 
 
@@ -65,7 +58,7 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./target/site/jacoco/jacoco.xml
-          flags: Integration Tests
+          flags: integration
           verbose: true
 
 

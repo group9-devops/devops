@@ -79,10 +79,12 @@ public class App
      * required to meet the project requirements*/
     public void runReports(CityReport cityReport,
                            CapitalCityReport capitalReport,
-                           CountryReport PrintCountry){
+                           CountryReport PrintCountry, LanguageReport languageReport){
 
 
-
+        System.out.println("\n=== Language Report ===");
+        ArrayList<CountryLanguage> languages = languageReport.retrieveLanguageSpeakers();
+        languageReport.printLanguageReport(languages);
         // --- 1. All Cities ---
         System.out.println("\n=== All Cities In The World ===");
         ArrayList<City> allCities = cityReport.printAllCities();
@@ -176,9 +178,10 @@ public class App
         CityReport cityReport = new CityReport(a.con);
         CapitalCityReport capitalReport = new CapitalCityReport(a.con);
         CountryReport PrintCountry = new CountryReport(a.con);
+        LanguageReport languageReport = new LanguageReport(a.con);
 
         //run the reports
-        a.runReports(cityReport,capitalReport,PrintCountry);
+        a.runReports(cityReport,capitalReport,PrintCountry, languageReport);
         // Disconnect from database
         a.disconnect();
     }
