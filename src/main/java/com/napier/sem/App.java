@@ -119,9 +119,19 @@ public class App
         ArrayList<City> topWorldCities = cityReport.getTopNCitiesInWorld(10);
         cityReport.printCities(topWorldCities);
 
-// --- Top N Most Populated Cities in a District ---
+        // --- Top N Most Populated Cities in a Continent ---
+        System.out.println("\n=== Top 5 Most Populated Cities in a Continent ===");
+        ArrayList<City> CityPopulationContinent = cityReport.getTopNCitiesByContinent("Asia", 2);
+        cityReport.printCities(CityPopulationContinent);
+
+        // --- Top N Most Populated Cities in a Region ---
+        System.out.println("\n=== Top 5 Most Populated Cities in a Region===");
+        ArrayList<City> CityPopulationRegion = cityReport.getTopNCitiesByRegion("North America", 4);
+        cityReport.printCities(CityPopulationRegion);
+
+        // --- Top N Most Populated Cities in a District ---
         System.out.println("\n=== Top 5 Most Populated Cities in a District ===");
-        ArrayList<City> CityPopulationDistrict = cityReport.CityPopulationDistrict("California", 5);
+        ArrayList<City> CityPopulationDistrict = cityReport.getTopNCitiesByDistrict("California", 5);
         cityReport.printCities(CityPopulationDistrict);
 
 

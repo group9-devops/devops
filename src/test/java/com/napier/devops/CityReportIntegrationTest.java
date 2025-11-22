@@ -155,4 +155,114 @@ public class CityReportIntegrationTest {
         assertNotNull(cities);
         assertTrue(cities.isEmpty(), "Expected empty list for non-existent district.");
     }
+
+    /**
+     * Test that getTopNCities returns exactly N cities in descending population order.
+     */
+    @Test
+    public void testGetTopNCities() {
+        int n = 5;
+        ArrayList<City> cities = report.getTopNCitiesInWorld(n);
+
+        assertNotNull(cities, "Returned list should not be null");
+        assertEquals(n, cities.size(), "Returned list should have exactly " + n + " cities");
+
+        for (int i = 1; i < cities.size(); i++) {
+            assertTrue(cities.get(i - 1).Population >= cities.get(i).Population,
+                    "Cities should be in descending order by population");
+        }
+    }
+
+    /**
+     * Test that getTopNCitiesByContinent returns exactly N cities
+     * in descending population order for the specified continent.
+     */
+    @Test
+    public void testGetTopNCitiesByContinent() {
+        int n = 3;
+        String continent = "Asia";
+
+        ArrayList<City> cities = report.getTopNCitiesByContinent(continent, n);
+
+        assertNotNull(cities, "Returned list should not be null");
+        assertEquals(n, cities.size(), "Returned list should have exactly " + n + " cities");
+
+        for (int i = 1; i < cities.size(); i++) {
+            assertTrue(cities.get(i - 1).Population >= cities.get(i).Population,
+                    "Cities should be in descending order by population");
+        }
+    }
+
+    /**
+     * Test that getTopNCitiesByRegion returns exactly N cities
+     * in descending population order for the specified region.
+     */
+    @Test
+    public void testGetTopNCitiesByRegion() {
+        int n = 2;
+        String region = "Western Europe";
+
+        ArrayList<City> cities = report.getTopNCitiesByRegion(region, n);
+
+        assertNotNull(cities, "Returned list should not be null");
+        assertEquals(n, cities.size(), "Returned list should have exactly " + n + " cities");
+
+        for (int i = 1; i < cities.size(); i++) {
+            assertTrue(cities.get(i - 1).Population >= cities.get(i).Population,
+                    "Cities should be in descending order by population");
+        }
+    }
+
+
+    /**
+     * Test that requesting zero cities returns an empty list.
+     */
+    @Test
+    public void testGetTopNZeroCities() {
+        ArrayList<City> cities = report.getTopNCitiesInWorld(0);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty when n=0");
+    }
+
+    /**
+     * Test that requesting more cities than available returns all cities.
+     */
+    @Test
+    public void testGetTopNMoreThanAvailable() {
+        int n = 1000; // Assuming fewer than 1000 capitals in DB
+        ArrayList<City> cities = report.getTopNCitiesInWorld(n);
+
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.size() <= n, "Returned list should contain at most " + n + " cities");
+    }
+
+    /**
+     * Test that an invalid continent returns an empty list.
+     */
+    @Test
+    public void testInvalidContinent() {
+        ArrayList<City> cities = report.getTopNCitiesByContinent("Atlantis", 5);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty for invalid continent");
+    }
+
+    /**
+     * Test that an invalid region returns an empty list.
+     */
+    @Test
+    public void testInvalidRegion() {
+        ArrayList<City> cities = report.getTopNCitiesByRegion("Middle Earth", 5);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty for invalid region");
+    }
+
+    /**
+     * Test that an invalid region returns an empty list.
+     */
+    @Test
+    public void testInvalidDistrict() {
+        ArrayList<City> cities = report.getTopNCitiesByDistrict("Middle Earth", 5);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty for invalid region");
+    }
 }
