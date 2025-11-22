@@ -2,6 +2,7 @@ package com.napier.devops;
 
 import com.napier.sem.CountryReport;
 import com.napier.sem.Country;
+import com.napier.sem.App;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
