@@ -16,7 +16,7 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - name: Unit Tests
-        run: mvn -Dtest=AppTest,CountryReportTest,CityReportTest,CapitalCityReportTest, LanguageReportTest test
+        run: mvn -Dtest=AppTest,CountryReportTest,CityReportTest,CapitalCityReportTest,LanguageReportTest test
 
 
 
@@ -49,7 +49,7 @@ jobs:
               exit 1
             fi
           done
-          mvn verify -Dtest=com.napier.devops.AppIntegrationTest,CountryReportIntegrationTest,CityReportIntegrationTest,CapitalCityReportIntegrationTest, LanguageReportIntegrationTest
+          mvn verify -Dtest=com.napier.devops.AppIntegrationTest,CountryReportIntegrationTest,CityReportIntegrationTest,CapitalCityReportIntegrationTest,LanguageReportIntegrationTest
           docker stop world
           docker rm world
           docker image rm database
