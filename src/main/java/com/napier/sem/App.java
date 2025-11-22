@@ -95,6 +95,26 @@ public class App
         ArrayList<City> cityInContinent = cityReport.printCitiesByContinent("Asia");
         cityReport.printCities(cityInContinent);
 
+        // --- Top N Most Populated Cities Globally ---
+        System.out.println("\n=== Top 10 Most Populated Cities in the World ===");
+        ArrayList<City> topWorldCities = cityReport.getTopNCitiesInWorld(10);
+        cityReport.printCities(topWorldCities);
+
+        // --- Top N Most Populated Cities in a Continent ---
+        System.out.println("\n=== Top 5 Most Populated Cities in a Continent ===");
+        ArrayList<City> CityPopulationContinent = cityReport.getTopNCitiesByContinent("Asia", 2);
+        cityReport.printCities(CityPopulationContinent);
+
+        // --- Top N Most Populated Cities in a Region ---
+        System.out.println("\n=== Top 5 Most Populated Cities in a Region===");
+        ArrayList<City> CityPopulationRegion = cityReport.getTopNCitiesByRegion("North America", 4);
+        cityReport.printCities(CityPopulationRegion);
+
+        // --- Top N Most Populated Cities in a District ---
+        System.out.println("\n=== Top 5 Most Populated Cities in a District ===");
+        ArrayList<City> CityPopulationDistrict = cityReport.getTopNCitiesByDistrict("California", 5);
+        cityReport.printCities(CityPopulationDistrict);
+
         // --- 3. Cities in a Region ---
         System.out.println("\n=== Capital Cities in a Region ===");
         ArrayList<City> cityInRegion = cityReport.printCitiesByRegion("South America");
@@ -138,9 +158,6 @@ public class App
 
 
 
-
-
-
         // Print the countries in decending order of population
         System.out.println("\n=== All Countries in The World ===");
         ArrayList<Country> countries = PrintCountry.getCountriesByPopulation();
@@ -155,6 +172,20 @@ public class App
         System.out.println("\n=== All Countries in a Region ===");
         ArrayList<Country> countriesInRegion = PrintCountry.getCountriesByRegion("North America");
         PrintCountry.printCountries(countriesInRegion);
+
+        //print top N countries in a region
+        System.out.println("\n=== Top N Countries in a Region ===");
+        ArrayList<Country> topNCountryInRegion = PrintCountry.topNCountriesByRegion("Carribean", 10);
+        PrintCountry.printCountries(topNCountryInRegion);
+
+        //print top N countries in the world
+        System.out.println("\n=== Top N Countries in The World ===");
+        ArrayList<Country> topNCountryInWorld = PrintCountry.topNCountriesInTheWorld( 10);
+        PrintCountry.printCountries(topNCountryInWorld);
+
+
+
+
     }
 
     /**
