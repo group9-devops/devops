@@ -231,10 +231,10 @@ class CountryReportTest {
         assertNotNull(countries);
         assertEquals(1, countries.size());
         Country c = countries.get(0);
-        assertEquals("JAM", c.code);
-        assertEquals("Jamaica", c.name);
-        assertEquals("Caribbean", c.region);
-        assertEquals(2700000, c.population);
+        assertEquals("JAM", c.Code);
+        assertEquals("Jamaica", c.Name);
+        assertEquals("Caribbean", c.Region);
+        assertEquals(2700000, c.Population);
 
         // Verify: Check that the correct parameters were bound
         verify(mockPreparedStatement).setString(1, "Caribbean");
@@ -298,9 +298,9 @@ class CountryReportTest {
         assertNotNull(countries);
         assertEquals(1, countries.size());
         Country c = countries.get(0);
-        assertEquals("BRA", c.code);
-        assertEquals("Brazil", c.name);
-        assertEquals("South America", c.continent);
+        assertEquals("BRA", c.Code);
+        assertEquals("Brazil", c.Name);
+        assertEquals("South America", c.Continent);
 
         // Verify
         verify(mockPreparedStatement).setString(1, "South America");
@@ -328,8 +328,8 @@ class CountryReportTest {
         assertNotNull(countries);
         assertEquals(1, countries.size());
         Country c = countries.get(0);
-        assertEquals("CHN", c.code);
-        assertEquals("China", c.name);
+        assertEquals("CHN", c.Code);
+        assertEquals("China", c.Name);
 
         // Verify: Check that the *single integer limit* was bound
         verify(mockPreparedStatement).setInt(1, 10);

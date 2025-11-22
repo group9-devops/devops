@@ -101,12 +101,12 @@ public class CountryReport {
             // Loop through the results and build the Country objects
             while (rset.next()) {
                 Country country = new Country();
-                country.code = rset.getString("Code");
-                country.name = rset.getString("Name");
-                country.continent = rset.getString("Continent");
-                country.population = rset.getInt("Population");
-                country.capital = rset.getString("Capital");
-                country.region = rset.getString("Region");
+                country.Code = rset.getString("Code");
+                country.Name = rset.getString("Name");
+                country.Continent = rset.getString("Continent");
+                country.Population = rset.getInt("Population");
+                country.Capital = rset.getString("Capital");
+                country.Region = rset.getString("Region");
                 countries.add(country);
             }
 
@@ -174,12 +174,12 @@ public class CountryReport {
             // Loop through the results and build the Country objects
             while (rset.next()) {
                 Country country = new Country();
-                country.code = rset.getString("Code");
-                country.name = rset.getString("Name");
-                country.continent = rset.getString("Continent");
-                country.population = rset.getInt("Population");
-                country.capital = rset.getString("Capital");
-                country.region = rset.getString("Region");
+                country.Code = rset.getString("Code");
+                country.Name = rset.getString("Name");
+                country.Continent = rset.getString("Continent");
+                country.Population = rset.getInt("Population");
+                country.Capital = rset.getString("Capital");
+                country.Region = rset.getString("Region");
                 countries.add(country);
             }
 
