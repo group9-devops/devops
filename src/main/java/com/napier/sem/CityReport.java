@@ -6,14 +6,11 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 /**
- * The  PrintCityValues class is responsible for retrieving and displaying
- *  * information about cities from the database. It connects to the database via a
- *  * provided {@link java.sql.Connection}, executes an SQL query to obtain city data,
- *  * and prints the results in a formatted table.*/
-
+ * The CityReport class is responsible for retrieving and displaying
+ * information about cities from the database.
+ */
 public class CityReport {
-
-    public Connection con;
+    private Connection con;
 
     /**
      * Constructor to inject database connection.
@@ -35,69 +32,131 @@ public class CityReport {
         }
         String sql = """
                 SELECT city.Name AS CityName, country.Name AS Country, city.District AS District, city.Population AS Population
-                FROM city JOIN country ON city.CountryCode = country.Code
+                FROM city
+                JOIN country ON city.CountryCode = country.Code
                 ORDER BY city.Population DESC
                 """;
-        return executeCapitalCityQuery(sql);
+        return executeCityQuery(sql);
     }
 
     /**
-     * Retrieves all cities in a specific continent.
+     * Retrieves all cities in a continent, ordered by population descending.
      *
-     * @param continent The name of the continent.
-     * @return A list of cities in that continent.
+     * @return A list of all cities in a continent.
      */
     public ArrayList<City> printCitiesByContinent(String continent) {
         if (con == null) {
             return new ArrayList<>(); // Return empty list, not null
         }
         String sql = """
-                SELECT city.Name AS CityName, country.Name AS Country, city.District AS District,city.Population AS Population
-                FROM city JOIN country ON city.CountryCode = country.Code
+                SELECT city.Name AS CityName, country.Name AS Country, city.District AS District, city.Population AS Population
+                FROM city
+                JOIN country ON city.CountryCode = country.Code
                 WHERE country.Continent = ?
                 ORDER BY city.Population DESC
                 """;
-        return executeCapitalCityQuery(sql,continent);
+        return executeCityQuery(sql, continent);
     }
 
     /**
-     * Retrieves all cities in a specific region.
+     * Retrieves all cities a region, ordered by population descending.
      *
-     * @param region The name of the region.
-     * @return A list of cities in that region.
+     * @return A list of all cities in a region.
      */
     public ArrayList<City> printCitiesByRegion(String region) {
         if (con == null) {
             return new ArrayList<>(); // Return empty list, not null
         }
         String sql = """
-                SELECT city.Name AS CityName, country.Name AS Country,city.District AS District, city.Population AS Population 
-                FROM city JOIN country ON city.CountryCode = country.Code 
+                SELECT city.Name AS CityName, country.Name AS Country, city.District AS District, city.Population AS Population
+                FROM city
+                JOIN country ON city.CountryCode = country.Code
                 WHERE country.Region = ?
                 ORDER BY city.Population DESC
                 """;
-        return executeCapitalCityQuery(sql,region);
+        return executeCityQuery(sql, region);
     }
 
     /**
-     * Retrieves all capital cities in a specific district.
+     * Retrieves all cities in a district, ordered by population descending.
      *
-     * @param district The name of the district.
-     * @return A list of cities in that district.
+     * @return A list of all cities in a district.
      */
     public ArrayList<City> printCitiesByDistrict(String district) {
         if (con == null) {
             return new ArrayList<>(); // Return empty list, not null
         }
         String sql = """
-                SELECT city.Name AS CityName, country.Name AS Country,city.District AS District, city.Population AS Population 
-                FROM city JOIN country ON city.CountryCode = country.Code
+                SELECT city.Name AS CityName, country.Name AS Country, city.District AS District, city.Population AS Population
+                FROM city
+                JOIN country ON city.CountryCode = country.Code
                 WHERE city.District = ?
                 ORDER BY city.Population DESC
                 """;
-        return executeCapitalCityQuery(sql,district);
+        return executeCityQuery(sql, district);
     }
 
+    /**
+     * Retrieves all Top N cities in the world, ordered by population descending.
+     * @param n The limit of cities to be listed
+     * @return A list of all Top N cities.
+     */
+    public ArrayList<City> getTopNCitiesInWorld(int n) {
+        String sql = """
+                SELECT city.Name AS CityName, country.Name AS Country, city.District AS District, city.Population AS Population
+                FROM city
+                JOIN country ON city.CountryCode = country.Code
+                ORDER BY city.Population DESC
+                LIMIT ?
+                """;
+        return executeCityQuery(sql, n);
+    }
+
+    /**
+     * Retrieves all Top N cities in a continent, ordered by population descending.
+     * @param n The limit of cities to be listed
+     * @return A list of all Top N cities in a contient.
+     */
+    public ArrayList<City> getTopNCitiesByContinent(String continent, int n) {
+        String sql = """
+                SELECT city.Name AS CityName, country.Name AS Country, city.District AS District, city.Population AS Population
+                FROM city
+                JOIN country ON city.CountryCode = country.Code
+                WHERE country.Continent = ?
+                ORDER BY city.Population DESC
+                LIMIT ?
+                """;
+        return executeCityQuery(sql, continent, n);
+    }
+
+    /**
+     * Retrieves all Top N cities in a region, ordered by population descending.
+     * @param n The limit of cities to be listed
+     * @return A list of all Top N cities in a region.
+     */
+    public ArrayList<City> getTopNCitiesByRegion(String region, int n) {
+        String sql = """
+                SELECT city.Name AS CityName, country.Name AS Country, city.District AS District, city.Population AS Population
+                FROM city
+                JOIN country ON city.CountryCode = country.Code
+                WHERE country.Region = ?
+                ORDER BY city.Population DESC
+                LIMIT ?
+                """;
+        return executeCityQuery(sql,region, n);
+    }
+
+    public ArrayList<City> getTopNCitiesByDistrict(String district, int n) {
+        String sql = """
+                SELECT city.Name AS CityName, country.Name AS Country, city.District AS District, city.Population AS Population
+                FROM city
+                JOIN country ON city.CountryCode = country.Code
+                WHERE city.District = ?
+                ORDER BY city.Population DESC
+                LIMIT ?
+                """;
+        return executeCityQuery(sql, district, n);
+    }
 
     /**
      * Executes SQL queries and maps results to City objects.
@@ -106,7 +165,7 @@ public class CityReport {
      * @param params Optional query parameters.
      * @return A list of City objects.
      */
-    private ArrayList<City> executeCapitalCityQuery(String sql, String... params) {
+    private ArrayList<City> executeCityQuery(String sql, String... params) {
         ArrayList<City> cities = new ArrayList<>();
 
         if (con == null) return cities;
@@ -136,6 +195,77 @@ public class CityReport {
 
         return cities;
     }
+
+    /**
+     * Executes SQL queries and maps results to City objects.
+     *
+     * @param sql    The SQL query to execute.
+     * @param params Optional query parameters.
+     * @param limit  The limit of objects to be printed
+     * @return A list of City objects.
+     */
+    private ArrayList<City> executeCityQuery(String sql, String params, int limit) {
+        ArrayList<City> cities = new ArrayList<>();
+
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setString(1, params);  // e.g., continent or region
+            pstmt.setInt(2, limit);     // the LIMIT parameter
+
+            ResultSet rset = pstmt.executeQuery();
+
+            while (rset.next()) {
+                City city = new City();
+                city.Name = rset.getString("CityName");
+                city.Country = rset.getString("Country");
+                city.District = rset.getString("District");
+                city.Population = rset.getInt("Population");
+                cities.add(city);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to execute capital city query.");
+            return null;
+        }
+
+        return cities;
+    }
+
+    /**
+     * Executes SQL queries and maps results to City objects.
+     *
+     * @param sql    The SQL query to execute.
+     * @param limit Optional query parameters.
+     * @return A list of City objects.
+     */
+    private ArrayList<City> executeCityQuery(String sql, int limit) {
+        ArrayList<City> cities = new ArrayList<>();
+
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setInt(1, limit);  // Bind the LIMIT parameter
+
+            ResultSet rset = pstmt.executeQuery();
+
+            while (rset.next()) {
+                City city = new City();
+                city.Name = rset.getString("CityName");
+                city.Country = rset.getString("Country");
+                city.District = rset.getString("District");
+                city.Population = rset.getInt("Population");
+                cities.add(city);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to execute capital city query.");
+            return null;
+        }
+
+        return cities;
+    }
+
+
+
 
     /**
      * Prints a formatted list of capital cities.
