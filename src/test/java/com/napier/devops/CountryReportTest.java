@@ -2,6 +2,7 @@ package com.napier.devops;
 
 import com.napier.sem.CountryReport;
 import com.napier.sem.Country;
+import com.napier.sem.App;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -208,6 +209,166 @@ class CountryReportTest {
         report.printCountries(new ArrayList<>());
     }
 
+    /**
+     * Verifies that topNCountriesByRegion correctly binds parameters and returns data.
+     * This test implicitly tests the 'topNCountries' helper method.
+     */
+    @Test
+    void testTopNCountriesByRegion_Valid() throws Exception {
+        // Arrange: Simulate one country being found
+        when(mockResultSet.next()).thenReturn(true, false);
+        when(mockResultSet.getString("Code")).thenReturn("JAM");
+        when(mockResultSet.getString("Name")).thenReturn("Jamaica");
+        when(mockResultSet.getString("Continent")).thenReturn("North America");
+        when(mockResultSet.getString("Region")).thenReturn("Caribbean");
+        when(mockResultSet.getInt("Population")).thenReturn(2700000);
+        when(mockResultSet.getString("Capital")).thenReturn("Kingston");
+
+        // Act: Call the method
+        ArrayList<Country> countries = report.topNCountriesByRegion("Caribbean", 5);
+
+        // Assert: Check the results
+        assertNotNull(countries);
+        assertEquals(1, countries.size());
+        Country c = countries.get(0);
+        assertEquals("JAM", c.Code);
+        assertEquals("Jamaica", c.Name);
+        assertEquals("Caribbean", c.Region);
+        assertEquals(2700000, c.Population);
+
+        // Verify: Check that the correct parameters were bound
+        verify(mockPreparedStatement).setString(1, "Caribbean");
+        verify(mockPreparedStatement).setInt(2, 5);
+    }
+
+    /**
+     * Verifies that topNCountriesByRegion returns an empty list for a region with no countries.
+     */
+    @Test
+    void testTopNCountriesByRegion_Empty() throws Exception {
+        // Arrange: Simulate no countries being found
+        when(mockResultSet.next()).thenReturn(false);
+
+        // Act
+        ArrayList<Country> countries = report.topNCountriesByRegion("EmptyRegion", 5);
+
+        // Assert
+        assertNotNull(countries);
+        assertEquals(0, countries.size());
+
+        // Verify: Check parameters were still bound
+        verify(mockPreparedStatement).setString(1, "EmptyRegion");
+        verify(mockPreparedStatement).setInt(2, 5);
+    }
+
+    /**
+     * Verifies that topNCountries helper method returns null when a SQLException occurs.
+     */
+    @Test
+    void testTopNCountriesByRegion_Exception() throws Exception {
+        // Arrange: Simulate a database error
+        when(mockConnection.prepareStatement(any(String.class))).thenThrow(new SQLException("DB error"));
+
+        // Act
+        ArrayList<Country> countries = report.topNCountriesByRegion("Caribbean", 5);
+
+        // Assert
+        assertNull(countries);
+    }
+
+    /**
+     * Verifies that topNCountriesByContinent correctly binds parameters and returns data.
+     * This test also implicitly tests the 'topNCountries' helper method.
+     */
+    @Test
+    void testTopNCountriesByContinent_Valid() throws Exception {
+        // Arrange: Simulate one country being found
+        when(mockResultSet.next()).thenReturn(true, false);
+        when(mockResultSet.getString("Code")).thenReturn("BRA");
+        when(mockResultSet.getString("Name")).thenReturn("Brazil");
+        when(mockResultSet.getString("Continent")).thenReturn("South America");
+        when(mockResultSet.getString("Region")).thenReturn("South America");
+        when(mockResultSet.getInt("Population")).thenReturn(210000000);
+        when(mockResultSet.getString("Capital")).thenReturn("Brasília");
+
+        // Act
+        ArrayList<Country> countries = report.topNCountriesByContinent("South America", 3);
+
+        // Assert
+        assertNotNull(countries);
+        assertEquals(1, countries.size());
+        Country c = countries.get(0);
+        assertEquals("BRA", c.Code);
+        assertEquals("Brazil", c.Name);
+        assertEquals("South America", c.Continent);
+
+        // Verify
+        verify(mockPreparedStatement).setString(1, "South America");
+        verify(mockPreparedStatement).setInt(2, 3);
+    }
+
+    /**
+     * Verifies that topNCountriesInTheWorld correctly binds its parameters and returns data.
+     */
+    @Test
+    void testTopNCountriesInTheWorld_Valid() throws Exception {
+        // Arrange: Simulate one country being found
+        when(mockResultSet.next()).thenReturn(true, false);
+        when(mockResultSet.getString("Code")).thenReturn("CHN");
+        when(mockResultSet.getString("Name")).thenReturn("China");
+        when(mockResultSet.getString("Continent")).thenReturn("Asia");
+        when(mockResultSet.getString("Region")).thenReturn("Eastern Asia");
+        when(mockResultSet.getInt("Population")).thenReturn(1400000000);
+        when(mockResultSet.getString("Capital")).thenReturn("Beijing");
+
+        // Act
+        ArrayList<Country> countries = report.topNCountriesInTheWorld(10);
+
+        // Assert
+        assertNotNull(countries);
+        assertEquals(1, countries.size());
+        Country c = countries.get(0);
+        assertEquals("CHN", c.Code);
+        assertEquals("China", c.Name);
+
+        // Verify: Check that the *single integer limit* was bound
+        verify(mockPreparedStatement).setInt(1, 10);
+    }
+
+    /**
+     * Verifies that topNCountriesInTheWorld returns an empty list when no countries are found.
+     */
+    @Test
+    void testTopNCountriesInTheWorld_Empty() throws Exception {
+        // Arrange: Simulate no countries being found
+        when(mockResultSet.next()).thenReturn(false);
+
+        // Act
+        ArrayList<Country> countries = report.topNCountriesInTheWorld(10);
+
+        // Assert
+        assertNotNull(countries);
+        assertEquals(0, countries.size());
+
+        // Verify
+        verify(mockPreparedStatement).setInt(1, 10);
+    }
+
+    /**
+     * Verifies that topNCountriesInTheWorld returns null when a SQLException occurs.
+     */
+    @Test
+    void testTopNCountriesInTheWorld_Exception() throws Exception {
+        // Arrange: Simulate a database error during query execution
+        when(mockPreparedStatement.executeQuery()).thenThrow(new SQLException("Query failed"));
+
+        // Act
+        ArrayList<Country> countries = report.topNCountriesInTheWorld(10);
+
+        // Assert
+        assertNull(countries);
+    }
+
     /** Test printCountries prints correctly for valid countries */
     @Test
     void testPrintCountries_Valid() {
@@ -235,4 +396,6 @@ class CountryReportTest {
         report.printCountries(countries);
     }
 }
+
+
 

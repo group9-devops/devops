@@ -2,6 +2,7 @@ package com.napier.devops;
 
 import com.napier.sem.CapitalCityReport;
 import com.napier.sem.City;
+import com.napier.sem.App;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

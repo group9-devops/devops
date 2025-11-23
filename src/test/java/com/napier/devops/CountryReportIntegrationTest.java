@@ -212,5 +212,93 @@ public class CountryReportIntegrationTest {
         report.printCountries(null);
     }
 
+    /**
+     * Test retrieving top N countries for a specific region.
+     */
+    @Test
+    void testGetTopNCountriesByRegion() {
+        int limit = 5;
+        ArrayList<Country> countries = report.topNCountriesByRegion("Caribbean", limit);
+
+        assertNotNull(countries, "Country list should not be null.");
+        assertFalse(countries.isEmpty(), "Country list should not be empty.");
+
+        // Check that the limit was respected
+        assertTrue(countries.size() <= limit, "List size should be less than or equal to the limit.");
+
+        Country firstCountry = countries.get(0);
+        System.out.printf("Top %d country in Caribbean: %s — %,d population%n",
+                limit, firstCountry.Name, firstCountry.Population);
+
+        // Sanity check
+        assertEquals("Caribbean", firstCountry.Region, "Region should be Caribbean.");
+    }
+
+    /**
+     * Test retrieving top N countries for a specific continent.
+     */
+    @Test
+    void testGetTopNCountriesByContinent() {
+        int limit = 3;
+        ArrayList<Country> countries = report.topNCountriesByContinent("South America", limit);
+
+        assertNotNull(countries, "Country list should not be null.");
+        assertFalse(countries.isEmpty(), "Country list should not be empty.");
+
+        // Check that the limit was respected
+        assertTrue(countries.size() <= limit, "List size should be less than or equal to the limit.");
+
+        Country firstCountry = countries.get(0);
+        System.out.printf("Top %d country in South America: %s — %,d population%n",
+                limit, firstCountry.Name, firstCountry.Population);
+
+        // Sanity check
+        assertEquals("South America", firstCountry.Continent, "Continent should be South America.");
+    }
+
+    /**
+     * Test retrieving top N countries in the world.
+     */
+    @Test
+    void testGetTopNCountriesInTheWorld() {
+        int limit = 10;
+        ArrayList<Country> countries = report.topNCountriesInTheWorld(limit);
+
+        assertNotNull(countries, "Country list should not be null.");
+        assertFalse(countries.isEmpty(), "Country list should not be empty.");
+
+        // This is a strong test that LIMIT ? worked correctly.
+        // It assumes your database has at least 10 countries.
+        assertEquals(limit, countries.size(), "List size should be equal to the limit.");
+
+        Country firstCountry = countries.get(0);
+        System.out.printf("Top %d country in the world: %s — %,d population%n",
+                limit, firstCountry.Name, firstCountry.Population);
+
+        // Sanity check
+        assertNotNull(firstCountry.Name, "Country name should not be null.");
+        assertTrue(firstCountry.Population > 0, "Population must be positive.");
+    }
+
+    /**
+     * Test top N countries with an invalid region.
+     */
+    @Test
+    void testGetTopNCountriesByInvalidRegion() {
+        ArrayList<Country> countries = report.topNCountriesByRegion("NotARealRegion", 5);
+        assertNotNull(countries);
+        assertTrue(countries.isEmpty(), "Expected empty list for non-existent region.");
+    }
+
+    /**
+     * Test top N countries with an invalid continent.
+     */
+    @Test
+    void testGetTopNCountriesByInvalidContinent() {
+        ArrayList<Country> countries = report.topNCountriesByContinent("NotARealContinent", 5);
+        assertNotNull(countries);
+        assertTrue(countries.isEmpty(), "Expected empty list for non-existent continent.");
+    }
+
 
 }

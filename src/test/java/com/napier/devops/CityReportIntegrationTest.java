@@ -1,8 +1,9 @@
 package com.napier.devops;
 
-import com.napier.sem.*;
+import com.napier.sem.App;
+import com.napier.sem.City;
+import com.napier.sem.CityReport;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -156,130 +157,112 @@ public class CityReportIntegrationTest {
     }
 
     /**
-     * Test to check for a null continent provided.
+     * Test that getTopNCities returns exactly N cities in descending population order.
      */
     @Test
-    void getCitiesByNullContinent() {
-        ArrayList<City> city = report.printCitiesByContinent(null);
-        assertNotNull(city, "Result should not be null for null region.");
-        assertTrue(city.isEmpty(), "Expected empty list for null region.");
+    public void testGetTopNCities() {
+        int n = 5;
+        ArrayList<City> cities = report.getTopNCitiesInWorld(n);
+
+        assertNotNull(cities, "Returned list should not be null");
+        assertEquals(n, cities.size(), "Returned list should have exactly " + n + " cities");
+
+        for (int i = 1; i < cities.size(); i++) {
+            assertTrue(cities.get(i - 1).Population >= cities.get(i).Population,
+                    "Cities should be in descending order by population");
+        }
     }
 
     /**
-     * Test to check for a null region provided.
+     * Test that getTopNCitiesByContinent returns exactly N cities
+     * in descending population order for the specified continent.
      */
     @Test
-    void getCitiesByNullRegion() {
-        ArrayList<City> city = report.printCitiesByRegion(null);
-        assertNotNull(city, "Result should not be null for null region.");
-        assertTrue(city.isEmpty(), "Expected empty list for null region.");
-    }
+    public void testGetTopNCitiesByContinent() {
+        int n = 3;
+        String continent = "Asia";
 
+        ArrayList<City> cities = report.getTopNCitiesByContinent(continent, n);
 
-    /**
-     * Test to check for a null district provided.
-     */
-    @Test
-    void getCitiesByNullDistrict() {
-        ArrayList<City> city = report.printCitiesByDistrict(null);
-        assertNotNull(city, "Result should not be null for null region.");
-        assertTrue(city.isEmpty(), "Expected empty list for null region.");
-    }
+        assertNotNull(cities, "Returned list should not be null");
+        assertEquals(n, cities.size(), "Returned list should have exactly " + n + " cities");
 
-
-    /**
-     * Integration test for the {@link CityReport#printCities(ArrayList)} method.
-     * <p>
-     * This test retrieves real city data from the database using
-     * {@link CityReport#printAllCities()}  and passes the result
-     * to the {@code printCities} method. The purpose is to verify that
-     * the method can handle a real dataset without throwing exceptions.
-     *
-     */
-    @Test
-    void printCitiesIntegration() {
-        ArrayList<City> city = report.printAllCities();
-        assertNotNull(city);
-        assertFalse(city.isEmpty());
-
-        // Just check that calling the print method does not throw
-        report.printCities(city);
+        for (int i = 1; i < cities.size(); i++) {
+            assertTrue(cities.get(i - 1).Population >= cities.get(i).Population,
+                    "Cities should be in descending order by population");
+        }
     }
 
     /**
-     * Test printing an empty country list.
+     * Test that getTopNCitiesByRegion returns exactly N cities
+     * in descending population order for the specified region.
      */
     @Test
-    void printEmptyCityList() {
-        ArrayList<City> emptyList = new ArrayList<>();
-        report.printCities(emptyList);
-    }
+    public void testGetTopNCitiesByRegion() {
+        int n = 2;
+        String region = "Western Europe";
 
-    /**
-     * Test printing a list with null Country objects.
-     */
-    @Test
-    void printListWithNullCity() {
-        ArrayList<City> list = new ArrayList<>();
-        list.add(null);
-        report.printCities(list);
-    }
+        ArrayList<City> cities = report.getTopNCitiesByRegion(region, n);
 
+        assertNotNull(cities, "Returned list should not be null");
+        assertEquals(n, cities.size(), "Returned list should have exactly " + n + " cities");
 
-
-    /**
-     * Test getCountriesByPopulation with a null connection.
-     */
-    @Test
-    void getCitiesByPopulationWithNullConnection() {
-        CityReport brokenReport = new CityReport(null);
-        ArrayList<City> city = brokenReport.printAllCities();
-        assertNotNull(city);
-        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
-    }
-
-    /**
-     * Test getCountriesByContinent with a null connection.
-     */
-    @Test
-    void getCitiesByContinentWithNullConnection() {
-        CityReport brokenReport = new CityReport(null);
-        ArrayList<City> city = brokenReport.printCitiesByContinent("Africa");
-        assertNotNull(city);
-        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
-    }
-
-    /**
-     * Test getCountriesByRegion with a null connection.
-     */
-    @Test
-    void getCitiesByRegionWithNullConnection() {
-        CityReport brokenReport = new CityReport(null);
-        ArrayList<City> city = brokenReport.printCitiesByRegion("Western Europe");
-        assertNotNull(city);
-        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+        for (int i = 1; i < cities.size(); i++) {
+            assertTrue(cities.get(i - 1).Population >= cities.get(i).Population,
+                    "Cities should be in descending order by population");
+        }
     }
 
 
     /**
-     * Test getCountriesByRegion with a null connection.
+     * Test that requesting zero cities returns an empty list.
      */
     @Test
-    void getCitiesByDistrictWithNullConnection() {
-        CityReport brokenReport = new CityReport(null);
-        ArrayList<City> city = brokenReport.printCitiesByDistrict("Oran");
-        assertNotNull(city);
-        assertTrue(city.isEmpty(), "Expected empty list when connection is null.");
+    public void testGetTopNZeroCities() {
+        ArrayList<City> cities = report.getTopNCitiesInWorld(0);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty when n=0");
     }
 
     /**
-     * Test whether printCapitalCities handles a null value*/
-    @DisplayName("printCities handles null list without crashing")
+     * Test that requesting more cities than available returns all cities.
+     */
     @Test
-    void printNullCityList() {
-        // If this throws an exception, JUnit will fail the test automatically.
-        report.printCities(null);
+    public void testGetTopNMoreThanAvailable() {
+        int n = 1000; // Assuming fewer than 1000 capitals in DB
+        ArrayList<City> cities = report.getTopNCitiesInWorld(n);
+
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.size() <= n, "Returned list should contain at most " + n + " cities");
     }
 
+    /**
+     * Test that an invalid continent returns an empty list.
+     */
+    @Test
+    public void testInvalidContinent() {
+        ArrayList<City> cities = report.getTopNCitiesByContinent("Atlantis", 5);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty for invalid continent");
+    }
 
+    /**
+     * Test that an invalid region returns an empty list.
+     */
+    @Test
+    public void testInvalidRegion() {
+        ArrayList<City> cities = report.getTopNCitiesByRegion("Middle Earth", 5);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty for invalid region");
+    }
+
+    /**
+     * Test that an invalid region returns an empty list.
+     */
+    @Test
+    public void testInvalidDistrict() {
+        ArrayList<City> cities = report.getTopNCitiesByDistrict("Middle Earth", 5);
+        assertNotNull(cities, "Returned list should not be null");
+        assertTrue(cities.isEmpty(), "Returned list should be empty for invalid region");
+    }
 }

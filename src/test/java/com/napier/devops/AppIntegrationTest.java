@@ -4,6 +4,7 @@ import com.napier.sem.App;
 import com.napier.sem.CapitalCityReport;
 import com.napier.sem.CityReport;
 import com.napier.sem.CountryReport;
+import com.napier.sem.LanguageReport;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -26,8 +27,9 @@ class AppIntegrationTest {
         CityReport cityReport = new CityReport(app.con);
         CapitalCityReport capitalReport = new CapitalCityReport(app.con);
         CountryReport PrintCountry = new CountryReport(app.con);
+        LanguageReport languageReport = new LanguageReport(app.con);
 
-        app.runReports(cityReport, capitalReport, PrintCountry); // test fails if exception occurs
+        app.runReports(cityReport, capitalReport, PrintCountry,languageReport); // test fails if exception occurs
 
         app.disconnect();
     }

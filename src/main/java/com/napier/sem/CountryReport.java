@@ -75,6 +75,126 @@ public class CountryReport {
     }
 
     /**
+     * Gets the top N most populated countries for a specific place and specific limit.
+     * @param sql The sql provided to the function to retrieve the data
+     * @param place The name of the region (e.g., "Caribbean", "Southern Europe").
+     * @param limit  The number of countries to return.
+     * @return An ArrayList of Country objects, or null on failure.
+     */
+    public ArrayList<Country> topNCountries(String sql,String place, int limit) {
+
+        // SQL query now uses placeholders for *both* region and limit
+        ArrayList<Country> countries = new ArrayList<>();
+
+        // Use a try-with-resources block to auto-close the PreparedStatement
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+
+            // 1. Bind the *first* '?' (Region) as a String
+            pstmt.setString(1, place);
+
+            // 2. Bind the *second* '?' (LIMIT) as an Int
+            pstmt.setInt(2, limit);
+
+            // Execute the query
+            ResultSet rset = pstmt.executeQuery();
+
+            // Loop through the results and build the Country objects
+            while (rset.next()) {
+                Country country = new Country();
+                country.Code = rset.getString("Code");
+                country.Name = rset.getString("Name");
+                country.Continent = rset.getString("Continent");
+                country.Population = rset.getInt("Population");
+                country.Capital = rset.getString("Capital");
+                country.Region = rset.getString("Region");
+                countries.add(country);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get countries for place: " + place);
+            return null; // Return null or an empty list
+        }
+
+        return countries;
+    }
+    /**
+     * Gets the top N most populated countries for a specific region.
+     *
+     * @param region The name of the region (e.g., "Caribbean", "Southern Europe").
+     * @param limit  The number of countries to return.
+     */
+    public ArrayList<Country> topNCountriesByRegion(String region, int limit) {
+        String sql = """
+            SELECT Code, Name, Continent, Region, Population, Capital 
+            FROM country 
+            WHERE Region = ?
+            ORDER BY Population DESC LIMIT ?
+            """;
+        return topNCountries(sql, region, limit);
+    }
+
+    /**
+     * Gets the top N most populated countries for a specific continent.
+     *
+     * @param continent The name of the region (e.g.,North America, South America).
+     * @param limit  The number of countries to return.
+     */
+    public ArrayList<Country> topNCountriesByContinent(String continent, int limit) {
+        String sql = """
+            SELECT Code, Name, Continent, Region, Population, Capital 
+            FROM country 
+            WHERE Continent = ?
+            ORDER BY Population DESC LIMIT ?
+            """;
+        return topNCountries(sql, continent, limit);
+    }
+
+    /**
+     * Gets the top N most populated countries in the world.
+     * @param limit  The number of countries to return.
+     */
+    public ArrayList<Country> topNCountriesInTheWorld(int limit) {
+        String sql = """
+            SELECT Code, Name, Continent, Region, Population, Capital 
+            FROM country 
+            ORDER BY Population DESC LIMIT ?
+            """;
+        // SQL query now uses placeholders for *both* region and limit
+        ArrayList<Country> countries = new ArrayList<>();
+
+        // Use a try-with-resources block to auto-close the PreparedStatement
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            //  Bind the '?' (LIMIT) as an Int
+            pstmt.setInt(1, limit);
+
+            // Execute the query
+            ResultSet rset = pstmt.executeQuery();
+
+            // Loop through the results and build the Country objects
+            while (rset.next()) {
+                Country country = new Country();
+                country.Code = rset.getString("Code");
+                country.Name = rset.getString("Name");
+                country.Continent = rset.getString("Continent");
+                country.Population = rset.getInt("Population");
+                country.Capital = rset.getString("Capital");
+                country.Region = rset.getString("Region");
+                countries.add(country);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get countries for place ");
+            return null; // Return null or an empty list
+        }
+
+        return countries;
+    }
+
+
+
+    /**
      * Private helper method to execute SQL queries and map results to Country objects.
      * @param sql The SQL query to execute.
      * @param params Optional query parameters for the PreparedStatement.
