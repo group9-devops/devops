@@ -68,7 +68,7 @@ public class UrbanReport {
         }
     }
 
-    public void getPopulationOfCContinent(Connection con, String continent) {
+    public void getPopulationOfContinent(Connection con, String continent) {
         try {
             Statement stmt = con.createStatement();
             String sqlStatement = "SELECT SUM(population) FROM country WHERE Continent = " + "'" + continent + "'";
@@ -123,7 +123,7 @@ public class UrbanReport {
             System.out.println("Failed to get population");
         }
     }
-    public void getPopulationOfCCity(Connection con, String city) {
+    public void getPopulationOfCity(Connection con, String city) {
         try {
             Statement stmt = con.createStatement();
             String sqlStatement = "SELECT population FROM city WHERE Name = " + "'" + city + "'";

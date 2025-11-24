@@ -109,7 +109,7 @@ class UrbanReportTest {
         when(mockResultSet.next()).thenReturn(true);
         when(mockResultSet.getDouble(1)).thenReturn(3705025700.0);
 
-        mockReport.getPopulationOfCContinent(mockConnection, "Asia");
+        mockReport.getPopulationOfContinent(mockConnection, "Asia");
 
         verify(mockStatement).executeQuery("SELECT SUM(population) FROM country WHERE Continent = 'Asia'");
     }
@@ -135,7 +135,7 @@ class UrbanReportTest {
         when(mockResultSet.next()).thenReturn(true);
         when(mockResultSet.getDouble(1)).thenReturn(461000.0);
 
-        mockReport.getPopulationOfCCity(mockConnection, "Liverpool");
+        mockReport.getPopulationOfCity(mockConnection, "Liverpool");
 
         verify(mockStatement).executeQuery("SELECT population FROM city WHERE Name = 'Liverpool'");
     }
@@ -165,6 +165,60 @@ class UrbanReportTest {
         when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
 
         mockReport.getPopulationOfRegion(mockConnection, "British Islands");
+
+        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
+    }
+
+    @Test
+    void testGetUrbanPopulationOfRegion_ExceptionHandled() throws Exception {
+        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
+
+        mockReport.getUrbanPopulationOfRegion(mockConnection, "British Islands");
+
+        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
+    }
+
+    @Test
+    void testGetPopulationOfContinent_ExceptionHandled() throws Exception {
+        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
+
+        mockReport.getPopulationOfContinent(mockConnection, "Asia");
+
+        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
+    }
+
+    @Test
+    void testGetUrbanPopulationOfContinent_ExceptionHandled() throws Exception {
+        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
+
+        mockReport.getUrbanPopulationOfContinent(mockConnection, "Asia");
+
+        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
+    }
+
+    @Test
+    void testGetPopulationOfCountry_ExceptionHandled() throws Exception {
+        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
+
+        mockReport.getPopulationOfCountry(mockConnection, "Afghanistan");
+
+        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
+    }
+
+    @Test
+    void testGetUrbanPopulationOfCountry_ExceptionHandled() throws Exception {
+        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
+
+        mockReport.getUrbanPopulationOfCountry(mockConnection, "Afghanistan");
+
+        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
+    }
+
+    @Test
+    void testGetPopulationOfCity_ExceptionHandled() throws Exception {
+        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
+
+        mockReport.getPopulationOfCity(mockConnection, "Liverpool");
 
         assertEquals(0.0, mockReport.urbanPopulation, 0.001);
     }
