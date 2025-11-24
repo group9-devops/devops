@@ -15,7 +15,6 @@ class UrbanReportTest {
     private PreparedStatement mockStatement;
     private ResultSet mockResultSet;
     private UrbanReport mockReport;
-    public String arg;
 
     @BeforeEach
     void setUp() throws Exception {
