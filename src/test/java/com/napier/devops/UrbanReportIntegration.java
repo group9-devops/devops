@@ -15,7 +15,7 @@ class UrbanReportIntegration
     @BeforeAll
     static void init() {
         a = new App();
-        a.connect("localhost:3306", 30000);  // Connect first
+        a.connect("localhost:3308", 30000);  // Connect first
         report = new UrbanReport();
     }
 
