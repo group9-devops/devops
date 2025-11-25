@@ -102,7 +102,7 @@ jobs:
             ./target/*.jar
 
       - name: Copy Output
-        run: docker container cp group9_devops_app:./tmp/reports ./
+        run: docker container cp devops-app:./tmp/reports ./
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
