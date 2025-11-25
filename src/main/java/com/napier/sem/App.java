@@ -89,41 +89,49 @@ public class App
         System.out.println("\n=== All Cities In The World ===");
         ArrayList<City> allCities = cityReport.printAllCities();
         cityReport.printCities(allCities);
+        cityReport.outputCapitalCities(allCities,"AllCities.md");
 
         // --- 2. Cities in a Continent ---
         System.out.println("\n=== All Cities in Continent ===");
         ArrayList<City> cityInContinent = cityReport.printCitiesByContinent("Asia");
         cityReport.printCities(cityInContinent);
+        cityReport.outputCapitalCities(cityInContinent,"AllCitiesInContinent.md");
 
         // --- 3. Cities in a Region ---
         System.out.println("\n=== Capital Cities in a Region ===");
         ArrayList<City> cityInRegion = cityReport.printCitiesByRegion("South America");
         cityReport.printCities(cityInRegion);
+        cityReport.outputCapitalCities(cityInRegion,"AllCitiesInRegion.md");
 
         // --- 3. Cities in a District---
         System.out.println("\n=== Capital Cities in a District ===");
         ArrayList<City> cityInDistrict = cityReport.printCitiesByDistrict("Oran");
         cityReport.printCities(cityInDistrict);
+        cityReport.outputCapitalCities(cityInDistrict,"AllCitiesInDistrict.md");
 
         // --- Top N Most Populated Cities Globally ---
         System.out.println("\n=== Top 10 Most Populated Cities in the World ===");
         ArrayList<City> topWorldCities = cityReport.getTopNCitiesInWorld(10);
         cityReport.printCities(topWorldCities);
+        cityReport.outputCapitalCities(topWorldCities,"TopCitiesInWorld.md");
 
         // --- Top N Most Populated Cities in a Continent ---
         System.out.println("\n=== Top 5 Most Populated Cities in a Continent ===");
         ArrayList<City> CityPopulationContinent = cityReport.getTopNCitiesByContinent("Asia", 2);
         cityReport.printCities(CityPopulationContinent);
+        cityReport.outputCapitalCities(CityPopulationContinent,"TopCityPopulationInContinent.md");
 
         // --- Top N Most Populated Cities in a Region ---
         System.out.println("\n=== Top 5 Most Populated Cities in a Region===");
         ArrayList<City> CityPopulationRegion = cityReport.getTopNCitiesByRegion("North America", 4);
         cityReport.printCities(CityPopulationRegion);
+        cityReport.outputCapitalCities(CityPopulationRegion,"TopCityPopulationInRegion.md");
 
         // --- Top N Most Populated Cities in a District ---
         System.out.println("\n=== Top 5 Most Populated Cities in a District ===");
         ArrayList<City> CityPopulationDistrict = cityReport.getTopNCitiesByDistrict("California", 5);
         cityReport.printCities(CityPopulationDistrict);
+        cityReport.outputCapitalCities(CityPopulationDistrict,"TopCityPopulationInDistrict.md");
 
         // --- 1. All Capital Cities ---
         System.out.println("\n=== All Capital Cities ===");
