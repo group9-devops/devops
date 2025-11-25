@@ -22,7 +22,7 @@ import static org.mockito.Mockito.*;
  * and output formatting for various scenarios.
  */
 class CityReportTest {
-
+    //comment
     private Connection mockConnection;
     private PreparedStatement mockPreparedStatement;
     private ResultSet mockResultSet;

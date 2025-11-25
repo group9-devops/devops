@@ -18,7 +18,6 @@ jobs:
           distribution: 'adopt'
       - name: Unit Tests
         run: mvn -Dtest=com.napier.devops.CityReportTest test
-
   IntegrationTests:
     name: Integration Tests
     runs-on: ubuntu-22.04
