@@ -1,0 +1,67 @@
+name: Bug Report
+description: Report an issue with the population reporting system.
+title: "[Bug]: "
+labels: ["bug"]
+assignees: [TULASI, CHIEDZA, EUAN, ADIN]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What went wrong?
+      description: Describe the bug clearly.
+      placeholder: e.g. "City report does not sort by population correctly."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce the problem?
+      placeholder: |
+        1. Run the application
+        2. Select "Top N Countries in Africa"
+        3. Enter N = 10
+        4. Output not ordered correctly
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      placeholder: "The report should show countries ordered from highest to lowest population."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      placeholder: "The system displays them in ascending order instead."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low
+        - Medium
+        - High
+      default: 1
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or SQL errors
+      render: shell
+      placeholder: "Paste error messages here (if any)."
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional information
+      placeholder: "Screenshots, database inputs, N values, etc."
