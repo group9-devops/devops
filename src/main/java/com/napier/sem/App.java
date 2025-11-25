@@ -163,7 +163,6 @@ public class App
         capitalReport.outputCapitalCities(nCapitalsRegion, "TopNCapitalCitiesInRegion.md");
 
 
-
         // Print the countries in descending order of population
         System.out.println("\n=== All Countries in The World ===");
         ArrayList<Country> countries = PrintCountry.getCountriesByPopulation();
