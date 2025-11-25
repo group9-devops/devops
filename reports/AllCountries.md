@@ -60,7 +60,7 @@
 | NLD | Netherlands | Europe | Western Europe | 15,864,000 | 5 |
 | CHL | Chile | South America | South America | 15,211,000 | 554 |
 | CMR | Cameroon | Africa | Central Africa | 15,085,000 | 1804 |
-| CIV | CÃ´te dâ€™Ivoire | Africa | Western Africa | 14,786,000 | 2814 |
+| CIV | Côte d’Ivoire | Africa | Western Africa | 14,786,000 | 2814 |
 | AGO | Angola | Africa | Central Africa | 12,878,000 | 56 |
 | ECU | Ecuador | South America | South America | 12,646,000 | 594 |
 | BFA | Burkina Faso | Africa | Western Africa | 11,937,000 | 549 |
@@ -158,7 +158,7 @@
 | GUY | Guyana | South America | South America | 861,000 | 928 |
 | FJI | Fiji Islands | Oceania | Melanesia | 817,000 | 764 |
 | CYP | Cyprus | Asia | Middle East | 754,700 | 2430 |
-| REU | RÃ©union | Africa | Eastern Africa | 699,000 | 3017 |
+| REU | Réunion | Africa | Eastern Africa | 699,000 | 3017 |
 | DJI | Djibouti | Africa | Eastern Africa | 638,000 | 585 |
 | BHR | Bahrain | Asia | Middle East | 617,000 | 149 |
 | QAT | Qatar | Asia | Middle East | 599,000 | 2973 |
