@@ -3,6 +3,7 @@ package com.napier.sem;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,8 @@ public class UrbanReport {
     public double population;
     public double urbanPopulation;
     public double percentage;
+    DecimalFormat numberFormat = new DecimalFormat("#,###");
+    DecimalFormat percentageFormat = new DecimalFormat("#.##");
 
     /**
      * @param con the active database connection.
@@ -179,10 +182,11 @@ public class UrbanReport {
                 "North America","Oceania","South America"
         };
 
-
+        List<String> regions = new ArrayList<>();
+        List<String> countries = new ArrayList<>();
+        List<String> cities = new ArrayList<>();
         try {
             // 1. Regions
-            List<String> regions = new ArrayList<>();
             try (Statement stmt = con.createStatement()) {
                 ResultSet rset = stmt.executeQuery(
                         "SELECT DISTINCT Region FROM country WHERE Region IS NOT NULL"
@@ -193,7 +197,6 @@ public class UrbanReport {
             }
 
             // 2. Countries
-            List<String> countries = new ArrayList<>();
             try (Statement stmt = con.createStatement()) {
                 ResultSet rset = stmt.executeQuery(
                         "SELECT DISTINCT Name FROM country ORDER BY Name"
@@ -204,7 +207,6 @@ public class UrbanReport {
             }
 
             // 3. Cities
-            List<String> cities = new ArrayList<>();
             try (Statement stmt = con.createStatement()) {
                 ResultSet rset = stmt.executeQuery(
                         "SELECT DISTINCT Name FROM city ORDER BY Name"
@@ -219,12 +221,13 @@ public class UrbanReport {
             System.out.println(e.getMessage());
         }
 
-        generateContinentReport(con, continents,"ContinentReport");
+        generateContinentReport(con, continents,"ContinentUrbanReport.md");
+        generateRegionReport(con, regions,"RegionalUrbanReport.md");
+        generateCountryReport(con, countries,"CountryUrbanReport.md");
     }
 
     public void generateContinentReport(Connection con, String[] continents, String filename){
         StringBuilder sb = new StringBuilder();
-        App a  = new App();
         // Markdown table header
         sb.append("| Continent | Population | Urban Population | Urbanisation Percentage |\r\n");
         sb.append("| --- | --- | --- | --- |\r\n");
@@ -236,9 +239,9 @@ public class UrbanReport {
             percentage = (urbanPopulation / population) * 100;
             sb.append("| ")
                     .append(continent).append(" | ")
-                    .append(population).append(" | ")
-                    .append(urbanPopulation).append(" | ")
-                    .append(percentage)
+                    .append(numberFormat.format(population)).append(" | ")
+                    .append(numberFormat.format(urbanPopulation)).append(" | ")
+                    .append(percentageFormat.format(percentage))
                     .append(" |\r\n");
 
         }
@@ -256,6 +259,78 @@ public class UrbanReport {
         } catch (java.io.IOException e) {
             e.printStackTrace();
             System.out.println("Failed to write continental urbanisation report.");
+        }
+    }
+
+    public void generateRegionReport(Connection con, List<String> regions, String filename){
+        StringBuilder sb = new StringBuilder();
+        // Markdown table header
+        sb.append("| Region | Population | Urban Population | Urbanisation Percentage |\r\n");
+        sb.append("| --- | --- | --- | --- |\r\n");
+
+        // Loop through all continents and generate values
+        for (String region : regions){
+            getPopulationOfRegion(con,region);
+            getUrbanPopulationOfRegion(con,region);
+            percentage = (urbanPopulation / population) * 100;
+            sb.append("| ")
+                    .append(region).append(" | ")
+                    .append(numberFormat.format(population)).append(" | ")
+                    .append(numberFormat.format(urbanPopulation)).append(" | ")
+                    .append(percentageFormat.format(percentage))
+                    .append(" |\r\n");
+
+        }
+
+        try {
+            // Create reports folder if it does not exist
+            new java.io.File("./reports/").mkdirs();
+
+            // Write Markdown to file
+            java.io.BufferedWriter writer = new java.io.BufferedWriter(
+                    new java.io.FileWriter("./reports/" + filename));
+            writer.write(sb.toString());
+            writer.close();
+            System.out.println("Regional urbanisation report written to ./reports/" + filename);
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to write regional urbanisation report.");
+        }
+    }
+
+    public void generateCountryReport(Connection con, List<String> countries, String filename){
+        StringBuilder sb = new StringBuilder();
+        // Markdown table header
+        sb.append("| Country | Population | Urban Population | Urbanisation Percentage |\r\n");
+        sb.append("| --- | --- | --- | --- |\r\n");
+
+        // Loop through all continents and generate values
+        for (String country : countries){
+            getPopulationOfCountry(con,country);
+            getUrbanPopulationOfCountry(con,country);
+            percentage = (urbanPopulation / population) * 100;
+            sb.append("| ")
+                    .append(country).append(" | ")
+                    .append(numberFormat.format(population)).append(" | ")
+                    .append(numberFormat.format(urbanPopulation)).append(" | ")
+                    .append(percentageFormat.format(percentage))
+                    .append(" |\r\n");
+
+        }
+
+        try {
+            // Create reports folder if it does not exist
+            new java.io.File("./reports/").mkdirs();
+
+            // Write Markdown to file
+            java.io.BufferedWriter writer = new java.io.BufferedWriter(
+                    new java.io.FileWriter("./reports/" + filename));
+            writer.write(sb.toString());
+            writer.close();
+            System.out.println("Country urbanisation report written to ./reports/" + filename);
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to write country urbanisation report.");
         }
     }
 }
