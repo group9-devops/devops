@@ -80,6 +80,7 @@ public class CapitalCityReport {
         return executeCapitalCityQuery(sql, region);
     }
 
+
     /**
      * Retrieves the top N populated capital cities in the world.
      *
