@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 public class UrbanReport {
     public double population;
     public double urbanPopulation;
-    public double percentage;
 
     /**
      * @param con the active database connection.
@@ -24,7 +23,6 @@ public class UrbanReport {
             System.out.println(e.getMessage());
             System.out.println("Failed to get population");
         }
-        System.out.println("Population of world: " + population);
     }
 
     /**
@@ -41,9 +39,6 @@ public class UrbanReport {
             System.out.println(e.getMessage());
             System.out.println("Failed to get population");
         }
-        System.out.println("Urban population: " + urbanPopulation);
-        percentage = (urbanPopulation / population) * 100;
-        System.out.println("Percentage of urban: " + percentage);
     }
 
     /**
@@ -147,7 +142,7 @@ public class UrbanReport {
                     "WHERE country.Name = " + "'" + country + "'";
             ResultSet rset = stmt.executeQuery(sqlStatement);
             rset.next();
-            population = rset.getDouble(1);
+            urbanPopulation = rset.getDouble(1);
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Failed to get population");

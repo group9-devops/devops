@@ -40,9 +40,52 @@ class UrbanReportIntegration
         report.getUrbanPopulation(a.con);
 
         System.out.println("Urban Population = " + report.urbanPopulation);
-        System.out.println("Percentage Urban = " + report.percentage);
 
         assertTrue(report.urbanPopulation > 0, "Urban population should be greater than zero");
-        assertTrue(report.percentage > 0 && report.percentage <= 100, "Urban percentage should be between 0 and 100");
+    }
+
+    @Test
+    void testGetPopulationOfRegion(){
+        report.getUrbanPopulationOfRegion(a.con,"British Islands");
+        report.getPopulationOfRegion(a.con,"British Islands");
+
+        System.out.println("Population = " + report.population);
+        System.out.println("Urban Population = " + report.urbanPopulation);
+
+        assertTrue(report.population > 0, "Population should be greater than zero");
+        assertTrue(report.urbanPopulation > 0, "Urban population should be greater than zero");
+    }
+
+    @Test
+    void testGetPopulationOfCountry(){
+        report.getPopulationOfCountry(a.con,"Afghanistan");
+        report.getUrbanPopulationOfCountry(a.con,"Afghanistan");
+
+        System.out.println("Population = " + report.population);
+        System.out.println("Urban Population = " + report.urbanPopulation);
+
+        assertTrue(report.population > 0, "Population should be greater than zero");
+        assertTrue(report.urbanPopulation > 0, "Urban population should be greater than zero");
+    }
+
+    @Test
+    void testGetPopulationOfContinent(){
+        report.getPopulationOfContinent(a.con,"Asia");
+        report.getUrbanPopulationOfContinent(a.con,"Asia");
+
+        System.out.println("Population = " + report.population);
+        System.out.println("Urban Population = " + report.urbanPopulation);
+
+        assertTrue(report.population > 0, "Population should be greater than zero");
+        assertTrue(report.urbanPopulation > 0, "Urban population should be greater than zero");
+    }
+
+    @Test
+    void testGetPopulationOfCity(){
+        report.getPopulationOfCity(a.con,"Liverpool");
+
+        System.out.println("Population = " + report.population);
+
+        assertTrue(report.population > 0, "Population should be greater than zero");
     }
 }

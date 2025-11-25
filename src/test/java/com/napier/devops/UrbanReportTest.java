@@ -47,7 +47,6 @@ class UrbanReportTest {
         mockReport.getUrbanPopulation(mockConnection);
 
         assertEquals(1429559884.0, mockReport.urbanPopulation, 0.001);
-        assertEquals((1429559884.0 / 6078749450.0) * 100, mockReport.percentage, 0.001);
     }
 
     @Test
@@ -156,7 +155,6 @@ class UrbanReportTest {
         mockReport.getUrbanPopulation(mockConnection);
 
         assertEquals(0.0, mockReport.urbanPopulation, 0.001);
-        assertEquals(0.0, mockReport.percentage, 0.001);
     }
 
     @Test
