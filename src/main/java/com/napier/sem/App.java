@@ -137,7 +137,6 @@ public class App
         capitalReport.printCapitalCities(capitalInContinent);
         capitalReport.outputCapitalCities(allCapitals, "CapitalCitiesInContinent.md");
 
-
         // --- 3. Capital Cities in a Region ---
         System.out.println("\n=== Capital Cities in a Region ===");
         ArrayList<City> capitalInRegion = capitalReport.getCapitalCitiesByRegion("North America");
