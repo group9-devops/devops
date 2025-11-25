@@ -266,4 +266,50 @@ public class CountryReport {
             );
         }
     }
+
+    /**
+     * Outputs a list of Country objects to a Markdown file.
+     * @param countries The ArrayList of Country objects to output.
+     * @param filename The name of the file (e.g., "all_countries.md").
+     */
+    public void outputCountries(ArrayList<Country> countries, String filename) {
+        if (countries == null || countries.isEmpty()) {
+            System.out.println("No countries to output.");
+            return;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        // Markdown table header
+        sb.append("| Code | Name | Continent | Region | Population | Capital |\r\n");
+        sb.append("| --- | --- | --- | --- | --- | --- |\r\n");
+
+        // Loop through all countries
+        for (Country country : countries) {
+            if (country == null) continue;
+            // Using String.format for better population formatting (optional, but good practice)
+            String formattedPopulation = String.format("%,d", country.Population);
+            sb.append("| ")
+                    .append(country.Code).append(" | ")
+                    .append(country.Name).append(" | ")
+                    .append(country.Continent).append(" | ")
+                    .append(country.Region).append(" | ")
+                    .append(formattedPopulation).append(" | ")
+                    .append(country.Capital).append(" |\r\n");
+        }
+
+        try {
+            // Create reports folder if it does not exist
+            new java.io.File("./reports/").mkdirs();
+
+            // Write Markdown to file
+            java.io.BufferedWriter writer = new java.io.BufferedWriter(
+                    new java.io.FileWriter("./reports/" + filename));
+            writer.write(sb.toString());
+            writer.close();
+            System.out.println("Country report written to ./reports/" + filename);
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to write country report.");
+        }
+    }
 }
