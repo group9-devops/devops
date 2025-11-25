@@ -119,10 +119,7 @@ public class App
         ArrayList<City> topWorldCities = cityReport.getTopNCitiesInWorld(10);
         cityReport.printCities(topWorldCities);
 
-         // --- Top N Most Populated Cities in a District ---
-        System.out.println("\n=== Top 5 Most Populated Cities in a District ===");
-        ArrayList<City> CityPopulationDistrict = cityReport.CityPopulationDistrict("California", 5);
-        cityReport.printCities(CityPopulationDistrict);
+
 
 
 
