@@ -129,6 +129,7 @@ public class App
         System.out.println("\n=== All Capital Cities ===");
         ArrayList<City> allCapitals = capitalReport.getAllCapitalCities();
         capitalReport.printCapitalCities(allCapitals);
+        capitalReport.outputCapitalCities(allCapitals, "AllCapitalCities.md");
 
         // --- 2. Capital Cities in a Continent ---
         System.out.println("\n=== Capital Cities in Continent ===");
