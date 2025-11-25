@@ -136,31 +136,31 @@ public class App
         System.out.println("\n=== Capital Cities in Continent ===");
         ArrayList<City> capitalInContinent = capitalReport.getCapitalCitiesByContinent("Asia");
         capitalReport.printCapitalCities(capitalInContinent);
-        capitalReport.outputCapitalCities(allCapitals, "CapitalCitiesInContinent.md");
+        capitalReport.outputCapitalCities(capitalInContinent, "CapitalCitiesInContinent.md");
 
         // --- 3. Capital Cities in a Region ---
         System.out.println("\n=== Capital Cities in a Region ===");
         ArrayList<City> capitalInRegion = capitalReport.getCapitalCitiesByRegion("North America");
         capitalReport.printCapitalCities(capitalInRegion);
-        capitalReport.outputCapitalCities(allCapitals, "CapitalCitiesInRegion.md");
+        capitalReport.outputCapitalCities(capitalInRegion, "CapitalCitiesInRegion.md");
 
         // --- 1. Top N Capital Cities ---
         System.out.println("\n=== Top N All Capital Cities ===");
         ArrayList<City> nCapitals = capitalReport.getTopNCapitalCities(3);
         capitalReport.printCapitalCities(nCapitals);
-        capitalReport.outputCapitalCities(allCapitals, "TopNCapitalCities.md");
+        capitalReport.outputCapitalCities(nCapitals, "TopNCapitalCities.md");
 
         // --- 2. Top N Capital Cities in a Continent ---
         System.out.println("\n=== Top N Capital Cities in Continent ===");
         ArrayList<City> nCapitalsContinent = capitalReport.getTopNCapitalCitiesByContinent("Asia",4);
         capitalReport.printCapitalCities(nCapitalsContinent);
-        capitalReport.outputCapitalCities(allCapitals, "TopNCapitalCitiesInContinent.md");
+        capitalReport.outputCapitalCities(nCapitalsContinent, "TopNCapitalCitiesInContinent.md");
 
         // --- 3. Capital Cities in a Region ---
         System.out.println("\n=== Top N Capital Cities in a Region ===");
         ArrayList<City> nCapitalsRegion = capitalReport.getTopNCapitalCitiesByRegion("North America",2);
         capitalReport.printCapitalCities(nCapitalsRegion);
-        capitalReport.outputCapitalCities(allCapitals, "TopNCapitalCitiesInRegion.md");
+        capitalReport.outputCapitalCities(nCapitalsRegion, "TopNCapitalCitiesInRegion.md");
 
 
 
