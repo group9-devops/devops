@@ -13,6 +13,7 @@ public class App
     /**
      * Connection object for interacting with the MySQL database.
      */
+
     public Connection con = null;
 
     /**
