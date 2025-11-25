@@ -9,6 +9,9 @@ public class UrbanReport {
     public double urbanPopulation;
     public double percentage;
 
+    /**
+     * @param con the active database connection.
+     */
     public void getPopulationOfWorld(Connection con) {
 
         try {
@@ -24,6 +27,9 @@ public class UrbanReport {
         System.out.println("Population of world: " + population);
     }
 
+    /**
+     * @param con the active database connection.
+     */
     public void getUrbanPopulation(Connection con) {
         try {
             Statement stmt = con.createStatement();
@@ -40,6 +46,10 @@ public class UrbanReport {
         System.out.println("Percentage of urban: " + percentage);
     }
 
+    /**
+     * @param con the active database connection.
+     * @param region the region used to define scope of report
+     */
     public void getPopulationOfRegion(Connection con, String region) {
         try {
             Statement stmt = con.createStatement();
@@ -53,6 +63,10 @@ public class UrbanReport {
         }
     }
 
+    /**
+     * @param con the active database connection.
+     * @param region the region used to define scope of report
+     */
     public void getUrbanPopulationOfRegion(Connection con, String region) {
         try {
             Statement stmt = con.createStatement();
@@ -68,6 +82,10 @@ public class UrbanReport {
         }
     }
 
+    /**
+     * @param con the active database connection.
+     * @param continent the continent used to define scope of report
+     */
     public void getPopulationOfContinent(Connection con, String continent) {
         try {
             Statement stmt = con.createStatement();
@@ -81,6 +99,10 @@ public class UrbanReport {
         }
     }
 
+    /**
+     * @param con the active database connection.
+     * @param continent the continent used to define scope of report
+     */
     public void getUrbanPopulationOfContinent(Connection con, String continent) {
         try {
             Statement stmt = con.createStatement();
@@ -96,6 +118,10 @@ public class UrbanReport {
         }
     }
 
+    /**
+     * @param con the active database connection.
+     * @param country the country used to define scope of report
+     */
     public void getPopulationOfCountry(Connection con, String country) {
         try {
             Statement stmt = con.createStatement();
@@ -109,6 +135,10 @@ public class UrbanReport {
         }
     }
 
+    /**
+     * @param con the active database connection.
+     * @param country the country used to define scope of report
+     */
     public void getUrbanPopulationOfCountry(Connection con, String country) {
         try {
             Statement stmt = con.createStatement();
@@ -123,6 +153,11 @@ public class UrbanReport {
             System.out.println("Failed to get population");
         }
     }
+
+    /**
+     * @param con the active database connection.
+     * @param city the city used to define scope of report
+     */
     public void getPopulationOfCity(Connection con, String city) {
         try {
             Statement stmt = con.createStatement();
