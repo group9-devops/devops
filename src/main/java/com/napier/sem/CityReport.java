@@ -293,5 +293,45 @@ public class CityReport {
         }
 
     }
+    /**
+     * Outputs a list of capital cities to a Markdown file.
+     *
+     * @param capitals List of capital cities to output
+     * @param filename The name of the Markdown file to create
+     */
+    public void outputCapitalCities(ArrayList<City> capitals, String filename) {
+        if (capitals == null || capitals.isEmpty()) {
+            System.out.println("No capital cities to output.");
+            return;
+        }
 
+        StringBuilder sb = new StringBuilder();
+        // Markdown table header
+        sb.append("| City | Country | Population |\r\n");
+        sb.append("| --- | --- | --- |\r\n");
+
+        // Loop through all capital cities
+        for (City capital : capitals) {
+            if (capital == null) continue;
+            sb.append("| ")
+                    .append(capital.Name).append(" | ")
+                    .append(capital.Country).append(" | ")
+                    .append(capital.Population).append(" |\r\n");
+        }
+
+        try {
+            // Create reports folder if it does not exist
+            new java.io.File("./reports/").mkdirs();
+
+            // Write Markdown to file
+            java.io.BufferedWriter writer = new java.io.BufferedWriter(
+                    new java.io.FileWriter("./reports/" + filename));
+            writer.write(sb.toString());
+            writer.close();
+            System.out.println("Capital cities report written to ./reports/" + filename);
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to write capital cities report.");
+        }
+    }
 }
