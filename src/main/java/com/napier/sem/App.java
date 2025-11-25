@@ -207,9 +207,11 @@ public class App
         CapitalCityReport capitalReport = new CapitalCityReport(a.con);
         CountryReport PrintCountry = new CountryReport(a.con);
         LanguageReport languageReport = new LanguageReport(a.con);
+        UrbanReport urbanReport = new UrbanReport();
 
         //run the reports
         a.runReports(cityReport,capitalReport,PrintCountry, languageReport);
+        urbanReport.generateReportLists(a.con);
 
         // Disconnect from database
         a.disconnect();

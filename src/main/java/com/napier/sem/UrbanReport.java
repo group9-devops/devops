@@ -9,6 +9,7 @@ import java.util.List;
 public class UrbanReport {
     public double population;
     public double urbanPopulation;
+    public double percentage;
 
     /**
      * @param con the active database connection.
@@ -172,7 +173,7 @@ public class UrbanReport {
     // Generate list of cities, country, region, continent
     // Iterate through list and call report on each of them.
 
-    public void generateReports(Connection con) {
+    public void generateReportLists(Connection con) {
         String[] continents = {
                 "Africa","Antarctica","Asia","Europe",
                 "North America","Oceania","South America"
@@ -217,6 +218,44 @@ public class UrbanReport {
             System.out.println("List creation error");
             System.out.println(e.getMessage());
         }
-        // Generate reports
+
+        generateContinentReport(con, continents,"ContinentReport");
+    }
+
+    public void generateContinentReport(Connection con, String[] continents, String filename){
+        StringBuilder sb = new StringBuilder();
+        App a  = new App();
+        // Markdown table header
+        sb.append("| Continent | Population | Urban Population | Urbanisation Percentage |\r\n");
+        sb.append("| --- | --- | --- | --- |\r\n");
+
+        // Loop through all continents and generate values
+        for (String continent : continents){
+            getPopulationOfContinent(con,continent);
+            getUrbanPopulationOfContinent(con,continent);
+            percentage = (urbanPopulation / population) * 100;
+            sb.append("| ")
+                    .append(continent).append(" | ")
+                    .append(population).append(" | ")
+                    .append(urbanPopulation).append(" | ")
+                    .append(percentage)
+                    .append(" |\r\n");
+
+        }
+
+        try {
+            // Create reports folder if it does not exist
+            new java.io.File("./reports/").mkdirs();
+
+            // Write Markdown to file
+            java.io.BufferedWriter writer = new java.io.BufferedWriter(
+                    new java.io.FileWriter("./reports/" + filename));
+            writer.write(sb.toString());
+            writer.close();
+            System.out.println("Continental urbanisation report written to ./reports/" + filename);
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to write continental urbanisation report.");
+        }
     }
 }
