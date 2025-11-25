@@ -162,26 +162,36 @@ public class App
         System.out.println("\n=== All Countries in The World ===");
         ArrayList<Country> countries = PrintCountry.getCountriesByPopulation();
         PrintCountry.printCountries(countries);
+        PrintCountry.outputCountries(countries, "AllCountries.md");
 
         // Print the countries in specific region
         System.out.println("\n=== All Countries in a Continent ===");
         ArrayList<Country> countriesInContinent = PrintCountry.getCountriesByContinent("Europe");
         PrintCountry.printCountries(countriesInContinent);
+        PrintCountry.outputCountries(countriesInContinent, "CountriesInContinent.md");
 
         // Print the countries in specific continent
         System.out.println("\n=== All Countries in a Region ===");
         ArrayList<Country> countriesInRegion = PrintCountry.getCountriesByRegion("North America");
         PrintCountry.printCountries(countriesInRegion);
+        PrintCountry.outputCountries(countriesInRegion, "CountriesInRegion.md");
 
         //print top N countries in a region
         System.out.println("\n=== Top N Countries in a Region ===");
-        ArrayList<Country> topNCountryInRegion = PrintCountry.topNCountriesByRegion("Carribean", 10);
+        ArrayList<Country> topNCountryInRegion = PrintCountry.topNCountriesByRegion("Caribbean", 10);
         PrintCountry.printCountries(topNCountryInRegion);
+        PrintCountry.outputCountries(topNCountryInRegion, "TopNCountriesInRegion.md");
 
         //print top N countries in the world
         System.out.println("\n=== Top N Countries in The World ===");
         ArrayList<Country> topNCountryInWorld = PrintCountry.topNCountriesInTheWorld( 10);
         PrintCountry.printCountries(topNCountryInWorld);
+        PrintCountry.outputCountries(topNCountryInWorld, "TopNCountriesInWorld.md");
+
+        System.out.println("\n=== Top N Countries in The Continent ===");
+        ArrayList<Country> topNCountryInContinent= PrintCountry.topNCountriesByContinent("North America",10);
+        PrintCountry.printCountries(topNCountryInContinent);
+        PrintCountry.outputCountries(topNCountryInContinent, "TopNCountriesInContinent.md");
 
 
     }
@@ -198,7 +208,7 @@ public class App
         App a = new App();
 
         if(args.length < 1){
-            a.connect("localhost:3307", 0);
+            a.connect("localhost:3308", 0);
         }else{
             a.connect("db:3306", 3000);
         }
