@@ -84,7 +84,7 @@ public class App
         App a = new App();
 
         if(args.length < 1){
-            a.connect("localhost:3307", 0);
+            a.connect("localhost:3308", 0);
         }else{
             a.connect("db:3306", 3000);
         }
@@ -119,7 +119,7 @@ public class App
         ArrayList<City> topWorldCities = cityReport.getTopNCitiesInWorld(10);
         cityReport.printCities(topWorldCities);
 
-// --- Top N Most Populated Cities in a District ---
+         // --- Top N Most Populated Cities in a District ---
         System.out.println("\n=== Top 5 Most Populated Cities in a District ===");
         ArrayList<City> CityPopulationDistrict = cityReport.CityPopulationDistrict("California", 5);
         cityReport.printCities(CityPopulationDistrict);
