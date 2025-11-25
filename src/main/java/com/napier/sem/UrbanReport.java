@@ -165,4 +165,8 @@ public class UrbanReport {
             System.out.println("Failed to get population");
         }
     }
+
+    //TODO: Method for HTML report generation.
+    // Generate list of cities, country, region, continent
+    // Iterate through list and call report on each of them.
 }
