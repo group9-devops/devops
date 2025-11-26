@@ -3,9 +3,12 @@ package com.napier.devops;
 import com.napier.sem.LanguageReport;
 import com.napier.sem.CountryLanguage;
 import com.napier.sem.App;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.nio.file.Files;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -27,6 +30,8 @@ class LanguageReportTest {
     private ResultSet mockResultSet;
     private LanguageReport report;
 
+    private final String testFileName = "TestLanguagesReport.md";
+
     @BeforeEach
     void setUp() throws Exception {
         mockConnection = mock(Connection.class);
@@ -37,6 +42,14 @@ class LanguageReportTest {
         when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
 
         report = new LanguageReport(mockConnection);
+    }
+
+    @AfterEach
+    void cleanup() {
+        File file = new File("./reports/" + testFileName);
+        if (file.exists()) {
+            file.delete();
+        }
     }
 
     /**
@@ -109,6 +122,46 @@ class LanguageReportTest {
         languages.add(null);
 
         report.printLanguageReport(languages);
+    }
+
+    /**
+     * Test whether the output languages generates the correct reports*/
+    @Test
+    void testOutputLanguages_Valid() throws Exception {
+        ArrayList<CountryLanguage> languages = new ArrayList<>();
+        CountryLanguage lang = new CountryLanguage();
+        lang.Language = "English";
+        lang.NumberOfSpeakers = 1450000000L;
+        lang.WorldPercentage = 17.6;
+        languages.add(lang);
+
+        CountryLanguage lang2 = new CountryLanguage();
+        lang2.Language = "Mandarin";
+        lang2.NumberOfSpeakers = 1200000000L;
+        lang2.WorldPercentage = 16.0;
+        languages.add(lang2);
+
+
+        report.outputLanguages(languages, testFileName);
+
+        File file = new File("./reports/" + testFileName);
+        assertTrue(file.exists(), "Report file should exist");
+
+        String content = new String(Files.readAllBytes(file.toPath()));
+        assertTrue(content.contains("| Language | Number of Speakers | World Percentage |"));
+        assertTrue(content.contains("| English | 1450000000 | 17.6 |"));
+        assertTrue(content.contains("| Mandarin | 1200000000 | 16.0 |"));
+    }
+
+    @Test
+    void testOutputLanguages_EmptyList() {
+        ArrayList<CountryLanguage> emptyList = new ArrayList<>();
+        report.outputLanguages(emptyList, testFileName);
+    }
+
+    @Test
+    void testOutputLanguages_NullList() {
+        report.outputLanguages(null, testFileName);
     }
 }
 
