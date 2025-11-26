@@ -1014,8 +1014,8 @@
 | Jaffna | Sri Lanka | 149000 |
 | Khoy | Iran | 148944 |
 | Hat Yai | Thailand | 148632 |
-| Ji´an | China | 148583 |
 | Karimnagar | India | 148583 |
+| Ji´an | China | 148583 |
 | Bharatpur | India | 148519 |
 | Longkou | China | 148362 |
 | Sikar | India | 148272 |
@@ -1159,8 +1159,8 @@
 | Shihung | South Korea | 133443 |
 | Shikarpur | Pakistan | 133300 |
 | Barrackpur | India | 133265 |
-| Linhe | China | 133183 |
 | Miyakonojo | Japan | 133183 |
+| Linhe | China | 133183 |
 | Bharuch (Broach) | India | 133102 |
 | Wuwei | China | 133101 |
 | Khanewal | Pakistan | 133000 |
@@ -1534,8 +1534,8 @@
 | Pemalang | Indonesia | 103500 |
 | Tando Adam | Pakistan | 103400 |
 | Klaten | Indonesia | 103300 |
-| Jaranwala | Pakistan | 103300 |
 | Ibb | Yemen | 103300 |
+| Jaranwala | Pakistan | 103300 |
 | Pabna | Bangladesh | 103277 |
 | Danjiangkou | China | 103211 |
 | Tajimi | Japan | 103171 |
@@ -1595,8 +1595,8 @@
 | Kanchrapara | India | 100194 |
 | Tonk | India | 100079 |
 | Nishio | Japan | 100032 |
-| Negombo | Sri Lanka | 100000 |
 | Malita | Philippines | 100000 |
+| Negombo | Sri Lanka | 100000 |
 | Nazilli | Turkey | 99900 |
 | Dipolog | Philippines | 99862 |
 | Tokai | Japan | 99738 |
@@ -1651,8 +1651,8 @@
 | Patan | India | 96109 |
 | Urasoe | Japan | 96002 |
 | Ahmadpur East | Pakistan | 96000 |
-| Ya´an | China | 95900 |
 | Purwakarta | Indonesia | 95900 |
+| Ya´an | China | 95900 |
 | Garut | Indonesia | 95800 |
 | Jinzhou | China | 95761 |
 | Mandasor | India | 95758 |

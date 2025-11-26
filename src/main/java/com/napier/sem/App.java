@@ -80,12 +80,9 @@ public class App
      * required to meet the project requirements*/
     public void runReports(CityReport cityReport,
                            CapitalCityReport capitalReport,
-                           CountryReport PrintCountry, LanguageReport languageReport){
+                           CountryReport PrintCountry, LanguageReport languageReport, UrbanReport urbanReport ){
 
 
-        System.out.println("\n=== Language Report ===");
-        ArrayList<CountryLanguage> languages = languageReport.retrieveLanguageSpeakers();
-        languageReport.printLanguageReport(languages);
         // --- 1. All Cities ---
         System.out.println("\n=== All Cities In The World ===");
         ArrayList<City> allCities = cityReport.printAllCities();
@@ -205,7 +202,15 @@ public class App
         PrintCountry.printCountries(topNCountryInContinent);
         PrintCountry.outputCountries(topNCountryInContinent, "TopNCountriesInContinent.md");
 
+        //Generate urban reports
+        System.out.println("\n=== Language Report ===");
+        urbanReport.generateReportLists(con);
 
+        //Output the language report
+        System.out.println("\n=== Language Report ===");
+        ArrayList<CountryLanguage> languages = languageReport.retrieveLanguageSpeakers();
+        languageReport.printLanguageReport(languages);
+        languageReport.outputLanguages(languages, "LanguageReport.md");
     }
 
     /**
@@ -233,8 +238,8 @@ public class App
         UrbanReport urbanReport = new UrbanReport();
 
         //run the reports
-        a.runReports(cityReport,capitalReport,PrintCountry, languageReport);
-        urbanReport.generateReportLists(a.con);
+        a.runReports(cityReport,capitalReport,PrintCountry, languageReport, urbanReport);
+
 
         // Disconnect from database
         a.disconnect();

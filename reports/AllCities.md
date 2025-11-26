@@ -216,8 +216,8 @@
 | Conakry | Guinea | 1090610 |
 | Ulsan | South Korea | 1084891 |
 | Tšeljabinsk | Russian Federation | 1083200 |
-| Qiqihar | China | 1070000 |
 | Accra | Ghana | 1070000 |
+| Qiqihar | China | 1070000 |
 | Bhopal | India | 1062771 |
 | Ujung Pandang | Indonesia | 1060257 |
 | Goiânia | Brazil | 1056330 |
@@ -836,8 +836,8 @@
 | Ujjain | India | 362266 |
 | Iwo | Nigeria | 362000 |
 | Hsinchu | Taiwan | 361958 |
-| Arkangeli | Russian Federation | 361800 |
 | Samarkand | Uzbekistan | 361800 |
+| Arkangeli | Russian Federation | 361800 |
 | Takatsuki | Japan | 361747 |
 | Iwaki | Japan | 361737 |
 | Nagano | Japan | 361391 |
@@ -1062,8 +1062,8 @@
 | Pavlodar | Kazakstan | 300500 |
 | Wonsan | North Korea | 300148 |
 | Neiva | Colombia | 300052 |
-| Bujumbura | Burundi | 300000 |
 | Bobo-Dioulasso | Burkina Faso | 300000 |
+| Bujumbura | Burundi | 300000 |
 | Naha | Japan | 299851 |
 | Varna | Bulgaria | 299801 |
 | Shihezi | China | 299676 |
@@ -1124,8 +1124,8 @@
 | Maringá | Brazil | 286461 |
 | Zanjan | Iran | 286295 |
 | Montes Claros | Brazil | 286058 |
-| Brest | Belarus | 286000 |
 | Kigali | Rwanda | 286000 |
+| Brest | Belarus | 286000 |
 | Bogor | Indonesia | 285114 |
 | Iligan | Philippines | 285061 |
 | Århus | Denmark | 284846 |
@@ -1715,9 +1715,9 @@
 | Podolsk | Russian Federation | 194300 |
 | Metepec | Mexico | 194265 |
 | Olongapo | Philippines | 194260 |
-| Petropavlovsk-Kamtšatski | Russian Federation | 194100 |
 | Karsi | Uzbekistan | 194100 |
 | Nukus | Uzbekistan | 194100 |
+| Petropavlovsk-Kamtšatski | Russian Federation | 194100 |
 | Porto-Novo | Benin | 194000 |
 | Fengcheng | China | 193784 |
 | Monclova | Mexico | 193657 |
@@ -1767,8 +1767,8 @@
 | Newcastle upon Tyne | United Kingdom | 189150 |
 | Markham | Canada | 189098 |
 | Arica | Chile | 189036 |
-| Engels | Russian Federation | 189000 |
 | Dodoma | Tanzania | 189000 |
+| Engels | Russian Federation | 189000 |
 | Modesto | United States | 188856 |
 | Uji | Japan | 188735 |
 | Mymensingh | Bangladesh | 188713 |
@@ -1798,8 +1798,8 @@
 | Columbus | United States | 186291 |
 | Sumaré | Brazil | 186205 |
 | Carolina | Puerto Rico | 186076 |
-| Grozny | Russian Federation | 186000 |
 | Kramatorsk | Ukraine | 186000 |
+| Grozny | Russian Federation | 186000 |
 | Orlando | United States | 185951 |
 | Yiyang | China | 185818 |
 | Boise City | United States | 185787 |
@@ -2177,8 +2177,8 @@
 | Moriguchi | Japan | 155941 |
 | Ashdod | Israel | 155800 |
 | Otaru | Japan | 155784 |
-| Mytištši | Russian Federation | 155700 |
 | Puerto La Cruz | Venezuela | 155700 |
+| Mytištši | Russian Federation | 155700 |
 | Chattanooga | United States | 155554 |
 | Lalbahadur Nagar | India | 155500 |
 | Priština | Yugoslavia | 155496 |
@@ -2241,9 +2241,9 @@
 | Tamale | Ghana | 151069 |
 | Salinas | United States | 151060 |
 | Raiganj | India | 151045 |
-| Borisov | Belarus | 151000 |
 | Blackpool | United Kingdom | 151000 |
 | Kamoke | Pakistan | 151000 |
+| Borisov | Belarus | 151000 |
 | Sambhal | India | 150869 |
 | Kolomna | Russian Federation | 150700 |
 | Itapevi | Brazil | 150664 |
@@ -2280,8 +2280,8 @@
 | Bulaq al-Dakrur | Egypt | 148787 |
 | Haarlem | Netherlands | 148772 |
 | Hat Yai | Thailand | 148632 |
-| Ji´an | China | 148583 |
 | Karimnagar | India | 148583 |
+| Ji´an | China | 148583 |
 | Bharatpur | India | 148519 |
 | Buzau | Romania | 148372 |
 | Longkou | China | 148362 |
@@ -2389,8 +2389,8 @@
 | Atyrau | Kazakstan | 142500 |
 | Almere | Netherlands | 142465 |
 | Cádiz | Spain | 142449 |
-| Murom | Russian Federation | 142400 |
 | Chingola | Zambia | 142400 |
+| Murom | Russian Federation | 142400 |
 | Moreno Valley | United States | 142381 |
 | Suizhou | China | 142302 |
 | San Andrés Tuxtla | Mexico | 142251 |
@@ -2413,12 +2413,12 @@
 | Kolpino | Russian Federation | 141200 |
 | Toledo | Philippines | 141174 |
 | Rach Gia | Vietnam | 141132 |
-| Bayamo | Cuba | 141000 |
 | Poole | United Kingdom | 141000 |
+| Bayamo | Cuba | 141000 |
 | Ikare | Nigeria | 140800 |
-| Norilsk | Russian Federation | 140800 |
 | Jubayl | Saudi Arabia | 140800 |
 | Margilon | Uzbekistan | 140800 |
+| Norilsk | Russian Federation | 140800 |
 | Almetjevsk | Russian Federation | 140700 |
 | Potosí | Bolivia | 140642 |
 | Huelva | Spain | 140583 |
@@ -2571,8 +2571,8 @@
 | São Caetano do Sul | Brazil | 133321 |
 | Shikarpur | Pakistan | 133300 |
 | Barrackpur | India | 133265 |
-| Linhe | China | 133183 |
 | Miyakonojo | Japan | 133183 |
+| Linhe | China | 133183 |
 | Tychy | Poland | 133178 |
 | Linköping | Sweden | 133168 |
 | Valdivia | Chile | 133106 |
@@ -2592,8 +2592,8 @@
 | Nevinnomyssk | Russian Federation | 132600 |
 | Pjatigorsk | Russian Federation | 132500 |
 | Shangrao | China | 132455 |
-| Korolev | Russian Federation | 132400 |
 | Saint-Louis | Senegal | 132400 |
+| Korolev | Russian Federation | 132400 |
 | Victoria de las Tunas | Cuba | 132350 |
 | Maragheh | Iran | 132318 |
 | San Cristóbal de las Casas | Mexico | 132317 |
@@ -2640,12 +2640,12 @@
 | Satu Mare | Romania | 130059 |
 | Zalantun | China | 130031 |
 | Lobito | Angola | 130000 |
-| Pinsk | Belarus | 130000 |
 | Yamoussoukro | Côte d’Ivoire | 130000 |
 | Berdjansk | Ukraine | 130000 |
+| Pinsk | Belarus | 130000 |
 | Rae Bareli | India | 129904 |
-| Battambang | Cambodia | 129800 |
 | Soyapango | El Salvador | 129800 |
+| Battambang | Cambodia | 129800 |
 | Elblag | Poland | 129782 |
 | Sagay | Philippines | 129765 |
 | Parnaíba | Brazil | 129756 |
@@ -2806,9 +2806,9 @@
 | Etawah | India | 124072 |
 | Manzanillo | Mexico | 124014 |
 | Kashihara | Japan | 124013 |
-| Orša | Belarus | 124000 |
 | Norwich | United Kingdom | 124000 |
 | Pangkal Pinang | Indonesia | 124000 |
+| Orša | Belarus | 124000 |
 | Sioux Falls | United States | 123975 |
 | Linqing | China | 123958 |
 | Pathankot | India | 123930 |
@@ -2848,8 +2848,8 @@
 | Veraval | India | 123000 |
 | Bremerhaven | Germany | 122735 |
 | Hoshiarpur | India | 122705 |
-| Bern | Switzerland | 122700 |
 | Mergui (Myeik) | Myanmar | 122700 |
+| Bern | Switzerland | 122700 |
 | Poryong | South Korea | 122604 |
 | Blitar | Indonesia | 122600 |
 | Ambala | India | 122596 |
@@ -2870,8 +2870,8 @@
 | Palmas | Brazil | 121919 |
 | Isparta | Turkey | 121911 |
 | Pindamonhangaba | Brazil | 121904 |
-| Daloa | Côte d’Ivoire | 121842 |
 | Sitapur | India | 121842 |
+| Daloa | Côte d’Ivoire | 121842 |
 | Concord | United States | 121780 |
 | Zinacantepec | Mexico | 121715 |
 | Chorzów | Poland | 121708 |
@@ -3014,9 +3014,9 @@
 | Offenbach am Main | Germany | 116627 |
 | Concordia | Argentina | 116485 |
 | Richmond Hill | Canada | 116428 |
-| Velikije Luki | Russian Federation | 116300 |
 | Ubon Ratchathani | Thailand | 116300 |
 | Navoi | Uzbekistan | 116300 |
+| Velikije Luki | Russian Federation | 116300 |
 | Machakos | Kenya | 116293 |
 | Columbia | United States | 116278 |
 | El Tigre | Venezuela | 116256 |
@@ -3328,9 +3328,9 @@
 | Tekirdag | Turkey | 106077 |
 | Tangail | Bangladesh | 106004 |
 | Sutton Coldfield | United Kingdom | 106001 |
-| Novopolotsk | Belarus | 106000 |
 | Cheltenham | United Kingdom | 106000 |
 | Abottabad | Pakistan | 106000 |
+| Novopolotsk | Belarus | 106000 |
 | Solikamsk | Russian Federation | 106000 |
 | Surendranagar | India | 105973 |
 | Calapan | Philippines | 105910 |
@@ -3416,9 +3416,9 @@
 | Tando Adam | Pakistan | 103400 |
 | Witten | Germany | 103384 |
 | Klaten | Indonesia | 103300 |
+| Ibb | Yemen | 103300 |
 | Jaranwala | Pakistan | 103300 |
 | Elista | Russian Federation | 103300 |
-| Ibb | Yemen | 103300 |
 | Norwalk | United States | 103298 |
 | Pabna | Bangladesh | 103277 |
 | Cachoeirinha | Brazil | 103240 |
@@ -3510,12 +3510,12 @@
 | Araras | Brazil | 101046 |
 | Daraga (Locsin) | Philippines | 101031 |
 | Marilao | Philippines | 101017 |
-| Lida | Belarus | 101000 |
-| Soligorsk | Belarus | 101000 |
 | Epe | Nigeria | 101000 |
 | Mary | Turkmenistan | 101000 |
 | Krasnyi Lutš | Ukraine | 101000 |
 | Stahanov | Ukraine | 101000 |
+| Lida | Belarus | 101000 |
+| Soligorsk | Belarus | 101000 |
 | Westminster | United States | 100940 |
 | Basildon | United Kingdom | 100924 |
 | San Buenaventura | United States | 100916 |
@@ -3559,8 +3559,8 @@
 | Pouso Alegre | Brazil | 100028 |
 | Kaiserslautern | Germany | 100025 |
 | Worthing | United Kingdom | 100000 |
-| Negombo | Sri Lanka | 100000 |
 | Malita | Philippines | 100000 |
+| Negombo | Sri Lanka | 100000 |
 | Kinešma | Russian Federation | 100000 |
 | Clearwater | United States | 99936 |
 | Taxco de Alarcón | Mexico | 99907 |
@@ -3666,8 +3666,8 @@
 | Balašov | Russian Federation | 97100 |
 | Buon Ma Thuot | Vietnam | 97044 |
 | Rustenburg | South Africa | 97008 |
-| Molodetšno | Belarus | 97000 |
 | Crawley | United Kingdom | 97000 |
+| Molodetšno | Belarus | 97000 |
 | Roubaix | France | 96984 |
 | Fujimi | Japan | 96972 |
 | Mekele | Ethiopia | 96938 |
@@ -3713,8 +3713,8 @@
 | Konotop | Ukraine | 96000 |
 | Coronel Fabriciano | Brazil | 95933 |
 | Valle de la Pascua | Venezuela | 95927 |
-| Ya´an | China | 95900 |
 | Purwakarta | Indonesia | 95900 |
+| Ya´an | China | 95900 |
 | Garut | Indonesia | 95800 |
 | Jinzhou | China | 95761 |
 | Mandasor | India | 95758 |
@@ -3749,8 +3749,8 @@
 | Meerut Cantonment | India | 94876 |
 | Sultan Kudarat | Philippines | 94861 |
 | Ovalle | Chile | 94854 |
-| Praia | Cape Verde | 94800 |
 | Kendari | Indonesia | 94800 |
+| Praia | Cape Verde | 94800 |
 | Pagakku (Pakokku) | Myanmar | 94800 |
 | Maizuru | Japan | 94784 |
 | New Bedford | United States | 94780 |
@@ -3774,8 +3774,8 @@
 | Idfu | Egypt | 94200 |
 | Jahrom | Iran | 94200 |
 | Norman | United States | 94193 |
-| Bugulma | Russian Federation | 94100 |
 | Nakhon Pathom | Thailand | 94100 |
+| Bugulma | Russian Federation | 94100 |
 | Richmond | United States | 94100 |
 | Toa Baja | Puerto Rico | 94085 |
 | Gorontalo | Indonesia | 94058 |
@@ -3900,8 +3900,8 @@
 | Melipilla | Chile | 91056 |
 | Semnan | Iran | 91045 |
 | Putian | China | 91030 |
-| Krasnogorsk | Russian Federation | 91000 |
 | Najran | Saudi Arabia | 91000 |
+| Krasnogorsk | Russian Federation | 91000 |
 | Southport | United Kingdom | 90959 |
 | Ratingen | Germany | 90951 |
 | San Felipe | Venezuela | 90940 |
@@ -3939,8 +3939,6 @@
 | Miandoab | Iran | 90100 |
 | Eastbourne | United Kingdom | 90000 |
 | Zhezqazghan | Kazakstan | 90000 |
-| Klin | Russian Federation | 90000 |
-| Tšaikovski | Russian Federation | 90000 |
 | Hargeysa | Somalia | 90000 |
 | Kismaayo | Somalia | 90000 |
 | Miaoli | Taiwan | 90000 |
@@ -3949,6 +3947,8 @@
 | Šostka | Ukraine | 90000 |
 | Uman | Ukraine | 90000 |
 | El Limón | Venezuela | 90000 |
+| Klin | Russian Federation | 90000 |
+| Tšaikovski | Russian Federation | 90000 |
 | Banyuwangi | Indonesia | 89900 |
 | Tanjung Pinang | Indonesia | 89900 |
 | Velbert | Germany | 89881 |

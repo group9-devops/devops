@@ -5,6 +5,7 @@ import com.napier.sem.CapitalCityReport;
 import com.napier.sem.CityReport;
 import com.napier.sem.CountryReport;
 import com.napier.sem.LanguageReport;
+import com.napier.sem.UrbanReport;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -12,7 +13,6 @@ import org.junit.jupiter.api.Test;
  * Connects to a real database and verifies that runReports
  * executes without exceptions using actual data.
  */
-
 class AppIntegrationTest {
 
     /**
@@ -28,13 +28,17 @@ class AppIntegrationTest {
         CapitalCityReport capitalReport = new CapitalCityReport(app.con);
         CountryReport PrintCountry = new CountryReport(app.con);
         LanguageReport languageReport = new LanguageReport(app.con);
+        UrbanReport urbanReport = new UrbanReport();
 
-        app.runReports(cityReport, capitalReport, PrintCountry,languageReport); // test fails if exception occurs
+        // Should run all reports (including UrbanReport) without throwing exceptions
+        app.runReports(
+                cityReport,
+                capitalReport,
+                PrintCountry,
+                languageReport,
+                urbanReport
+        );
 
         app.disconnect();
     }
-
-
-
-
 }

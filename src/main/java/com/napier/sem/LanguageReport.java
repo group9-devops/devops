@@ -111,4 +111,46 @@ public class LanguageReport {
                     lang.Language, lang.NumberOfSpeakers, lang.WorldPercentage);
         }
     }
+
+    /**
+     * Outputs a list of capital cities to a Markdown file.
+     *
+     * @param languages List of capital cities to output
+     * @param filename The name of the Markdown file to create
+     */
+    public void outputLanguages(ArrayList<CountryLanguage> languages, String filename) {
+        if (languages == null || languages.isEmpty()) {
+            System.out.println("No capital cities to output.");
+            return;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        // Markdown table header
+        sb.append("| Language | Number of Speakers | World Percentage |\r\n");
+        sb.append("| --- | --- | --- |\r\n");
+
+        // Loop through all capital cities
+        for (CountryLanguage language : languages) {
+            if (language == null) continue;
+            sb.append("| ")
+                    .append(language.Language).append(" | ")
+                    .append(language.NumberOfSpeakers).append(" | ")
+                    .append(language.WorldPercentage).append(" |\r\n");
+        }
+
+        try {
+            // Create reports folder if it does not exist
+            new java.io.File("./reports/").mkdirs();
+
+            // Write Markdown to file
+            java.io.BufferedWriter writer = new java.io.BufferedWriter(
+                    new java.io.FileWriter("./reports/" + filename));
+            writer.write(sb.toString());
+            writer.close();
+            System.out.println("Capital cities report written to ./reports/" + filename);
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to write capital cities report.");
+        }
+    }
 }

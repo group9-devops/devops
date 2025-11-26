@@ -8,7 +8,7 @@ import com.napier.sem.CityReport;
 import com.napier.sem.CapitalCityReport;
 import com.napier.sem.CountryReport;
 import com.napier.sem.LanguageReport;
-import com.napier.sem.CountryLanguage;
+import com.napier.sem.UrbanReport;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -26,6 +26,7 @@ class AppTest {
     private CapitalCityReport mockCapitalReport;
     private CountryReport mockCountryReport;
     private LanguageReport mockLanguageReport;
+    private UrbanReport mockUrbanReport;
     private Connection mockConnection;
 
     /**
@@ -40,6 +41,7 @@ class AppTest {
         mockCapitalReport = mock(CapitalCityReport.class);
         mockCountryReport = mock(CountryReport.class);
         mockLanguageReport = mock(LanguageReport.class);
+        mockUrbanReport = mock(UrbanReport.class);
         mockConnection = mock(Connection.class);
 
         // Mock CityReport methods
@@ -66,7 +68,7 @@ class AppTest {
     }
 
     /**
-     * Tests that runReports calls all report methods including LanguageReport.
+     * Tests that runReports calls all reports including UrbanReport.
      */
     @Test
     void testRunReports() {
@@ -74,7 +76,8 @@ class AppTest {
                 mockCityReport,
                 mockCapitalReport,
                 mockCountryReport,
-                mockLanguageReport
+                mockLanguageReport,
+                mockUrbanReport
         );
 
         // --- Verify LanguageReport calls ---
@@ -96,6 +99,9 @@ class AppTest {
         verify(mockCountryReport).getCountriesByPopulation();
         verify(mockCountryReport).getCountriesByContinent("Europe");
         verify(mockCountryReport).getCountriesByRegion("North America");
+
+        // --- Verify UrbanReport is executed ---
+        verify(mockUrbanReport).generateReportLists(mockConnection);
     }
 
     /**
@@ -118,7 +124,6 @@ class AppTest {
 
     @Test
     void testConnectWithException() throws Exception {
-        App app2 = spy(new App());
-        // Placeholder – System.exit not testable safely
+        // Can't test System.exit safely, so left empty intentionally
     }
 }

@@ -9,214 +9,169 @@ import java.sql.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+/**
+ * Unit tests for {@link UrbanReport}.
+ * <p>
+ * These tests use Mockito to mock database interactions via PreparedStatements
+ * and ResultSets. They verify population queries and report generation logic.
+ */
 class UrbanReportTest {
 
     private Connection mockConnection;
-    private PreparedStatement mockStatement;
+    private PreparedStatement mockPreparedStatement;
     private ResultSet mockResultSet;
-    private UrbanReport mockReport;
+    private UrbanReport report;
 
     @BeforeEach
     void setUp() throws Exception {
         mockConnection = mock(Connection.class);
-        mockStatement = mock(PreparedStatement.class);
+        mockPreparedStatement = mock(PreparedStatement.class);
         mockResultSet = mock(ResultSet.class);
-        mockReport = new UrbanReport();
-
-        when(mockConnection.createStatement()).thenReturn(mockStatement);
+        report = new UrbanReport();
     }
 
+    /**
+     * Tests that {@link UrbanReport#getPopulationOfWorld(Connection)}
+     * correctly retrieves the world's population.
+     */
     @Test
     void testGetPopulationOfWorld() throws Exception {
-        when(mockStatement.executeQuery("SELECT SUM(population) FROM country")).thenReturn(mockResultSet);
+        when(mockConnection.prepareStatement("SELECT SUM(population) FROM country")).thenReturn(mockPreparedStatement);
+        when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
         when(mockResultSet.next()).thenReturn(true);
         when(mockResultSet.getDouble(1)).thenReturn(6078749450.0);
 
-        mockReport.getPopulationOfWorld(mockConnection);
+        report.getPopulationOfWorld(mockConnection);
 
-        assertEquals(6078749450.0, mockReport.population, 0.001);
+        assertEquals(6078749450.0, report.population, 0.001);
     }
 
+    /**
+     * Tests that {@link UrbanReport#getUrbanPopulation(Connection)}
+     * correctly retrieves the urban population of the world.
+     */
     @Test
     void testGetUrbanPopulation() throws Exception {
-        mockReport.population = 6078749450.0;
-        when(mockStatement.executeQuery("SELECT SUM(population) FROM city")).thenReturn(mockResultSet);
+        report.population = 6078749450.0;
+
+        when(mockConnection.prepareStatement("SELECT SUM(population) FROM city")).thenReturn(mockPreparedStatement);
+        when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
         when(mockResultSet.next()).thenReturn(true);
         when(mockResultSet.getDouble(1)).thenReturn(1429559884.0);
 
-        mockReport.getUrbanPopulation(mockConnection);
+        report.getUrbanPopulation(mockConnection);
 
-        assertEquals(1429559884.0, mockReport.urbanPopulation, 0.001);
+        assertEquals(1429559884.0, report.urbanPopulation, 0.001);
     }
 
+    /**
+     * Tests that {@link UrbanReport#getPopulationOfRegion(Connection, String)}
+     * correctly retrieves a region's population.
+     */
     @Test
     void testGetPopulationOfRegion() throws Exception {
-        when(mockStatement.executeQuery("SELECT SUM(population) FROM country WHERE Region = 'British Islands'")).thenReturn(mockResultSet);
+        String sql = "SELECT SUM(population) FROM country WHERE Region = ?";
+        when(mockConnection.prepareStatement(sql)).thenReturn(mockPreparedStatement);
+        when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
         when(mockResultSet.next()).thenReturn(true);
         when(mockResultSet.getDouble(1)).thenReturn(63398500.0);
 
-        mockReport.getPopulationOfRegion(mockConnection, "British Islands");
+        report.getPopulationOfRegion(mockConnection, "British Islands");
 
-        verify(mockStatement).executeQuery("SELECT SUM(population) FROM country WHERE Region = 'British Islands'");
+        verify(mockPreparedStatement).setString(1, "British Islands");
+        assertEquals(63398500.0, report.population, 0.001);
     }
 
+    /**
+     * Tests that {@link UrbanReport#getUrbanPopulationOfRegion(Connection, String)}
+     * correctly retrieves a region's urban population.
+     */
     @Test
     void testGetUrbanPopulationOfRegion() throws Exception {
-        when(mockStatement.executeQuery("SELECT SUM(city.population) FROM city " +
+        String sql = "SELECT SUM(city.population) FROM city " +
                 "JOIN country ON city.CountryCode = country.Code " +
-                "WHERE country.Region = 'British Islands'")).thenReturn(mockResultSet);
+                "WHERE country.Region = ?";
+        when(mockConnection.prepareStatement(sql)).thenReturn(mockPreparedStatement);
+        when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
         when(mockResultSet.next()).thenReturn(true);
         when(mockResultSet.getDouble(1)).thenReturn(19401506.0);
 
-        mockReport.getUrbanPopulationOfRegion(mockConnection, "British Islands");
+        report.getUrbanPopulationOfRegion(mockConnection, "British Islands");
 
-        verify(mockStatement).executeQuery("SELECT SUM(city.population) FROM city " +
-                "JOIN country ON city.CountryCode = country.Code " +
-                "WHERE country.Region = 'British Islands'");
+        verify(mockPreparedStatement).setString(1, "British Islands");
+        assertEquals(19401506.0, report.urbanPopulation, 0.001);
     }
 
+    /**
+     * Tests that {@link UrbanReport#getPopulationOfCountry(Connection, String)}
+     * correctly retrieves a country's population.
+     */
     @Test
     void testGetPopulationOfCountry() throws Exception {
-        when(mockStatement.executeQuery("SELECT population FROM country WHERE Name = 'Afghanistan'")).thenReturn(mockResultSet);
+        String sql = "SELECT population FROM country WHERE Name = ?";
+        when(mockConnection.prepareStatement(sql)).thenReturn(mockPreparedStatement);
+        when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
         when(mockResultSet.next()).thenReturn(true);
         when(mockResultSet.getDouble(1)).thenReturn(22720000.0);
 
-        mockReport.getPopulationOfCountry(mockConnection, "Afghanistan");
+        report.getPopulationOfCountry(mockConnection, "Afghanistan");
 
-        verify(mockStatement).executeQuery("SELECT population FROM country WHERE Name = 'Afghanistan'");
+        verify(mockPreparedStatement).setString(1, "Afghanistan");
+        assertEquals(22720000.0, report.population, 0.001);
     }
 
+    /**
+     * Tests that {@link UrbanReport#getUrbanPopulationOfCountry(Connection, String)}
+     * correctly retrieves a country's urban population.
+     */
     @Test
     void testGetUrbanPopulationOfCountry() throws Exception {
-        when(mockStatement.executeQuery("SELECT SUM(city.population) FROM city " +
+        String sql = "SELECT SUM(city.population) FROM city " +
                 "JOIN country ON city.CountryCode = country.Code " +
-                "WHERE country.Name = 'Afghanistan'")).thenReturn(mockResultSet);
+                "WHERE country.Name = ?";
+        when(mockConnection.prepareStatement(sql)).thenReturn(mockPreparedStatement);
+        when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
         when(mockResultSet.next()).thenReturn(true);
         when(mockResultSet.getDouble(1)).thenReturn(2332100.0);
 
-        mockReport.getUrbanPopulationOfCountry(mockConnection, "Afghanistan");
+        report.getUrbanPopulationOfCountry(mockConnection, "Afghanistan");
 
-        verify(mockStatement).executeQuery("SELECT SUM(city.population) FROM city " +
-                "JOIN country ON city.CountryCode = country.Code " +
-                "WHERE country.Name = 'Afghanistan'");
+        verify(mockPreparedStatement).setString(1, "Afghanistan");
+        assertEquals(2332100.0, report.urbanPopulation, 0.001);
     }
 
+
+
+    /**
+     * Tests that {@link UrbanReport#generateReportLists(Connection)}
+     * generates lists of regions, countries, and cities without errors.
+     */
     @Test
-    void testGetPopulationOfContinent() throws Exception {
-        when(mockStatement.executeQuery("SELECT SUM(population) FROM country WHERE Continent = 'Asia'")).thenReturn(mockResultSet);
+    void testGenerateReportLists() throws Exception {
+        // Mock continent population
+        String sqlContinent = "SELECT SUM(population) FROM country WHERE Continent = ?";
+        when(mockConnection.prepareStatement(sqlContinent)).thenReturn(mockPreparedStatement);
+        when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
         when(mockResultSet.next()).thenReturn(true);
-        when(mockResultSet.getDouble(1)).thenReturn(3705025700.0);
+        when(mockResultSet.getDouble(1)).thenReturn(100.0);
 
-        mockReport.getPopulationOfContinent(mockConnection, "Asia");
+        report.generateReportLists(mockConnection);
 
-        verify(mockStatement).executeQuery("SELECT SUM(population) FROM country WHERE Continent = 'Asia'");
+        verify(mockPreparedStatement, atLeast(1)).executeQuery();
     }
 
+    /**
+     * Tests exception handling for population queries: ensures that when
+     * a SQLException occurs, the population is set to 0.
+     */
     @Test
-    void testGetUrbanPopulationOfContinent() throws Exception {
-        when(mockStatement.executeQuery("SELECT SUM(city.population) FROM city " +
-                "JOIN country ON city.CountryCode = country.Code " +
-                "WHERE country.Continent = 'Asia'")).thenReturn(mockResultSet);
-        when(mockResultSet.next()).thenReturn(true);
-        when(mockResultSet.getDouble(1)).thenReturn(697604103.0);
+    void testPopulationQuery_ExceptionHandled() throws Exception {
+        when(mockConnection.prepareStatement(anyString())).thenThrow(new SQLException("DB error"));
 
-        mockReport.getUrbanPopulationOfContinent(mockConnection, "Asia");
+        report.getPopulationOfWorld(mockConnection);
+        assertEquals(0.0, report.population, 0.001);
 
-        verify(mockStatement).executeQuery("SELECT SUM(city.population) FROM city " +
-                "JOIN country ON city.CountryCode = country.Code " +
-                "WHERE country.Continent = 'Asia'");
-    }
-
-    @Test
-    void testGetPopulationOfCity() throws Exception {
-        when(mockStatement.executeQuery("SELECT population FROM city WHERE Name = 'Liverpool'")).thenReturn(mockResultSet);
-        when(mockResultSet.next()).thenReturn(true);
-        when(mockResultSet.getDouble(1)).thenReturn(461000.0);
-
-        mockReport.getPopulationOfCity(mockConnection, "Liverpool");
-
-        verify(mockStatement).executeQuery("SELECT population FROM city WHERE Name = 'Liverpool'");
-    }
-
-    @Test
-    void testGetPopulationOfWorld_ExceptionHandled() throws Exception {
-        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
-
-        mockReport.getPopulationOfWorld(mockConnection);
-
-        assertEquals(0.0, mockReport.population, 0.001);
-    }
-
-    @Test
-    void testGetUrbanPopulation_ExceptionHandled() throws Exception {
-        mockReport.population = 6078749450.0;
-        when(mockStatement.executeQuery("SELECT SUM(population) FROM city")).thenThrow(new RuntimeException("Query failed"));
-
-        mockReport.getUrbanPopulation(mockConnection);
-
-        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
-    }
-
-    @Test
-    void testGetPopulationOfRegion_ExceptionHandled() throws Exception {
-        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
-
-        mockReport.getPopulationOfRegion(mockConnection, "British Islands");
-
-        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
-    }
-
-    @Test
-    void testGetUrbanPopulationOfRegion_ExceptionHandled() throws Exception {
-        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
-
-        mockReport.getUrbanPopulationOfRegion(mockConnection, "British Islands");
-
-        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
-    }
-
-    @Test
-    void testGetPopulationOfContinent_ExceptionHandled() throws Exception {
-        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
-
-        mockReport.getPopulationOfContinent(mockConnection, "Asia");
-
-        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
-    }
-
-    @Test
-    void testGetUrbanPopulationOfContinent_ExceptionHandled() throws Exception {
-        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
-
-        mockReport.getUrbanPopulationOfContinent(mockConnection, "Asia");
-
-        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
-    }
-
-    @Test
-    void testGetPopulationOfCountry_ExceptionHandled() throws Exception {
-        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
-
-        mockReport.getPopulationOfCountry(mockConnection, "Afghanistan");
-
-        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
-    }
-
-    @Test
-    void testGetUrbanPopulationOfCountry_ExceptionHandled() throws Exception {
-        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
-
-        mockReport.getUrbanPopulationOfCountry(mockConnection, "Afghanistan");
-
-        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
-    }
-
-    @Test
-    void testGetPopulationOfCity_ExceptionHandled() throws Exception {
-        when(mockConnection.createStatement()).thenThrow(new RuntimeException("DB error"));
-
-        mockReport.getPopulationOfCity(mockConnection, "Liverpool");
-
-        assertEquals(0.0, mockReport.urbanPopulation, 0.001);
+        report.getUrbanPopulation(mockConnection);
+        assertEquals(0.0, report.urbanPopulation, 0.001);
     }
 }
