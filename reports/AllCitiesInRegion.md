@@ -1,8 +1,8 @@
 | City | Country | Population |
 | --- | --- | --- |
-| S„o Paulo | Brazil | 9968485 |
+| S√£o Paulo | Brazil | 9968485 |
 | Lima | Peru | 6464693 |
-| SantafÈ de Bogot· | Colombia | 6260862 |
+| Santaf√© de Bogot√° | Colombia | 6260862 |
 | Rio de Janeiro | Brazil | 5598953 |
 | Santiago de Chile | Chile | 4703954 |
 | Buenos Aires | Argentina | 2982146 |
@@ -12,96 +12,96 @@
 | Cali | Colombia | 2077386 |
 | Guayaquil | Ecuador | 2070040 |
 | Caracas | Venezuela | 1975294 |
-| BrasÌlia | Brazil | 1969868 |
-| MedellÌn | Colombia | 1861265 |
+| Bras√≠lia | Brazil | 1969868 |
+| Medell√≠n | Colombia | 1861265 |
 | Curitiba | Brazil | 1584232 |
 | Quito | Ecuador | 1573458 |
 | Recife | Brazil | 1378087 |
 | Porto Alegre | Brazil | 1314032 |
-| MaracaÌbo | Venezuela | 1304776 |
+| Maraca√≠bo | Venezuela | 1304776 |
 | La Matanza | Argentina | 1266461 |
 | Manaus | Brazil | 1255049 |
 | Montevideo | Uruguay | 1236000 |
 | Barranquilla | Colombia | 1223260 |
-| BelÈm | Brazil | 1186926 |
-| CÛrdoba | Argentina | 1157507 |
+| Bel√©m | Brazil | 1186926 |
+| C√≥rdoba | Argentina | 1157507 |
 | Guarulhos | Brazil | 1095874 |
-| Goi‚nia | Brazil | 1056330 |
+| Goi√¢nia | Brazil | 1056330 |
 | Campinas | Brazil | 950043 |
 | Santa Cruz de la Sierra | Bolivia | 935361 |
 | Rosario | Argentina | 907718 |
 | Barquisimeto | Venezuela | 877239 |
-| S„o GonÁalo | Brazil | 869254 |
-| Nova IguaÁu | Brazil | 862225 |
-| S„o LuÌs | Brazil | 837588 |
+| S√£o Gon√ßalo | Brazil | 869254 |
+| Nova Igua√ßu | Brazil | 862225 |
+| S√£o Lu√≠s | Brazil | 837588 |
 | Cartagena | Colombia | 805757 |
 | Valencia | Venezuela | 794246 |
-| MaceiÛ | Brazil | 786288 |
+| Macei√≥ | Brazil | 786288 |
 | Arequipa | Peru | 762000 |
 | La Paz | Bolivia | 758141 |
 | Duque de Caxias | Brazil | 746758 |
-| S„o Bernardo do Campo | Brazil | 723132 |
+| S√£o Bernardo do Campo | Brazil | 723132 |
 | Teresina | Brazil | 691942 |
 | Natal | Brazil | 688955 |
 | Ciudad Guayana | Venezuela | 663713 |
 | Osasco | Brazil | 659604 |
 | Trujillo | Peru | 652000 |
 | Campo Grande | Brazil | 649593 |
-| Santo AndrÈ | Brazil | 630073 |
+| Santo Andr√© | Brazil | 630073 |
 | Lomas de Zamora | Argentina | 622013 |
-| C˙cuta | Colombia | 606932 |
-| Jo„o Pessoa | Brazil | 584029 |
+| C√∫cuta | Colombia | 606932 |
+| Jo√£o Pessoa | Brazil | 584029 |
 | Quilmes | Argentina | 559249 |
-| Jaboat„o dos Guararapes | Brazil | 558680 |
-| AsunciÛn | Paraguay | 557776 |
+| Jaboat√£o dos Guararapes | Brazil | 558680 |
+| Asunci√≥n | Paraguay | 557776 |
 | Almirante Brown | Argentina | 538918 |
 | El Alto | Bolivia | 534466 |
 | La Plata | Argentina | 521936 |
 | Contagem | Brazil | 520801 |
 | Chiclayo | Peru | 517000 |
 | Bucaramanga | Colombia | 515555 |
-| S„o JosÈ dos Campos | Brazil | 515553 |
+| S√£o Jos√© dos Campos | Brazil | 515553 |
 | Mar del Plata | Argentina | 512880 |
 | Petare | Venezuela | 488868 |
-| Uberl‚ndia | Brazil | 487222 |
+| Uberl√¢ndia | Brazil | 487222 |
 | Cochabamba | Bolivia | 482800 |
 | Feira de Santana | Brazil | 479992 |
-| Ribeir„o Preto | Brazil | 473276 |
-| San Miguel de Tucum·n | Argentina | 470809 |
-| Lan˙s | Argentina | 469735 |
+| Ribeir√£o Preto | Brazil | 473276 |
+| San Miguel de Tucum√°n | Argentina | 470809 |
+| Lan√∫s | Argentina | 469735 |
 | Sorocaba | Brazil | 466823 |
 | Merlo | Argentina | 463846 |
-| NiterÛi | Brazil | 459884 |
-| Cuiab· | Brazil | 453813 |
+| Niter√≥i | Brazil | 459884 |
+| Cuiab√° | Brazil | 453813 |
 | Juiz de Fora | Brazil | 450288 |
 | Aracaju | Brazil | 445555 |
 | Maracay | Venezuela | 444443 |
-| S„o Jo„o de Meriti | Brazil | 440052 |
+| S√£o Jo√£o de Meriti | Brazil | 440052 |
 | Londrina | Brazil | 432257 |
 | Joinville | Brazil | 428011 |
 | Belford Roxo | Brazil | 425194 |
 | Callao | Peru | 424294 |
-| General San MartÌn | Argentina | 422542 |
+| General San Mart√≠n | Argentina | 422542 |
 | Santos | Brazil | 408748 |
 | Ananindeua | Brazil | 400940 |
 | Campos dos Goytacazes | Brazil | 398418 |
-| IbaguÈ | Colombia | 393664 |
+| Ibagu√© | Colombia | 393664 |
 | Puente Alto | Chile | 386236 |
 | Pereira | Colombia | 381725 |
-| Mau· | Brazil | 375055 |
+| Mau√° | Brazil | 375055 |
 | Salta | Argentina | 367550 |
 | Iquitos | Peru | 367000 |
 | Santa Marta | Colombia | 359147 |
-| CarapicuÌba | Brazil | 357552 |
+| Carapicu√≠ba | Brazil | 357552 |
 | Moreno | Argentina | 356993 |
 | Olinda | Brazil | 354732 |
-| Santa FÈ | Argentina | 353063 |
+| Santa F√© | Argentina | 353063 |
 | Avellaneda | Argentina | 353046 |
 | Campina Grande | Brazil | 352497 |
 | Tres de Febrero | Argentina | 352311 |
-| S„o JosÈ do Rio Preto | Brazil | 351944 |
+| S√£o Jos√© do Rio Preto | Brazil | 351944 |
 | Caxias do Sul | Brazil | 349581 |
-| MorÛn | Argentina | 349246 |
+| Mor√≥n | Argentina | 349246 |
 | Moji das Cruzes | Brazil | 339194 |
 | Manizales | Colombia | 337580 |
 | Chimbote | Peru | 336000 |
@@ -110,138 +110,138 @@
 | Pasto | Colombia | 332396 |
 | Huancayo | Peru | 327000 |
 | Piura | Peru | 325000 |
-| Aparecida de Goi‚nia | Brazil | 324662 |
+| Aparecida de Goi√¢nia | Brazil | 324662 |
 | Barcelona | Venezuela | 322267 |
-| MaturÌn | Venezuela | 319726 |
-| San CristÛbal | Venezuela | 319373 |
+| Matur√≠n | Venezuela | 319726 |
+| San Crist√≥bal | Venezuela | 319373 |
 | Piracicaba | Brazil | 319104 |
 | Cariacica | Brazil | 319033 |
 | Vila Velha | Brazil | 318758 |
 | Florencio Varela | Argentina | 315432 |
 | Pelotas | Brazil | 315415 |
 | Bauru | Brazil | 313670 |
-| ViÒa del Mar | Chile | 312493 |
+| Vi√±a del Mar | Chile | 312493 |
 | Porto Velho | Brazil | 309750 |
 | San Isidro | Argentina | 306341 |
 | Serra | Brazil | 302666 |
 | Betim | Brazil | 302108 |
-| Ciudad BolÌvar | Venezuela | 301107 |
+| Ciudad Bol√≠var | Venezuela | 301107 |
 | Neiva | Colombia | 300052 |
 | Tigre | Argentina | 296226 |
-| JundÌaÌ | Brazil | 296127 |
+| Jund√≠a√≠ | Brazil | 296127 |
 | Soledad | Colombia | 295058 |
 | Canoas | Brazil | 294125 |
-| ValparaÌso | Chile | 293800 |
-| Cuman· | Venezuela | 293105 |
+| Valpara√≠so | Chile | 293800 |
+| Cuman√° | Venezuela | 293105 |
 | Cusco | Peru | 291000 |
 | Malvinas Argentinas | Argentina | 290335 |
 | Franca | Brazil | 290139 |
 | Armenia | Colombia | 288977 |
-| Vicente LÛpez | Argentina | 288341 |
-| S„o Vicente | Brazil | 286848 |
-| Maring· | Brazil | 286461 |
+| Vicente L√≥pez | Argentina | 288341 |
+| S√£o Vicente | Brazil | 286848 |
+| Maring√° | Brazil | 286461 |
 | Montes Claros | Brazil | 286058 |
-| An·polis | Brazil | 282197 |
-| FlorianÛpolis | Brazil | 281928 |
-| PetrÛpolis | Brazil | 279183 |
+| An√°polis | Brazil | 282197 |
+| Florian√≥polis | Brazil | 281928 |
+| Petr√≥polis | Brazil | 279183 |
 | Talcahuano | Chile | 277752 |
 | Berazategui | Argentina | 276916 |
 | Villavicencio | Colombia | 273140 |
 | Soacha | Colombia | 272058 |
 | Itaquaquecetuba | Brazil | 270874 |
-| VitÛria | Brazil | 270626 |
+| Vit√≥ria | Brazil | 270626 |
 | Cuenca | Ecuador | 270353 |
 | Ponta Grossa | Brazil | 268013 |
 | Valledupar | Colombia | 263247 |
 | Rio Branco | Brazil | 259537 |
-| Foz do IguaÁu | Brazil | 259425 |
+| Foz do Igua√ßu | Brazil | 259425 |
 | Corrientes | Argentina | 258103 |
-| Macap· | Brazil | 256033 |
-| IlhÈus | Brazil | 254970 |
+| Macap√° | Brazil | 256033 |
+| Ilh√©us | Brazil | 254970 |
 | Georgetown | Guyana | 254000 |
-| VitÛria da Conquista | Brazil | 253587 |
+| Vit√≥ria da Conquista | Brazil | 253587 |
 | Antofagasta | Chile | 251429 |
 | Uberaba | Brazil | 249225 |
 | San Miguel | Argentina | 248700 |
 | Paulista | Brazil | 248473 |
-| MonterÌa | Colombia | 248245 |
+| Monter√≠a | Colombia | 248245 |
 | Limeira | Brazil | 245497 |
 | Blumenau | Brazil | 244379 |
 | Caruaru | Brazil | 244247 |
 | San Bernardo | Chile | 241910 |
-| SantarÈm | Brazil | 241771 |
+| Santar√©m | Brazil | 241771 |
 | Volta Redonda | Brazil | 240315 |
 | Novo Hamburgo | Brazil | 239940 |
-| BahÌa Blanca | Argentina | 239810 |
+| Bah√≠a Blanca | Argentina | 239810 |
 | Caucaia | Brazil | 238738 |
 | Santa Maria | Brazil | 238473 |
 | Cascavel | Brazil | 237510 |
-| Guaruj· | Brazil | 237206 |
-| Esteban EcheverrÌa | Argentina | 235760 |
+| Guaruj√° | Brazil | 237206 |
+| Esteban Echeverr√≠a | Argentina | 235760 |
 | Temuco | Chile | 233041 |
-| Ribeir„o das Neves | Brazil | 232685 |
+| Ribeir√£o das Neves | Brazil | 232685 |
 | Governador Valadares | Brazil | 231724 |
 | Resistencia | Argentina | 229212 |
-| TaubatÈ | Brazil | 229130 |
-| Itag¸Ì | Colombia | 228985 |
+| Taubat√© | Brazil | 229130 |
+| Itag√º√≠ | Colombia | 228985 |
 | Palmira | Colombia | 226509 |
-| MÈrida | Venezuela | 224887 |
+| M√©rida | Venezuela | 224887 |
 | Imperatriz | Brazil | 224564 |
 | Buenaventura | Colombia | 224336 |
 | Oruro | Bolivia | 223553 |
-| GravataÌ | Brazil | 223011 |
+| Gravata√≠ | Brazil | 223011 |
 | Embu | Brazil | 222223 |
 | Floridablanca | Colombia | 221913 |
-| JosÈ C. Paz | Argentina | 221754 |
+| Jos√© C. Paz | Argentina | 221754 |
 | Cabimas | Venezuela | 221329 |
 | Pucallpa | Peru | 220866 |
 | Sincelejo | Colombia | 220704 |
 | Barinas | Venezuela | 217831 |
-| ConcepciÛn | Chile | 217664 |
+| Concepci√≥n | Chile | 217664 |
 | Turmero | Venezuela | 217499 |
 | Tacna | Peru | 215683 |
-| MossorÛ | Brazil | 214901 |
-| V·rzea Grande | Brazil | 214435 |
+| Mossor√≥ | Brazil | 214901 |
+| V√°rzea Grande | Brazil | 214435 |
 | Rancagua | Chile | 212977 |
 | Petrolina | Brazil | 210540 |
 | Machala | Ecuador | 210368 |
 | Barueri | Brazil | 208426 |
-| Viam„o | Brazil | 207557 |
+| Viam√£o | Brazil | 207557 |
 | Baruta | Venezuela | 207290 |
-| Paran· | Argentina | 207041 |
+| Paran√° | Argentina | 207041 |
 | Godoy Cruz | Argentina | 206998 |
 | Ipatinga | Brazil | 206338 |
 | Santo Domingo de los Colorados | Ecuador | 202111 |
 | Posadas | Argentina | 201273 |
 | Juazeiro | Brazil | 201073 |
-| Popay·n | Colombia | 200719 |
-| GuaymallÈn | Argentina | 200595 |
+| Popay√°n | Colombia | 200719 |
+| Guaymall√©n | Argentina | 200595 |
 | Juazeiro do Norte | Brazil | 199636 |
-| Tabo„o da Serra | Brazil | 197550 |
-| S„o JosÈ dos Pinhais | Brazil | 196884 |
-| MagÈ | Brazil | 196147 |
+| Tabo√£o da Serra | Brazil | 197550 |
+| S√£o Jos√© dos Pinhais | Brazil | 196884 |
+| Mag√© | Brazil | 196147 |
 | Suzano | Brazil | 195434 |
 | Ica | Peru | 194820 |
 | Santiago del Estero | Argentina | 189947 |
-| S„o Leopoldo | Brazil | 189258 |
+| S√£o Leopoldo | Brazil | 189258 |
 | Arica | Chile | 189036 |
-| MarÌlia | Brazil | 188691 |
+| Mar√≠lia | Brazil | 188691 |
 | Puerto Cabello | Venezuela | 187722 |
 | Talca | Chile | 187557 |
-| S„o Carlos | Brazil | 187122 |
-| SumarÈ | Brazil | 186205 |
+| S√£o Carlos | Brazil | 187122 |
+| Sumar√© | Brazil | 186205 |
 | Santa Ana de Coro | Venezuela | 185766 |
 | Presidente Prudente | Brazil | 185340 |
-| DivinÛpolis | Brazil | 185047 |
+| Divin√≥polis | Brazil | 185047 |
 | Sete Lagoas | Brazil | 182984 |
 | Rio Grande | Brazil | 182222 |
 | Itabuna | Brazil | 182148 |
-| JequiÈ | Brazil | 179128 |
+| Jequi√© | Brazil | 179128 |
 | Arapiraca | Brazil | 178988 |
 | Los Teques | Venezuela | 178784 |
 | San Salvador de Jujuy | Argentina | 178748 |
 | Sucre | Bolivia | 178426 |
-| Chill·n | Chile | 178182 |
+| Chill√°n | Chile | 178182 |
 | Barrancabermeja | Colombia | 178020 |
 | Iquique | Chile | 177892 |
 | Colombo | Brazil | 177764 |
@@ -249,18 +249,18 @@
 | Portoviejo | Ecuador | 176413 |
 | Alvorada | Brazil | 175574 |
 | Araraquara | Brazil | 174381 |
-| ItaboraÌ | Brazil | 173977 |
-| Santa B·rbara d¥Oeste | Brazil | 171657 |
+| Itabora√≠ | Brazil | 173977 |
+| Santa B√°rbara d¬¥Oeste | Brazil | 171657 |
 | Nova Friburgo | Brazil | 170697 |
-| JacareÌ | Brazil | 170356 |
+| Jacare√≠ | Brazil | 170356 |
 | Hurlingham | Argentina | 170028 |
 | Ambato | Ecuador | 169612 |
-| AraÁatuba | Brazil | 169303 |
+| Ara√ßatuba | Brazil | 169303 |
 | Barra Mansa | Brazil | 168953 |
 | Praia Grande | Brazil | 168434 |
-| Marab· | Brazil | 167795 |
-| Crici˙ma | Brazil | 167661 |
-| NeuquÈn | Argentina | 167296 |
+| Marab√° | Brazil | 167795 |
+| Crici√∫ma | Brazil | 167661 |
+| Neuqu√©n | Argentina | 167296 |
 | Punto Fijo | Venezuela | 167215 |
 | Boa Vista | Brazil | 167185 |
 | Passo Fundo | Brazil | 166343 |
@@ -269,34 +269,34 @@
 | Dourados | Brazil | 164716 |
 | Santa Luzia | Brazil | 164704 |
 | Rio Claro | Brazil | 163551 |
-| Maracana˙ | Brazil | 162022 |
+| Maracana√∫ | Brazil | 162022 |
 | Guarapuava | Brazil | 160510 |
 | Dos Quebradas | Colombia | 159363 |
 | Acarigua | Venezuela | 158954 |
 | Los Angeles | Chile | 158215 |
-| ItuzaingÛ | Argentina | 158197 |
+| Ituzaing√≥ | Argentina | 158197 |
 | Puerto La Cruz | Venezuela | 155700 |
-| RondonÛpolis | Brazil | 155115 |
-| S„o JosÈ | Brazil | 155105 |
+| Rondon√≥polis | Brazil | 155115 |
+| S√£o Jos√© | Brazil | 155105 |
 | Cachoeiro de Itapemirim | Brazil | 155024 |
-| NilÛpolis | Brazil | 153383 |
+| Nil√≥polis | Brazil | 153383 |
 | San Fernando | Argentina | 153036 |
 | Duran [Eloy Alfaro] | Ecuador | 152514 |
-| Tulu· | Colombia | 152488 |
+| Tulu√° | Colombia | 152488 |
 | Puerto Montt | Chile | 152194 |
 | Itapevi | Brazil | 150664 |
 | Cabo de Santo Agostinho | Brazil | 149964 |
-| CamaÁari | Brazil | 149146 |
+| Cama√ßari | Brazil | 149146 |
 | Formosa | Argentina | 147636 |
 | Sullana | Peru | 147361 |
 | Sobral | Brazil | 146005 |
 | Las Heras | Argentina | 145823 |
-| ItajaÌ | Brazil | 145197 |
-| ChapecÛ | Brazil | 144158 |
+| Itaja√≠ | Brazil | 145197 |
+| Chapec√≥ | Brazil | 144158 |
 | Coquimbo | Chile | 143353 |
 | Juliaca | Peru | 142576 |
 | Osorno | Chile | 141468 |
-| PotosÌ | Bolivia | 140642 |
+| Potos√≠ | Bolivia | 140642 |
 | Cotia | Brazil | 140042 |
 | Lages | Brazil | 139570 |
 | Ferraz de Vasconcelos | Brazil | 139283 |
@@ -305,72 +305,72 @@
 | Calama | Chile | 137265 |
 | Indaiatuba | Brazil | 135968 |
 | Envigado | Colombia | 135848 |
-| Hortol‚ndia | Brazil | 135755 |
+| Hortol√¢ndia | Brazil | 135755 |
 | San Fernando del Valle de Cata | Argentina | 134935 |
 | Ciudad Losada | Venezuela | 134501 |
-| RÌo Cuarto | Argentina | 134355 |
+| R√≠o Cuarto | Argentina | 134355 |
 | Caxias | Brazil | 133980 |
 | Ciudad del Este | Paraguay | 133881 |
 | San Lorenzo | Paraguay | 133395 |
-| S„o Caetano do Sul | Brazil | 133321 |
+| S√£o Caetano do Sul | Brazil | 133321 |
 | Valdivia | Chile | 133106 |
 | Itu | Brazil | 132736 |
 | Nossa Senhora do Socorro | Brazil | 131351 |
 | Guacara | Venezuela | 131334 |
 | Ibarra | Ecuador | 130643 |
 | Valera | Venezuela | 130281 |
-| ParnaÌba | Brazil | 129756 |
-| Hu·nuco | Peru | 129688 |
-| PoÁos de Caldas | Brazil | 129683 |
+| Parna√≠ba | Brazil | 129756 |
+| Hu√°nuco | Peru | 129688 |
+| Po√ßos de Caldas | Brazil | 129683 |
 | Quevedo | Ecuador | 129631 |
-| TeresÛpolis | Brazil | 128079 |
+| Teres√≥polis | Brazil | 128079 |
 | Barreiras | Brazil | 127801 |
 | Castanhal | Brazil | 127634 |
 | Alagoinhas | Brazil | 126820 |
 | Itapecerica da Serra | Brazil | 126672 |
 | Uruguaiana | Brazil | 126305 |
-| Paranagu· | Brazil | 126076 |
-| IbiritÈ | Brazil | 125982 |
+| Paranagu√° | Brazil | 126076 |
+| Ibirit√© | Brazil | 125982 |
 | Cartago | Colombia | 125884 |
 | Timon | Brazil | 125812 |
 | Punta Arenas | Chile | 125631 |
 | Guanare | Venezuela | 125621 |
-| Luzi‚nia | Brazil | 125597 |
-| MacaÈ | Brazil | 125597 |
+| Luzi√¢nia | Brazil | 125597 |
+| Maca√© | Brazil | 125597 |
 | Tarija | Bolivia | 125255 |
-| TeÛfilo Otoni | Brazil | 124489 |
+| Te√≥filo Otoni | Brazil | 124489 |
 | Milagro | Ecuador | 124177 |
 | Comodoro Rivadavia | Argentina | 124104 |
 | Loja | Ecuador | 123875 |
-| Moji-GuaÁu | Brazil | 123782 |
-| RÌobamba | Ecuador | 123163 |
+| Moji-Gua√ßu | Brazil | 123782 |
+| R√≠obamba | Ecuador | 123163 |
 | Esmeraldas | Ecuador | 123045 |
 | Mendoza | Argentina | 123027 |
 | Palmas | Brazil | 121919 |
 | Pindamonhangaba | Brazil | 121904 |
 | Francisco Morato | Brazil | 121197 |
-| BagÈ | Brazil | 120793 |
+| Bag√© | Brazil | 120793 |
 | Sapucaia do Sul | Brazil | 120217 |
-| CopiapÛ | Chile | 120128 |
-| Car˙pano | Venezuela | 119639 |
+| Copiap√≥ | Chile | 120128 |
+| Car√∫pano | Venezuela | 119639 |
 | Cabo Frio | Brazil | 119503 |
 | Itapetininga | Brazil | 119391 |
-| San Nicol·s de los Arroyos | Argentina | 119302 |
+| San Nicol√°s de los Arroyos | Argentina | 119302 |
 | Patos de Minas | Brazil | 119262 |
 | San Juan | Argentina | 119152 |
 | Camaragibe | Brazil | 118968 |
 | Ayacucho | Peru | 118960 |
-| QuilpuÈ | Chile | 118857 |
+| Quilpu√© | Chile | 118857 |
 | Catia La Mar | Venezuela | 117012 |
-| BraganÁa Paulista | Brazil | 116929 |
+| Bragan√ßa Paulista | Brazil | 116929 |
 | Escobar | Argentina | 116675 |
 | Concordia | Argentina | 116485 |
 | El Tigre | Venezuela | 116256 |
-| CuricÛ | Chile | 115766 |
+| Curic√≥ | Chile | 115766 |
 | Queimados | Brazil | 115020 |
-| AraguaÌna | Brazil | 114948 |
+| Aragua√≠na | Brazil | 114948 |
 | Garanhuns | Brazil | 114603 |
-| VitÛria de Santo Ant„o | Brazil | 113595 |
+| Vit√≥ria de Santo Ant√£o | Brazil | 113595 |
 | Pilar | Argentina | 113428 |
 | Santa Rita | Brazil | 113135 |
 | Barbacena | Brazil | 113079 |
@@ -380,7 +380,7 @@
 | Buga | Colombia | 110699 |
 | San Luis | Argentina | 110136 |
 | Chincha Alta | Peru | 110016 |
-| Ja˙ | Brazil | 109965 |
+| Ja√∫ | Brazil | 109965 |
 | Tunja | Colombia | 109740 |
 | Lauro de Freitas | Brazil | 109236 |
 | Guatire | Venezuela | 109121 |
@@ -388,10 +388,10 @@
 | Florencia | Colombia | 108574 |
 | Teixeira de Freitas | Brazil | 108441 |
 | Varginha | Brazil | 108314 |
-| Ribeir„o Pires | Brazil | 108121 |
+| Ribeir√£o Pires | Brazil | 108121 |
 | Maicao | Colombia | 108053 |
 | Cajamarca | Peru | 108009 |
-| Sabar· | Brazil | 107781 |
+| Sabar√° | Brazil | 107781 |
 | Catanduva | Brazil | 107761 |
 | Rio Verde | Brazil | 107755 |
 | Sogamoso | Colombia | 107728 |
@@ -403,11 +403,11 @@
 | Pozuelos | Venezuela | 105690 |
 | Apucarana | Brazil | 105114 |
 | Barretos | Brazil | 104156 |
-| Guaratinguet· | Brazil | 103433 |
+| Guaratinguet√° | Brazil | 103433 |
 | Cachoeirinha | Brazil | 103240 |
-| CodÛ | Brazil | 103153 |
-| Jaragu· do Sul | Brazil | 102580 |
-| Cubat„o | Brazil | 102372 |
+| Cod√≥ | Brazil | 103153 |
+| Jaragu√° do Sul | Brazil | 102580 |
+| Cubat√£o | Brazil | 102372 |
 | Itabira | Brazil | 102217 |
 | Puno | Peru | 101578 |
 | Itaituba | Brazil | 101320 |
@@ -416,21 +416,21 @@
 | Resende | Brazil | 100627 |
 | Atibaia | Brazil | 100356 |
 | Pouso Alegre | Brazil | 100028 |
-| LambarÈ | Paraguay | 99681 |
+| Lambar√© | Paraguay | 99681 |
 | Ezeiza | Argentina | 99578 |
 | Toledo | Brazil | 99387 |
 | Ciudad Ojeda | Venezuela | 99354 |
 | Crato | Brazil | 98965 |
 | Passos | Brazil | 98570 |
 | Araguari | Brazil | 98399 |
-| S„o JosÈ de Ribamar | Brazil | 98318 |
+| S√£o Jos√© de Ribamar | Brazil | 98318 |
 | Pinhais | Brazil | 98198 |
-| Sert„ozinho | Brazil | 98140 |
+| Sert√£ozinho | Brazil | 98140 |
 | Conselheiro Lafaiete | Brazil | 97507 |
 | Paulo Afonso | Brazil | 97291 |
 | Ocumare del Tuy | Venezuela | 97168 |
 | Angra dos Reis | Brazil | 96864 |
-| Eun·polis | Brazil | 96610 |
+| Eun√°polis | Brazil | 96610 |
 | Salto | Brazil | 96348 |
 | Ourinhos | Brazil | 96291 |
 | Parnamirim | Brazil | 96210 |
@@ -442,14 +442,14 @@
 | Birigui | Brazil | 94685 |
 | San Rafael | Argentina | 94651 |
 | Araure | Venezuela | 94269 |
-| TatuÌ | Brazil | 93897 |
+| Tatu√≠ | Brazil | 93897 |
 | San Fernando de Apure | Venezuela | 93809 |
-| Ji-Paran· | Brazil | 93346 |
+| Ji-Paran√° | Brazil | 93346 |
 | Bacabal | Brazil | 93121 |
 | Coronel | Chile | 93061 |
-| Camet· | Brazil | 92779 |
-| GuaÌba | Brazil | 92224 |
-| S„o LourenÁo da Mata | Brazil | 91999 |
+| Camet√° | Brazil | 92779 |
+| Gua√≠ba | Brazil | 92224 |
+| S√£o Louren√ßo da Mata | Brazil | 91999 |
 | Santana do Livramento | Brazil | 91779 |
 | Votorantim | Brazil | 91777 |
 | San Pedro de la Paz | Chile | 91684 |
@@ -461,12 +461,12 @@
 | Castilla | Peru | 90642 |
 | Patos | Brazil | 90519 |
 | Ituiutaba | Brazil | 90507 |
-| Corumb· | Brazil | 90111 |
-| El LimÛn | Venezuela | 90000 |
-| PalhoÁa | Brazil | 89465 |
-| Barra do PiraÌ | Brazil | 89388 |
-| Bento GonÁalves | Brazil | 89254 |
-| Po· | Brazil | 89236 |
-| ¡guas Lindas de Goi·s | Brazil | 89200 |
+| Corumb√° | Brazil | 90111 |
+| El Lim√≥n | Venezuela | 90000 |
+| Palho√ßa | Brazil | 89465 |
+| Barra do Pira√≠ | Brazil | 89388 |
+| Bento Gon√ßalves | Brazil | 89254 |
+| Po√° | Brazil | 89236 |
+| √Åguas Lindas de Goi√°s | Brazil | 89200 |
 | Cayenne | French Guiana | 50699 |
 | Stanley | Falkland Islands | 1636 |

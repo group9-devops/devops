@@ -34,7 +34,7 @@
 | Ahmedabad | India | 2876710 |
 | Nanking [Nanjing] | China | 2870300 |
 | Changchun | China | 2812000 |
-| Xi´an | China | 2761400 |
+| XiÂ´an | China | 2761400 |
 | Dalian | China | 2697000 |
 | Surabaya | Indonesia | 2663820 |
 | Bangalore | India | 2660088 |
@@ -63,7 +63,7 @@
 | Kunming | China | 1829500 |
 | Changsha | China | 1809800 |
 | Sapporo | Japan | 1790886 |
-| Bak? | Azerbaijan | 1787800 |
+| BakÄ± | Azerbaijan | 1787800 |
 | Kabul | Afghanistan | 1780000 |
 | Nanchang | China | 1691600 |
 | Nagpur | India | 1624752 |
@@ -87,7 +87,7 @@
 | Kwangju | South Korea | 1368341 |
 | Damascus | Syria | 1347000 |
 | Victoria | Hong Kong | 1312637 |
-| Urumtši [Ürümqi] | China | 1310100 |
+| UrumtÅ¡i [ÃœrÃ¼mqi] | China | 1310100 |
 | Fukuoka | Japan | 1308379 |
 | Kuala Lumpur | Malaysia | 1297526 |
 | Esfahan | Iran | 1266072 |
@@ -201,7 +201,7 @@
 | Kathmandu | Nepal | 591835 |
 | Anyang | South Korea | 591106 |
 | Bishkek | Kyrgyzstan | 589400 |
-| Mersin (Içel) | Turkey | 587212 |
+| Mersin (IÃ§el) | Turkey | 587212 |
 | Bareilly | India | 587211 |
 | Sagamihara | Japan | 586300 |
 | Guwahati (Gauhati) | India | 584342 |
@@ -267,7 +267,7 @@
 | Himeji | Japan | 475167 |
 | Shizuoka | Japan | 473854 |
 | Xinxiang | China | 473762 |
-| Las Piñas | Philippines | 472780 |
+| Las PiÃ±as | Philippines | 472780 |
 | Guntur | India | 471051 |
 | Antipolo | Philippines | 470866 |
 | Eskisehir | Turkey | 470781 |
@@ -284,7 +284,7 @@
 | Ghaziabad | India | 454156 |
 | Kawaguchi | Japan | 452155 |
 | Yantai | China | 452127 |
-| Parañaque | Philippines | 449811 |
+| ParaÃ±aque | Philippines | 449811 |
 | Bengbu | China | 449245 |
 | Warangal | India | 447657 |
 | Makati | Philippines | 444867 |
@@ -361,7 +361,7 @@
 | Zaozhuang | China | 380846 |
 | Arak | Iran | 380755 |
 | Sanchung | Taiwan | 380084 |
-| Dasmariñas | Philippines | 379520 |
+| DasmariÃ±as | Philippines | 379520 |
 | Muntinlupa | Philippines | 379310 |
 | Bhiwandi | India | 379070 |
 | Yakeshi | China | 377869 |
@@ -402,7 +402,7 @@
 | Gaza | Palestine | 353632 |
 | Xianyang | China | 352125 |
 | Kwangmyong | South Korea | 350914 |
-| Tai´an | China | 350696 |
+| TaiÂ´an | China | 350696 |
 | Chifeng | China | 350077 |
 | Shaoguan | China | 350043 |
 | Tel Aviv-Jaffa | Israel | 348100 |
@@ -452,7 +452,7 @@
 | Changzhi | China | 317144 |
 | Nellore | India | 316606 |
 | Taoyuan | Taiwan | 316438 |
-| San José del Monte | Philippines | 315807 |
+| San JosÃ© del Monte | Philippines | 315807 |
 | Tengzhou | China | 315083 |
 | Akita | Japan | 314440 |
 | Chaozhou | China | 313469 |
@@ -460,7 +460,7 @@
 | Yangzhou | China | 312892 |
 | Kumi | South Korea | 311431 |
 | Astana | Kazakstan | 311200 |
-| Öskemen | Kazakstan | 311000 |
+| Ã–skemen | Kazakstan | 311000 |
 | al-Najaf | Iraq | 309010 |
 | Dongwan | China | 308669 |
 | Udaipur | India | 308571 |
@@ -468,7 +468,7 @@
 | New Bombay | India | 307297 |
 | Mataram | Indonesia | 306600 |
 | Bacoor | Philippines | 305699 |
-| Ma´anshan | China | 305421 |
+| MaÂ´anshan | China | 305421 |
 | Bhatpara | India | 304952 |
 | Gulbarga | India | 304099 |
 | Miyazaki | Japan | 303784 |
@@ -484,7 +484,7 @@
 | Wonsan | North Korea | 300148 |
 | Naha | Japan | 299851 |
 | Shihezi | China | 299676 |
-| G?nc? | Azerbaijan | 299300 |
+| GÉ™ncÉ™ | Azerbaijan | 299300 |
 | Hodeida | Yemen | 298500 |
 | Yancheng | China | 296831 |
 | Karbala | Iraq | 296705 |
@@ -506,9 +506,9 @@
 | Bogor | Indonesia | 285114 |
 | Iligan | Philippines | 285061 |
 | Maebashi | Japan | 284473 |
-| Sumqay?t | Azerbaijan | 283000 |
+| SumqayÄ±t | Azerbaijan | 283000 |
 | Kasugai | Japan | 282348 |
-| Biên Hoa | Vietnam | 282095 |
+| BiÃªn Hoa | Vietnam | 282095 |
 | Otsu | Japan | 282070 |
 | Dongying | China | 281728 |
 | Shashi | China | 281352 |
@@ -581,7 +581,7 @@
 | Denizli | Turkey | 253848 |
 | Kediri | Indonesia | 253760 |
 | Bhagalpur | India | 253225 |
-| Aqtöbe | Kazakstan | 253100 |
+| AqtÃ¶be | Kazakstan | 253100 |
 | Baguio | Philippines | 252386 |
 | Wafangdian | China | 251733 |
 | Anqing | China | 250718 |
@@ -643,7 +643,7 @@
 | Navotas | Philippines | 230403 |
 | Haeju | North Korea | 229172 |
 | Namyangju | South Korea | 229060 |
-| Elâzig | Turkey | 228815 |
+| ElÃ¢zig | Turkey | 228815 |
 | Rahim Yar Khan | Pakistan | 228479 |
 | Kuala Terengganu | Malaysia | 228119 |
 | Tongling | China | 228017 |
@@ -729,7 +729,7 @@
 | Cimanggis | Indonesia | 205100 |
 | Alwar | India | 205086 |
 | Baiyin | China | 204970 |
-| Bei´an | China | 204899 |
+| BeiÂ´an | China | 204899 |
 | Batman | Turkey | 203793 |
 | Petropavl | Kazakstan | 203500 |
 | Pondicherry | India | 203065 |
@@ -743,7 +743,7 @@
 | Chofu | Japan | 201585 |
 | Kashan | Iran | 201372 |
 | Bihar Sharif | India | 201323 |
-| Biñan | Philippines | 201186 |
+| BiÃ±an | Philippines | 201186 |
 | Okara | Pakistan | 200901 |
 | Yixing | China | 200824 |
 | Odawara | Japan | 200171 |
@@ -792,11 +792,11 @@
 | Sakarya (Adapazari) | Turkey | 190641 |
 | Parbhani | India | 190255 |
 | Ezhou | China | 190123 |
-| Kükon | Uzbekistan | 190100 |
+| KÃ¼kon | Uzbekistan | 190100 |
 | Nagar Coil | India | 190084 |
 | Moratuwa | Sri Lanka | 190000 |
 | Heze | China | 189293 |
-| Chärjew | Turkmenistan | 189200 |
+| ChÃ¤rjew | Turkmenistan | 189200 |
 | Uji | Japan | 188735 |
 | Mymensingh | Bangladesh | 188713 |
 | Gorgan | Iran | 188710 |
@@ -964,7 +964,7 @@
 | Legazpi | Philippines | 157010 |
 | Wanxian | China | 156823 |
 | Satna | India | 156630 |
-| Rui´an | China | 156468 |
+| RuiÂ´an | China | 156468 |
 | Zhoushan | China | 156317 |
 | Liangcheng | China | 156307 |
 | Silang | Philippines | 156137 |
@@ -1015,7 +1015,7 @@
 | Khoy | Iran | 148944 |
 | Hat Yai | Thailand | 148632 |
 | Karimnagar | India | 148583 |
-| Ji´an | China | 148583 |
+| JiÂ´an | China | 148583 |
 | Bharatpur | India | 148519 |
 | Longkou | China | 148362 |
 | Sikar | India | 148272 |
@@ -1047,20 +1047,20 @@
 | Iruma | Japan | 145922 |
 | Lalitapur | Nepal | 145847 |
 | Jhelum | Pakistan | 145800 |
-| Çorum | Turkey | 145495 |
+| Ã‡orum | Turkey | 145495 |
 | Ota | Japan | 145317 |
 | Vung Tau | Vietnam | 145145 |
 | Bhusawal | India | 145143 |
 | Khandwa | India | 145133 |
 | Karawang | Indonesia | 145000 |
-| Kütahya | Turkey | 144761 |
+| KÃ¼tahya | Turkey | 144761 |
 | Yulin | China | 144467 |
 | Malayer | Iran | 144373 |
 | Yamuna Nagar | India | 144346 |
 | al-Qamishliya | Syria | 144286 |
 | Santa Maria | Philippines | 144282 |
 | Jinhua | China | 144280 |
-| Liu´an | China | 144248 |
+| LiuÂ´an | China | 144248 |
 | Hatay (Antakya) | Turkey | 143982 |
 | Sonipat (Sonepat) | India | 143922 |
 | Tenali | India | 143726 |
@@ -1100,10 +1100,10 @@
 | Ome | Japan | 139216 |
 | Ingraj Bazar (English Bazar) | India | 139204 |
 | Chong-up | South Korea | 139111 |
-| Da´an | China | 138963 |
+| DaÂ´an | China | 138963 |
 | Kadoma | Japan | 138953 |
 | Timkur | India | 138903 |
-| Ürgenc | Uzbekistan | 138900 |
+| Ãœrgenc | Uzbekistan | 138900 |
 | Monywa | Myanmar | 138600 |
 | Jaramana | Syria | 138469 |
 | Qods | Iran | 138278 |
@@ -1182,7 +1182,7 @@
 | Taunggyi (Taunggye) | Myanmar | 131500 |
 | Kongju | South Korea | 131229 |
 | Duma | Syria | 131158 |
-| Huai´an | China | 131149 |
+| HuaiÂ´an | China | 131149 |
 | Sambalpur | India | 131138 |
 | Yongju | South Korea | 131097 |
 | Marawi | Philippines | 131090 |
@@ -1276,12 +1276,12 @@
 | Chaohu | China | 123676 |
 | Malaybalay | Philippines | 123672 |
 | Matsusaka | Japan | 123582 |
-| Kökshetau | Kazakstan | 123400 |
+| KÃ¶kshetau | Kazakstan | 123400 |
 | Edirne | Turkey | 123383 |
 | Laohekou | China | 123366 |
 | Gandhinagar | India | 123359 |
 | Dujiangyan | China | 123357 |
-| Çorlu | Turkey | 123300 |
+| Ã‡orlu | Turkey | 123300 |
 | Palghat (Palakkad) | India | 123289 |
 | Isesaki | Japan | 123285 |
 | Zhumadian | China | 123232 |
@@ -1338,7 +1338,7 @@
 | Kuytun | China | 118553 |
 | Surigao | Philippines | 118534 |
 | Kiryu | Japan | 118326 |
-| Karabük | Turkey | 118285 |
+| KarabÃ¼k | Turkey | 118285 |
 | San Carlos | Philippines | 118259 |
 | Kilis | Turkey | 118245 |
 | Neyveli | India | 118080 |
@@ -1382,7 +1382,7 @@
 | Ajman | United Arab Emirates | 114395 |
 | Cianjur | Indonesia | 114300 |
 | Renqiu | China | 114256 |
-| Phan Thiêt | Vietnam | 114236 |
+| Phan ThiÃªt | Vietnam | 114236 |
 | Rajapalaiyam | India | 114202 |
 | Titagarh | India | 114085 |
 | Yuyao | China | 114065 |
@@ -1394,7 +1394,7 @@
 | Yongchon | South Korea | 113511 |
 | Sachon | South Korea | 113494 |
 | Hathras | India | 113285 |
-| Yan´an | China | 113277 |
+| YanÂ´an | China | 113277 |
 | Malasiqui | Philippines | 113190 |
 | Beihai | China | 112673 |
 | Xuangzhou | China | 112673 |
@@ -1407,7 +1407,7 @@
 | Kiziltepe | Turkey | 112000 |
 | Tanshui | Taiwan | 111882 |
 | Pallavaram | India | 111866 |
-| Yong´an | China | 111762 |
+| YongÂ´an | China | 111762 |
 | Sohumi | Georgia | 111700 |
 | Higashikurume | Japan | 111666 |
 | Ikoma | Japan | 111645 |
@@ -1456,7 +1456,7 @@
 | Shivapuri | India | 108277 |
 | Muroran | Japan | 108275 |
 | San Jose | Philippines | 108254 |
-| Ara´ar | Saudi Arabia | 108100 |
+| AraÂ´ar | Saudi Arabia | 108100 |
 | al-Raqqa | Syria | 108020 |
 | Bidar | India | 108016 |
 | Komatsu | Japan | 107937 |
@@ -1510,7 +1510,7 @@
 | Qutubullapur | India | 105380 |
 | Beawar | India | 105363 |
 | Jinchang | China | 105287 |
-| Fu´an | China | 105265 |
+| FuÂ´an | China | 105265 |
 | Citeureup | Indonesia | 105100 |
 | Siem Reap | Cambodia | 105100 |
 | Suqian | China | 105021 |
@@ -1652,7 +1652,7 @@
 | Urasoe | Japan | 96002 |
 | Ahmadpur East | Pakistan | 96000 |
 | Purwakarta | Indonesia | 95900 |
-| Ya´an | China | 95900 |
+| YaÂ´an | China | 95900 |
 | Garut | Indonesia | 95800 |
 | Jinzhou | China | 95761 |
 | Mandasor | India | 95758 |
@@ -1681,7 +1681,7 @@
 | Nakhon Pathom | Thailand | 94100 |
 | Gorontalo | Indonesia | 94058 |
 | Emeishan | China | 94000 |
-| Ming?çevir | Azerbaijan | 93900 |
+| MingÉ™Ã§evir | Azerbaijan | 93900 |
 | al-Hawiya | Saudi Arabia | 93900 |
 | Onomichi | Japan | 93756 |
 | Chhindwara | India | 93731 |
@@ -1739,7 +1739,7 @@
 | Birgunj | Nepal | 90639 |
 | Ligao | Philippines | 90603 |
 | Baidyabati | India | 90601 |
-| Inegöl | Turkey | 90500 |
+| InegÃ¶l | Turkey | 90500 |
 | Dera Ismail Khan | Pakistan | 90400 |
 | Morvi | India | 90357 |
 | Rehovot | Israel | 90300 |

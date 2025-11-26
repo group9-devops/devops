@@ -2,12 +2,12 @@
 | --- | --- | --- |
 | Mumbai (Bombay) | India | 10500000 |
 | Seoul | South Korea | 9981619 |
-| S„o Paulo | Brazil | 9968485 |
+| S√£o Paulo | Brazil | 9968485 |
 | Shanghai | China | 9696300 |
 | Jakarta | Indonesia | 9604900 |
 | Karachi | Pakistan | 9269265 |
 | Istanbul | Turkey | 8787958 |
-| Ciudad de MÈxico | Mexico | 8591309 |
+| Ciudad de M√©xico | Mexico | 8591309 |
 | Moscow | Russian Federation | 8389200 |
 | New York | United States | 8008278 |
 | Tokyo | Japan | 7980230 |
@@ -19,7 +19,7 @@
 | Lima | Peru | 6464693 |
 | Chongqing | China | 6351600 |
 | Bangkok | Thailand | 6320174 |
-| SantafÈ de Bogot· | Colombia | 6260862 |
+| Santaf√© de Bogot√° | Colombia | 6260862 |
 | Rio de Janeiro | Brazil | 5598953 |
 | Tianjin | China | 5286800 |
 | Kinshasa | Congo, The Democratic Republic of the | 5064000 |
@@ -55,7 +55,7 @@
 | Nanking [Nanjing] | China | 2870300 |
 | Melbourne | Australia | 2865329 |
 | Changchun | China | 2812000 |
-| Xi¥an | China | 2761400 |
+| Xi¬¥an | China | 2761400 |
 | Dalian | China | 2697000 |
 | Surabaya | Indonesia | 2663820 |
 | Bangalore | India | 2660088 |
@@ -66,7 +66,7 @@
 | Osaka | Japan | 2595674 |
 | Inchon | South Korea | 2559424 |
 | Taegu | South Korea | 2548568 |
-| Abidjan | CÙte díIvoire | 2500000 |
+| Abidjan | C√¥te d‚ÄôIvoire | 2500000 |
 | Addis Abeba | Ethiopia | 2495000 |
 | Pyongyang | North Korea | 2484000 |
 | Bandung | Indonesia | 2429000 |
@@ -95,18 +95,18 @@
 | Kowloon and New Kowloon | Hong Kong | 1987996 |
 | Faisalabad | Pakistan | 1977246 |
 | Caracas | Venezuela | 1975294 |
-| BrasÌlia | Brazil | 1969868 |
+| Bras√≠lia | Brazil | 1969868 |
 | Taiyuan | China | 1968400 |
 | Houston | United States | 1953631 |
 | Mashhad | Iran | 1887405 |
 | Kanpur | India | 1874409 |
-| MedellÌn | Colombia | 1861265 |
+| Medell√≠n | Colombia | 1861265 |
 | Medan | Indonesia | 1843919 |
 | Kunming | China | 1829500 |
 | Budapest | Hungary | 1811552 |
 | Changsha | China | 1809800 |
 | Sapporo | Japan | 1790886 |
-| Bak? | Azerbaijan | 1787800 |
+| Bakƒ± | Azerbaijan | 1787800 |
 | Kabul | Afghanistan | 1780000 |
 | Dar es Salaam | Tanzania | 1747000 |
 | Hamburg | Germany | 1704735 |
@@ -118,7 +118,7 @@
 | Ecatepec de Morelos | Mexico | 1620303 |
 | Lucknow | India | 1619115 |
 | Warszawa | Poland | 1615369 |
-| Santo Domingo de Guzm·n | Dominican Republic | 1609966 |
+| Santo Domingo de Guzm√°n | Dominican Republic | 1609966 |
 | Wien | Austria | 1608144 |
 | Fuzhou | China | 1593800 |
 | Curitiba | Brazil | 1584232 |
@@ -145,7 +145,7 @@
 | Novosibirsk | Russian Federation | 1398800 |
 | Chittagong | Bangladesh | 1392860 |
 | Recife | Brazil | 1378087 |
-| YaoundÈ | Cameroon | 1372800 |
+| Yaound√© | Cameroon | 1372800 |
 | Ningbo | China | 1371200 |
 | Hefei | China | 1369100 |
 | Kwangju | South Korea | 1368341 |
@@ -156,9 +156,9 @@
 | Lusaka | Zambia | 1317000 |
 | Porto Alegre | Brazil | 1314032 |
 | Victoria | Hong Kong | 1312637 |
-| Urumtöi [‹r¸mqi] | China | 1310100 |
+| Urumt≈°i [√úr√ºmqi] | China | 1310100 |
 | Fukuoka | Japan | 1308379 |
-| MaracaÌbo | Venezuela | 1304776 |
+| Maraca√≠bo | Venezuela | 1304776 |
 | Milano | Italy | 1300977 |
 | Kuala Lumpur | Malaysia | 1297526 |
 | Brisbane | Australia | 1291117 |
@@ -171,33 +171,33 @@
 | Yerevan | Armenia | 1248700 |
 | Montevideo | Uruguay | 1236000 |
 | Tbilisi | Georgia | 1235200 |
-| NezahualcÛyotl | Mexico | 1224924 |
+| Nezahualc√≥yotl | Mexico | 1224924 |
 | San Diego | United States | 1223400 |
 | Barranquilla | Colombia | 1223260 |
 | Palembang | Indonesia | 1222764 |
-| Ju·rez | Mexico | 1217818 |
+| Ju√°rez | Mexico | 1217818 |
 | Kawasaki | Japan | 1217359 |
 | Tijuana | Mexico | 1212232 |
 | Beograd | Yugoslavia | 1204000 |
 | Anshan | China | 1200000 |
 | Fushun | China | 1200000 |
 | Tangerang | Indonesia | 1198300 |
-| Munich [M¸nchen] | Germany | 1194560 |
+| Munich [M√ºnchen] | Germany | 1194560 |
 | Tabriz | Iran | 1191043 |
 | Dallas | United States | 1188580 |
-| BelÈm | Brazil | 1186926 |
+| Bel√©m | Brazil | 1186926 |
 | Multan | Pakistan | 1182441 |
 | Praha | Czech Republic | 1181126 |
 | Kalookan | Philippines | 1177604 |
 | Nanning | China | 1161800 |
-| CÛrdoba | Argentina | 1157507 |
+| C√≥rdoba | Argentina | 1157507 |
 | Samara | Russian Federation | 1156100 |
 | Hyderabad | Pakistan | 1151274 |
 | Omsk | Russian Federation | 1148900 |
 | Davao | Philippines | 1147116 |
 | San Antonio | United States | 1144646 |
 | Zibo | China | 1140000 |
-| LeÛn | Mexico | 1133576 |
+| Le√≥n | Mexico | 1133576 |
 | Adana | Turkey | 1131198 |
 | Almaty | Kazakstan | 1129400 |
 | Gujranwala | Pakistan | 1124749 |
@@ -215,12 +215,12 @@
 | Ufa | Russian Federation | 1091200 |
 | Conakry | Guinea | 1090610 |
 | Ulsan | South Korea | 1084891 |
-| Töeljabinsk | Russian Federation | 1083200 |
+| T≈°eljabinsk | Russian Federation | 1083200 |
 | Accra | Ghana | 1070000 |
 | Qiqihar | China | 1070000 |
 | Bhopal | India | 1062771 |
 | Ujung Pandang | Indonesia | 1060257 |
-| Goi‚nia | Brazil | 1056330 |
+| Goi√¢nia | Brazil | 1056330 |
 | Shiraz | Iran | 1053025 |
 | Donetsk | Ukraine | 1050000 |
 | Ludhiana | India | 1042740 |
@@ -228,7 +228,7 @@
 | Tangshan | China | 1040000 |
 | Vadodara (Baroda) | India | 1031346 |
 | Maputo | Mozambique | 1018938 |
-| MontrÈal | Canada | 1016376 |
+| Montr√©al | Canada | 1016376 |
 | Kitakyushu | Japan | 1016264 |
 | Kalyan | India | 1014557 |
 | Birmingham | United Kingdom | 1013000 |
@@ -246,7 +246,7 @@
 | Adelaide | Australia | 978100 |
 | Madurai | India | 977856 |
 | Mekka | Saudi Arabia | 965700 |
-| Kˆln | Germany | 962507 |
+| K√∂ln | Germany | 962507 |
 | Managua | Nicaragua | 959000 |
 | Detroit | United States | 951270 |
 | Shenzhen | China | 950500 |
@@ -275,18 +275,18 @@
 | Krasnojarsk | Russian Federation | 875500 |
 | Saratov | Russian Federation | 874000 |
 | Shubra al-Khayma | Egypt | 870716 |
-| S„o GonÁalo | Brazil | 869254 |
+| S√£o Gon√ßalo | Brazil | 869254 |
 | Songnam | South Korea | 869094 |
 | Chiba | Japan | 863930 |
-| Nova IguaÁu | Brazil | 862225 |
-| Naucalpan de Ju·rez | Mexico | 857511 |
+| Nova Igua√ßu | Brazil | 862225 |
+| Naucalpan de Ju√°rez | Mexico | 857511 |
 | Pikine | Senegal | 855287 |
 | Lubumbashi | Congo, The Democratic Republic of the | 851381 |
 | Monrovia | Liberia | 850000 |
 | Freetown | Sierra Leone | 850000 |
 | Zaporizzja | Ukraine | 848000 |
 | Handan | China | 840000 |
-| S„o LuÌs | Brazil | 837588 |
+| S√£o Lu√≠s | Brazil | 837588 |
 | Wuxi | China | 830000 |
 | Ouagadougou | Burkina Faso | 824000 |
 | Ciudad de Guatemala | Guatemala | 823301 |
@@ -299,7 +299,7 @@
 | Ahvaz | Iran | 804980 |
 | Bengasi | Libyan Arab Jamahiriya | 804000 |
 | Thane (Thana) | India | 803389 |
-| LÛdz | Poland | 800110 |
+| L√≥dz | Poland | 800110 |
 | Datong | China | 800000 |
 | Yichun | China | 800000 |
 | Marseille | France | 798430 |
@@ -309,7 +309,7 @@
 | Indianapolis | United States | 791926 |
 | Gaziantep | Turkey | 789056 |
 | Lviv | Ukraine | 788000 |
-| MaceiÛ | Brazil | 786288 |
+| Macei√≥ | Brazil | 786288 |
 | Dakar | Senegal | 785071 |
 | Haiphong | Vietnam | 783133 |
 | Puchon | South Korea | 779412 |
@@ -331,17 +331,17 @@
 | Vishakhapatnam | India | 752037 |
 | Stockholm | Sweden | 750348 |
 | Duque de Caxias | Brazil | 746758 |
-| Culiac·n | Mexico | 744859 |
+| Culiac√°n | Mexico | 744859 |
 | Jabalpur | India | 741927 |
 | Valencia | Spain | 739412 |
-| KrakÛw | Poland | 738150 |
+| Krak√≥w | Poland | 738150 |
 | Jacksonville | United States | 735167 |
 | Amsterdam | Netherlands | 731200 |
 | Ogbomosho | Nigeria | 730000 |
 | Tainan | Taiwan | 728060 |
-| S„o Bernardo do Campo | Brazil | 723132 |
+| S√£o Bernardo do Campo | Brazil | 723132 |
 | Toljatti | Russian Federation | 722900 |
-| Acapulco de Ju·rez | Mexico | 721011 |
+| Acapulco de Ju√°rez | Mexico | 721011 |
 | Tlalnepantla de Baz | Mexico | 720755 |
 | Chisinau | Moldova | 719900 |
 | Cebu | Philippines | 718821 |
@@ -352,7 +352,7 @@
 | Amritsar | India | 708835 |
 | Zagreb | Croatia | 706770 |
 | Faridabad | India | 703592 |
-| MÈrida | Mexico | 703324 |
+| M√©rida | Mexico | 703324 |
 | Kryvyi Rig | Ukraine | 703000 |
 | Sevilla | Spain | 701927 |
 | Vijayawada | India | 701827 |
@@ -371,7 +371,7 @@
 | Antananarivo | Madagascar | 675669 |
 | Kano | Nigeria | 674100 |
 | Chihuahua | Mexico | 670208 |
-| San Luis PotosÌ | Mexico | 669353 |
+| San Luis Potos√≠ | Mexico | 669353 |
 | Dubai | United Arab Emirates | 669181 |
 | Guadalupe | Mexico | 668780 |
 | Uljanovsk | Russian Federation | 667400 |
@@ -397,13 +397,13 @@
 | Frankfurt am Main | Germany | 643821 |
 | Aguascalientes | Mexico | 643360 |
 | Fuxin | China | 640000 |
-| QuerÈtaro | Mexico | 639839 |
+| Quer√©taro | Mexico | 639839 |
 | Krasnodar | Russian Federation | 639000 |
 | Wroclaw | Poland | 636765 |
 | Genova | Italy | 636104 |
 | Inanda | South Africa | 634065 |
 | Jerusalem | Israel | 633700 |
-| Santo AndrÈ | Brazil | 630073 |
+| Santo Andr√© | Brazil | 630073 |
 | Konya | Turkey | 628364 |
 | Amoy [Xiamen] | China | 627500 |
 | Okayama | Japan | 624269 |
@@ -423,7 +423,7 @@
 | Hermosillo | Mexico | 608697 |
 | Medina | Saudi Arabia | 608300 |
 | Mississauga | Canada | 608072 |
-| C˙cuta | Colombia | 606932 |
+| C√∫cuta | Colombia | 606932 |
 | Vladivostok | Russian Federation | 606200 |
 | Solapur (Sholapur) | India | 604215 |
 | Zaragoza | Spain | 603367 |
@@ -439,11 +439,11 @@
 | Dortmund | Germany | 590213 |
 | Bishkek | Kyrgyzstan | 589400 |
 | Boston | United States | 589141 |
-| Mersin (IÁel) | Turkey | 587212 |
+| Mersin (I√ßel) | Turkey | 587212 |
 | Bareilly | India | 587211 |
 | Sagamihara | Japan | 586300 |
 | Guwahati (Gauhati) | India | 584342 |
-| Jo„o Pessoa | Brazil | 584029 |
+| Jo√£o Pessoa | Brazil | 584029 |
 | Chongjin | North Korea | 582480 |
 | Stuttgart | Germany | 582443 |
 | Barnaul | Russian Federation | 580100 |
@@ -457,7 +457,7 @@
 | Jinzhou | China | 570000 |
 | Mudanjiang | China | 570000 |
 | Nashville-Davidson | United States | 569891 |
-| D¸sseldorf | Germany | 568855 |
+| D√ºsseldorf | Germany | 568855 |
 | Hamamatsu | Japan | 568796 |
 | Nampo | North Korea | 566200 |
 | Durban | South Africa | 566120 |
@@ -471,14 +471,14 @@
 | Quetta | Pakistan | 560307 |
 | Rajkot | India | 559407 |
 | Quilmes | Argentina | 559249 |
-| Jaboat„o dos Guararapes | Brazil | 558680 |
-| AsunciÛn | Paraguay | 557776 |
+| Jaboat√£o dos Guararapes | Brazil | 558680 |
+| Asunci√≥n | Paraguay | 557776 |
 | Helsinki [Helsingfors] | Finland | 555474 |
 | Denver | United States | 554636 |
 | Kagoshima | Japan | 549977 |
 | Funabashi | Japan | 545299 |
 | Yinchuan | China | 544500 |
-| FËs | Morocco | 541162 |
+| F√®s | Morocco | 541162 |
 | Charlotte | United States | 540828 |
 | Ashgabat | Turkmenistan | 540600 |
 | Bremen | Germany | 540330 |
@@ -491,13 +491,13 @@
 | Penza | Russian Federation | 532200 |
 | Vientiane | Laos | 531800 |
 | Chongju | South Korea | 531376 |
-| N¥DjamÈna | Chad | 530965 |
-| M·laga | Spain | 530553 |
+| N¬¥Djam√©na | Chad | 530965 |
+| M√°laga | Spain | 530553 |
 | Changzhou | China | 530000 |
 | Zhangjiakou | China | 530000 |
 | Rjazan | Russian Federation | 529900 |
 | Portland | United States | 529121 |
-| TorreÛn | Mexico | 529093 |
+| Torre√≥n | Mexico | 529093 |
 | Islamabad | Pakistan | 524500 |
 | Thiruvananthapuram (Trivandrum | India | 524006 |
 | Bangui | Central African Republic | 524000 |
@@ -518,9 +518,9 @@
 | Pimpri-Chinchwad | India | 517083 |
 | Chiclayo | Peru | 517000 |
 | Bucaramanga | Colombia | 515555 |
-| S„o JosÈ dos Campos | Brazil | 515553 |
+| S√£o Jos√© dos Campos | Brazil | 515553 |
 | Hannover | Germany | 514718 |
-| Nabereznyje Töelny | Russian Federation | 514700 |
+| Nabereznyje T≈°elny | Russian Federation | 514700 |
 | Vancouver | Canada | 514008 |
 | Hachioji | Japan | 513451 |
 | Mar del Plata | Argentina | 512880 |
@@ -535,26 +535,26 @@
 | Tula | Russian Federation | 506100 |
 | Gorakhpur | India | 505566 |
 | Pasig | Philippines | 505058 |
-| SalÈ | Morocco | 504420 |
+| Sal√© | Morocco | 504420 |
 | Chandigarh | India | 504094 |
 | Sanaa | Yemen | 503600 |
 | Tjumen | Russian Federation | 503400 |
 | Pointe-Noire | Congo | 500000 |
 | Niigata | Japan | 497464 |
-| K¯benhavn | Denmark | 495699 |
-| San Nicol·s de los Garza | Mexico | 495540 |
+| K√∏benhavn | Denmark | 495699 |
+| San Nicol√°s de los Garza | Mexico | 495540 |
 | Jiamusi | China | 493409 |
 | Kemerovo | Russian Federation | 492700 |
 | Liaoyang | China | 492559 |
 | Durango | Mexico | 490524 |
-| Chimalhuac·n | Mexico | 490245 |
+| Chimalhuac√°n | Mexico | 490245 |
 | Mariupol | Ukraine | 490000 |
 | Leipzig | Germany | 489532 |
 | Petare | Venezuela | 488868 |
-| Uberl‚ndia | Brazil | 487222 |
+| Uberl√¢ndia | Brazil | 487222 |
 | Hengyang | China | 487148 |
 | Tucson | United States | 486699 |
-| N¸rnberg | Germany | 486628 |
+| N√ºrnberg | Germany | 486628 |
 | Astrahan | Russian Federation | 486100 |
 | Irbil | Iraq | 485968 |
 | Valenzuela | Philippines | 485433 |
@@ -584,21 +584,21 @@
 | Gomel | Belarus | 475000 |
 | Shizuoka | Japan | 473854 |
 | Xinxiang | China | 473762 |
-| Ribeir„o Preto | Brazil | 473276 |
-| Las PiÒas | Philippines | 472780 |
-| Ciudad de Panam· | Panama | 471373 |
+| Ribeir√£o Preto | Brazil | 473276 |
+| Las Pi√±as | Philippines | 472780 |
+| Ciudad de Panam√° | Panama | 471373 |
 | Guntur | India | 471051 |
 | Antipolo | Philippines | 470866 |
-| San Miguel de Tucum·n | Argentina | 470809 |
+| San Miguel de Tucum√°n | Argentina | 470809 |
 | Eskisehir | Turkey | 470781 |
-| Lan˙s | Argentina | 469735 |
+| Lan√∫s | Argentina | 469735 |
 | Urawa | Japan | 469675 |
 | Port Said | Egypt | 469533 |
 | Lugansk | Ukraine | 469000 |
 | Vanderbijlpark | South Africa | 468931 |
 | Taguig | Philippines | 467375 |
-| Atizap·n de Zaragoza | Mexico | 467262 |
-| Gothenburg [Gˆteborg] | Sweden | 466990 |
+| Atizap√°n de Zaragoza | Mexico | 467262 |
+| Gothenburg [G√∂teborg] | Sweden | 466990 |
 | Sorocaba | Brazil | 466823 |
 | Kirov | Russian Federation | 466200 |
 | Matsuyama | Japan | 466133 |
@@ -609,10 +609,10 @@
 | Matsudo | Japan | 461126 |
 | Liverpool | United Kingdom | 461000 |
 | Jamshedpur | India | 460577 |
-| MeknËs | Morocco | 460000 |
-| NiterÛi | Brazil | 459884 |
+| Mekn√®s | Morocco | 460000 |
+| Niter√≥i | Brazil | 459884 |
 | Ivanovo | Russian Federation | 459200 |
-| Töeboksary | Russian Federation | 459200 |
+| T≈°eboksary | Russian Federation | 459200 |
 | Gdansk | Poland | 458988 |
 | Huangshi | China | 457601 |
 | Brjansk | Russian Federation | 457400 |
@@ -622,13 +622,13 @@
 | Tver | Russian Federation | 454900 |
 | Haikou | China | 454300 |
 | Ghaziabad | India | 454156 |
-| Cuiab· | Brazil | 453813 |
-| Cuautitl·n Izcalli | Mexico | 452976 |
+| Cuiab√° | Brazil | 453813 |
+| Cuautitl√°n Izcalli | Mexico | 452976 |
 | Kawaguchi | Japan | 452155 |
 | Yantai | China | 452127 |
 | Juiz de Fora | Brazil | 450288 |
 | Edinburgh | United Kingdom | 450180 |
-| ParaÒaque | Philippines | 449811 |
+| Para√±aque | Philippines | 449811 |
 | Bengbu | China | 449245 |
 | Albuquerque | United States | 448607 |
 | Bratislava | Slovakia | 448292 |
@@ -649,7 +649,7 @@
 | Masan | South Korea | 441242 |
 | Haag | Netherlands | 440900 |
 | Utsunomiya | Japan | 440353 |
-| S„o Jo„o de Meriti | Brazil | 440052 |
+| S√£o Jo√£o de Meriti | Brazil | 440052 |
 | Irapuato | Mexico | 440039 |
 | Raipur | India | 438639 |
 | Pekan Baru | Indonesia | 438638 |
@@ -659,11 +659,11 @@
 | Urmia | Iran | 435200 |
 | Denpasar | Indonesia | 435000 |
 | San Juan | Puerto Rico | 434374 |
-| Tuxtla GutiÈrrez | Mexico | 433544 |
+| Tuxtla Guti√©rrez | Mexico | 433544 |
 | Oita | Japan | 433401 |
 | Santiago de Cuba | Cuba | 433180 |
 | Nagasaki | Japan | 432759 |
-| Tultitl·n | Mexico | 432411 |
+| Tultitl√°n | Mexico | 432411 |
 | Londrina | Brazil | 432257 |
 | Sheffield | United Kingdom | 431607 |
 | Asmara | Eritrea | 431000 |
@@ -686,7 +686,7 @@
 | Kaliningrad | Russian Federation | 424400 |
 | Callao | Peru | 424294 |
 | Leeds | United Kingdom | 424194 |
-| General San MartÌn | Argentina | 422542 |
+| General San Mart√≠n | Argentina | 422542 |
 | Yingkou | China | 421589 |
 | Amravati | India | 421576 |
 | Anyang | China | 420332 |
@@ -694,7 +694,7 @@
 | Calicut (Kozhikode) | India | 419831 |
 | Reynosa | Mexico | 419776 |
 | Zahedan | Iran | 419518 |
-| Benito Ju·rez | Mexico | 419276 |
+| Benito Ju√°rez | Mexico | 419276 |
 | Libreville | Gabon | 419000 |
 | Yogyakarta | Indonesia | 418944 |
 | Kirkuk | Iraq | 418624 |
@@ -747,7 +747,7 @@
 | Toyonaka | Japan | 396689 |
 | Mesa | United States | 396375 |
 | al-Mahallat al-Kubra | Egypt | 395402 |
-| IbaguÈ | Colombia | 393664 |
+| Ibagu√© | Colombia | 393664 |
 | Zigong | China | 393184 |
 | Tulsa | United States | 393049 |
 | Kananga | Congo, The Democratic Republic of the | 393030 |
@@ -784,9 +784,9 @@
 | Bologna | Italy | 381161 |
 | Zaozhuang | China | 380846 |
 | Arak | Iran | 380755 |
-| Mazatl·n | Mexico | 380265 |
+| Mazatl√°n | Mexico | 380265 |
 | Sanchung | Taiwan | 380084 |
-| DasmariÒas | Philippines | 379520 |
+| Dasmari√±as | Philippines | 379520 |
 | Muntinlupa | Philippines | 379310 |
 | Zaria | Nigeria | 379200 |
 | Bhiwandi | India | 379070 |
@@ -796,8 +796,8 @@
 | Fukuyama | Japan | 376921 |
 | Firenze | Italy | 376662 |
 | Murmansk | Russian Federation | 376300 |
-| Mau· | Brazil | 375055 |
-| LomÈ | Togo | 375000 |
+| Mau√° | Brazil | 375055 |
+| Lom√© | Togo | 375000 |
 | Saharanpur | India | 374945 |
 | Fujisawa | Japan | 372840 |
 | Onitsha | Nigeria | 371900 |
@@ -849,9 +849,9 @@
 | Ado-Ekiti | Nigeria | 359400 |
 | Santa Marta | Colombia | 359147 |
 | Ahome | Mexico | 358663 |
-| Sotöi | Russian Federation | 358600 |
+| Sot≈°i | Russian Federation | 358600 |
 | Bilbao | Spain | 357589 |
-| CarapicuÌba | Brazil | 357552 |
+| Carapicu√≠ba | Brazil | 357552 |
 | Jinxi | China | 357052 |
 | Moreno | Argentina | 356993 |
 | Lublin | Poland | 356251 |
@@ -866,20 +866,20 @@
 | Gaza | Palestine | 353632 |
 | Murcia | Spain | 353504 |
 | Smolensk | Russian Federation | 353400 |
-| Santa FÈ | Argentina | 353063 |
+| Santa F√© | Argentina | 353063 |
 | Avellaneda | Argentina | 353046 |
 | Herson | Ukraine | 353000 |
 | Campina Grande | Brazil | 352497 |
 | Tres de Febrero | Argentina | 352311 |
 | Xianyang | China | 352125 |
-| S„o JosÈ do Rio Preto | Brazil | 351944 |
+| S√£o Jos√© do Rio Preto | Brazil | 351944 |
 | Kwangmyong | South Korea | 350914 |
-| Tai¥an | China | 350696 |
+| Tai¬¥an | China | 350696 |
 | Abuja | Nigeria | 350100 |
 | Chifeng | China | 350077 |
 | Shaoguan | China | 350043 |
 | Caxias do Sul | Brazil | 349581 |
-| MorÛn | Argentina | 349246 |
+| Mor√≥n | Argentina | 349246 |
 | Etobicoke | Canada | 348845 |
 | Saint Louis | United States | 348189 |
 | Tel Aviv-Jaffa | Israel | 348100 |
@@ -911,7 +911,7 @@
 | Kaluga | Russian Federation | 339300 |
 | Umlazi | South Africa | 339233 |
 | Moji das Cruzes | Brazil | 339194 |
-| San JosÈ | Costa Rica | 339131 |
+| San Jos√© | Costa Rica | 339131 |
 | Simferopol | Ukraine | 339000 |
 | Malabon | Philippines | 338855 |
 | Balikpapan | Indonesia | 338752 |
@@ -921,8 +921,8 @@
 | Baoji | China | 337765 |
 | Manizales | Colombia | 337580 |
 | Vladimir | Russian Federation | 337100 |
-| Z¸rich | Switzerland | 336800 |
-| Tonal· | Mexico | 336109 |
+| Z√ºrich | Switzerland | 336800 |
+| Tonal√° | Mexico | 336109 |
 | Chimbote | Peru | 336000 |
 | Hamilton | Canada | 335614 |
 | Ottawa | Canada | 335277 |
@@ -933,7 +933,7 @@
 | Bello | Colombia | 333470 |
 | Mushin | Nigeria | 333200 |
 | Arlington | United States | 332969 |
-| Mahatökala | Russian Federation | 332800 |
+| Mahat≈°kala | Russian Federation | 332800 |
 | Cluj-Napoca | Romania | 332498 |
 | Takamatsu | Japan | 332471 |
 | Pasto | Colombia | 332396 |
@@ -947,7 +947,7 @@
 | Chonan | South Korea | 330259 |
 | Taraz | Kazakstan | 330100 |
 | Chinju | South Korea | 329886 |
-| BouakÈ | CÙte díIvoire | 329850 |
+| Bouak√© | C√¥te d‚ÄôIvoire | 329850 |
 | Ndola | Zambia | 329200 |
 | Sukkur | Pakistan | 329176 |
 | Okazaki | Japan | 328711 |
@@ -967,9 +967,9 @@
 | Rajahmundry | India | 324851 |
 | Linyi | China | 324720 |
 | Kochi | Japan | 324710 |
-| Aparecida de Goi‚nia | Brazil | 324662 |
+| Aparecida de Goi√¢nia | Brazil | 324662 |
 | Tonghua | China | 324600 |
-| Töerepovets | Russian Federation | 324400 |
+| T≈°erepovets | Russian Federation | 324400 |
 | Timisoara | Romania | 324304 |
 | Christchurch | New Zealand | 324200 |
 | Valle de Chalco Solidaridad | Mexico | 323113 |
@@ -983,8 +983,8 @@
 | Ostrava | Czech Republic | 320041 |
 | Maiduguri | Nigeria | 320000 |
 | Valladolid | Spain | 319998 |
-| MaturÌn | Venezuela | 319726 |
-| San CristÛbal | Venezuela | 319373 |
+| Matur√≠n | Venezuela | 319726 |
+| San Crist√≥bal | Venezuela | 319373 |
 | Piracicaba | Brazil | 319104 |
 | Cariacica | Brazil | 319033 |
 | Vila Velha | Brazil | 318758 |
@@ -997,7 +997,7 @@
 | Nellore | India | 316606 |
 | Taoyuan | Taiwan | 316438 |
 | Enugu | Nigeria | 316100 |
-| San JosÈ del Monte | Philippines | 315807 |
+| San Jos√© del Monte | Philippines | 315807 |
 | Florencio Varela | Argentina | 315432 |
 | Pelotas | Brazil | 315415 |
 | San Miguelito | Panama | 315382 |
@@ -1010,22 +1010,22 @@
 | Craiova | Romania | 313530 |
 | Chaozhou | China | 313469 |
 | Pultava [Poltava] | Ukraine | 313000 |
-| Töernigiv | Ukraine | 313000 |
+| T≈°ernigiv | Ukraine | 313000 |
 | Pyongtaek | South Korea | 312927 |
 | Yangzhou | China | 312892 |
-| ViÒa del Mar | Chile | 312493 |
+| Vi√±a del Mar | Chile | 312493 |
 | Tambov | Russian Federation | 312000 |
 | Gold Coast | Australia | 311932 |
-| CÛrdoba | Spain | 311708 |
+| C√≥rdoba | Spain | 311708 |
 | Kumi | South Korea | 311431 |
 | Astana | Kazakstan | 311200 |
-| ÷skemen | Kazakstan | 311000 |
+| √ñskemen | Kazakstan | 311000 |
 | Nuevo Laredo | Mexico | 310277 |
 | Vladikavkaz | Russian Federation | 310100 |
-| Töita | Russian Federation | 309900 |
+| T≈°ita | Russian Federation | 309900 |
 | Porto Velho | Brazil | 309750 |
 | al-Najaf | Iraq | 309010 |
-| Töerkasy | Ukraine | 309000 |
+| T≈°erkasy | Ukraine | 309000 |
 | Dongwan | China | 308669 |
 | Udaipur | India | 308571 |
 | Port Sudan | Sudan | 308195 |
@@ -1036,7 +1036,7 @@
 | Mataram | Indonesia | 306600 |
 | San Isidro | Argentina | 306341 |
 | Bacoor | Philippines | 305699 |
-| Ma¥anshan | China | 305421 |
+| Ma¬¥anshan | China | 305421 |
 | Tepic | Mexico | 305025 |
 | Bhatpara | India | 304952 |
 | Surrey | Canada | 304477 |
@@ -1056,7 +1056,7 @@
 | Koshigaya | Japan | 301446 |
 | New Delhi | India | 301297 |
 | Changde | China | 301276 |
-| Ciudad BolÌvar | Venezuela | 301107 |
+| Ciudad Bol√≠var | Venezuela | 301107 |
 | Bonn | Germany | 301048 |
 | Jhansi | India | 300850 |
 | Pavlodar | Kazakstan | 300500 |
@@ -1068,11 +1068,11 @@
 | Varna | Bulgaria | 299801 |
 | Shihezi | China | 299676 |
 | Veliki Novgorod | Russian Federation | 299500 |
-| G?nc? | Azerbaijan | 299300 |
+| G…ônc…ô | Azerbaijan | 299300 |
 | Likasi | Congo, The Democratic Republic of the | 299118 |
 | Gorlivka | Ukraine | 299000 |
 | Aba | Nigeria | 298900 |
-| Camag¸ey | Cuba | 298726 |
+| Camag√ºey | Cuba | 298726 |
 | Hodeida | Yemen | 298500 |
 | Maseru | Lesotho | 297000 |
 | Zytomyr | Ukraine | 297000 |
@@ -1081,7 +1081,7 @@
 | Brampton | Canada | 296711 |
 | Karbala | Iraq | 296705 |
 | Tigre | Argentina | 296226 |
-| JundÌaÌ | Brazil | 296127 |
+| Jund√≠a√≠ | Brazil | 296127 |
 | Aomori | Japan | 295969 |
 | Soledad | Colombia | 295058 |
 | Tampico | Mexico | 294789 |
@@ -1090,11 +1090,11 @@
 | Rajshahi | Bangladesh | 294056 |
 | Leicester | United Kingdom | 294000 |
 | Sumy | Ukraine | 294000 |
-| ValparaÌso | Chile | 293800 |
+| Valpara√≠so | Chile | 293800 |
 | Ixtapaluca | Mexico | 293160 |
-| Cuman· | Venezuela | 293105 |
+| Cuman√° | Venezuela | 293105 |
 | Buffalo | United States | 292648 |
-| KÈnitra | Morocco | 292600 |
+| K√©nitra | Morocco | 292600 |
 | Tabuk | Saudi Arabia | 292600 |
 | Akashi | Japan | 292253 |
 | Jhang | Pakistan | 292214 |
@@ -1111,7 +1111,7 @@
 | Bradford | United Kingdom | 289376 |
 | Armenia | Colombia | 288977 |
 | Kitwe | Zambia | 288600 |
-| Vicente LÛpez | Argentina | 288341 |
+| Vicente L√≥pez | Argentina | 288341 |
 | Yokkaichi | Japan | 288173 |
 | Kostroma | Russian Federation | 288100 |
 | Fukushima | Japan | 287525 |
@@ -1120,29 +1120,29 @@
 | Saint Paul | United States | 287151 |
 | Nottingham | United Kingdom | 287000 |
 | Volzski | Russian Federation | 286900 |
-| S„o Vicente | Brazil | 286848 |
-| Maring· | Brazil | 286461 |
+| S√£o Vicente | Brazil | 286848 |
+| Maring√° | Brazil | 286461 |
 | Zanjan | Iran | 286295 |
 | Montes Claros | Brazil | 286058 |
 | Kigali | Rwanda | 286000 |
 | Brest | Belarus | 286000 |
 | Bogor | Indonesia | 285114 |
 | Iligan | Philippines | 285061 |
-| ≈rhus | Denmark | 284846 |
+| √Örhus | Denmark | 284846 |
 | Maebashi | Japan | 284473 |
 | Taganrog | Russian Federation | 284400 |
 | Bialystok | Poland | 283937 |
 | Vigo | Spain | 283670 |
 | Wonderboom | South Africa | 283289 |
-| Sumqay?t | Azerbaijan | 283000 |
+| Sumqayƒ±t | Azerbaijan | 283000 |
 | Apodaca | Mexico | 282941 |
 | Kasugai | Japan | 282348 |
-| An·polis | Brazil | 282197 |
+| An√°polis | Brazil | 282197 |
 | Petroskoi | Russian Federation | 282100 |
-| BiÍn Hoa | Vietnam | 282095 |
+| Bi√™n Hoa | Vietnam | 282095 |
 | Otsu | Japan | 282070 |
 | Gelsenkirchen | Germany | 281979 |
-| FlorianÛpolis | Brazil | 281928 |
+| Florian√≥polis | Brazil | 281928 |
 | Manukau | New Zealand | 281800 |
 | Dongying | China | 281728 |
 | Shashi | China | 281352 |
@@ -1153,14 +1153,14 @@
 | Kakinada | India | 279980 |
 | Roodepoort | South Africa | 279340 |
 | Ichihara | Japan | 279280 |
-| PetrÛpolis | Brazil | 279183 |
+| Petr√≥polis | Brazil | 279183 |
 | Zhongshan | China | 278829 |
 | Mandaluyong | Philippines | 278474 |
 | Dhule (Dhulia) | India | 278317 |
 | Sanandaj | Iran | 277808 |
 | Talcahuano | Chile | 277752 |
 | Bratsk | Russian Federation | 277600 |
-| TÈtouan | Morocco | 277516 |
+| T√©touan | Morocco | 277516 |
 | Corpus Christi | United States | 277454 |
 | Venezia | Italy | 277305 |
 | Karlsruhe | Germany | 277204 |
@@ -1186,7 +1186,7 @@
 | Kyongju | South Korea | 272968 |
 | Phyongsong | North Korea | 272934 |
 | Khorramabad | Iran | 272815 |
-| GÛmez Palacio | Mexico | 272806 |
+| G√≥mez Palacio | Mexico | 272806 |
 | Alicante [Alacant] | Spain | 272432 |
 | Soacha | Colombia | 272058 |
 | Sheikhupura | Pakistan | 271875 |
@@ -1195,7 +1195,7 @@
 | Itaquaquecetuba | Brazil | 270874 |
 | Ichinomiya | Japan | 270828 |
 | Ciputat | Indonesia | 270800 |
-| VitÛria | Brazil | 270626 |
+| Vit√≥ria | Brazil | 270626 |
 | Larkana | Pakistan | 270366 |
 | Cuenca | Ecuador | 270353 |
 | Newcastle | Australia | 270324 |
@@ -1205,11 +1205,11 @@
 | Dniprodzerzynsk | Ukraine | 270000 |
 | Tokushima | Japan | 269649 |
 | Semey | Kazakstan | 269600 |
-| Nicol·s Romero | Mexico | 269393 |
+| Nicol√°s Romero | Mexico | 269393 |
 | al-Hilla | Iraq | 268834 |
 | Wiesbaden | Germany | 268716 |
 | Ponta Grossa | Brazil | 268013 |
-| GijÛn | Spain | 267980 |
+| Gij√≥n | Spain | 267980 |
 | Zagazig | Egypt | 267351 |
 | Butuan | Philippines | 267279 |
 | Coatzacoalcos | Mexico | 267037 |
@@ -1227,14 +1227,14 @@
 | Chiayi | Taiwan | 265109 |
 | Kirovograd | Ukraine | 265000 |
 | Angarsk | Russian Federation | 264700 |
-| M¸nster | Germany | 264670 |
+| M√ºnster | Germany | 264670 |
 | Latakia | Syria | 264563 |
 | Gebze | Turkey | 264170 |
 | Strasbourg | France | 264115 |
 | Wuhai | China | 264081 |
 | Ila | Nigeria | 264000 |
 | Angeles | Philippines | 263971 |
-| Mˆnchengladbach | Germany | 263697 |
+| M√∂nchengladbach | Germany | 263697 |
 | Hsintien | Taiwan | 263603 |
 | Valledupar | Colombia | 263247 |
 | Chemnitz | Germany | 263222 |
@@ -1255,11 +1255,11 @@
 | Lexington-Fayette | United States | 260512 |
 | Anchorage | United States | 260283 |
 | Mandaue | Philippines | 259728 |
-| Malmˆ | Sweden | 259579 |
+| Malm√∂ | Sweden | 259579 |
 | Rio Branco | Brazil | 259537 |
-| Foz do IguaÁu | Brazil | 259425 |
+| Foz do Igua√ßu | Brazil | 259425 |
 | Messina | Italy | 259156 |
-| Töernivtsi | Ukraine | 259000 |
+| T≈°ernivtsi | Ukraine | 259000 |
 | Cheju | South Korea | 258511 |
 | Corrientes | Argentina | 258103 |
 | Shizuishan | China | 257862 |
@@ -1267,17 +1267,17 @@
 | Sfax | Tunisia | 257800 |
 | Neyagawa | Japan | 257315 |
 | Shimonoseki | Japan | 257263 |
-| Oaxaca de Ju·rez | Mexico | 256848 |
+| Oaxaca de Ju√°rez | Mexico | 256848 |
 | Oyo | Nigeria | 256400 |
 | Kimhae | South Korea | 256370 |
 | Louisville | United States | 256231 |
-| Macap· | Brazil | 256033 |
+| Macap√° | Brazil | 256033 |
 | Neijiang | China | 256012 |
 | Yamagata | Japan | 255617 |
 | Verona | Italy | 255268 |
 | Riverside | United States | 255166 |
 | Tongliao | China | 255129 |
-| IlhÈus | Brazil | 254970 |
+| Ilh√©us | Brazil | 254970 |
 | Augsburg | Germany | 254867 |
 | Tieling | China | 254842 |
 | Fukui | Japan | 254818 |
@@ -1290,31 +1290,31 @@
 | Georgetown | Guyana | 254000 |
 | Denizli | Turkey | 253848 |
 | Kediri | Indonesia | 253760 |
-| VitÛria da Conquista | Brazil | 253587 |
+| Vit√≥ria da Conquista | Brazil | 253587 |
 | Gdynia | Poland | 253521 |
 | Bhagalpur | India | 253225 |
-| Aqtˆbe | Kazakstan | 253100 |
+| Aqt√∂be | Kazakstan | 253100 |
 | Plymouth | United Kingdom | 253000 |
 | Baguio | Philippines | 252386 |
-| Coacalco de Berrioz·bal | Mexico | 252270 |
+| Coacalco de Berrioz√°bal | Mexico | 252270 |
 | Stoke-on-Trent | United Kingdom | 252000 |
 | Wafangdian | China | 251733 |
 | Antofagasta | Chile | 251429 |
 | Ploiesti | Romania | 251348 |
 | Anqing | China | 250718 |
 | Gujrat | Pakistan | 250121 |
-| HolguÌn | Cuba | 249492 |
+| Holgu√≠n | Cuba | 249492 |
 | Ambon | Indonesia | 249312 |
 | Sunchon | South Korea | 249263 |
 | Uberaba | Brazil | 249225 |
-| Joökar-Ola | Russian Federation | 249200 |
+| Jo≈°kar-Ola | Russian Federation | 249200 |
 | San Miguel | Argentina | 248700 |
 | Burayda | Saudi Arabia | 248600 |
 | Paulista | Brazil | 248473 |
-| MonterÌa | Colombia | 248245 |
+| Monter√≠a | Colombia | 248245 |
 | Saint Petersburg | United States | 248232 |
-| ThiËs | Senegal | 248000 |
-| L¥Hospitalet de Llobregat | Spain | 247986 |
+| Thi√®s | Senegal | 248000 |
+| L¬¥Hospitalet de Llobregat | Spain | 247986 |
 | Batangas | Philippines | 247588 |
 | Mokpo | South Korea | 247452 |
 | Shaoyang | China | 247227 |
@@ -1344,7 +1344,7 @@
 | Aachen | Germany | 243825 |
 | Stockton | United States | 243771 |
 | Rampur | India | 243742 |
-| A CoruÒa (La CoruÒa) | Spain | 243402 |
+| A Coru√±a (La Coru√±a) | Spain | 243402 |
 | Kelang | Malaysia | 243355 |
 | Nanyang | China | 243303 |
 | Hachinohe | Japan | 242979 |
@@ -1356,8 +1356,8 @@
 | Jalgaon | India | 242193 |
 | Wolverhampton | United Kingdom | 242000 |
 | San Bernardo | Chile | 241910 |
-| Koöice | Slovakia | 241874 |
-| SantarÈm | Brazil | 241771 |
+| Ko≈°ice | Slovakia | 241874 |
+| Santar√©m | Brazil | 241771 |
 | Krefeld | Germany | 241769 |
 | Kasur | Pakistan | 241649 |
 | Muzaffarpur | India | 241107 |
@@ -1372,12 +1372,12 @@
 | Jersey City | United States | 240055 |
 | Tripoli | Lebanon | 240000 |
 | Novo Hamburgo | Brazil | 239940 |
-| BahÌa Blanca | Argentina | 239810 |
+| Bah√≠a Blanca | Argentina | 239810 |
 | Huaiyin | China | 239675 |
 | Rybinsk | Russian Federation | 239600 |
 | Takasaki | Japan | 239124 |
 | Shimizu | Japan | 239123 |
-| Krementöuk | Ukraine | 239000 |
+| Krement≈°uk | Ukraine | 239000 |
 | Caucaia | Brazil | 238738 |
 | Santa Maria | Brazil | 238473 |
 | Patiala | India | 238368 |
@@ -1386,13 +1386,13 @@
 | Qandahar | Afghanistan | 237500 |
 | Wonju | South Korea | 237460 |
 | Prokopjevsk | Russian Federation | 237300 |
-| Guaruj· | Brazil | 237206 |
+| Guaruj√° | Brazil | 237206 |
 | Buhoro | Uzbekistan | 237100 |
 | Ivano-Frankivsk | Ukraine | 237000 |
 | Kurnool | India | 236800 |
 | Derby | United Kingdom | 236000 |
 | Ternopil | Ukraine | 236000 |
-| Esteban EcheverrÌa | Argentina | 235760 |
+| Esteban Echeverr√≠a | Argentina | 235760 |
 | Tiruppur (Tirupper) | India | 235661 |
 | Kurume | Japan | 235611 |
 | Kunpo | South Korea | 235233 |
@@ -1406,11 +1406,11 @@
 | Kiel | Germany | 233795 |
 | Braila | Romania | 233756 |
 | Rohtak | India | 233400 |
-| Naltöik | Russian Federation | 233400 |
+| Nalt≈°ik | Russian Federation | 233400 |
 | Temuco | Chile | 233041 |
 | General Escobedo | Mexico | 232961 |
 | South Dum Dum | India | 232811 |
-| Ribeir„o das Neves | Brazil | 232685 |
+| Ribeir√£o das Neves | Brazil | 232685 |
 | Radom | Poland | 232262 |
 | Kafr al-Dawwar | Egypt | 231978 |
 | Governador Valadares | Brazil | 231724 |
@@ -1428,10 +1428,10 @@
 | Severodvinsk | Russian Federation | 229300 |
 | Resistencia | Argentina | 229212 |
 | Haeju | North Korea | 229172 |
-| TaubatÈ | Brazil | 229130 |
+| Taubat√© | Brazil | 229130 |
 | Namyangju | South Korea | 229060 |
-| Itag¸Ì | Colombia | 228985 |
-| El‚zig | Turkey | 228815 |
+| Itag√º√≠ | Colombia | 228985 |
+| El√¢zig | Turkey | 228815 |
 | Rahim Yar Khan | Pakistan | 228479 |
 | Kuala Terengganu | Malaysia | 228119 |
 | Tongling | China | 228017 |
@@ -1449,23 +1449,23 @@
 | Hialeah | United States | 226419 |
 | Chandrapur | India | 226105 |
 | al-Ayn | United Arab Emirates | 225970 |
-| Tehuac·n | Mexico | 225943 |
+| Tehuac√°n | Mexico | 225943 |
 | al-Hufuf | Saudi Arabia | 225800 |
 | Lincoln | United States | 225581 |
 | Montpellier | France | 225392 |
 | Bijsk | Russian Federation | 225000 |
 | Tucheng | Taiwan | 224897 |
-| MÈrida | Venezuela | 224887 |
+| M√©rida | Venezuela | 224887 |
 | Barahanagar (Baranagar) | India | 224821 |
 | Imperatriz | Brazil | 224564 |
 | Buenaventura | Colombia | 224336 |
 | Gent | Belgium | 224180 |
-| BayamÛn | Puerto Rico | 224044 |
+| Bayam√≥n | Puerto Rico | 224044 |
 | Greensboro | United States | 223891 |
 | Oruro | Bolivia | 223553 |
 | Kanggye | North Korea | 223410 |
 | Niznekamsk | Russian Federation | 223400 |
-| GravataÌ | Brazil | 223011 |
+| Gravata√≠ | Brazil | 223011 |
 | Newcastle | South Africa | 222993 |
 | Xiantao | China | 222884 |
 | Cabanatuan | Philippines | 222859 |
@@ -1478,11 +1478,11 @@
 | Embu | Brazil | 222223 |
 | Chalco | Mexico | 222201 |
 | Plano | United States | 222030 |
-| Blagoveötöensk | Russian Federation | 222000 |
+| Blagove≈°t≈°ensk | Russian Federation | 222000 |
 | Floridablanca | Colombia | 221913 |
 | San Fernando | Philippines | 221857 |
-| äahty | Russian Federation | 221800 |
-| JosÈ C. Paz | Argentina | 221754 |
+| ≈†ahty | Russian Federation | 221800 |
+| Jos√© C. Paz | Argentina | 221754 |
 | Qostanay | Kazakstan | 221400 |
 | Nha Trang | Vietnam | 221331 |
 | Cabimas | Venezuela | 221329 |
@@ -1510,7 +1510,7 @@
 | Khamis Mushayt | Saudi Arabia | 217900 |
 | Barinas | Venezuela | 217831 |
 | Borujerd | Iran | 217804 |
-| ConcepciÛn | Chile | 217664 |
+| Concepci√≥n | Chile | 217664 |
 | Turmero | Venezuela | 217499 |
 | Iseyin | Nigeria | 217300 |
 | Vitoria-Gasteiz | Spain | 217154 |
@@ -1518,7 +1518,7 @@
 | Lapu-Lapu | Philippines | 217019 |
 | Lutsk | Ukraine | 217000 |
 | Siliguri (Shiliguri) | India | 216950 |
-| C·rdenas | Mexico | 216903 |
+| C√°rdenas | Mexico | 216903 |
 | Campeche | Mexico | 216735 |
 | Trieste | Italy | 216459 |
 | Chigasaki | Japan | 216015 |
@@ -1536,15 +1536,15 @@
 | Bila Tserkva | Ukraine | 215000 |
 | Qitaihe | China | 214957 |
 | Ichalkaranji | India | 214950 |
-| MossorÛ | Brazil | 214901 |
+| Mossor√≥ | Brazil | 214901 |
 | Jammu | India | 214737 |
 | Pingtung | Taiwan | 214727 |
-| V·rzea Grande | Brazil | 214435 |
+| V√°rzea Grande | Brazil | 214435 |
 | Ramagundam | India | 214384 |
 | Gejiu | China | 214294 |
 | Staryi Oskol | Russian Federation | 213800 |
 | Jiangyin | China | 213659 |
-| L¸beck | Germany | 213326 |
+| L√ºbeck | Germany | 213326 |
 | Espoo | Finland | 213271 |
 | Aberdeen | United Kingdom | 213070 |
 | Santa Cruz de Tenerife | Spain | 213050 |
@@ -1580,17 +1580,17 @@
 | Yamato | Japan | 208234 |
 | Taranto | Italy | 208214 |
 | Madison | United States | 208054 |
-| OthÛn P. Blanco (Chetumal) | Mexico | 208014 |
+| Oth√≥n P. Blanco (Chetumal) | Mexico | 208014 |
 | San Pablo | Philippines | 207927 |
 | Liaocheng | China | 207844 |
 | Windsor | Canada | 207588 |
-| Viam„o | Brazil | 207557 |
+| Viam√£o | Brazil | 207557 |
 | Sahiwal | Pakistan | 207388 |
 | Santa Clara | Cuba | 207350 |
 | Baruta | Venezuela | 207290 |
 | Manisa | Turkey | 207148 |
 | Zelenograd | Russian Federation | 207100 |
-| Paran· | Argentina | 207041 |
+| Paran√° | Argentina | 207041 |
 | Godoy Cruz | Argentina | 206998 |
 | Cilacap | Indonesia | 206900 |
 | Matsumoto | Japan | 206801 |
@@ -1611,10 +1611,10 @@
 | Hagen | Germany | 205201 |
 | Cimanggis | Indonesia | 205100 |
 | Alwar | India | 205086 |
-| Guant·namo | Cuba | 205078 |
+| Guant√°namo | Cuba | 205078 |
 | Baiyin | China | 204970 |
 | Sokoto | Nigeria | 204900 |
-| Bei¥an | China | 204899 |
+| Bei¬¥an | China | 204899 |
 | Batman | Turkey | 203793 |
 | Texcoco | Mexico | 203681 |
 | Debrecen | Hungary | 203648 |
@@ -1645,13 +1645,13 @@
 | Bihar Sharif | India | 201323 |
 | Posadas | Argentina | 201273 |
 | Erfurt | Germany | 201267 |
-| BiÒan | Philippines | 201186 |
+| Bi√±an | Philippines | 201186 |
 | Juazeiro | Brazil | 201073 |
 | Okara | Pakistan | 200901 |
 | Charleroi | Belgium | 200827 |
 | Yixing | China | 200824 |
-| Popay·n | Colombia | 200719 |
-| GuaymallÈn | Argentina | 200595 |
+| Popay√°n | Colombia | 200719 |
+| Guaymall√©n | Argentina | 200595 |
 | Oviedo | Spain | 200453 |
 | Zabrze | Poland | 200177 |
 | Odawara | Japan | 200171 |
@@ -1676,20 +1676,20 @@
 | Kushiro | Japan | 197608 |
 | Qaramay | China | 197602 |
 | Acheng | China | 197595 |
-| Tabo„o da Serra | Brazil | 197550 |
+| Tabo√£o da Serra | Brazil | 197550 |
 | Latur | India | 197408 |
 | Kishiwada | Japan | 197276 |
 | Kimberley | South Africa | 197254 |
 | Offa | Nigeria | 197200 |
 | Ariana | Tunisia | 197000 |
 | Zlatoust | Russian Federation | 196900 |
-| S„o JosÈ dos Pinhais | Brazil | 196884 |
+| S√£o Jos√© dos Pinhais | Brazil | 196884 |
 | La Paz | Mexico | 196708 |
 | Hitachi | Japan | 196622 |
 | al-Diwaniya | Iraq | 196519 |
 | Balikesir | Turkey | 196382 |
 | Kassel | Germany | 196211 |
-| MagÈ | Brazil | 196147 |
+| Mag√© | Brazil | 196147 |
 | Yonkers | United States | 196086 |
 | Lucena | Philippines | 196075 |
 | Northampton | United Kingdom | 196000 |
@@ -1701,7 +1701,7 @@
 | Tampere | Finland | 195468 |
 | Suzano | Brazil | 195434 |
 | Jakutsk | Russian Federation | 195400 |
-| MÛstoles | Spain | 195351 |
+| M√≥stoles | Spain | 195351 |
 | Sagar | India | 195346 |
 | Burgas | Bulgaria | 195255 |
 | Nanping | China | 195064 |
@@ -1717,7 +1717,7 @@
 | Olongapo | Philippines | 194260 |
 | Karsi | Uzbekistan | 194100 |
 | Nukus | Uzbekistan | 194100 |
-| Petropavlovsk-Kamtöatski | Russian Federation | 194100 |
+| Petropavlovsk-Kamt≈°atski | Russian Federation | 194100 |
 | Porto-Novo | Benin | 194000 |
 | Fengcheng | China | 193784 |
 | Monclova | Mexico | 193657 |
@@ -1751,7 +1751,7 @@
 | Kamensk-Uralski | Russian Federation | 190600 |
 | Parbhani | India | 190255 |
 | Ezhou | China | 190123 |
-| K¸kon | Uzbekistan | 190100 |
+| K√ºkon | Uzbekistan | 190100 |
 | Nagar Coil | India | 190084 |
 | Portsmouth | United Kingdom | 190000 |
 | Moratuwa | Sri Lanka | 190000 |
@@ -1762,8 +1762,8 @@
 | Uppsala | Sweden | 189569 |
 | Split | Croatia | 189388 |
 | Heze | China | 189293 |
-| S„o Leopoldo | Brazil | 189258 |
-| Ch‰rjew | Turkmenistan | 189200 |
+| S√£o Leopoldo | Brazil | 189258 |
+| Ch√§rjew | Turkmenistan | 189200 |
 | Newcastle upon Tyne | United Kingdom | 189150 |
 | Markham | Canada | 189098 |
 | Arica | Chile | 189036 |
@@ -1773,7 +1773,7 @@
 | Uji | Japan | 188735 |
 | Mymensingh | Bangladesh | 188713 |
 | Gorgan | Iran | 188710 |
-| MarÌlia | Brazil | 188691 |
+| Mar√≠lia | Brazil | 188691 |
 | Andong | South Korea | 188443 |
 | Pingchen | Taiwan | 188344 |
 | Rishon Le Ziyyon | Israel | 188200 |
@@ -1788,7 +1788,7 @@
 | Linfen | China | 187309 |
 | Reims | France | 187206 |
 | Pitesti | Romania | 187170 |
-| S„o Carlos | Brazil | 187122 |
+| S√£o Carlos | Brazil | 187122 |
 | Durham | United States | 187035 |
 | Bijapur | India | 186939 |
 | Syzran | Russian Federation | 186900 |
@@ -1796,7 +1796,7 @@
 | Ponce | Puerto Rico | 186475 |
 | Tianmen | China | 186332 |
 | Columbus | United States | 186291 |
-| SumarÈ | Brazil | 186205 |
+| Sumar√© | Brazil | 186205 |
 | Carolina | Puerto Rico | 186076 |
 | Kramatorsk | Ukraine | 186000 |
 | Grozny | Russian Federation | 186000 |
@@ -1805,14 +1805,14 @@
 | Boise City | United States | 185787 |
 | Winston-Salem | United States | 185776 |
 | Santa Ana de Coro | Venezuela | 185766 |
-| LiËge | Belgium | 185639 |
+| Li√®ge | Belgium | 185639 |
 | Santa Rosa | Philippines | 185633 |
 | San Bernardino | United States | 185401 |
 | Kukatpalle | India | 185378 |
 | Presidente Prudente | Brazil | 185340 |
 | Quanzhou | China | 185154 |
 | Rizhao | China | 185048 |
-| DivinÛpolis | Brazil | 185047 |
+| Divin√≥polis | Brazil | 185047 |
 | Ikorodu | Nigeria | 184900 |
 | Sabadell | Spain | 184859 |
 | Lille | France | 184657 |
@@ -1820,14 +1820,14 @@
 | Mirpur Khas | Pakistan | 184500 |
 | Bally | India | 184474 |
 | Arad | Romania | 184408 |
-| Novotöerkassk | Russian Federation | 184400 |
+| Novot≈°erkassk | Russian Federation | 184400 |
 | Jackson | United States | 184256 |
 | Santander | Spain | 184165 |
 | Suzuka | Japan | 184061 |
 | Bhilwara | India | 183965 |
 | Odense | Denmark | 183912 |
 | Bassein (Pathein) | Myanmar | 183900 |
-| Saarbr¸cken | Germany | 183836 |
+| Saarbr√ºcken | Germany | 183836 |
 | Puerto Vallarta | Mexico | 183741 |
 | Yosu | South Korea | 183596 |
 | Owo | Nigeria | 183500 |
@@ -1866,17 +1866,17 @@
 | Tshikapa | Congo, The Democratic Republic of the | 180860 |
 | Hailar | China | 180650 |
 | Fargona | Uzbekistan | 180500 |
-| Pamplona [IruÒa] | Spain | 180483 |
+| Pamplona [Iru√±a] | Spain | 180483 |
 | Reno | United States | 180480 |
 | Regina | Canada | 180400 |
 | Bielsko-Biala | Poland | 180307 |
 | Nanchong | China | 180273 |
-| St-…tienne | France | 180210 |
+| St-√âtienne | France | 180210 |
 | Newport News | United States | 180150 |
 | Jiutai | China | 180130 |
 | Swindon | United Kingdom | 180000 |
 | Zhaodong | China | 179976 |
-| Soledad de Graciano S·nchez | Mexico | 179956 |
+| Soledad de Graciano S√°nchez | Mexico | 179956 |
 | Bilaspur | India | 179833 |
 | Shaoxing | China | 179818 |
 | Tasikmalaya | Indonesia | 179800 |
@@ -1884,13 +1884,13 @@
 | Reggio di Calabria | Italy | 179617 |
 | Fuyang | China | 179572 |
 | Tagum | Philippines | 179531 |
-| San Juan del RÌo | Mexico | 179300 |
+| San Juan del R√≠o | Mexico | 179300 |
 | Shimoga | India | 179258 |
 | Burnaby | Canada | 179209 |
-| Donostia-San Sebasti·n | Spain | 179208 |
+| Donostia-San Sebasti√°n | Spain | 179208 |
 | Juzno-Sahalinsk | Russian Federation | 179200 |
-| JequiÈ | Brazil | 179128 |
-| SÈtif | Algeria | 179055 |
+| Jequi√© | Brazil | 179128 |
+| S√©tif | Algeria | 179055 |
 | Kimchaek | North Korea | 179000 |
 | Arapiraca | Brazil | 178988 |
 | Los Teques | Venezuela | 178784 |
@@ -1903,7 +1903,7 @@
 | Vantaa | Finland | 178471 |
 | Sucre | Bolivia | 178426 |
 | Volgodonsk | Russian Federation | 178200 |
-| Chill·n | Chile | 178182 |
+| Chill√°n | Chile | 178182 |
 | Barrancabermeja | Colombia | 178020 |
 | Hyesan | North Korea | 178020 |
 | Kharagpur | India | 177989 |
@@ -1916,7 +1916,7 @@
 | San Felipe del Progreso | Mexico | 177330 |
 | Ghulja | China | 177193 |
 | Garoua | Cameroon | 177000 |
-| CÛrdoba | Mexico | 176952 |
+| C√≥rdoba | Mexico | 176952 |
 | Hail | Saudi Arabia | 176800 |
 | Chandler | United States | 176581 |
 | Laredo | United States | 176576 |
@@ -1929,7 +1929,7 @@
 | Jiangyou | China | 175753 |
 | Herne | Germany | 175661 |
 | Alvorada | Brazil | 175574 |
-| Niö | Yugoslavia | 175391 |
+| Ni≈° | Yugoslavia | 175391 |
 | Henderson | United States | 175381 |
 | Mira Bhayandar | India | 175372 |
 | Malolos | Philippines | 175291 |
@@ -1950,8 +1950,8 @@
 | Takaoka | Japan | 174380 |
 | Tirupati | India | 174369 |
 | Anshun | China | 174142 |
-| ItaboraÌ | Brazil | 173977 |
-| M¸lheim an der Ruhr | Germany | 173895 |
+| Itabora√≠ | Brazil | 173977 |
+| M√ºlheim an der Ruhr | Germany | 173895 |
 | Knoxville | United States | 173890 |
 | Fuling | China | 173878 |
 | Karnal | India | 173751 |
@@ -1964,7 +1964,7 @@
 | Chula Vista | United States | 173556 |
 | Xinyu | China | 173524 |
 | Geneve | Switzerland | 173500 |
-| LeganÈs | Spain | 173163 |
+| Legan√©s | Spain | 173163 |
 | Matadi | Congo, The Democratic Republic of the | 172730 |
 | Burhanpur | India | 172710 |
 | Groningen | Netherlands | 172701 |
@@ -1972,9 +1972,9 @@
 | Hisar (Hissar) | India | 172677 |
 | Worcester | United States | 172648 |
 | Tiruvottiyur | India | 172562 |
-| Turku [≈bo] | Finland | 172561 |
+| Turku [√Öbo] | Finland | 172561 |
 | Prato | Italy | 172473 |
-| Tec·mac | Mexico | 172410 |
+| Tec√°mac | Mexico | 172410 |
 | Miskolc | Hungary | 172357 |
 | Mwanza | Tanzania | 172300 |
 | Bani Suwayf | Egypt | 172032 |
@@ -1982,7 +1982,7 @@
 | Tomakomai | Japan | 171958 |
 | Tali | Taiwan | 171940 |
 | Nam Dinh | Vietnam | 171699 |
-| Santa B·rbara d¥Oeste | Brazil | 171657 |
+| Santa B√°rbara d¬¥Oeste | Brazil | 171657 |
 | Madiun | Indonesia | 171532 |
 | Kaesong | North Korea | 171500 |
 | Ocosingo | Mexico | 171495 |
@@ -1994,14 +1994,14 @@
 | Chimoio | Mozambique | 171056 |
 | Mabalacat | Philippines | 171045 |
 | Olsztyn | Poland | 170904 |
-| L·zaro C·rdenas | Mexico | 170878 |
+| L√°zaro C√°rdenas | Mexico | 170878 |
 | Sabzevar | Iran | 170738 |
 | Nova Friburgo | Brazil | 170697 |
 | Waitakere | New Zealand | 170600 |
 | Temirtau | Kazakstan | 170500 |
 | Jiutepec | Mexico | 170428 |
 | Oxnard | United States | 170358 |
-| JacareÌ | Brazil | 170356 |
+| Jacare√≠ | Brazil | 170356 |
 | Barisal | Bangladesh | 170232 |
 | Sawhaj | Egypt | 170125 |
 | Papantla | Mexico | 170123 |
@@ -2014,11 +2014,11 @@
 | Danyang | China | 169603 |
 | Chenzhou | China | 169400 |
 | Mirzapur-cum-Vindhyachal | India | 169336 |
-| AraÁatuba | Brazil | 169303 |
+| Ara√ßatuba | Brazil | 169303 |
 | Chiniot | Pakistan | 169300 |
 | Abakan | Russian Federation | 169200 |
-| AlmerÌa | Spain | 169027 |
-| El-Aai˙n | Western Sahara | 169000 |
+| Almer√≠a | Spain | 169027 |
+| El-Aai√∫n | Western Sahara | 169000 |
 | Windhoek | Namibia | 169000 |
 | Melitopol | Ukraine | 169000 |
 | Barra Mansa | Brazil | 168953 |
@@ -2028,19 +2028,19 @@
 | Praia Grande | Brazil | 168434 |
 | Sakura | Japan | 168072 |
 | Rijeka | Croatia | 167964 |
-| Marab· | Brazil | 167795 |
-| Crici˙ma | Brazil | 167661 |
+| Marab√° | Brazil | 167795 |
+| Crici√∫ma | Brazil | 167661 |
 | Kamakura | Japan | 167661 |
 | Secunderabad | India | 167461 |
 | Maikop | Russian Federation | 167300 |
-| NeuquÈn | Argentina | 167296 |
+| Neuqu√©n | Argentina | 167296 |
 | Mitaka | Japan | 167268 |
-| QuÈbec | Canada | 167264 |
+| Qu√©bec | Canada | 167264 |
 | Punto Fijo | Venezuela | 167215 |
 | Boa Vista | Brazil | 167185 |
 | Witbank | South Africa | 167183 |
 | Nadiad | India | 167051 |
-| Baranovitöi | Belarus | 167000 |
+| Baranovit≈°i | Belarus | 167000 |
 | Izumi | Japan | 166979 |
 | Hino | Japan | 166770 |
 | Plzen | Czech Republic | 166759 |
@@ -2059,7 +2059,7 @@
 | Taiping | Taiwan | 165524 |
 | Ashikaga | Japan | 165243 |
 | Garden Grove | United States | 165196 |
-| T‚rgu Mures | Romania | 165153 |
+| T√¢rgu Mures | Romania | 165153 |
 | Armavir | Russian Federation | 164900 |
 | Shangqiu | China | 164880 |
 | Dire Dawa | Ethiopia | 164851 |
@@ -2070,8 +2070,8 @@
 | Qingyuan | China | 164641 |
 | Comalcalco | Mexico | 164640 |
 | Tsu | Japan | 164543 |
-| Osnabr¸ck | Germany | 164539 |
-| Alcal· de Henares | Spain | 164463 |
+| Osnabr√ºck | Germany | 164539 |
+| Alcal√° de Henares | Spain | 164463 |
 | Oberholzer | South Africa | 164367 |
 | Dewas | India | 164364 |
 | Mount Darwin | Zimbabwe | 164362 |
@@ -2098,10 +2098,10 @@
 | Akure | Nigeria | 162300 |
 | Zaoyang | China | 162198 |
 | Springs | South Africa | 162072 |
-| RzeszÛw | Poland | 162049 |
-| Maracana˙ | Brazil | 162022 |
+| Rzesz√≥w | Poland | 162049 |
+| Maracana√∫ | Brazil | 162022 |
 | Bournemouth | United Kingdom | 162000 |
-| Kertö | Ukraine | 162000 |
+| Kert≈° | Ukraine | 162000 |
 | Puerto Princesa | Philippines | 161912 |
 | Xinghua | China | 161910 |
 | Pate | Taiwan | 161700 |
@@ -2144,10 +2144,10 @@
 | Tempe | United States | 158625 |
 | Babol | Iran | 158346 |
 | Huimanguillo | Mexico | 158335 |
-| NaÁala-Porto | Mozambique | 158248 |
+| Na√ßala-Porto | Mozambique | 158248 |
 | Huntsville | United States | 158216 |
 | Los Angeles | Chile | 158215 |
-| ItuzaingÛ | Argentina | 158197 |
+| Ituzaing√≥ | Argentina | 158197 |
 | Szeged | Hungary | 158158 |
 | Udon Thani | Thailand | 158100 |
 | Ontario | United States | 158007 |
@@ -2158,7 +2158,7 @@
 | Raichur | India | 157551 |
 | Qyzylorda | Kazakstan | 157400 |
 | Agartala | India | 157358 |
-| PÈcs | Hungary | 157332 |
+| P√©cs | Hungary | 157332 |
 | Ussurijsk | Russian Federation | 157300 |
 | Kumagaya | Japan | 157171 |
 | Arrah (Ara) | India | 157082 |
@@ -2167,7 +2167,7 @@
 | Salavat | Russian Federation | 156800 |
 | Perugia | Italy | 156673 |
 | Satna | India | 156630 |
-| Rui¥an | China | 156468 |
+| Rui¬¥an | China | 156468 |
 | Ijebu-Ode | Nigeria | 156400 |
 | Zhoushan | China | 156317 |
 | Liangcheng | China | 156307 |
@@ -2178,17 +2178,17 @@
 | Ashdod | Israel | 155800 |
 | Otaru | Japan | 155784 |
 | Puerto La Cruz | Venezuela | 155700 |
-| Mytiötöi | Russian Federation | 155700 |
+| Myti≈°t≈°i | Russian Federation | 155700 |
 | Chattanooga | United States | 155554 |
 | Lalbahadur Nagar | India | 155500 |
-| Priötina | Yugoslavia | 155496 |
+| Pri≈°tina | Yugoslavia | 155496 |
 | Rustavi | Georgia | 155400 |
 | Ichon | South Korea | 155332 |
 | Agadir | Morocco | 155244 |
 | Aizawl | India | 155240 |
 | Uluberia | India | 155172 |
-| RondonÛpolis | Brazil | 155115 |
-| S„o JosÈ | Brazil | 155105 |
+| Rondon√≥polis | Brazil | 155115 |
+| S√£o Jos√© | Brazil | 155105 |
 | Cachoeiro de Itapemirim | Brazil | 155024 |
 | al-Sib | Oman | 155000 |
 | York | Canada | 154980 |
@@ -2206,22 +2206,22 @@
 | Anjo | Japan | 153823 |
 | Apeldoorn | Netherlands | 153491 |
 | Balti | Moldova | 153400 |
-| NilÛpolis | Brazil | 153383 |
+| Nil√≥polis | Brazil | 153383 |
 | Jiaozhou | China | 153364 |
 | Patras | Greece | 153344 |
 | Grenoble | France | 153317 |
 | Cuautla | Mexico | 153132 |
-| Sidi Bel AbbËs | Algeria | 153106 |
+| Sidi Bel Abb√®s | Algeria | 153106 |
 | Effon-Alaiye | Nigeria | 153100 |
 | Cuddalore | India | 153086 |
 | San Fernando | Argentina | 153036 |
 | Iskenderun | Turkey | 153022 |
-| Minatitl·n | Mexico | 152983 |
+| Minatitl√°n | Mexico | 152983 |
 | Narashino | Japan | 152849 |
 | Oyama | Japan | 152820 |
 | Poza Rica de Hidalgo | Mexico | 152678 |
 | Duran [Eloy Alfaro] | Ecuador | 152514 |
-| Tulu· | Colombia | 152488 |
+| Tulu√° | Colombia | 152488 |
 | Nijmegen | Netherlands | 152463 |
 | Taizhou | China | 152442 |
 | Fort Lauderdale | United States | 152397 |
@@ -2271,7 +2271,7 @@
 | Pomona | United States | 149473 |
 | Metairie | United States | 149428 |
 | Paterson | United States | 149222 |
-| CamaÁari | Brazil | 149146 |
+| Cama√ßari | Brazil | 149146 |
 | Overland Park | United States | 149080 |
 | Jaffna | Sri Lanka | 149000 |
 | Nikopol | Ukraine | 149000 |
@@ -2281,7 +2281,7 @@
 | Haarlem | Netherlands | 148772 |
 | Hat Yai | Thailand | 148632 |
 | Karimnagar | India | 148583 |
-| Ji¥an | China | 148583 |
+| Ji¬¥an | China | 148583 |
 | Bharatpur | India | 148519 |
 | Buzau | Romania | 148372 |
 | Longkou | China | 148362 |
@@ -2317,7 +2317,7 @@
 | Tama | Japan | 146712 |
 | Dundee | United Kingdom | 146690 |
 | Nonsan | South Korea | 146619 |
-| äiauliai | Lithuania | 146563 |
+| ≈†iauliai | Lithuania | 146563 |
 | Noida | India | 146514 |
 | Bengkulu | Indonesia | 146439 |
 | Hampton | United States | 146437 |
@@ -2338,19 +2338,19 @@
 | Jhelum | Pakistan | 145800 |
 | Banha | Egypt | 145792 |
 | Oldbury/Smethwick (Warley) | United Kingdom | 145542 |
-| «orum | Turkey | 145495 |
+| √áorum | Turkey | 145495 |
 | Navolato | Mexico | 145396 |
 | Getafe | Spain | 145371 |
 | Ota | Japan | 145317 |
-| San Luis RÌo Colorado | Mexico | 145276 |
-| ItajaÌ | Brazil | 145197 |
+| San Luis R√≠o Colorado | Mexico | 145276 |
+| Itaja√≠ | Brazil | 145197 |
 | Burlington | Canada | 145150 |
 | Vung Tau | Vietnam | 145145 |
 | Bhusawal | India | 145143 |
 | Khandwa | India | 145133 |
 | Middlesbrough | United Kingdom | 145000 |
 | Karawang | Indonesia | 145000 |
-| K¸tahya | Turkey | 144761 |
+| K√ºtahya | Turkey | 144761 |
 | Rybnik | Poland | 144582 |
 | Yulin | China | 144467 |
 | Malayer | Iran | 144373 |
@@ -2358,17 +2358,17 @@
 | al-Qamishliya | Syria | 144286 |
 | Santa Maria | Philippines | 144282 |
 | Jinhua | China | 144280 |
-| Liu¥an | China | 144248 |
+| Liu¬¥an | China | 144248 |
 | Salzburg | Austria | 144247 |
-| ChapecÛ | Brazil | 144158 |
+| Chapec√≥ | Brazil | 144158 |
 | Lakewood | United States | 144126 |
 | Oxford | United Kingdom | 144000 |
 | Hatay (Antakya) | Turkey | 143982 |
-| PÈnjamo | Mexico | 143927 |
+| P√©njamo | Mexico | 143927 |
 | Sonipat (Sonepat) | India | 143922 |
 | Huddersfield | United Kingdom | 143726 |
 | Tenali | India | 143726 |
-| Reggio nell¥ Emilia | Italy | 143664 |
+| Reggio nell¬¥ Emilia | Italy | 143664 |
 | Bushehr | Iran | 143641 |
 | Vancouver | United States | 143560 |
 | Banda Aceh | Indonesia | 143409 |
@@ -2388,17 +2388,17 @@
 | Pagadian | Philippines | 142515 |
 | Atyrau | Kazakstan | 142500 |
 | Almere | Netherlands | 142465 |
-| C·diz | Spain | 142449 |
+| C√°diz | Spain | 142449 |
 | Chingola | Zambia | 142400 |
 | Murom | Russian Federation | 142400 |
 | Moreno Valley | United States | 142381 |
 | Suizhou | China | 142302 |
-| San AndrÈs Tuxtla | Mexico | 142251 |
+| San Andr√©s Tuxtla | Mexico | 142251 |
 | Kuri | South Korea | 142173 |
 | Ankang | China | 142170 |
-| Pinar del RÌo | Cuba | 142100 |
+| Pinar del R√≠o | Cuba | 142100 |
 | Salerno | Italy | 142055 |
-| AlcorcÛn | Spain | 142048 |
+| Alcorc√≥n | Spain | 142048 |
 | Kirikkale | Turkey | 142044 |
 | Cadiz | Philippines | 141954 |
 | al-Fashir | Sudan | 141884 |
@@ -2420,7 +2420,7 @@
 | Margilon | Uzbekistan | 140800 |
 | Norilsk | Russian Federation | 140800 |
 | Almetjevsk | Russian Federation | 140700 |
-| PotosÌ | Bolivia | 140642 |
+| Potos√≠ | Bolivia | 140642 |
 | Huelva | Spain | 140583 |
 | Caguas | Puerto Rico | 140502 |
 | Navojoa | Mexico | 140495 |
@@ -2436,9 +2436,9 @@
 | Kandy | Sri Lanka | 140000 |
 | Kollam (Quilon) | India | 139852 |
 | Komaki | Japan | 139827 |
-| LeÛn | Spain | 139809 |
+| Le√≥n | Spain | 139809 |
 | Brownsville | United States | 139722 |
-| CastellÛn de la Plana [Castell | Spain | 139712 |
+| Castell√≥n de la Plana [Castell | Spain | 139712 |
 | Jessore | Bangladesh | 139710 |
 | Heidelberg | Germany | 139672 |
 | Lages | Brazil | 139570 |
@@ -2455,10 +2455,10 @@
 | Chong-up | South Korea | 139111 |
 | Bolton | United Kingdom | 139020 |
 | Newport | United Kingdom | 139000 |
-| Da¥an | China | 138963 |
+| Da¬¥an | China | 138963 |
 | Kadoma | Japan | 138953 |
 | Timkur | India | 138903 |
-| ‹rgenc | Uzbekistan | 138900 |
+| √úrgenc | Uzbekistan | 138900 |
 | Mejicanos | El Salvador | 138800 |
 | Monywa | Myanmar | 138600 |
 | Deba Habe | Nigeria | 138600 |
@@ -2474,7 +2474,7 @@
 | Arnhem | Netherlands | 138020 |
 | Bamenda | Cameroon | 138000 |
 | Lengshuijiang | China | 137994 |
-| Zit·cuaro | Mexico | 137970 |
+| Zit√°cuaro | Mexico | 137970 |
 | Torrance | United States | 137946 |
 | Eugene | United States | 137893 |
 | Naga | Philippines | 137810 |
@@ -2518,8 +2518,8 @@
 | Indaiatuba | Brazil | 135968 |
 | Envigado | Colombia | 135848 |
 | Tirunelveli | India | 135825 |
-| Hortol‚ndia | Brazil | 135755 |
-| Boca del RÌo | Mexico | 135721 |
+| Hortol√¢ndia | Brazil | 135755 |
+| Boca del R√≠o | Mexico | 135721 |
 | Zaanstad | Netherlands | 135621 |
 | San Mateo | Philippines | 135603 |
 | Amiens | France | 135501 |
@@ -2538,7 +2538,7 @@
 | Longyan | China | 134481 |
 | Musashino | Japan | 134426 |
 | Xichang | China | 134419 |
-| RÌo Cuarto | Argentina | 134355 |
+| R√≠o Cuarto | Argentina | 134355 |
 | Aix-en-Provence | France | 134222 |
 | Djougou | Benin | 134099 |
 | Tsuchiura | Japan | 134072 |
@@ -2566,22 +2566,22 @@
 | Joetsu | Japan | 133505 |
 | Chittoor | India | 133462 |
 | Shihung | South Korea | 133443 |
-| NÓmes | France | 133424 |
+| N√Æmes | France | 133424 |
 | San Lorenzo | Paraguay | 133395 |
-| S„o Caetano do Sul | Brazil | 133321 |
+| S√£o Caetano do Sul | Brazil | 133321 |
 | Shikarpur | Pakistan | 133300 |
 | Barrackpur | India | 133265 |
 | Miyakonojo | Japan | 133183 |
 | Linhe | China | 133183 |
 | Tychy | Poland | 133178 |
-| Linkˆping | Sweden | 133168 |
+| Link√∂ping | Sweden | 133168 |
 | Valdivia | Chile | 133106 |
 | Bharuch (Broach) | India | 133102 |
 | Wuwei | China | 133101 |
 | Khanewal | Pakistan | 133000 |
 | Duyun | China | 132971 |
 | Misato | Japan | 132957 |
-| Balaöiha | Russian Federation | 132900 |
+| Bala≈°iha | Russian Federation | 132900 |
 | Tours | France | 132820 |
 | Stockport | United Kingdom | 132813 |
 | Cienfuegos | Cuba | 132770 |
@@ -2596,7 +2596,7 @@
 | Korolev | Russian Federation | 132400 |
 | Victoria de las Tunas | Cuba | 132350 |
 | Maragheh | Iran | 132318 |
-| San CristÛbal de las Casas | Mexico | 132317 |
+| San Crist√≥bal de las Casas | Mexico | 132317 |
 | Changji | China | 132260 |
 | Meixian | China | 132156 |
 | Ferrara | Italy | 132127 |
@@ -2610,18 +2610,18 @@
 | Tong-yong | South Korea | 131717 |
 | Savannah | United States | 131510 |
 | Taunggyi (Taunggye) | Myanmar | 131500 |
-| Saint-Denis | RÈunion | 131480 |
+| Saint-Denis | R√©union | 131480 |
 | Mutare | Zimbabwe | 131367 |
 | Nossa Senhora do Socorro | Brazil | 131351 |
 | Guacara | Venezuela | 131334 |
 | Kongju | South Korea | 131229 |
 | Duma | Syria | 131158 |
-| Huai¥an | China | 131149 |
+| Huai¬¥an | China | 131149 |
 | Sambalpur | India | 131138 |
 | Yongju | South Korea | 131097 |
 | Marawi | Philippines | 131090 |
 | Rimini | Italy | 131062 |
-| Dabrowa GÛrnicza | Poland | 131037 |
+| Dabrowa G√≥rnicza | Poland | 131037 |
 | Plock | Poland | 131011 |
 | Bafoussam | Cameroon | 131000 |
 | Mbeya | Tanzania | 130800 |
@@ -2640,7 +2640,7 @@
 | Satu Mare | Romania | 130059 |
 | Zalantun | China | 130031 |
 | Lobito | Angola | 130000 |
-| Yamoussoukro | CÙte díIvoire | 130000 |
+| Yamoussoukro | C√¥te d‚ÄôIvoire | 130000 |
 | Berdjansk | Ukraine | 130000 |
 | Pinsk | Belarus | 130000 |
 | Rae Bareli | India | 129904 |
@@ -2648,16 +2648,16 @@
 | Battambang | Cambodia | 129800 |
 | Elblag | Poland | 129782 |
 | Sagay | Philippines | 129765 |
-| ParnaÌba | Brazil | 129756 |
+| Parna√≠ba | Brazil | 129756 |
 | Meikhtila | Myanmar | 129700 |
-| Hu·nuco | Peru | 129688 |
-| PoÁos de Caldas | Brazil | 129683 |
+| Hu√°nuco | Peru | 129688 |
+| Po√ßos de Caldas | Brazil | 129683 |
 | Quevedo | Ecuador | 129631 |
 | Opole | Poland | 129553 |
 | Colima | Mexico | 129454 |
 | Kupang | Indonesia | 129300 |
 | Tebing Tinggi | Indonesia | 129300 |
-| ¥s-Hertogenbosch | Netherlands | 129170 |
+| ¬¥s-Hertogenbosch | Netherlands | 129170 |
 | Percut Sei Tuan | Indonesia | 129000 |
 | Potsdam | Germany | 128983 |
 | Rewa | India | 128981 |
@@ -2676,14 +2676,14 @@
 | Biskra | Algeria | 128281 |
 | Qingzhou | China | 128258 |
 | Usak | Turkey | 128162 |
-| TeresÛpolis | Brazil | 128079 |
+| Teres√≥polis | Brazil | 128079 |
 | Gweru | Zimbabwe | 128037 |
 | Angren | Uzbekistan | 128000 |
 | Khammam | India | 127992 |
 | Longueuil | Canada | 127977 |
 | Kariya | Japan | 127969 |
 | Lagos de Moreno | Mexico | 127949 |
-| [San CristÛbal de] la Laguna | Spain | 127945 |
+| [San Crist√≥bal de] la Laguna | Spain | 127945 |
 | Piedras Negras | Mexico | 127898 |
 | Nazret | Ethiopia | 127842 |
 | Dinajpur | Bangladesh | 127815 |
@@ -2701,16 +2701,16 @@
 | Toamasina | Madagascar | 127441 |
 | Grand Prairie | United States | 127427 |
 | Odintsovo | Russian Federation | 127400 |
-| W¸rzburg | Germany | 127350 |
+| W√ºrzburg | Germany | 127350 |
 | Blida (el-Boulaida) | Algeria | 127284 |
 | Binjai | Indonesia | 127222 |
 | Niihama | Japan | 127207 |
 | Bulandshahr | India | 127201 |
 | Ekibastuz | Kazakstan | 127200 |
 | Cork | Ireland | 127187 |
-| Gyˆr | Hungary | 127119 |
+| Gy√∂r | Hungary | 127119 |
 | Warraq al-Arab | Egypt | 127108 |
-| LogroÒo | Spain | 127093 |
+| Logro√±o | Spain | 127093 |
 | Minoo | Japan | 127026 |
 | Pavlograd | Ukraine | 127000 |
 | Sjeverodonetsk | Ukraine | 127000 |
@@ -2724,41 +2724,41 @@
 | Itapecerica da Serra | Brazil | 126672 |
 | Abiko | Japan | 126670 |
 | Khon Kaen | Thailand | 126500 |
-| T˙xpam | Mexico | 126475 |
+| T√∫xpam | Mexico | 126475 |
 | Luohe | China | 126438 |
 | Yuanlin | Taiwan | 126402 |
 | Sibu | Malaysia | 126381 |
 | East Los Angeles | United States | 126379 |
 | Roxas | Philippines | 126352 |
 | Ilam | Iran | 126346 |
-| V‰sterÂs | Sweden | 126328 |
+| V√§ster√•s | Sweden | 126328 |
 | Yangmei | Taiwan | 126323 |
 | Uruguaiana | Brazil | 126305 |
-| TÈmara | Morocco | 126303 |
+| T√©mara | Morocco | 126303 |
 | Syrakusa | Italy | 126282 |
 | Amersfoort | Netherlands | 126270 |
-| San Pedro Garza GarcÌa | Mexico | 126147 |
+| San Pedro Garza Garc√≠a | Mexico | 126147 |
 | Hobart | Australia | 126118 |
 | Warri | Nigeria | 126100 |
 | Navsari | India | 126089 |
-| Paranagu· | Brazil | 126076 |
+| Paranagu√° | Brazil | 126076 |
 | Malkajgiri | India | 126066 |
 | Pak Kret | Thailand | 126055 |
-| GorzÛw Wielkopolski | Poland | 126019 |
+| Gorz√≥w Wielkopolski | Poland | 126019 |
 | Fullerton | United States | 126003 |
 | Chinhae | South Korea | 125997 |
-| IbiritÈ | Brazil | 125982 |
+| Ibirit√© | Brazil | 125982 |
 | Cartago | Colombia | 125884 |
 | Sandakan | Malaysia | 125841 |
 | Timon | Brazil | 125812 |
 | Sukabumi | Indonesia | 125766 |
-| Bender (TÓghina) | Moldova | 125700 |
+| Bender (T√Æghina) | Moldova | 125700 |
 | al-Tuqba | Saudi Arabia | 125700 |
 | Lubao | Philippines | 125699 |
 | Punta Arenas | Chile | 125631 |
 | Guanare | Venezuela | 125621 |
-| Luzi‚nia | Brazil | 125597 |
-| MacaÈ | Brazil | 125597 |
+| Luzi√¢nia | Brazil | 125597 |
+| Maca√© | Brazil | 125597 |
 | Nobeoka | Japan | 125547 |
 | Bida | Nigeria | 125500 |
 | Midnapore (Medinipur) | India | 125498 |
@@ -2782,24 +2782,24 @@
 | Orehovo-Zujevo | Russian Federation | 124900 |
 | Kafr al-Shaykh | Egypt | 124819 |
 | Cizah | Uzbekistan | 124800 |
-| Gˆttingen | Germany | 124775 |
-| San Pedro de MacorÌs | Dominican Republic | 124735 |
+| G√∂ttingen | Germany | 124775 |
+| San Pedro de Macor√≠s | Dominican Republic | 124735 |
 | Mocuba | Mozambique | 124700 |
 | Paradise | United States | 124682 |
-| Kamyöin | Russian Federation | 124600 |
+| Kamy≈°in | Russian Federation | 124600 |
 | Mesquite | United States | 124523 |
 | Korba | India | 124501 |
-| TeÛfilo Otoni | Brazil | 124489 |
+| Te√≥filo Otoni | Brazil | 124489 |
 | Sterling Heights | United States | 124471 |
 | Faizabad | India | 124437 |
 | Alor Setar | Malaysia | 124412 |
 | Waru | Indonesia | 124300 |
-| CuauhtÈmoc | Mexico | 124279 |
+| Cuauht√©moc | Mexico | 124279 |
 | Selayang Baru | Malaysia | 124228 |
 | Kaiyuan | China | 124219 |
 | Ueda | Japan | 124217 |
 | Villeurbanne | France | 124215 |
-| ÷rebro | Sweden | 124207 |
+| √ñrebro | Sweden | 124207 |
 | Milagro | Ecuador | 124177 |
 | Sangju | South Korea | 124116 |
 | Comodoro Rivadavia | Argentina | 124104 |
@@ -2808,40 +2808,40 @@
 | Kashihara | Japan | 124013 |
 | Norwich | United Kingdom | 124000 |
 | Pangkal Pinang | Indonesia | 124000 |
-| Oröa | Belarus | 124000 |
+| Or≈°a | Belarus | 124000 |
 | Sioux Falls | United States | 123975 |
 | Linqing | China | 123958 |
 | Pathankot | India | 123930 |
 | Mufulira | Zambia | 123900 |
 | Iguala de la Independencia | Mexico | 123883 |
 | Loja | Ecuador | 123875 |
-| LeÛn | Nicaragua | 123865 |
+| Le√≥n | Nicaragua | 123865 |
 | San Miguel | Philippines | 123824 |
 | Magelang | Indonesia | 123800 |
 | Nakhon Sawan | Thailand | 123800 |
-| Moji-GuaÁu | Brazil | 123782 |
+| Moji-Gua√ßu | Brazil | 123782 |
 | Metz | France | 123776 |
 | Zacatecas | Mexico | 123700 |
 | Chaohu | China | 123676 |
 | Malaybalay | Philippines | 123672 |
 | New Haven | United States | 123626 |
 | Matsusaka | Japan | 123582 |
-| Kˆkshetau | Kazakstan | 123400 |
-| Novotöeboksarsk | Russian Federation | 123400 |
+| K√∂kshetau | Kazakstan | 123400 |
+| Novot≈°eboksarsk | Russian Federation | 123400 |
 | Edirne | Turkey | 123383 |
 | Wloclawek | Poland | 123373 |
 | Laohekou | China | 123366 |
 | Gandhinagar | India | 123359 |
 | Dujiangyan | China | 123357 |
 | Ikire | Nigeria | 123300 |
-| «orlu | Turkey | 123300 |
+| √áorlu | Turkey | 123300 |
 | Palghat (Palakkad) | India | 123289 |
 | Isesaki | Japan | 123285 |
 | Matanzas | Cuba | 123273 |
 | Zhumadian | China | 123232 |
-| Tlajomulco de Z˙Òiga | Mexico | 123220 |
+| Tlajomulco de Z√∫√±iga | Mexico | 123220 |
 | Khan Yunis | Palestine | 123175 |
-| RÌobamba | Ecuador | 123163 |
+| R√≠obamba | Ecuador | 123163 |
 | Makurdi | Nigeria | 123100 |
 | Esmeraldas | Ecuador | 123045 |
 | Mendoza | Argentina | 123027 |
@@ -2857,7 +2857,7 @@
 | Serang | Indonesia | 122400 |
 | al-Mukalla | Yemen | 122400 |
 | Topeka | United States | 122377 |
-| Norrkˆping | Sweden | 122199 |
+| Norrk√∂ping | Sweden | 122199 |
 | Amadora | Portugal | 122106 |
 | Maastricht | Netherlands | 122087 |
 | Kwang-yang | South Korea | 122052 |
@@ -2871,19 +2871,19 @@
 | Isparta | Turkey | 121911 |
 | Pindamonhangaba | Brazil | 121904 |
 | Sitapur | India | 121842 |
-| Daloa | CÙte díIvoire | 121842 |
+| Daloa | C√¥te d‚ÄôIvoire | 121842 |
 | Concord | United States | 121780 |
 | Zinacantepec | Mexico | 121715 |
-| ChorzÛw | Poland | 121708 |
-| Töerkessk | Russian Federation | 121700 |
+| Chorz√≥w | Poland | 121708 |
+| T≈°erkessk | Russian Federation | 121700 |
 | Misrata | Libyan Arab Jamahiriya | 121669 |
 | Bhiwani | India | 121629 |
 | Muzaffargarh | Pakistan | 121600 |
-| Atöinsk | Russian Federation | 121600 |
+| At≈°insk | Russian Federation | 121600 |
 | Evansville | United States | 121582 |
 | Hartford | United States | 121578 |
 | Miryang | South Korea | 121501 |
-| TarnÛw | Poland | 121494 |
+| Tarn√≥w | Poland | 121494 |
 | Cuddapah | India | 121463 |
 | Jiaonan | China | 121397 |
 | Rotherham | United Kingdom | 121380 |
@@ -2891,7 +2891,7 @@
 | Francisco Morato | Brazil | 121197 |
 | Krishnanagar | India | 121110 |
 | Bottrop | Germany | 121097 |
-| San MartÌn Texmelucan | Mexico | 121093 |
+| San Mart√≠n Texmelucan | Mexico | 121093 |
 | Noda | Japan | 121030 |
 | Fayetteville | United States | 121015 |
 | Cambridge | United Kingdom | 121000 |
@@ -2901,21 +2901,21 @@
 | Randfontein | South Africa | 120838 |
 | Sassari | Italy | 120803 |
 | Santa Coloma de Gramenet | Spain | 120802 |
-| BagÈ | Brazil | 120793 |
+| Bag√© | Brazil | 120793 |
 | Probolinggo | Indonesia | 120770 |
 | Cedar Rapids | United States | 120758 |
 | Oulu | Finland | 120753 |
-| Mitöurinsk | Russian Federation | 120700 |
+| Mit≈°urinsk | Russian Federation | 120700 |
 | Tuguegarao | Philippines | 120645 |
 | Elizabeth | United States | 120568 |
 | Sanmenxia | China | 120523 |
 | Kislovodsk | Russian Federation | 120400 |
 | Chandannagar | India | 120378 |
 | Mandya | India | 120265 |
-| AntsirabÈ | Madagascar | 120239 |
+| Antsirab√© | Madagascar | 120239 |
 | Sapucaia do Sul | Brazil | 120217 |
 | Bogra | Bangladesh | 120170 |
-| CopiapÛ | Chile | 120128 |
+| Copiap√≥ | Chile | 120128 |
 | Dibrugarh | India | 120127 |
 | Remscheid | Germany | 120125 |
 | Heyuan | China | 120101 |
@@ -2928,11 +2928,11 @@
 | Inisa | Nigeria | 119800 |
 | Yanbu | Saudi Arabia | 119800 |
 | Balurghat | India | 119796 |
-| R‚mnicu V‚lcea | Romania | 119741 |
+| R√¢mnicu V√¢lcea | Romania | 119741 |
 | Fujinomiya | Japan | 119714 |
 | Baliuag | Philippines | 119675 |
 | Kawachinagano | Japan | 119666 |
-| Car˙pano | Venezuela | 119639 |
+| Car√∫pano | Venezuela | 119639 |
 | Dunedin | New Zealand | 119600 |
 | Heilbronn | Germany | 119526 |
 | Monza | Italy | 119516 |
@@ -2941,7 +2941,7 @@
 | Jelets | Russian Federation | 119400 |
 | Itapetininga | Brazil | 119391 |
 | Imabari | Japan | 119357 |
-| San Nicol·s de los Arroyos | Argentina | 119302 |
+| San Nicol√°s de los Arroyos | Argentina | 119302 |
 | Aizuwakamatsu | Japan | 119287 |
 | Mallawi | Egypt | 119283 |
 | Patos de Minas | Brazil | 119262 |
@@ -2949,14 +2949,14 @@
 | San Juan | Argentina | 119152 |
 | Lansing | United States | 119128 |
 | El Jadida | Morocco | 119083 |
-| Altöevsk | Ukraine | 119000 |
+| Alt≈°evsk | Ukraine | 119000 |
 | Camaragibe | Brazil | 118968 |
 | Habikino | Japan | 118968 |
 | Ayacucho | Peru | 118960 |
-| Tepatitl·n de Morelos | Mexico | 118948 |
+| Tepatitl√°n de Morelos | Mexico | 118948 |
 | Lianyuan | China | 118858 |
-| QuilpuÈ | Chile | 118857 |
-| MartÌnez de la Torre | Mexico | 118815 |
+| Quilpu√© | Chile | 118857 |
+| Mart√≠nez de la Torre | Mexico | 118815 |
 | Ebetsu | Japan | 118805 |
 | Hofu | Japan | 118751 |
 | Lancaster | United States | 118718 |
@@ -2967,22 +2967,22 @@
 | Surigao | Philippines | 118534 |
 | Orizaba | Mexico | 118488 |
 | Kiryu | Japan | 118326 |
-| Karab¸k | Turkey | 118285 |
+| Karab√ºk | Turkey | 118285 |
 | San Carlos | Philippines | 118259 |
 | Kilis | Turkey | 118245 |
 | Namibe | Angola | 118200 |
-| Zielona GÛra | Poland | 118182 |
+| Zielona G√≥ra | Poland | 118182 |
 | Luanshya | Zambia | 118100 |
 | Neyveli | India | 118080 |
 | Sri Jayawardenepura Kotte | Sri Lanka | 118000 |
 | Drobeta-Turnu Severin | Romania | 117865 |
-| Apatzing·n | Mexico | 117849 |
+| Apatzing√°n | Mexico | 117849 |
 | Bergamo | Italy | 117837 |
 | Khanpur | Pakistan | 117800 |
 | Morogoro | Tanzania | 117800 |
 | Okinawa | Japan | 117748 |
 | Helsingborg | Sweden | 117737 |
-| BesanÁon | France | 117733 |
+| Besan√ßon | France | 117733 |
 | San Juan del Monte | Philippines | 117680 |
 | Fatehpur | India | 117675 |
 | Coral Springs | United States | 117549 |
@@ -2995,15 +2995,15 @@
 | Shagamu | Nigeria | 117200 |
 | Noginsk | Russian Federation | 117200 |
 | Leiden | Netherlands | 117196 |
-| BÈjaÔa | Algeria | 117162 |
+| B√©ja√Øa | Algeria | 117162 |
 | Hamilton | New Zealand | 117100 |
-| Jˆnkˆping | Sweden | 117095 |
+| J√∂nk√∂ping | Sweden | 117095 |
 | Stamford | United States | 117083 |
 | Atlixco | Mexico | 117019 |
 | Catia La Mar | Venezuela | 117012 |
 | Thousand Oaks | United States | 117005 |
 | Cilegon | Indonesia | 117000 |
-| BraganÁa Paulista | Brazil | 116929 |
+| Bragan√ßa Paulista | Brazil | 116929 |
 | Masjed-e-Soleyman | Iran | 116883 |
 | Mahbubnagar | India | 116833 |
 | Vallejo | United States | 116760 |
@@ -3021,19 +3021,19 @@
 | Columbia | United States | 116278 |
 | El Tigre | Venezuela | 116256 |
 | Brugge | Belgium | 116246 |
-| Novokuibyöevsk | Russian Federation | 116200 |
+| Novokuiby≈°evsk | Russian Federation | 116200 |
 | Hongjiang | China | 116188 |
 | Herakleion | Greece | 116178 |
 | Delicias | Mexico | 116132 |
 | Ulm | Germany | 116103 |
-| Lysytöansk | Ukraine | 116000 |
+| Lysyt≈°ansk | Ukraine | 116000 |
 | El Monte | United States | 115965 |
 | Abilene | United States | 115930 |
 | Thunder Bay | Canada | 115913 |
 | Taliao | Taiwan | 115897 |
 | Hanam | South Korea | 115812 |
 | Toyokawa | Japan | 115781 |
-| CuricÛ | Chile | 115766 |
+| Curic√≥ | Chile | 115766 |
 | Neftekamsk | Russian Federation | 115700 |
 | Pescara | Italy | 115698 |
 | Uvira | Congo, The Democratic Republic of the | 115590 |
@@ -3052,7 +3052,7 @@
 | Queimados | Brazil | 115020 |
 | Gojra | Pakistan | 115000 |
 | Juba | Sudan | 114980 |
-| AraguaÌna | Brazil | 114948 |
+| Aragua√≠na | Brazil | 114948 |
 | Purnea (Purnia) | India | 114912 |
 | Olmalik | Uzbekistan | 114900 |
 | Bankura | India | 114876 |
@@ -3070,7 +3070,7 @@
 | Ajman | United Arab Emirates | 114395 |
 | Cianjur | Indonesia | 114300 |
 | Renqiu | China | 114256 |
-| Phan ThiÍt | Vietnam | 114236 |
+| Phan Thi√™t | Vietnam | 114236 |
 | Kallithea | Greece | 114233 |
 | Rajapalaiyam | India | 114202 |
 | Latina | Italy | 114099 |
@@ -3090,17 +3090,17 @@
 | Leninsk-Kuznetski | Russian Federation | 113800 |
 | Waco | United States | 113726 |
 | Bilbays | Egypt | 113608 |
-| VitÛria de Santo Ant„o | Brazil | 113595 |
+| Vit√≥ria de Santo Ant√£o | Brazil | 113595 |
 | Yongchon | South Korea | 113511 |
 | Sachon | South Korea | 113494 |
 | Pilar | Argentina | 113428 |
 | Macon | United States | 113336 |
 | Independence | United States | 113288 |
 | Hathras | India | 113285 |
-| Yan¥an | China | 113277 |
+| Yan¬¥an | China | 113277 |
 | Malasiqui | Philippines | 113190 |
 | Santa Rita | Brazil | 113135 |
-| OrlÈans | France | 113126 |
+| Orl√©ans | France | 113126 |
 | Kairouan | Tunisia | 113100 |
 | Larisa | Greece | 113090 |
 | Watford | United Kingdom | 113080 |
@@ -3118,15 +3118,15 @@
 | Nador | Morocco | 112450 |
 | General Mariano Alvarez | Philippines | 112446 |
 | Bhir (Bid) | India | 112434 |
-| Nyiregyh·za | Hungary | 112419 |
+| Nyiregyh√°za | Hungary | 112419 |
 | Koszalin | Poland | 112375 |
 | Quzhou | China | 112373 |
 | Abha | Saudi Arabia | 112300 |
 | Lerdo | Mexico | 112272 |
 | Gonder | Ethiopia | 112249 |
-| Lleida (LÈrida) | Spain | 112207 |
+| Lleida (L√©rida) | Spain | 112207 |
 | Kueishan | Taiwan | 112195 |
-| TÈbessa | Algeria | 112007 |
+| T√©bessa | Algeria | 112007 |
 | Slough | United Kingdom | 112000 |
 | Paramaribo | Suriname | 112000 |
 | Kiziltepe | Turkey | 112000 |
@@ -3134,7 +3134,7 @@
 | Eldoret | Kenya | 111882 |
 | Tanshui | Taiwan | 111882 |
 | Pallavaram | India | 111866 |
-| Yong¥an | China | 111762 |
+| Yong¬¥an | China | 111762 |
 | Innsbruck | Austria | 111752 |
 | Sohumi | Georgia | 111700 |
 | Higashikurume | Japan | 111666 |
@@ -3162,12 +3162,12 @@
 | Polomolok | Philippines | 110709 |
 | Arzamas | Russian Federation | 110700 |
 | Buga | Colombia | 110699 |
-| Almoloya de Ju·rez | Mexico | 110550 |
+| Almoloya de Ju√°rez | Mexico | 110550 |
 | Santiago | Philippines | 110531 |
 | Tanza | Philippines | 110517 |
-| Ac·mbaro | Mexico | 110487 |
+| Ac√°mbaro | Mexico | 110487 |
 | Ozamis | Philippines | 110420 |
-| AcuÒa | Mexico | 110388 |
+| Acu√±a | Mexico | 110388 |
 | Spanish Town | Jamaica | 110379 |
 | Mulhouse | France | 110359 |
 | Reutlingen | Germany | 110343 |
@@ -3183,10 +3183,10 @@
 | Mozyr | Belarus | 110000 |
 | Kiseljovsk | Russian Federation | 110000 |
 | Tema | Ghana | 109975 |
-| Ja˙ | Brazil | 109965 |
+| Ja√∫ | Brazil | 109965 |
 | Santipur | India | 109956 |
 | Townsville | Australia | 109914 |
-| F¸rth | Germany | 109771 |
+| F√ºrth | Germany | 109771 |
 | Bhind | India | 109755 |
 | Tunja | Colombia | 109740 |
 | Vicenza | Italy | 109738 |
@@ -3202,19 +3202,19 @@
 | Termiz | Uzbekistan | 109500 |
 | Mexico | Philippines | 109481 |
 | Gondiya | India | 109470 |
-| Korhogo | CÙte díIvoire | 109445 |
+| Korhogo | C√¥te d‚ÄôIvoire | 109445 |
 | Butembo | Congo, The Democratic Republic of the | 109406 |
 | Manzanillo | Cuba | 109350 |
 | Legnica | Poland | 109335 |
 | Mbour | Senegal | 109300 |
 | Yizheng | China | 109268 |
-| JaÈn | Spain | 109247 |
+| Ja√©n | Spain | 109247 |
 | Lauro de Freitas | Brazil | 109236 |
 | Yumen | China | 109234 |
 | Siegen | Germany | 109225 |
 | Tiruvannamalai | India | 109196 |
 | Cambridge | Canada | 109186 |
-| ReykjavÌk | Iceland | 109184 |
+| Reykjav√≠k | Iceland | 109184 |
 | Guatire | Venezuela | 109121 |
 | Ourense (Orense) | Spain | 109120 |
 | Goma | Congo, The Democratic Republic of the | 109094 |
@@ -3234,7 +3234,7 @@
 | Florencia | Colombia | 108574 |
 | Kulti-Barakar | India | 108518 |
 | Liling | China | 108504 |
-| San Francisco de MacorÌs | Dominican Republic | 108485 |
+| San Francisco de Macor√≠s | Dominican Republic | 108485 |
 | Teixeira de Freitas | Brazil | 108441 |
 | Hualien | Taiwan | 108407 |
 | My Tho | Vietnam | 108404 |
@@ -3246,8 +3246,8 @@
 | Shivapuri | India | 108277 |
 | Muroran | Japan | 108275 |
 | San Jose | Philippines | 108254 |
-| Ribeir„o Pires | Brazil | 108121 |
-| Ara¥ar | Saudi Arabia | 108100 |
+| Ribeir√£o Pires | Brazil | 108121 |
+| Ara¬¥ar | Saudi Arabia | 108100 |
 | Maicao | Colombia | 108053 |
 | al-Raqqa | Syria | 108020 |
 | Huejutla de Reyes | Mexico | 108017 |
@@ -3261,7 +3261,7 @@
 | Pak Pattan | Pakistan | 107800 |
 | Mahabad | Iran | 107799 |
 | South Bend | United States | 107789 |
-| Sabar· | Brazil | 107781 |
+| Sabar√° | Brazil | 107781 |
 | Terni | Italy | 107770 |
 | Catanduva | Brazil | 107761 |
 | Rio Verde | Brazil | 107755 |
@@ -3274,7 +3274,7 @@
 | Guntakal | India | 107592 |
 | Iida | Japan | 107583 |
 | Bawshar | Oman | 107500 |
-| ForlÏ | Italy | 107475 |
+| Forl√¨ | Italy | 107475 |
 | Unnao | India | 107425 |
 | Kansk | Russian Federation | 107400 |
 | Barasat | India | 107365 |
@@ -3282,7 +3282,7 @@
 | Cixi | China | 107329 |
 | Downey | United States | 107323 |
 | Gloucester | Canada | 107314 |
-| BÈchar | Algeria | 107311 |
+| B√©char | Algeria | 107311 |
 | Waterbury | United States | 107271 |
 | Varamin | Iran | 107233 |
 | Tambaram | India | 107187 |
@@ -3308,7 +3308,7 @@
 | Allentown | United States | 106632 |
 | Cabuyao | Philippines | 106630 |
 | Pilibhit | India | 106605 |
-| GabËs | Tunisia | 106600 |
+| Gab√®s | Tunisia | 106600 |
 | Rouen | France | 106592 |
 | Valparai | India | 106523 |
 | McAllen | United States | 106414 |
@@ -3346,7 +3346,7 @@
 | Pozuelos | Venezuela | 105690 |
 | Sanda | Japan | 105643 |
 | Khorramshahr | Iran | 105636 |
-| KecskemÈt | Hungary | 105606 |
+| Kecskem√©t | Hungary | 105606 |
 | Sliven | Bulgaria | 105530 |
 | Hikone | Japan | 105508 |
 | Namur | Belgium | 105419 |
@@ -3354,12 +3354,12 @@
 | Qutubullapur | India | 105380 |
 | Beawar | India | 105363 |
 | Jinchang | China | 105287 |
-| Fu¥an | China | 105265 |
+| Fu¬¥an | China | 105265 |
 | Ust-Ilimsk | Russian Federation | 105200 |
 | Los Cabos | Mexico | 105199 |
 | Lowell | United States | 105167 |
 | Provo | United States | 105166 |
-| SzÈkesfehÈrv·r | Hungary | 105119 |
+| Sz√©kesfeh√©rv√°r | Hungary | 105119 |
 | Perpignan | France | 105115 |
 | Apucarana | Brazil | 105114 |
 | Citeureup | Indonesia | 105100 |
@@ -3369,9 +3369,9 @@
 | Koudougou | Burkina Faso | 105000 |
 | Agege | Nigeria | 105000 |
 | Jenakijeve | Ukraine | 105000 |
-| Comit·n de DomÌnguez | Mexico | 104986 |
+| Comit√°n de Dom√≠nguez | Mexico | 104986 |
 | Trento | Italy | 104906 |
-| ätöolkovo | Russian Federation | 104900 |
+| ≈†t≈°olkovo | Russian Federation | 104900 |
 | Shahrud | Iran | 104765 |
 | Osijek | Croatia | 104761 |
 | Nantou | Taiwan | 104723 |
@@ -3379,24 +3379,24 @@
 | Hindupur | India | 104651 |
 | Gandhidham | India | 104585 |
 | Shishou | China | 104571 |
-| UmeÂ | Sweden | 104512 |
+| Ume√• | Sweden | 104512 |
 | York | United Kingdom | 104425 |
-| Mezduretöensk | Russian Federation | 104400 |
+| Mezduret≈°ensk | Russian Federation | 104400 |
 | Hengshui | China | 104269 |
 | Karaman | Turkey | 104200 |
 | Wichita Falls | United States | 104197 |
 | Haldwani-cum-Kathgodam | India | 104195 |
-| Cunduac·n | Mexico | 104164 |
+| Cunduac√°n | Mexico | 104164 |
 | Barretos | Brazil | 104156 |
 | Zwickau | Germany | 104146 |
-| MatarÛ | Spain | 104095 |
+| Matar√≥ | Spain | 104095 |
 | Hildesheim | Germany | 104013 |
 | Afyon | Turkey | 103984 |
 | Toda | Japan | 103969 |
 | Kingston | Jamaica | 103962 |
 | Cauayan | Philippines | 103952 |
 | Oldham | United Kingdom | 103931 |
-| RÌo Bravo | Mexico | 103901 |
+| R√≠o Bravo | Mexico | 103901 |
 | Erie | United States | 103717 |
 | Sekondi-Takoradi | Ghana | 103653 |
 | Daly City | United States | 103621 |
@@ -3411,7 +3411,7 @@
 | Pemalang | Indonesia | 103500 |
 | Usolje-Sibirskoje | Russian Federation | 103500 |
 | Citrus Heights | United States | 103455 |
-| Guaratinguet· | Brazil | 103433 |
+| Guaratinguet√° | Brazil | 103433 |
 | Ise-Ekiti | Nigeria | 103400 |
 | Tando Adam | Pakistan | 103400 |
 | Witten | Germany | 103384 |
@@ -3424,7 +3424,7 @@
 | Cachoeirinha | Brazil | 103240 |
 | Danjiangkou | China | 103211 |
 | Tajimi | Japan | 103171 |
-| CodÛ | Brazil | 103153 |
+| Cod√≥ | Brazil | 103153 |
 | Algeciras | Spain | 103106 |
 | Fujin | China | 103104 |
 | Lungtan | Taiwan | 103088 |
@@ -3444,21 +3444,21 @@
 | Huangshan | China | 102628 |
 | Serekunda | Gambia | 102600 |
 | Ugep | Nigeria | 102600 |
-| Jaragu· do Sul | Brazil | 102580 |
+| Jaragu√° do Sul | Brazil | 102580 |
 | Arusha | Tanzania | 102500 |
 | Grudziadz | Poland | 102434 |
 | Ceyhan | Turkey | 102412 |
 | Xingcheng | China | 102384 |
 | Gingoog | Philippines | 102379 |
-| Cubat„o | Brazil | 102372 |
+| Cubat√£o | Brazil | 102372 |
 | Slupsk | Poland | 102370 |
 | Santa Clara | United States | 102361 |
 | Green Bay | United States | 102313 |
 | Erzincan | Turkey | 102304 |
-| Jastrzebie-ZdrÛj | Poland | 102294 |
+| Jastrzebie-Zdr√≥j | Poland | 102294 |
 | Cape Coral | United States | 102286 |
 | Dumaguete | Philippines | 102265 |
-| Le-Cap-HaÔtien | Haiti | 102233 |
+| Le-Cap-Ha√Øtien | Haiti | 102233 |
 | Itabira | Brazil | 102217 |
 | Khairpur | Pakistan | 102200 |
 | Jalib al-Shuyukh | Kuwait | 102178 |
@@ -3472,8 +3472,8 @@
 | Novara | Italy | 102037 |
 | Shah Alam | Malaysia | 102019 |
 | Tete | Mozambique | 101984 |
-| Saint John¥s | Canada | 101936 |
-| Novoöahtinsk | Russian Federation | 101900 |
+| Saint John¬¥s | Canada | 101936 |
+| Novo≈°ahtinsk | Russian Federation | 101900 |
 | Sandy | United States | 101853 |
 | Coquitlam | Canada | 101820 |
 | Potchefstroom | South Africa | 101817 |
@@ -3496,7 +3496,7 @@
 | Saanich | Canada | 101388 |
 | Cambridge | United States | 101355 |
 | Kasuga | Japan | 101344 |
-| BÊrum | Norway | 101340 |
+| B√¶rum | Norway | 101340 |
 | Itaituba | Brazil | 101320 |
 | Kalemie | Congo, The Democratic Republic of the | 101309 |
 | Cibinong | Indonesia | 101300 |
@@ -3512,7 +3512,7 @@
 | Marilao | Philippines | 101017 |
 | Epe | Nigeria | 101000 |
 | Mary | Turkmenistan | 101000 |
-| Krasnyi Lutö | Ukraine | 101000 |
+| Krasnyi Lut≈° | Ukraine | 101000 |
 | Stahanov | Ukraine | 101000 |
 | Lida | Belarus | 101000 |
 | Soligorsk | Belarus | 101000 |
@@ -3525,7 +3525,7 @@
 | Ongole | India | 100836 |
 | Kamagaya | Japan | 100821 |
 | Mahajanga | Madagascar | 100807 |
-| Sancti-SpÌritus | Cuba | 100751 |
+| Sancti-Sp√≠ritus | Cuba | 100751 |
 | Erlangen | Germany | 100750 |
 | Tsuruoka | Japan | 100713 |
 | Gatineau | Canada | 100702 |
@@ -3549,7 +3549,7 @@
 | Habra | India | 100223 |
 | Zelenodolsk | Russian Federation | 100200 |
 | Kanchrapara | India | 100194 |
-| San Francisco del RincÛn | Mexico | 100149 |
+| San Francisco del Rinc√≥n | Mexico | 100149 |
 | Arecibo | Puerto Rico | 100131 |
 | Tiaret | Algeria | 100118 |
 | Zeleznodoroznyi | Russian Federation | 100100 |
@@ -3561,9 +3561,9 @@
 | Worthing | United Kingdom | 100000 |
 | Malita | Philippines | 100000 |
 | Negombo | Sri Lanka | 100000 |
-| Kineöma | Russian Federation | 100000 |
+| Kine≈°ma | Russian Federation | 100000 |
 | Clearwater | United States | 99936 |
-| Taxco de AlarcÛn | Mexico | 99907 |
+| Taxco de Alarc√≥n | Mexico | 99907 |
 | Nazilli | Turkey | 99900 |
 | Trier | Germany | 99891 |
 | Dipolog | Philippines | 99862 |
@@ -3574,7 +3574,7 @@
 | San Pedro Cholula | Mexico | 99734 |
 | Lerma | Mexico | 99714 |
 | Palangka Raya | Indonesia | 99693 |
-| LambarÈ | Paraguay | 99681 |
+| Lambar√© | Paraguay | 99681 |
 | Sirajganj | Bangladesh | 99669 |
 | Ezeiza | Argentina | 99578 |
 | Moundou | Chad | 99500 |
@@ -3586,13 +3586,13 @@
 | Cavite | Philippines | 99367 |
 | Ciudad Ojeda | Venezuela | 99354 |
 | Gurue | Mozambique | 99300 |
-| Tecom·n | Mexico | 99296 |
+| Tecom√°n | Mexico | 99296 |
 | Pingliang | China | 99265 |
 | Fuqing | China | 99193 |
 | Liberec | Czech Republic | 99155 |
 | Fianarantsoa | Madagascar | 99005 |
 | Oleksandrija | Ukraine | 99000 |
-| T‚rgoviste | Romania | 98980 |
+| T√¢rgoviste | Romania | 98980 |
 | Focsani | Romania | 98979 |
 | Crato | Brazil | 98965 |
 | Lund | Sweden | 98948 |
@@ -3607,17 +3607,17 @@
 | Dadu | Pakistan | 98600 |
 | Passos | Brazil | 98570 |
 | Jieyang | China | 98531 |
-| T‚rgu Jiu | Romania | 98524 |
-| Ciego de ¡vila | Cuba | 98505 |
+| T√¢rgu Jiu | Romania | 98524 |
+| Ciego de √Åvila | Cuba | 98505 |
 | Bandar-e Anzali | Iran | 98500 |
 | Vacoas-Phoenix | Mauritius | 98464 |
-| Mayag¸ez | Puerto Rico | 98434 |
+| Mayag√ºez | Puerto Rico | 98434 |
 | Nueva San Salvador | El Salvador | 98400 |
 | Araguari | Brazil | 98399 |
 | Piacenza | Italy | 98384 |
 | Narsinghdi | Bangladesh | 98342 |
 | Ancona | Italy | 98329 |
-| S„o JosÈ de Ribamar | Brazil | 98318 |
+| S√£o Jos√© de Ribamar | Brazil | 98318 |
 | Rafsanjan | Iran | 98300 |
 | Midland | United States | 98293 |
 | Davenport | United States | 98256 |
@@ -3627,11 +3627,11 @@
 | Lecce | Italy | 98208 |
 | Kuznetsk | Russian Federation | 98200 |
 | Pinhais | Brazil | 98198 |
-| CeskÈ Budejovice | Czech Republic | 98186 |
-| Sert„ozinho | Brazil | 98140 |
+| Cesk√© Budejovice | Czech Republic | 98186 |
+| Sert√£ozinho | Brazil | 98140 |
 | Isehara | Japan | 98123 |
 | Lower Hutt | New Zealand | 98100 |
-| Hradec Kr·lovÈ | Czech Republic | 98080 |
+| Hradec Kr√°lov√© | Czech Republic | 98080 |
 | Mission Viejo | United States | 98049 |
 | Taldyqorghan | Kazakstan | 98000 |
 | Uhta | Russian Federation | 98000 |
@@ -3644,7 +3644,7 @@
 | Talkha | Egypt | 97700 |
 | Palayankottai | India | 97662 |
 | Takasago | Japan | 97632 |
-| Nou‚dhibou | Mauritania | 97600 |
+| Nou√¢dhibou | Mauritania | 97600 |
 | Tobolsk | Russian Federation | 97600 |
 | Conselheiro Lafaiete | Brazil | 97507 |
 | Chelmsford | United Kingdom | 97451 |
@@ -3663,17 +3663,17 @@
 | Cosoleacaque | Mexico | 97199 |
 | Tong Xian | China | 97168 |
 | Ocumare del Tuy | Venezuela | 97168 |
-| Balaöov | Russian Federation | 97100 |
+| Bala≈°ov | Russian Federation | 97100 |
 | Buon Ma Thuot | Vietnam | 97044 |
 | Rustenburg | South Africa | 97008 |
 | Crawley | United Kingdom | 97000 |
-| Molodetöno | Belarus | 97000 |
+| Molodet≈°no | Belarus | 97000 |
 | Roubaix | France | 96984 |
 | Fujimi | Japan | 96972 |
 | Mekele | Ethiopia | 96938 |
 | Lahti | Finland | 96921 |
 | Zeleznogorsk | Russian Federation | 96900 |
-| BorÂs | Sweden | 96883 |
+| Bor√•s | Sweden | 96883 |
 | Angra dos Reis | Brazil | 96864 |
 | Guagua | Philippines | 96858 |
 | Godhra | India | 96813 |
@@ -3688,7 +3688,7 @@
 | Catanzaro | Italy | 96700 |
 | Savannakhet | Laos | 96652 |
 | Mojokerto | Indonesia | 96626 |
-| Eun·polis | Brazil | 96610 |
+| Eun√°polis | Brazil | 96610 |
 | Bayambang | Philippines | 96609 |
 | Zukovski | Russian Federation | 96500 |
 | Marand | Iran | 96400 |
@@ -3704,7 +3704,7 @@
 | Jacobina | Brazil | 96131 |
 | Nasugbu | Philippines | 96113 |
 | Patan | India | 96109 |
-| CoÌmbra | Portugal | 96100 |
+| Co√≠mbra | Portugal | 96100 |
 | Anzero-Sudzensk | Russian Federation | 96100 |
 | Colchester | United Kingdom | 96063 |
 | Zenica | Bosnia and Herzegovina | 96027 |
@@ -3714,7 +3714,7 @@
 | Coronel Fabriciano | Brazil | 95933 |
 | Valle de la Pascua | Venezuela | 95927 |
 | Purwakarta | Indonesia | 95900 |
-| Ya¥an | China | 95900 |
+| Ya¬¥an | China | 95900 |
 | Garut | Indonesia | 95800 |
 | Jinzhou | China | 95761 |
 | Mandasor | India | 95758 |
@@ -3723,9 +3723,9 @@
 | Yonezawa | Japan | 95592 |
 | Konan | Japan | 95521 |
 | La Spezia | Italy | 95504 |
-| ⁄stÌ nad Labem | Czech Republic | 95491 |
+| √öst√≠ nad Labem | Czech Republic | 95491 |
 | Tonghae | South Korea | 95472 |
-| JosÈ Azueta | Mexico | 95448 |
+| Jos√© Azueta | Mexico | 95448 |
 | Delta | Canada | 95411 |
 | Jirja | Egypt | 95400 |
 | Sunrise Manor | United States | 95362 |
@@ -3739,7 +3739,7 @@
 | Yamatokoriyama | Japan | 95165 |
 | Satara | India | 95133 |
 | Heerlen | Netherlands | 95052 |
-| G¸tersloh | Germany | 95028 |
+| G√ºtersloh | Germany | 95028 |
 | Worcester | United Kingdom | 95000 |
 | Kostjantynivka | Ukraine | 95000 |
 | Meru | Kenya | 94947 |
@@ -3756,7 +3756,7 @@
 | New Bedford | United States | 94780 |
 | Tantoyuca | Mexico | 94709 |
 | Jaya Pura | Indonesia | 94700 |
-| äumen | Bulgaria | 94686 |
+| ≈†umen | Bulgaria | 94686 |
 | Birigui | Brazil | 94685 |
 | San Rafael | Argentina | 94651 |
 | Torbat-e Heydariyeh | Iran | 94600 |
@@ -3784,13 +3784,13 @@
 | Zeleznogorsk | Russian Federation | 94000 |
 | Albany | United States | 93994 |
 | Maxixe | Mozambique | 93985 |
-| Preöov | Slovakia | 93977 |
+| Pre≈°ov | Slovakia | 93977 |
 | Resita | Romania | 93976 |
 | Argenteuil | France | 93961 |
-| Jelenia GÛra | Poland | 93901 |
-| Ming?Áevir | Azerbaijan | 93900 |
+| Jelenia G√≥ra | Poland | 93901 |
+| Ming…ô√ßevir | Azerbaijan | 93900 |
 | al-Hawiya | Saudi Arabia | 93900 |
-| TatuÌ | Brazil | 93897 |
+| Tatu√≠ | Brazil | 93897 |
 | George | South Africa | 93818 |
 | San Fernando de Apure | Venezuela | 93809 |
 | Onomichi | Japan | 93756 |
@@ -3805,7 +3805,7 @@
 | Tultepec | Mexico | 93364 |
 | Roanoke | United States | 93357 |
 | Nagaon | India | 93350 |
-| Ji-Paran· | Brazil | 93346 |
+| Ji-Paran√° | Brazil | 93346 |
 | Higashimatsuyama | Japan | 93342 |
 | Novouralsk | Russian Federation | 93300 |
 | Giugliano in Campania | Italy | 93286 |
@@ -3825,11 +3825,11 @@
 | Kars | Turkey | 93000 |
 | Billings | United States | 92988 |
 | Vidisha | India | 92917 |
-| Puökin | Russian Federation | 92900 |
+| Pu≈°kin | Russian Federation | 92900 |
 | Yuzhou | China | 92889 |
 | Compton | United States | 92864 |
 | Tabora | Tanzania | 92800 |
-| Camet· | Brazil | 92779 |
+| Camet√° | Brazil | 92779 |
 | Alkmaar | Netherlands | 92713 |
 | Pondok Aren | Indonesia | 92700 |
 | Taza | Morocco | 92700 |
@@ -3852,19 +3852,19 @@
 | Derbent | Russian Federation | 92300 |
 | Gainesville | United States | 92291 |
 | Cairns | Australia | 92273 |
-| TorrejÛn de Ardoz | Spain | 92262 |
+| Torrej√≥n de Ardoz | Spain | 92262 |
 | Fairfield | United States | 92256 |
 | Mun-gyong | South Korea | 92239 |
-| GuaÌba | Brazil | 92224 |
+| Gua√≠ba | Brazil | 92224 |
 | Kangshan | Taiwan | 92200 |
-| L¸nen | Germany | 92044 |
+| L√ºnen | Germany | 92044 |
 | Arden-Arcade | United States | 92040 |
 | Rafah | Palestine | 92020 |
 | Gillingham | United Kingdom | 92000 |
 | Hartlepool | United Kingdom | 92000 |
 | Woking/Byfleet | United Kingdom | 92000 |
 | Ilan | Taiwan | 92000 |
-| S„o LourenÁo da Mata | Brazil | 91999 |
+| S√£o Louren√ßo da Mata | Brazil | 91999 |
 | Kaiyuan | China | 91999 |
 | Barletta | Italy | 91904 |
 | Batam | Indonesia | 91871 |
@@ -3877,7 +3877,7 @@
 | al-Hawamidiya | Egypt | 91700 |
 | San Pedro de la Paz | Chile | 91684 |
 | Mobara | Japan | 91664 |
-| Kirovo-Töepetsk | Russian Federation | 91600 |
+| Kirovo-T≈°epetsk | Russian Federation | 91600 |
 | Tumen | China | 91471 |
 | Narita | Japan | 91470 |
 | Pardubice | Czech Republic | 91309 |
@@ -3893,7 +3893,7 @@
 | Tandil | Argentina | 91101 |
 | Sawangan | Indonesia | 91100 |
 | Unayza | Saudi Arabia | 91100 |
-| D¸ren | Germany | 91092 |
+| D√ºren | Germany | 91092 |
 | Santa Monica | United States | 91084 |
 | Idlib | Syria | 91081 |
 | Halifax | United Kingdom | 91069 |
@@ -3911,7 +3911,7 @@
 | Suhar | Oman | 90814 |
 | Hassan | India | 90803 |
 | Quetzaltenango | Guatemala | 90801 |
-| G‰vle | Sweden | 90742 |
+| G√§vle | Sweden | 90742 |
 | Ambala Sadar | India | 90712 |
 | Giron | Colombia | 90688 |
 | Montreuil | France | 90674 |
@@ -3921,11 +3921,11 @@
 | Ligao | Philippines | 90603 |
 | Baidyabati | India | 90601 |
 | Fall River | United States | 90555 |
-| P·nuco | Mexico | 90551 |
+| P√°nuco | Mexico | 90551 |
 | Braga | Portugal | 90535 |
 | Patos | Brazil | 90519 |
 | Ituiutaba | Brazil | 90507 |
-| Inegˆl | Turkey | 90500 |
+| Ineg√∂l | Turkey | 90500 |
 | El Araich | Morocco | 90400 |
 | Dera Ismail Khan | Pakistan | 90400 |
 | Morvi | India | 90357 |
@@ -3935,20 +3935,20 @@
 | Shaowu | China | 90286 |
 | Junan | China | 90222 |
 | Bandirma | Turkey | 90200 |
-| Corumb· | Brazil | 90111 |
+| Corumb√° | Brazil | 90111 |
 | Miandoab | Iran | 90100 |
 | Eastbourne | United Kingdom | 90000 |
 | Zhezqazghan | Kazakstan | 90000 |
 | Hargeysa | Somalia | 90000 |
 | Kismaayo | Somalia | 90000 |
 | Miaoli | Taiwan | 90000 |
-| Berdytöiv | Ukraine | 90000 |
+| Berdyt≈°iv | Ukraine | 90000 |
 | Izmajil | Ukraine | 90000 |
-| äostka | Ukraine | 90000 |
+| ≈†ostka | Ukraine | 90000 |
 | Uman | Ukraine | 90000 |
-| El LimÛn | Venezuela | 90000 |
+| El Lim√≥n | Venezuela | 90000 |
 | Klin | Russian Federation | 90000 |
-| Töaikovski | Russian Federation | 90000 |
+| T≈°aikovski | Russian Federation | 90000 |
 | Banyuwangi | Indonesia | 89900 |
 | Tanjung Pinang | Indonesia | 89900 |
 | Velbert | Germany | 89881 |
@@ -3958,25 +3958,25 @@
 | Wazirabad | Pakistan | 89700 |
 | Esslingen am Neckar | Germany | 89667 |
 | El Fuerte | Mexico | 89556 |
-| PalhoÁa | Brazil | 89465 |
+| Palho√ßa | Brazil | 89465 |
 | Kenosha | United States | 89447 |
 | Kelowna | Canada | 89442 |
 | Liepaja | Latvia | 89439 |
 | San Felipe de Puerto Plata | Dominican Republic | 89423 |
-| GhardaÔa | Algeria | 89415 |
+| Gharda√Øa | Algeria | 89415 |
 | Elgin | United States | 89408 |
 | Huaying | China | 89400 |
 | Nowshera | Pakistan | 89400 |
-| Barra do PiraÌ | Brazil | 89388 |
+| Barra do Pira√≠ | Brazil | 89388 |
 | Pingyi | China | 89373 |
 | al-Zawiya | Libyan Arab Jamahiriya | 89338 |
 | Odessa | United States | 89293 |
 | Ladysmith | South Africa | 89292 |
 | Huangyan | China | 89288 |
 | Barrie | Canada | 89269 |
-| Bento GonÁalves | Brazil | 89254 |
-| Po· | Brazil | 89236 |
-| ¡guas Lindas de Goi·s | Brazil | 89200 |
+| Bento Gon√ßalves | Brazil | 89254 |
+| Po√° | Brazil | 89236 |
+| √Åguas Lindas de Goi√°s | Brazil | 89200 |
 | La Ceiba | Honduras | 89200 |
 | Raigarh | India | 89166 |
 | Tierra Blanca | Mexico | 89143 |
@@ -3986,13 +3986,13 @@
 | Vejalpur | India | 89053 |
 | Grimsby | United Kingdom | 89000 |
 | Brovary | Ukraine | 89000 |
-| Mukatöeve | Ukraine | 89000 |
+| Mukat≈°eve | Ukraine | 89000 |
 | Pesaro | Italy | 88987 |
 | Masaya | Nicaragua | 88971 |
 | Apopa | El Salvador | 88800 |
-| Luxembourg [Luxemburg/LÎtzebuerg] | Luxembourg | 80700 |
+| Luxembourg [Luxemburg/L√´tzebuerg] | Luxembourg | 80700 |
 | Suva | Fiji Islands | 77366 |
-| NoumÈa | New Caledonia | 76293 |
+| Noum√©a | New Caledonia | 76293 |
 | Male | Maldives | 71000 |
 | Les Abymes | Guadeloupe | 62947 |
 | Mbabane | Swaziland | 61000 |
@@ -4001,7 +4001,7 @@
 | Masqat | Oman | 51969 |
 | Cayenne | French Guiana | 50699 |
 | Honiara | Solomon Islands | 50100 |
-| S„o TomÈ | Sao Tome and Principe | 49541 |
+| S√£o Tom√© | Sao Tome and Principe | 49541 |
 | Dili | East Timor | 47900 |
 | Port-of-Spain | Trinidad and Tobago | 43396 |
 | Banjul | Gambia | 42326 |
@@ -4017,9 +4017,9 @@
 | Gibraltar | Gibraltar | 27025 |
 | Faaa | French Polynesia | 25888 |
 | Papeete | French Polynesia | 25553 |
-| Saint John¥s | Antigua and Barbuda | 24000 |
+| Saint John¬¥s | Antigua and Barbuda | 24000 |
 | Douglas | United Kingdom | 23487 |
-| Nuku¥alofa | Tonga | 22400 |
+| Nuku¬¥alofa | Tonga | 22400 |
 | Thimphu | Bhutan | 22000 |
 | Weno | Micronesia, Federated States of | 22000 |
 | Bandar Seri Begawan | Brunei | 21484 |
@@ -4028,7 +4028,7 @@
 | George Town | Cayman Islands | 19600 |
 | Kingstown | Saint Vincent and the Grenadines | 17100 |
 | Roseau | Dominica | 16243 |
-| TÛrshavn | Faroe Islands | 14542 |
+| T√≥rshavn | Faroe Islands | 14542 |
 | Nuuk | Greenland | 13445 |
 | Monte-Carlo | Monaco | 13154 |
 | Charlotte Amalie | Virgin Islands, U.S. | 13000 |
@@ -4051,7 +4051,7 @@
 | Vaduz | Liechtenstein | 5043 |
 | Serravalle | San Marino | 4802 |
 | Cockburn Town | Turks and Caicos Islands | 4800 |
-| Saint George¥s | Grenada | 4621 |
+| Saint George¬¥s | Grenada | 4621 |
 | Funafuti | Tuvalu | 4600 |
 | Yangor | Nauru | 4050 |
 | Willemstad | Netherlands Antilles | 2345 |
@@ -4066,7 +4066,7 @@
 | Longyearbyen | Svalbard and Jan Mayen | 1438 |
 | Monaco-Ville | Monaco | 1234 |
 | Hamilton | Bermuda | 1200 |
-| AgaÒa | Guam | 1139 |
+| Aga√±a | Guam | 1139 |
 | Mata-Utu | Wallis and Futuna | 1137 |
 | South Hill | Anguilla | 961 |
 | Kingston | Norfolk Island | 800 |
@@ -4075,7 +4075,7 @@
 | The Valley | Anguilla | 595 |
 | Yaren | Nauru | 559 |
 | Bantam | Cocos (Keeling) Islands | 503 |
-| Citt‡ del Vaticano | Holy See (Vatican City State) | 455 |
+| Citt√† del Vaticano | Holy See (Vatican City State) | 455 |
 | Fakaofo | Tokelau | 300 |
 | West Island | Cocos (Keeling) Islands | 167 |
 | Adamstown | Pitcairn | 42 |
