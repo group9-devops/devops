@@ -15,7 +15,7 @@
 | Taipei | Taiwan | 2641312 |
 | Pyongyang | North Korea | 2484000 |
 | Toskent | Uzbekistan | 2117500 |
-| Bakı | Azerbaijan | 1787800 |
+| Bak? | Azerbaijan | 1787800 |
 | Kabul | Afghanistan | 1780000 |
 | Manila | Philippines | 1581082 |
 | Hanoi | Vietnam | 1410000 |
