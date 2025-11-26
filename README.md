@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/github/group9-devops/devops/branch/develop/graph/badge.svg?token=9KBLM161VW)](https://codecov.io/github/group9-devops/devops)
+[![codecov](https://codecov.io/github/group9-devops/devops/branch/master/graph/badge.svg?token=9KBLM161VW)](https://codecov.io/github/group9-devops/devops)
 
 # Population Reporting System - Group 9
 
