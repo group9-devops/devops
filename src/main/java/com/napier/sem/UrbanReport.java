@@ -218,11 +218,12 @@ public class UrbanReport {
     }
 
     /**
-     * Generates lists of regions, countries, and cities, then generates continent report.
+     * Generates lists of regions and countries for later use in the generation of reports.
      *
      * @param con active database connection
      */
     public void generateReportLists(Connection con) {
+        // Continents list hard coded for performance purposes to avoid unnecessary DB query
         String[] continents = {
                 "Africa","Antarctica","Asia","Europe",
                 "North America","Oceania","South America"
@@ -252,15 +253,6 @@ public class UrbanReport {
                 }
             }
 
-            // 3. Cities
-            try (Statement stmt = con.createStatement()) {
-                ResultSet rset = stmt.executeQuery(
-                        "SELECT DISTINCT Name FROM city ORDER BY Name"
-                );
-                while (rset.next()) {
-                    cities.add(rset.getString("Name"));
-                }
-            }
 
         } catch (Exception e) {
             System.out.println("List creation error");
