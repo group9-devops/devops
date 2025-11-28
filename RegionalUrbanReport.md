@@ -7,7 +7,7 @@
 | Middle East | 188,380,700 | 70,371,374 | 37.36 |
 | South America | 345,780,000 | 172,037,859 | 49.75 |
 | Polynesia | 633,050 | 135,925 | 21.47 |
-| Antarctica | 0 | 0 | NaN |
+| Antarctica | 0 | 0 | 0 |
 | Australia and New Zealand | 22,753,100 | 13,163,436 | 57.85 |
 | Western Europe | 183,247,600 | 45,683,298 | 24.93 |
 | Eastern Africa | 246,999,000 | 24,067,066 | 9.74 |
@@ -24,4 +24,4 @@
 | Melanesia | 6,472,000 | 484,459 | 7.49 |
 | Micronesia | 543,000 | 102,329 | 18.85 |
 | British Islands | 63,398,500 | 23,045,714 | 36.35 |
-| Micronesia/Caribbean | 0 | 0 | NaN |
+| Micronesia/Caribbean | 0 | 0 | 0 |

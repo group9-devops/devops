@@ -7,7 +7,7 @@
 | Andorra | 78,000 | 21,189 | 27.17 |
 | Angola | 12,878,000 | 2,561,600 | 19.89 |
 | Anguilla | 8,000 | 1,556 | 19.45 |
-| Antarctica | 0 | 0 | NaN |
+| Antarctica | 0 | 0 | 0 |
 | Antigua and Barbuda | 68,000 | 24,000 | 35.29 |
 | Argentina | 37,032,000 | 19,996,563 | 54 |
 | Armenia | 3,520,000 | 1,633,100 | 46.39 |
@@ -28,9 +28,9 @@
 | Bolivia | 8,329,000 | 3,378,644 | 40.56 |
 | Bosnia and Herzegovina | 3,972,000 | 599,106 | 15.08 |
 | Botswana | 1,622,000 | 314,822 | 19.41 |
-| Bouvet Island | 0 | 0 | NaN |
+| Bouvet Island | 0 | 0 | 0 |
 | Brazil | 170,115,000 | 85,876,862 | 50.48 |
-| British Indian Ocean Territory | 0 | 0 | NaN |
+| British Indian Ocean Territory | 0 | 0 | 0 |
 | Brunei | 328,000 | 21,484 | 6.55 |
 | Bulgaria | 8,190,900 | 2,696,915 | 32.93 |
 | Burkina Faso | 11,937,000 | 1,229,000 | 10.3 |
@@ -76,7 +76,7 @@
 | France | 59,225,700 | 9,244,494 | 15.61 |
 | French Guiana | 181,000 | 50,699 | 28.01 |
 | French Polynesia | 235,000 | 51,441 | 21.89 |
-| French Southern territories | 0 | 0 | NaN |
+| French Southern territories | 0 | 0 | 0 |
 | Gabon | 1,226,000 | 419,000 | 34.18 |
 | Gambia | 1,305,000 | 144,926 | 11.11 |
 | Georgia | 4,968,000 | 1,880,900 | 37.86 |
@@ -93,7 +93,7 @@
 | Guinea-Bissau | 1,213,000 | 241,000 | 19.87 |
 | Guyana | 861,000 | 254,000 | 29.5 |
 | Haiti | 8,222,000 | 1,517,338 | 18.45 |
-| Heard Island and McDonald Islands | 0 | 0 | NaN |
+| Heard Island and McDonald Islands | 0 | 0 | 0 |
 | Holy See (Vatican City State) | 1,000 | 455 | 45.5 |
 | Honduras | 6,485,000 | 1,287,000 | 19.85 |
 | Hong Kong | 6,782,000 | 3,300,633 | 48.67 |
@@ -196,7 +196,7 @@
 | Solomon Islands | 444,000 | 50,100 | 11.28 |
 | Somalia | 10,097,000 | 1,177,000 | 11.66 |
 | South Africa | 40,377,000 | 15,196,370 | 37.64 |
-| South Georgia and the South Sandwich Islands | 0 | 0 | NaN |
+| South Georgia and the South Sandwich Islands | 0 | 0 | 0 |
 | South Korea | 46,844,000 | 38,999,893 | 83.25 |
 | Spain | 39,441,700 | 16,669,189 | 42.26 |
 | Sri Lanka | 18,827,000 | 1,545,000 | 8.21 |
@@ -225,7 +225,7 @@
 | United Arab Emirates | 2,441,000 | 1,728,336 | 70.8 |
 | United Kingdom | 59,623,400 | 22,436,673 | 37.63 |
 | United States | 278,357,000 | 78,625,774 | 28.25 |
-| United States Minor Outlying Islands | 0 | 0 | NaN |
+| United States Minor Outlying Islands | 0 | 0 | 0 |
 | Uruguay | 3,337,000 | 1,236,000 | 37.04 |
 | Uzbekistan | 24,318,000 | 5,183,900 | 21.32 |
 | Vanuatu | 190,000 | 33,700 | 17.74 |
