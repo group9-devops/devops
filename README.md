@@ -44,7 +44,7 @@ The primary users are data analysts and policy advisors with moderate technical 
 
 [![Releases](https://img.shields.io/github/release/group9-devops/devops/all.svg?style=flat-square)](https://github.com/group9-devops/devops/releases)
 
-- Module : Software Engineering Methods (SETO8101)
+- Module : Software Engineering Methods (SET08101)
 - Year : 2
 - Group: 9
 - Repository: [`group9-devops`](https://github.com/group9-devops/devops)
@@ -70,7 +70,7 @@ cd group9-devops
 mvn clean package
 
 # Run the app
-java -jar target/devops-0.1.0.2-jar-with-dependencies.jar
+java -jar target/devops.jar
 
 
 
@@ -85,8 +85,9 @@ java -jar target/devops-0.1.0.2-jar-with-dependencies.jar
 
 Our GitHub Actions pipeline automatically
 
-- Builds the Maven JAR
-- Builds the Docker image
+- Builds and packages our application using Maven
+- Runs unit and integration testing complete with CodeCov reporting using Docker
+- Creates a new GitHub release
 
 Workflow file: .github/workflows/main.yml
 
