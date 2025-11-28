@@ -282,7 +282,12 @@ public class UrbanReport {
         for (String continent : continents){
             getPopulationOfContinent(con,continent);
             getUrbanPopulationOfContinent(con,continent);
-            percentage = (urbanPopulation / population) * 100;
+            if (population == 0) {
+                percentage = 0;
+            } else {
+                percentage = (urbanPopulation * 100.0) / population;
+            }
+
             sb.append("| ")
                     .append(continent).append(" | ")
                     .append(numberFormat.format(population)).append(" | ")
@@ -318,7 +323,12 @@ public class UrbanReport {
         for (String region : regions){
             getPopulationOfRegion(con,region);
             getUrbanPopulationOfRegion(con,region);
-            percentage = (urbanPopulation / population) * 100;
+            if (population == 0) {
+                percentage = 0;
+            } else {
+                percentage = (urbanPopulation * 100.0) / population;
+            }
+
             sb.append("| ")
                     .append(region).append(" | ")
                     .append(numberFormat.format(population)).append(" | ")
@@ -354,7 +364,12 @@ public class UrbanReport {
         for (String country : countries){
             getPopulationOfCountry(con,country);
             getUrbanPopulationOfCountry(con,country);
-            percentage = (urbanPopulation / population) * 100;
+            if (population == 0) {
+                percentage = 0;
+            } else {
+                percentage = (urbanPopulation * 100.0) / population;
+            }
+
             sb.append("| ")
                     .append(country).append(" | ")
                     .append(numberFormat.format(population)).append(" | ")
